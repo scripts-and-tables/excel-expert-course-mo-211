@@ -1,3 +1,5 @@
+![MO-211 Chapter 3](../src/hero-c3.png)
+
 # Module 03: Create Advanced Formulas and Macros (25–30%)
 
 This module is the technical engine of the MO-211 exam. You will move beyond basic calculations to build "intelligent" spreadsheets that handle complex business logic, perform predictive financial modeling, and automate repetitive tasks. We cover the transition from legacy functions to the modern **Dynamic Array engine** (`FILTER`, `SORTBY`, `UNIQUE`) and the professional use of the **`LET()`** function to write clean, high-performance code.
