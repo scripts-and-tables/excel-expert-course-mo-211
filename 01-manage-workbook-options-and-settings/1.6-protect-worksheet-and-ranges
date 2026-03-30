@@ -1,0 +1,62 @@
+# 1.6 Prepare for Collaboration: Protect Workbook Structure
+
+While **Worksheet Protection** (which we just covered) locks the contents of the cells, **Workbook Structure Protection** locks the "container" itself. In a data analytics workflow, this is like setting schema permissions in a database—it prevents users from "dropping" or renaming your tables (sheets), even if they have permission to edit the data inside.
+
+-----
+
+## Part 1: What is "Structure"?
+
+When you protect the structure of a workbook, you are disabling the user's ability to perform "managerial" actions on the tabs at the bottom of the screen.
+
+### Restricted Actions:
+
+  * **Inserting** new worksheets.
+  * **Deleting** existing worksheets (this is critical for preventing the loss of source data).
+  * **Renaming** sheets (which would break your external `INDIRECT` or 3D formulas).
+  * **Hiding or Unhiding** sheets (useful for keeping "helper" or "calculation" sheets out of sight).
+  * **Moving** or copying sheets to other workbooks.
+
+-----
+
+## Part 2: How to Apply Structure Protection
+
+This is a global setting for the entire file.
+
+1.  Go to the **Review** tab.
+2.  Click **Protect Workbook** (in the Protect group).
+3.  Ensure the **Structure** checkbox is selected.
+4.  (Optional) Enter a password.
+5.  Click **OK**.
+
+> [\!NOTE]
+> In older versions of Excel, there was a "Windows" option here to prevent users from resizing or moving the actual Excel windows. In modern Microsoft 365, this is almost always grayed out and unnecessary.
+
+-----
+
+## Part 3: Worksheet vs. Workbook Protection
+
+Experts often use both simultaneously, but it is important to distinguish them for the exam.
+
+| Feature | Protect Worksheet | Protect Workbook (Structure) |
+| :--- | :--- | :--- |
+| **Primary Goal** | Protect cell data and formulas. | Protect the organization of tabs. |
+| **Right-Click Menu** | Cells are locked/unlocked. | Sheet tabs (Insert/Delete) are disabled. |
+| **Scope** | Applies to one specific sheet. | Applies to the entire file. |
+| **Typical Use** | Preventing accidental deletion of a formula. | Preventing a user from deleting the "Data\_Source" tab. |
+
+-----
+
+## Part 4: The "Unhide" Strategy
+
+A common "Expert" tactic is to hide a sheet containing sensitive background data or complex SQL-style mapping tables and then protect the workbook structure.
+
+  * **Result:** Because the structure is protected, the "Unhide..." option in the sheet tab menu becomes grayed out.
+  * **Benefit:** Users can't see your background logic, and they can't bring it back without the workbook password.
+
+-----
+
+## Expert Tips for the Exam
+
+  * **Password Consistency:** If the exam scenario asks you to protect both the sheet and the workbook, pay attention to whether they require the *same* password or different ones.
+  * **Visual Cues:** You can tell a workbook is protected if the **Protect Workbook** button on the Review tab is highlighted/shaded and the right-click options on sheet tabs are grayed out.
+  * **VBA Interaction:** If you are running macros (like the ones we copied in Section 1.1) that need to create new sheets, your code will **fail** if Workbook Protection is on. You must include code to `Unprotect` the workbook at the start of the macro and `Protect` it again at the end.
