@@ -1,0 +1,79 @@
+# 1.2 Manage Workbooks: Reference Data in Other Workbooks
+
+In high-level data architecture, you rarely keep all your data in a single file. Just as a SQL query might pull from multiple tables or a Python script imports various libraries, Excel Expert users create **External References** (also known as "links") to connect workbooks.
+
+This allows you to maintain a "Single Source of Truth"—where one master workbook holds the data, and multiple reporting workbooks reference it without duplicating (and potentially corrupting) the information.
+
+-----
+
+## Part 1: The Anatomy of an External Reference
+
+When you link to another workbook, Excel creates a specific path syntax so it knows exactly where to look. Understanding this syntax is vital for troubleshooting broken links.
+
+### The Formula Structure
+
+If the source workbook is **Open**:
+`=[WorkbookName.xlsx]SheetName!$A$1`
+
+If the source workbook is **Closed**:
+`='C:\Reports\[WorkbookName.xlsx]SheetName'!$A$1`
+
+  * **Square Brackets `[]`:** Enclose the name of the workbook.
+  * **Single Quotes `' '`:** Required if the file path or sheet name contains **spaces**.
+  * **Exclamation Point `!`:** Separates the sheet name from the cell reference.
+
+-----
+
+## Part 2: Creating the Reference
+
+There are two primary ways to establish a link. For the **MO-211 Exam**, the "Point-and-Click" method is the most reliable.
+
+### The Point-and-Click Method
+
+1.  Open both the **Source** workbook and the **Destination** workbook.
+2.  In the Destination workbook, type `=` in the cell where you want the data.
+3.  Switch to the Source workbook (using `Alt + Tab` or the taskbar).
+4.  Click the specific cell or range you want to reference and press **Enter**.
+5.  Excel automatically builds the complex file path for you.
+
+-----
+
+## Part 3: Managing External Links
+
+Once links are created, you must manage them. If a file is renamed or moved, your formulas will return a `#REF!` error. The **Edit Links** dialog is your control center for this.
+
+### The "Edit Links" Dialog
+
+Go to **Data \> Queries & Connections \> Edit Links**.
+
+| Action | What it does |
+| :--- | :--- |
+| **Update Values** | Forces Excel to pull the latest data from the source file. |
+| **Change Source** | Point the link to a new file (useful if a file was renamed or replaced). |
+| **Open Source** | Immediately opens the linked workbook. |
+| **Break Link** | **Warning:** This permanently converts the formula into its current static value. The connection to the source is deleted. |
+
+> [\!WARNING]
+> **Breaking a link cannot be undone with "Undo" (`Ctrl + Z`).** Always save a backup before breaking links in a complex model.
+
+-----
+
+## Part 4: Startup Prompts & Security
+
+Because external links can pose a security risk (or simply be annoying), Excel allows you to control how they behave when a file is opened.
+
+### Controlling the Startup Prompt
+
+In the **Edit Links** dialog, click **Startup Prompt**:
+
+1.  **Let users choose:** Displays a yellow security warning bar.
+2.  **Don't display the alert and don't update:** Keeps old data until manually updated.
+3.  **Don't display the alert and update links:** Silently pulls new data (best for automated dashboards).
+
+-----
+
+## Professional Tips for the Expert Exam
+
+  * **Avoid "Link Chains":** Don't link Workbook A to Workbook B, which then links to Workbook C. If Workbook B breaks, the whole chain fails. Try to link all reports directly to the primary source.
+  * **The "Closed File" Limitation:** Some functions (like `INDIRECT` or `OFFSET`) will not work if the source workbook is closed. Stick to direct cell references or `INDEX` for the most stable external links.
+  * **Naming Ranges:** If you define a **Named Range** in the source workbook, you can reference it by name (e.g., `=[Data.xlsx]!SalesTotal`). This makes your formulas much easier to read and less likely to break if rows are added.
