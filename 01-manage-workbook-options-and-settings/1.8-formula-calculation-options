@@ -1,0 +1,68 @@
+# 1.8 Prepare for Collaboration: Configure Formula Calculation Options
+
+In a standard spreadsheet, Excel recalculates every formula the moment a single cell changes. However, when you are managing the massive datasets typical of an Expert-level role, this "Automatic" behavior can cause Excel to lag or even crash.
+
+As an **Excel Expert**, you must control *when* and *how* Excel performs its math to optimize performance and ensure accuracy in complex models.
+
+-----
+
+## Part 1: Calculation Modes
+
+You can toggle how Excel triggers calculations by going to the **Formulas** tab \> **Calculation Options**.
+
+| Option | What it does | Best Used For... |
+| :--- | :--- | :--- |
+| **Automatic** | **The Default.** Every change triggers a full recalculation. | Standard workbooks with fast processing times. |
+| **Automatic Except for Data Tables** | Recalculates everything *except* what-if data tables. | Complex financial models using "Data Tables" that slow down the file. |
+| **Manual** | Excel only calculates when you tell it to (by pressing a key). | Huge datasets where every edit causes a 5-second "Calculating" delay. |
+
+> [\!IMPORTANT]
+> If your workbook is set to **Manual**, you will see a "Calculate" message in the status bar (bottom left) whenever data has changed but the formulas haven't updated yet. **Always recalculate before sharing or printing a manual-mode file.**
+
+-----
+
+## Part 2: Manual Recalculation Commands
+
+When in Manual mode, you use these shortcuts to refresh your data:
+
+  * **`F9` (Calculate Now):** Recalculates every open workbook.
+  * **`Shift + F9` (Calculate Sheet):** Recalculates only the active worksheet (much faster for large files).
+  * **`Ctrl + Alt + F9`:** Forces a full "re-build" of every formula, even if the data hasn't changed (useful for fixing deep calculation errors).
+
+-----
+
+## Part 3: Iterative Calculation (Handling Circular References)
+
+Usually, if Cell A1 refers to B1, and B1 refers back to A1, Excel throws a "Circular Reference" error. However, some advanced financial models (like calculating interest on a loan that depends on the total balance) require these loops.
+
+### How to Enable:
+
+1.  Go to **File \> Options \> Formulas**.
+2.  Check **Enable iterative calculation**.
+3.  **Maximum Iterations:** How many times Excel "loops" the math (default is 100).
+4.  **Maximum Change:** How small the difference must be for Excel to stop looping (default is 0.001).
+
+-----
+
+## Part 4: Precision as Displayed
+
+By default, Excel stores numbers with 15 digits of precision, even if you format them to show only two decimals.
+
+  * *Example:* If a cell shows `$10.00` but actually contains `10.004`, adding ten of those cells will result in `$100.04`, not `$100.00`.
+
+To force Excel to calculate using only the rounded numbers you see on screen:
+
+1.  Go to **File \> Options \> Advanced**.
+2.  Scroll down to the **"When calculating this workbook"** section.
+3.  Check **Set precision as displayed**.
+
+> [\!WARNING]
+> **This action is permanent.** Once you check this and click OK, Excel deletes the "hidden" decimal data. You cannot undo this to get the extra precision back later.
+
+-----
+
+## Expert Tips for the Exam
+
+  * **Workbook Level Setting:** Calculation mode is a *global* setting for the current Excel session. If you open a "Manual" workbook first, all other workbooks you open will also be in Manual mode.
+  * **The Status Bar:** Always keep an eye on the bottom-left Status Bar. If it says "Calculate," your results are currently "stale" and do not reflect the actual data.
+  * **Iteration Limits:** For the MO-211, you may be asked to set a specific number of iterations (e.g., "Set the workbook to allow 500 iterations").
