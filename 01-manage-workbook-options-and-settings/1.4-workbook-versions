@@ -1,0 +1,64 @@
+# 1.4 Manage Workbooks: Manage Workbook Versions
+
+In a high-stakes data environment, "I forgot to save" or "I accidentally deleted the master sheet" can be a disaster. As an Excel Expert, you need to know how to travel back in time. Excel provides two distinct ways to manage versions: **AutoRecover** (for local files) and **Version History** (for cloud files).
+
+-----
+
+## Part 1: Recovering Unsaved Work (AutoRecover)
+
+If Excel crashes or you accidentally click "Don't Save" on a file stored on your local drive, all is not lost. Excel keeps temporary drafts of your progress.
+
+### How to access Unsaved Versions:
+
+1.  Go to **File \> Info**.
+2.  Look for the **Manage Workbook** button.
+3.  Click it and select **Recover Unsaved Workbooks**.
+4.  Excel opens a file explorer to the `UnsavedFiles` folder, where you can find `.asb` (AutoRecovery) files.
+
+> [\!NOTE]
+> These files are temporary. If you don't recover them within a few days, Excel may automatically purge them to save space.
+
+-----
+
+## Part 2: Version History (OneDrive & SharePoint)
+
+If your file is saved to the cloud (Microsoft 365), you have access to a much more powerful tool: **Version History**. This records every major change made by you or your collaborators.
+
+### How to View History:
+
+  * **The Quick Way:** Click the filename in the top Title Bar and select **Version History**.
+  * **The Info Way:** Go to **File \> Info \> Version History**.
+
+### What you can do with Versions:
+
+  * **View:** Open an older version in a separate window to compare data.
+  * **Restore:** Replace the current version with the older one.
+  * **Save a Copy:** Extract the old version as a completely new file without affecting the current one.
+
+-----
+
+## Part 3: Comparison of Recovery Methods
+
+| Feature | AutoRecover | Version History |
+| :--- | :--- | :--- |
+| **Storage Location** | Local Drive | OneDrive / SharePoint |
+| **Trigger** | Unexpected Close/Crash | Every Save / AutoSave interval |
+| **Visibility** | Hidden in system folders | Accessible via the UI |
+| **Retention** | Short-term (Days) | Long-term (Months) |
+
+-----
+
+## Part 4: Configuring Recovery Settings
+
+For the **MO-211 Exam**, you might be asked to change how often Excel saves your safety net.
+
+1.  Go to **File \> Options \> Save**.
+2.  **Save AutoRecover information every X minutes:** The default is 10. For critical projects, experts often drop this to **2 or 3 minutes**.
+3.  **Keep the last AutoRecovered version if I close without saving:** Ensure this checkbox is **ON**.
+
+-----
+
+## Expert Tips for Version Management
+
+  * **Manual Versioning:** Even with these tools, "Hard Versioning" (e.g., `Project_v01`, `Project_v02`) is still a best practice for major architectural changes in a workbook.
+  * **The "Check In" System:** If you are working in a SharePoint environment, using the **Check Out** feature (found in the Open menu) prevents others from creating conflicting versions while you are making expert-level formula changes.
