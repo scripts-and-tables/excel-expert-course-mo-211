@@ -9,7 +9,8 @@ You will also learn to navigate the high-stakes world of **Workbook Security and
 
 ## 📂 Module Contents
 
-### [1.1 Copy Macros](./1.1-copy-macro.md)
+### [1.1 Copy Macros](./1.1-copy-macro.md) 
+### [3.1 Logical Operations](./3.1-logical-operation.md)
 
   * Navigating the Visual Basic Editor (VBE) and Project Explorer.
   * Moving and copying modules between workbooks via drag-and-drop or `.bas` export/import.
