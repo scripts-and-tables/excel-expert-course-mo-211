@@ -1,3 +1,4 @@
+![MO-211 Chapter 1](../src/hero-c1.png)
 # Module 01: Manage Workbook Options and Settings (10–15%)
 
 This module focuses on the infrastructure, security, and connectivity of Microsoft Excel workbooks. As an Excel Expert, you aren't just filling cells; you are managing the environment in which data lives. We begin by mastering the movement of automation through the **Visual Basic Editor (VBE)** and establishing robust data pipelines by **referencing external workbooks** to create a "Single Source of Truth."
