@@ -1,7 +1,7 @@
 ![MO-211 Excel Expert Hero Image](src/hero-image.png)
 # MO-211: Microsoft Excel Expert Preparation Course 📊
 
-Welcome to the **MO-211 Excel Expert Prep** repository! This is a hands-on, text-based bootcamp designed to help you master the advanced Excel skills required to pass **[[Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)]**(https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/) and receive certification **[Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)]**(https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)
+Welcome to the **MO-211 Excel Expert Prep** repository! This is a hands-on, text-based bootcamp designed to help you master the advanced Excel skills required to pass **[Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/)** and receive certification **[Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)**
 
 Instead of just reading theory, this repository provides realistic, scenario-based datasets and instructions. You will learn by doing.
 
