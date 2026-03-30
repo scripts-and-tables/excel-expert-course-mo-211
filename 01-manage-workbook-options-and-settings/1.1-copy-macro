@@ -1,0 +1,83 @@
+# 1.1 Manage Workbooks: Copying Macros between Workbooks
+
+In a professional data environment, macros are the automation scripts that handle repetitive tasks. For the **MO-211 Exam**, you must be able to move these "scripts" (VBA code) between files. Think of this like sharing a Python module or a SQL stored procedure across different environments—you need to ensure the code lands in the right place and that the destination supports execution.
+
+-----
+
+## Part 1: The Environment (Visual Basic Editor)
+
+To manage macros, you must step behind the standard Excel interface and into the **Visual Basic Editor (VBE)**.
+
+### Accessing the VBE
+
+  * **The Shortcut:** Press `Alt + F11`.
+  * **The Ribbon:** Go to the **Developer** tab and click **Visual Basic**.
+      * *Note: If you don't see the Developer tab, right-click any tab \> Customize the Ribbon \> Check "Developer".*
+  * **Official Docs:** [VBA Editor Interface](https://www.google.com/search?q=https://learn.microsoft.com/en-us/office/vba/library-reference/concepts/getting-started-with-vba-in-excel)
+
+-----
+
+## Part 2: The Direct Method (Drag-and-Drop)
+
+This is the most efficient way to copy macros when both the source and destination workbooks are open. It is the preferred method for the exam due to its speed.
+
+### How to Drag-and-Drop Modules
+
+1.  Open both the **Source Workbook** (with the macro) and the **Destination Workbook**.
+2.  Open the VBE (`Alt + F11`).
+3.  In the **Project Explorer** (the left-hand pane), locate the `Modules` folder under the Source Workbook.
+4.  Click and hold the specific **Module** (e.g., `Module1`).
+5.  Drag it directly onto the name of the **Destination Workbook** in the list.
+6.  Excel creates an identical copy in the destination file automatically.
+
+> [\!IMPORTANT]
+> You cannot drag individual **Macros (Sub-routines)**. You must drag the entire **Module** that contains them. If you only need one specific macro from a module with many, you should use the **Copy/Paste Code** method instead.
+
+-----
+
+## Part 3: The Portable Method (Export & Import)
+
+If you need to send a macro to someone else or save it as a standalone file for a library, use the Export/Import feature. This saves the code as a `.bas` file.
+
+### Steps to Export
+
+  * Right-click the Module in the Project Explorer.
+  * Select **Export File...** and choose a location.
+
+### Steps to Import
+
+  * Right-click the name of the Destination Workbook in the Project Explorer.
+  * Select **Import File...** and browse for your `.bas` file.
+
+-----
+
+## Part 4: Compatibility & Security
+
+Even if you copy the code correctly, the macro will not work if the destination file isn't configured properly. This is a common "gotcha" in expert-level workflows.
+
+### 1\. File Extensions
+
+Macros can only be saved in specific file formats. If you copy a macro into a standard `.xlsx` file and save it, **the macro will be deleted without warning.**
+
+  * **Required Formats:** `.xlsm` (Macro-Enabled Workbook) or `.xlsb` (Binary Workbook).
+
+### 2\. Enabling Macros
+
+By default, Excel blocks macros for security. To run your copied code, you must:
+
+  * Click **Enable Content** on the yellow Message Bar.
+  * **Exam Tip:** You may be asked to "Enable macros in a workbook" via the Trust Center (**File \> Options \> Trust Center \> Trust Center Settings \> Macro Settings**).
+
+-----
+
+## Comparison of Copying Methods
+
+| Method | Best For | Speed | Notes |
+| :--- | :--- | :--- | :--- |
+| **Drag & Drop** | Open Workbooks | ⚡ Fast | Best for Exam scenarios. |
+| **Export/Import** | Sharing/Backups | 📁 Medium | Creates a `.bas` file. |
+| **Copy/Paste** | Specific Snippets | ✍️ Slow | Use when you only want 1 macro out of 10. |
+
+### Handling "Object Already Exists" Errors
+
+If you try to drag `Module1` into a workbook that already has a `Module1`, Excel will automatically rename the new one to `Module11`. Always check your module names to avoid confusion in large projects.
