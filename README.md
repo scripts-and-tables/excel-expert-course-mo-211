@@ -52,3 +52,4 @@ Found a typo or have a better way to solve a practice problem? Feel free to open
 ## Useful Links
 1. [Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/)
 2. [Certification Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)
+3. [YouTube - Mike's Office - Excel Expert Tutorial (MO-201 Practice Exam) - 28 min](https://youtu.be/jOZZOEFllrA)
