@@ -1,7 +1,7 @@
 ![MO-211 Excel Expert Hero Image](src/hero-image.png)
 # MO-211: Microsoft Excel Expert Preparation Course 📊
 
-Welcome to the **MO-211 Excel Expert Prep** repository! This is a hands-on, text-based bootcamp designed to help you master the advanced Excel skills required to pass **[Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/)** and receive certification **[Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)**
+Welcome to the **MO-211 Excel Expert Prep** repository! This is a hands-on, text-based bootcamp designed to help you master the advanced Excel skills required to pass **[Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/)** and receive certification **[Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)**. We are following official set of [Exam MO-211 Microsoft Excel Expert (Microsoft 365 Apps) – Skills Measured](https://arch-center.azureedge.net/Learning/Credentials/MO-211_OD_MOS365_ExcelExpert.pdf) as guidelines.
 
 Instead of just reading theory, this repository provides realistic, scenario-based datasets and instructions. You will learn by doing.
 
@@ -22,12 +22,12 @@ To get started, simply clone this repository or download the ZIP file, and work 
 * **1.1 Manage workbooks:** Copy macros, reference external data, version history.
 * **1.2 Prepare for collaboration:** Restrict editing, protect structure/ranges, configure calculation options.
 
-### [Module 2: Manage and Format Data (30–35%)](./02-format-data)
+### [Module 2: Manage and Format Data (30–35%)](./02-manage-and-format-data)
 * **2.1 Fill cells:** Flash Fill, advanced Series options, `RANDARRAY()`.
 * **2.2 Format and validate:** Custom number formats, data validation, subtotals, removing duplicates.
 * **2.3 Advanced conditional formatting:** Custom rules, formula-based rules, rule management.
 
-### [Module 3: Create Advanced Formulas and Macros (25–30%)](./03-formulas-macros)
+### [Module 3: Create Advanced Formulas and Macros (25–30%)](./03-advanced-formulas-and-macro)
 * **3.1 Logical operations:** Nested `IF()`, `IFS()`, `SWITCH()`, `LET()`, and `AND/OR`.
 * **3.2 Lookup functions:** `XLOOKUP()`, `VLOOKUP()`, `INDEX()`, `MATCH()`.
 * **3.3 Date/Time functions:** `WEEKDAY()`, `WORKDAY()`, `NOW()`.
@@ -35,7 +35,7 @@ To get started, simply clone this repository or download the ZIP file, and work 
 * **3.5 Troubleshoot formulas:** Trace precedents/dependents, Watch Window, Evaluate Formula.
 * **3.6 Macros:** Record, name, and edit simple macros.
 
-### [Module 4: Manage Advanced Charts and Tables (25–30%)](./04-charts-pivots)
+### [Module 4: Manage Advanced Charts and Tables (25–30%)](./04-manage-advanced-charts-and-tables)
 * **4.1 Advanced charts:** Dual-axis, Box & Whisker, Waterfall, Funnel, Sunburst.
 * **4.2 PivotTables:** Creation, slicers, calculated fields, value field settings.
 * **4.3 PivotCharts:** Creation, styles, drill-down details.
