@@ -1,4 +1,4 @@
-../src/hero-c4.png
+![MO-211 Chapter 4](../src/hero-c4.png)
 
 # Module 04: Manage Advanced Charts and Tables (25–30%)
 
