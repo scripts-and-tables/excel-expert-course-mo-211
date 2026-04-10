@@ -18,7 +18,7 @@ To get started, simply clone this repository or download the ZIP file, and work 
 
 ## 📚 Course Syllabus (Skills Measured)
 
-### [Module 1: Manage Workbook Options and Settings (10–15%)](./01-manage-workbooks)
+### [Module 1: Manage Workbook Options and Settings (10–15%)](./01-manage-workbook-options-and-settings)
 * **1.1 Manage workbooks:** Copy macros, reference external data, version history.
 * **1.2 Prepare for collaboration:** Restrict editing, protect structure/ranges, configure calculation options.
 
