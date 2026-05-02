@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MO-211 Excel Expert prep — Troubleshoot Formulas and Audit Logic" />
+  <meta name="theme-color" content="#0f6f3f" />
+  <title>3.7 Troubleshoot Formulas and Audit Logic · MO-211 Excel Expert</title>
+  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="course-page">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="../../" aria-label="MO-211 Excel Expert home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l6 5-6 5"/><path d="M13 7l6 5-6 5"/></svg>
+        </span>
+        <span class="brand-text">MO-211 <span class="brand-accent">Expert Prep</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../../#why">Why</a>
+        <a href="../../course/">Course</a>
+        <a href="../../#faq">FAQ</a>
+        <a class="btn btn-ghost" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.99 0 1.98.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+  <button class="sidebar-toggle" type="button" aria-controls="course-sidebar" aria-expanded="false">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <span>Course menu</span>
+  </button>
+  <div class="course-shell">
+    <aside class="course-sidebar" id="course-sidebar">
+      <div class="sidebar-inner">
+        <nav class="course-nav" aria-label="Course navigation">
+<a class="course-nav-home" href="../"><span aria-hidden="true">←</span> Course outline</a>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M1</span><span class="nav-mod-title">Manage Workbook Options &amp; Settings</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-1/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.1-copy-macro.html"><span class="nav-lesson-num">1.1</span><span class="nav-lesson-title">Manage Workbooks: Copying Macros between Workbooks</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.2-reference-data.html"><span class="nav-lesson-num">1.2</span><span class="nav-lesson-title">Manage Workbooks: Reference Data in Other Workbooks</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.3-enable-macro.html"><span class="nav-lesson-num">1.3</span><span class="nav-lesson-title">Manage Workbooks: Enable Macros in a Workbook</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.4-workbook-versions.html"><span class="nav-lesson-num">1.4</span><span class="nav-lesson-title">Manage Workbooks: Manage Workbook Versions</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.5-restrict-editing.html"><span class="nav-lesson-num">1.5</span><span class="nav-lesson-title">Prepare for Collaboration: Restrict Editing</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Workbook Structure</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.7-protect-workbook-structure.html"><span class="nav-lesson-num">1.7</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Workbook Structure</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.8-formula-calculation-options.html"><span class="nav-lesson-num">1.8</span><span class="nav-lesson-title">Prepare for Collaboration: Configure Formula Calculation Options</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 1.1 Test: Managing Workbooks &amp; Macros</span></a></li>
+</ul></details>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.11-manage-conditional-formatting-rules.html"><span class="nav-lesson-num">2.11</span><span class="nav-lesson-title">Manage Conditional Formatting Rules</span></a></li>
+</ul></details>
+<details class="nav-module is-current" open>
+<summary><span class="nav-mod-num">M3</span><span class="nav-mod-title">Advanced Formulas &amp; Macros</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-3/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.1-logical-operation.html"><span class="nav-lesson-num">3.1</span><span class="nav-lesson-title">Perform Logical Operations Using Advanced Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.2-lookup-data.html"><span class="nav-lesson-num">3.2</span><span class="nav-lesson-title">Look Up Data by Using Advanced Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.3-date-and-time-funcs.html"><span class="nav-lesson-num">3.3</span><span class="nav-lesson-title">Use Advanced Date and Time Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.4-what-if-analysis.html"><span class="nav-lesson-num">3.4</span><span class="nav-lesson-title">What-If Analysis: Goal Seek and Scenario Manager</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.5-arrays.html"><span class="nav-lesson-num">3.5</span><span class="nav-lesson-title">Dynamic Array Functions: The New Era of Excel</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.6-financial-analysis.html"><span class="nav-lesson-num">3.6</span><span class="nav-lesson-title">Financial Analysis &amp; Forecasting</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-3/3.7-troubleshoot-formulas.html"><span class="nav-lesson-num">3.7</span><span class="nav-lesson-title">Troubleshoot Formulas and Audit Logic</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.8-macro.html"><span class="nav-lesson-num">3.8</span><span class="nav-lesson-title">Introduction to Macros (Automation)</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.9-consolidate.html"><span class="nav-lesson-num">3.9</span><span class="nav-lesson-title">Summarize Data Using the Consolidate Feature</span></a></li>
+</ul></details>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.1-dual-axis-charts.html"><span class="nav-lesson-num">4.1</span><span class="nav-lesson-title">Create and Modify Dual-Axis Charts</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">Create and Modify Advanced Charts</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">Create PivotTables</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.4-modify-field-selection-and-options.html"><span class="nav-lesson-num">4.4</span><span class="nav-lesson-title">Modify PivotTable Field Selections and Options</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.5-slicers.html"><span class="nav-lesson-num">4.5</span><span class="nav-lesson-title">Create Slicers</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.6-grouping-in-pivot-tables.html"><span class="nav-lesson-num">4.6</span><span class="nav-lesson-title">Group PivotTable Data</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.8-pivotcharts.html"><span class="nav-lesson-num">4.8</span><span class="nav-lesson-title">Create and Modify PivotCharts</span></a></li>
+</ul></details>
+</nav>
+      </div>
+    </aside>
+    <main class="course-main">
+      <div class="lesson-wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../../">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="../">Course</a>
+          <span aria-hidden="true">/</span>
+          <a href="./">Module 3</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">3.7</span>
+        </nav>
+        <header class="lesson-head">
+          <span class="lesson-eyebrow">Module 3 · Lesson 3.7</span>
+          <h1 class="lesson-title">Troubleshoot Formulas and Audit Logic</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/03-advanced-formulas-and-macro/3.7-troubleshoot-formulas.md" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Edit on GitHub
+          </a>
+        </header>
+        <article class="lesson-content">
+<p>In professional data analysis, a correct result is useless if you cannot prove how you calculated it. Formula Auditing tools allow you to visualize the relationships between cells, monitor distant calculations, and step through complex logic one operation at a time.</p>
+<hr>
+<h2>Part 1: Tracing Cell Relationships</h2>
+<p>Excel formulas create a "web" of dependencies. Auditing arrows help you visualize this web.</p>
+<h3>Where to find these tools:</h3>
+<p>Go to the <strong>Formulas</strong> tab on the Ribbon and look for the <strong>Formula Auditing</strong> group. This is your "Command Center" for troubleshooting.</p>
+<h3>1. Trace Precedents</h3>
+<ul>
+<li><strong>What it does:</strong> Shows arrows that point to the cells that provide data to the current formula (<strong><code>precedents</code></strong>).</li>
+<li><strong>Practical Example:</strong> You have a <strong><code>Net Profit</code></strong> cell (B10) with the formula <code>=B5-B8</code>.</li>
+<li><strong>Action:</strong> Select B10 and click <strong>Formulas &gt; Formula Auditing &gt; Trace Precedents</strong>.</li>
+<li><strong>Visual Result:</strong> Blue arrows will appear pointing from <strong><code>Revenue</code></strong> (B5) and <strong><code>Expenses</code></strong> (B8) into your profit cell.</li>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/display-the-relationships-between-formulas-and-cells-a59bef2b-3701-46bf-8ff1-d3518771d507" target="_blank" rel="noopener">Display Relationship</a></li>
+</ul>
+<h3>2. Trace Dependents</h3>
+<ul>
+<li><strong>What it does:</strong> Shows arrows pointing to the formulas that rely on the current cell (<strong><code>dependents</code></strong>).</li>
+<li><strong>Practical Example:</strong> You are about to delete a <strong><code>Tax Rate</code></strong> cell (C1). You want to know which formulas will break if you do.</li>
+<li><strong>Action:</strong> Select C1 and click <strong>Formulas &gt; Formula Auditing &gt; Trace Dependents</strong>.</li>
+</ul>
+<p><img alt="Trace Dependents" src="../src/trace-depend.jpg"></p>
+<hr>
+<h2>Part 2: The Watch Window</h2>
+<p>In large workbooks, your "Input" cells (like <code>Unit Price</code>) might be on one tab, while your "Goal" cells (like <code>Total Margin</code>) are on a completely different sheet. The <strong>Watch Window</strong> allows you to monitor a cell's value without scrolling back and forth.</p>
+<ul>
+<li><strong>Location:</strong> <strong>Formulas</strong> tab &gt; <strong>Formula Auditing</strong> group &gt; <strong>Watch Window</strong>.</li>
+<li><strong>Practical Example:</strong> You are adjusting <strong><code>Shipping Costs</code></strong> on the "Data" tab, but you need to see how it affects the <strong><code>EBITDA</code></strong> on the "Executive Summary" tab.</li>
+<li><strong>Action:</strong> 1. Go to the Summary tab and select the <code>EBITDA</code> cell.<ol start="2">
+<li>Click <strong>Watch Window &gt; Add Watch</strong>.</li>
+</ol>
+</li>
+<li><strong>Result:</strong> A floating window appears. As you change shipping costs on the other tab, you can see the <code>EBITDA</code> value update live in the small window.</li>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/watch-a-formula-and-its-result-by-using-the-watch-window-d72fc6f3-4c9d-4c13-bd15-bb074ba7c784" target="_blank" rel="noopener">Watch Window</a></li>
+</ul>
+<hr>
+<h2>Part 3: Validate with Error Checking Rules</h2>
+<p>Excel performs "Background Error Checking." If a formula breaks a rule, a small <strong>green triangle</strong> appears in the top-left corner of the cell.</p>
+<ul>
+<li><strong>Location:</strong> <strong>Formulas</strong> tab &gt; <strong>Formula Auditing</strong> group &gt; <strong>Error Checking</strong>.</li>
+<li><strong>Common Error Rules:</strong><ol>
+<li><strong>Inconsistent Formula:</strong> Your formula in row 10 is different from the ones around it.</li>
+<li><strong>Formula Omits Adjacent Cells:</strong> You summed <code>A1:A5</code>, but there is a number in <code>A6</code> you missed.</li>
+</ol>
+</li>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/detect-formula-errors-in-excel-3a8acca5-1d61-4702-80e0-99a36a2822c1" target="_blank" rel="noopener">Error Checking Rules</a></li>
+</ul>
+<hr>
+<h2>Part 4: Evaluate Formula (The Slow-Motion Replay)</h2>
+<p>This is the most powerful tool for debugging complex, nested formulas (like a <code>VLOOKUP</code> inside an <code>IF</code> statement). It breaks the formula down and calculates it step-by-step.</p>
+<ul>
+<li><strong>Location:</strong> <strong>Formulas</strong> tab &gt; <strong>Formula Auditing</strong> group &gt; <strong>Evaluate Formula</strong>.</li>
+<li><strong>Practical Example:</strong> Your formula <code>=IF(VLOOKUP(A1, B1:C10, 2, 0) &gt; 100, "High", "Low")</code> is returning an error.</li>
+<li><strong>Action:</strong> Select the cell and click <strong>Evaluate Formula</strong>.</li>
+<li><strong>Process:</strong> 1. Click <strong>Evaluate</strong>. Excel solves the <code>VLOOKUP</code> first (e.g., Result: <code>150</code>).<ol start="2">
+<li>Click <strong>Evaluate</strong> again. Excel compares <code>150 &gt; 100</code> (Result: <code>TRUE</code>).</li>
+<li>Click <strong>Evaluate</strong> again. Excel returns the final result (<code>"High"</code>).</li>
+</ol>
+</li>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-au/office/evaluate-a-nested-formula-one-step-at-a-time-59a201ae-d1dc-4b15-8586-a70aa409b8a7" target="_blank" rel="noopener">Evaluate Formula</a></li>
+</ul>
+<hr>
+<h2>💡 Troubleshooting Shortcuts</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Shortcut</th>
+<th style="text-align: left;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>Ctrl</code> + <code>[</code></strong></td>
+<td style="text-align: left;">Select Precedents (jump to the source cells)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Ctrl</code> + <code>]</code></strong></td>
+<td style="text-align: left;">Select Dependents (jump to the formulas using this cell)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Ctrl</code> + <code>~</code></strong></td>
+<td style="text-align: left;"><strong>Show Formulas</strong> (Toggles between results and the raw code)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>F9</code></strong></td>
+<td style="text-align: left;">Evaluate a <em>highlighted</em> portion of a formula in the formula bar</td>
+</tr>
+</tbody>
+</table>
+        </article>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./3.6-financial-analysis.html"><span class="pager-direction">← Previous</span><span class="pager-title">3.6 Financial Analysis &amp; Forecasting</span></a><a class="pager-link pager-next" href="./3.8-macro.html"><span class="pager-direction">Next →</span><span class="pager-title">3.8 Introduction to Macros (Automation)</span></a></nav>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">MO-211 Expert Prep</p>
+        <p class="muted">A free, open-source path to Microsoft Excel Expert certification.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Course</p>
+        <ul>
+          <li><a href="../../course/">All modules</a></li>
+          <li><a href="../../course/module-1/">Module 1</a></li>
+          <li><a href="../../course/module-2/">Module 2</a></li>
+          <li><a href="../../course/module-3/">Module 3</a></li>
+          <li><a href="../../course/module-4/">Module 4</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Project</p>
+        <ul>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">Repository</a></li>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/issues" target="_blank" rel="noopener">Report an issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function() {
+      var btn = document.querySelector('.sidebar-toggle');
+      var sb = document.getElementById('course-sidebar');
+      if (!btn || !sb) return;
+      btn.addEventListener('click', function() {
+        var open = sb.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      // Close when a sidebar link is tapped (mobile UX)
+      sb.addEventListener('click', function(e) {
+        if (e.target.closest('a')) sb.classList.remove('is-open');
+      });
+    })();
+  </script>
+</body>
+</html>
