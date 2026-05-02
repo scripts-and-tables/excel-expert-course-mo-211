@@ -779,8 +779,32 @@ ul, ol { padding-left: 1.1em; }
 
 @media (max-width: 720px) {
   body { font-size: 16.5px; }
-  .primary-nav { gap: 14px; }
-  .primary-nav a:not(.btn) { display: none; }
+  .header-burger { display: inline-flex; }
+  .primary-nav {
+    position: absolute;
+    top: 64px;
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 22px 22px;
+    background: var(--paper);
+    border-top: 1px solid var(--line);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 220ms ease, opacity 200ms ease;
+  }
+  .primary-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+  .primary-nav a:not(.btn) {
+    display: block;
+    padding: 12px 4px;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .primary-nav a:not(.btn):last-of-type { border-bottom: 0; }
+  .primary-nav .btn { margin-top: 10px; align-self: flex-start; }
   .trust .container { flex-direction: column; align-items: flex-start; }
   .learn-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 18px; }
@@ -1025,14 +1049,26 @@ ul, ol { padding-left: 1.1em; }
 }
 .nav-lesson.is-current .nav-lesson-num { color: var(--green-700); }
 
-/* ---------- Mobile sidebar toggle (floating action button) ---------- */
-.sidebar-toggle {
+/* ---------- Header burger (mobile course nav trigger) ---------- */
+.header-burger {
   display: none;
-  font: inherit;
-  cursor: pointer;
+  background: transparent;
   border: 0;
+  padding: 8px;
+  margin-right: 6px;
+  margin-left: -4px;
+  color: var(--ink-800);
+  cursor: pointer;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  transition: background 160ms ease, color 160ms ease;
 }
-.sidebar-toggle svg { color: currentColor; }
+.header-burger:hover { background: var(--green-50); color: var(--green-700); }
+.header-burger:active { background: var(--green-100); }
+.header-burger:focus-visible { outline: 2px solid var(--green-500); outline-offset: 2px; }
+/* Legacy FAB removed — use the burger in the header */
+.sidebar-toggle { display: none !important; }
 
 /* ---------- Course main ---------- */
 .course-main { min-width: 0; padding: clamp(28px, 4vw, 56px) clamp(20px, 4vw, 56px) clamp(48px, 6vw, 80px); }
@@ -1393,38 +1429,8 @@ ul, ol { padding-left: 1.1em; }
     pointer-events: auto;
   }
 
-  /* Floating menu button: bottom-right, green, impossible to miss */
-  .sidebar-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    position: fixed;
-    bottom: 22px;
-    right: 22px;
-    z-index: 50;
-    padding: 14px 22px;
-    background: linear-gradient(135deg, var(--green-700), var(--green-500));
-    color: #fff;
-    font-weight: 700;
-    font-size: 0.95rem;
-    border-radius: 999px;
-    box-shadow:
-      0 14px 28px rgba(15, 111, 63, 0.36),
-      0 4px 10px rgba(15, 111, 63, 0.20);
-    transition: transform 180ms ease, box-shadow 220ms ease, opacity 200ms ease;
-  }
-  .sidebar-toggle:hover, .sidebar-toggle:focus-visible {
-    transform: translateY(-2px);
-    box-shadow:
-      0 18px 36px rgba(15, 111, 63, 0.42),
-      0 6px 12px rgba(15, 111, 63, 0.24);
-    outline: none;
-  }
-  /* Hide the FAB while the sidebar is open so it doesn't sit on top of the drawer */
-  body:has(.course-sidebar.is-open) .sidebar-toggle {
-    opacity: 0;
-    pointer-events: none;
-  }
+  /* Show the header burger on mobile */
+  .header-burger { display: inline-flex; }
 
   .lesson-pager { grid-template-columns: 1fr; }
   .pager-next { text-align: left; }

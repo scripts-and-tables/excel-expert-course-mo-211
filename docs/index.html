@@ -23,13 +23,16 @@
 
   <header class="site-header">
     <div class="container nav">
+      <button class="header-burger" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
       <a class="brand" href="#top" aria-label="MO-211 Excel Expert home">
         <span class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l6 5-6 5"/><path d="M13 7l6 5-6 5"/></svg>
         </span>
         <span class="brand-text">MO-211 <span class="brand-accent">Expert Prep</span></span>
       </a>
-      <nav class="primary-nav" aria-label="Primary">
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
         <a href="#why">Why</a>
         <a href="#learn">Curriculum</a>
         <a href="course/">Course</a>
@@ -386,6 +389,21 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    (function() {
+      var burger = document.querySelector('.header-burger');
+      var nav = document.getElementById('primary-nav');
+      if (!burger || !nav) return;
+      burger.addEventListener('click', function() {
+        var open = nav.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.addEventListener('click', function(e) {
+        if (e.target.closest('a')) {
+          nav.classList.remove('is-open');
+          burger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
   </script>
 </body>
 </html>
