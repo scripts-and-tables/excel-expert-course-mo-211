@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Group and Ungroup Data" />
+  <meta name="description" content="MO-211 Excel Expert prep — Advanced Filter and Database Functions" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.6 Group and Ungroup Data · MO-211 Excel Expert</title>
+  <title>2.13 Advanced Filter and Database Functions · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -63,14 +63,14 @@
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.11-manage-conditional-formatting-rules.html"><span class="nav-lesson-num">2.11</span><span class="nav-lesson-title">Manage Conditional Formatting Rules</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
 </ul></details>
 <details class="nav-module">
@@ -123,139 +123,361 @@
           <span aria-hidden="true">/</span>
           <a href="./">Module 2</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">2.6</span>
+          <span aria-current="page">2.13</span>
         </nav>
         <header class="lesson-head">
-          <span class="lesson-eyebrow">Module 2 · Lesson 2.6</span>
-          <h1 class="lesson-title">Group and Ungroup Data</h1>
-          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.6-group-and-ungroup-data.md" target="_blank" rel="noopener">
+          <span class="lesson-eyebrow">Module 2 · Lesson 2.13</span>
+          <h1 class="lesson-title">Advanced Filter and Database Functions</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.13-advanced-filter.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Financial models, quarterly reports, and large project plans all share one problem: they are too long to navigate comfortably. Excel's <strong>Grouping</strong> feature solves this by creating collapsible outline levels — similar to the expand/collapse sections in a modern code editor or project management tool. Users can hide detail rows with one click and expose them again instantly, without deleting or hiding data permanently.</p>
+<p>SQL's <code>WHERE</code> clause can mix any combination of <code>AND</code> and <code>OR</code> predicates, write computed expressions (<code>WHERE total &gt; avg(total)</code>), and feed results into a separate destination table with <code>INSERT INTO ... SELECT</code>. Excel's <strong>AutoFilter</strong> can do none of those things cleanly — it is limited to a few predefined criteria per column, all combined with <code>AND</code>. The <strong>Advanced Filter</strong> is the tool that closes the gap: it accepts a free-form <strong>criteria range</strong> that supports <code>OR</code> across rows, computed conditions, and a "copy to another location" mode that writes the matching rows to a separate area without touching the original.</p>
 <hr>
-<h2>Part 1: Grouping Rows and Columns</h2>
-<p><strong>To group rows:</strong>
-1. Select the <strong>rows</strong> you want to collapse (click the row numbers on the left).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> &gt; <strong>Group...</strong> (or just click <strong>Group</strong> — Excel auto-detects rows vs. columns based on your selection).
-3. A bracket and +/- button appear on the left margin.</p>
-<p><strong>To group columns:</strong>
-1. Select the <strong>columns</strong> you want to collapse (click the column letters at the top).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong>.
-3. A bracket and +/- button appear above the column headers.</p>
-<p>You can nest multiple group levels (up to 8 levels deep) to create a hierarchical outline.</p>
-<hr>
-<h2>Part 2: Expand and Collapse Controls</h2>
-<p>Once groups are applied, outline controls appear on the left (for row groups) or top (for column groups):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>–</code> button</strong></td>
-<td style="text-align: left;">Collapses that group (hides the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>+</code> button</strong></td>
-<td style="text-align: left;">Expands that group (shows the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>1</code></strong></td>
-<td style="text-align: left;">Collapse all groups to the outermost level</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>2</code></strong></td>
-<td style="text-align: left;">Expand to the second level of nesting</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>3</code></strong></td>
-<td style="text-align: left;">Show all detail (innermost level)</td>
-</tr>
-</tbody>
-</table>
-<p>Click the level buttons in the top-left corner of the row/column header area to control all groups simultaneously.</p>
-<hr>
-<h2>Part 3: Auto Outline</h2>
-<p>If your worksheet contains <strong>summary formulas</strong> (like SUM rows below detail rows), Excel can detect the outline structure automatically:</p>
-<p><strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> dropdown &gt; <strong>Auto Outline</strong></p>
-<p>Excel places the +/- buttons above or below (and left or right of) detail rows based on where it finds the summary formulas. The result is a complete, multi-level outline without manually selecting each group.</p>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Auto Outline works best when summary rows are **consistently positioned** (e.g., always below the detail rows they summarize). Inconsistent layouts produce incorrect or missing groups.
-
-</div>
-
-<hr>
-<h2>Part 4: Ungroup and Clear Outline</h2>
-<p><strong>To ungroup a specific group:</strong>
-1. Select the same rows or columns that form the group.
-2. <strong>Data</strong> tab &gt; <strong>Outline</strong> &gt; <strong>Ungroup</strong>.</p>
-<p><strong>To remove ALL grouping from the sheet:</strong>
-<strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Ungroup</strong> dropdown &gt; <strong>Clear Outline</strong></p>
-<p>This removes all outline levels and +/- buttons without deleting any data.</p>
-<hr>
-<h2>Part 5: Grouping vs. Hiding — Key Difference</h2>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Grouping and hiding rows/columns are **not the same thing**. This distinction appears on the exam.
-
-</div>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: left;">Grouping</th>
-<th style="text-align: left;">Hiding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Toggle method</strong></td>
-<td style="text-align: left;">+/– buttons or level numbers</td>
-<td style="text-align: left;">Right-click &gt; Hide / Unhide</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Visual indicator</strong></td>
-<td style="text-align: left;">Outline bracket + level buttons</td>
-<td style="text-align: left;">Skipped row/column numbers</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>User can find hidden rows?</strong></td>
-<td style="text-align: left;">Yes — easily, via + button</td>
-<td style="text-align: left;">Only if they know to look</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>SUBTOTAL behavior</strong></td>
-<td style="text-align: left;">Collapsed rows are excluded from <code>SUBTOTAL(101–111)</code></td>
-<td style="text-align: left;">Hidden rows excluded from <code>SUBTOTAL(101–111)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Printing</strong></td>
-<td style="text-align: left;">Collapsed groups are not printed</td>
-<td style="text-align: left;">Hidden rows not printed</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Best for</strong></td>
-<td style="text-align: left;">Structured reports with drill-down</td>
-<td style="text-align: left;">One-time hiding of sensitive data</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2>Official Resources</h2>
+<h2>Part 1: When to Use Advanced Filter</h2>
+<p>Reach for Advanced Filter — instead of regular AutoFilter — when you need any of the following:</p>
 <ul>
-<li><a href="https://support.microsoft.com/en-us/office/group-or-ungroup-data-in-a-pivottable-c9d1ddd0-6580-47d1-82bc-c84a5a340725" target="_blank" rel="noopener">Microsoft Support — Group or ungroup data in a PivotTable</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/outline-group-data-in-a-worksheet-08ce98c4-0063-4d42-8ac7-8278c49e9aff" target="_blank" rel="noopener">Microsoft Support — Outline (group) data in a worksheet</a></li>
+<li><strong><code>OR</code> logic across columns</strong> — e.g., "Region = North <strong>or</strong> Amount &gt; 10,000."</li>
+<li><strong>Multiple criteria sets per column</strong> — e.g., "Department = Sales with Amount &gt; 5,000 <strong>OR</strong> Department = Marketing with Amount &gt; 1,000."</li>
+<li><strong>Computed criteria</strong> — filter using a formula such as "Amount &gt; average of column."</li>
+<li><strong>Copy results elsewhere</strong> — write the filtered rows to a different area of the sheet without disturbing the source list.</li>
+<li><strong>Unique-records-only output</strong> — extract distinct rows in a single operation (a non-destructive alternative to <strong>Remove Duplicates</strong>).</li>
+</ul>
+<hr>
+<h2>Part 2: Setting Up the Criteria Range</h2>
+<p>The <strong>criteria range</strong> is a small block of cells that lives anywhere on the worksheet (or on a different sheet). It must follow this structure:</p>
+<ol>
+<li><strong>Row 1</strong> — column headers that <strong>exactly match</strong> the headers in the source list (the headers you want to filter on).</li>
+<li><strong>Row 2 onward</strong> — the criteria values, one row per condition set.</li>
+</ol>
+<h3>AND vs. OR Logic</h3>
+<ul>
+<li><strong>AND</strong> — criteria placed on the <strong>same row</strong> are combined with <code>AND</code>.</li>
+<li><strong>OR</strong> — criteria placed on <strong>different rows</strong> are combined with <code>OR</code>.</li>
+</ul>
+<h3>Example 1 — <code>AND</code> across two columns</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Region</th>
+<th style="text-align: left;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">North</td>
+<td style="text-align: left;">&gt;5000</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Region is North <strong>AND</strong> Amount &gt; 5000.</p>
+</blockquote>
+<h3>Example 2 — <code>OR</code> across two rows</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Region</th>
+<th style="text-align: left;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">North</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">&gt;5000</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Region is North <strong>OR</strong> Amount &gt; 5000.</p>
+</blockquote>
+<h3>Example 3 — Mixed <code>AND</code>/<code>OR</code></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Department</th>
+<th style="text-align: left;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Sales</td>
+<td style="text-align: left;">&gt;5000</td>
+</tr>
+<tr>
+<td style="text-align: left;">Marketing</td>
+<td style="text-align: left;">&gt;1000</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>(Department = Sales AND Amount &gt; 5000) <strong>OR</strong> (Department = Marketing AND Amount &gt; 1000).</p>
+</blockquote>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+Headers in the criteria range must match the source headers **character for character**, including spelling and trailing spaces. Copy/paste the headers from the source rather than retyping them.
+
+</div>
+
+<hr>
+<h2>Part 3: Comparison Operators in Criteria</h2>
+<p>Criteria values support standard comparison operators when typed before a number, date, or text value:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>=</code></td>
+<td style="text-align: left;">Exact match (numeric or text)</td>
+<td style="text-align: left;"><code>=North</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;</code></td>
+<td style="text-align: left;">Greater than</td>
+<td style="text-align: left;"><code>&gt;5000</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;</code></td>
+<td style="text-align: left;">Less than</td>
+<td style="text-align: left;"><code>&lt;100</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&gt;=</code></td>
+<td style="text-align: left;">Greater than or equal to</td>
+<td style="text-align: left;"><code>&gt;=2024-01-01</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;=</code></td>
+<td style="text-align: left;">Less than or equal to</td>
+<td style="text-align: left;"><code>&lt;=2024-12-31</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>&lt;&gt;</code></td>
+<td style="text-align: left;">Not equal to</td>
+<td style="text-align: left;"><code>&lt;&gt;Closed</code></td>
+</tr>
+</tbody>
+</table>
+<p>A bare value with no operator behaves like "begins with" for text and "equals" for numbers/dates.</p>
+<hr>
+<h2>Part 4: Wildcards in Criteria</h2>
+<p>Two wildcard characters work in the criteria range:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Wildcard</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Matches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>*</code></td>
+<td style="text-align: left;">Any number of characters</td>
+<td style="text-align: left;"><code>Acme*</code></td>
+<td style="text-align: left;"><code>Acme</code>, <code>Acme Corp</code>, <code>Acme Holdings</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>?</code></td>
+<td style="text-align: left;">Exactly one character</td>
+<td style="text-align: left;"><code>?at</code></td>
+<td style="text-align: left;"><code>cat</code>, <code>bat</code>, <code>hat</code> (but not <code>chat</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>To match a literal <code>*</code> or <code>?</code>, prefix it with a tilde: <code>~*</code> or <code>~?</code>.</p>
+<hr>
+<h2>Part 5: Computed Criteria</h2>
+<p>You can use a <strong>formula</strong> as a criterion. The rules are unusual but specific:</p>
+<ul>
+<li>The criteria-range header <strong>must be empty or use a label that does not match any source header</strong> (otherwise Excel treats the column as a regular comparison).</li>
+<li>The formula evaluates against the <strong>first row of data</strong> in the source list and must return <code>TRUE</code> or <code>FALSE</code>.</li>
+<li>Use <strong>relative references</strong> for the column being tested and <strong>absolute references</strong> for any range used in an aggregate.</li>
+</ul>
+<h3>Example: rows where Amount is above average</h3>
+<p>Source list has Amount in column <code>D</code>, data starts in row 2. In a free area, build:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">(any non-matching header, e.g., "AboveAvg")</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>=D2&gt;AVERAGE($D$2:$D$1000)</code></td>
+</tr>
+</tbody>
+</table>
+<p>When evaluated, the formula appears as <code>FALSE</code> or <code>TRUE</code> in the criteria cell — that's normal. Excel re-evaluates it against each row in the list.</p>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+A common pattern is to leave the criteria-range header **completely blank** for computed criteria. The blank header tells Excel "this is a formula criterion, not a column match."
+
+</div>
+
+<hr>
+<h2>Part 6: Running Advanced Filter</h2>
+<p><strong>Data</strong> tab &gt; <strong>Sort &amp; Filter</strong> group &gt; <strong>Advanced</strong>.</p>
+<p>The <strong>Advanced Filter</strong> dialog asks for:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Action</strong></td>
+<td style="text-align: left;"><code>Filter the list, in-place</code> (hides non-matching rows in the source) <strong>or</strong> <code>Copy to another location</code> (writes matches to a destination range)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>List range</strong></td>
+<td style="text-align: left;">The source data including headers — Excel pre-fills this if a cell in the list was selected</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Criteria range</strong></td>
+<td style="text-align: left;">The criteria block built in Part 2 (include the header row)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Copy to</strong></td>
+<td style="text-align: left;">Required only when "Copy to another location" is selected — point to the top-left cell of the destination</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unique records only</strong></td>
+<td style="text-align: left;">Drops duplicate rows from the output</td>
+</tr>
+</tbody>
+</table>
+<h3>Example workflow — Copy unique customer records that meet criteria</h3>
+<ol>
+<li>Build the source list with headers in row 1.</li>
+<li>Build a criteria range with <code>Region</code> and <code>Amount</code> headers and an OR pattern.</li>
+<li>Click any cell in the source list.</li>
+<li><strong>Data &gt; Advanced</strong>.</li>
+<li>Choose <strong>Copy to another location</strong>.</li>
+<li>Confirm the <strong>List range</strong> auto-detected the source.</li>
+<li>Click in the <strong>Criteria range</strong> field and select the criteria block.</li>
+<li>Click in the <strong>Copy to</strong> field and click any empty cell, e.g., <code>H1</code>.</li>
+<li>Tick <strong>Unique records only</strong>.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The filtered, deduped rows are written starting at <code>H1</code>.</p>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+When using **Copy to another location**, the destination must be on the **same worksheet** as the source list. To deliver results to a different sheet, run Advanced Filter from the destination sheet (open the dialog while that sheet is active) — Excel allows the source to be on another sheet but not the other way around.
+
+</div>
+
+<hr>
+<h2>Part 7: Removing the Advanced Filter</h2>
+<p>If you used <strong>Filter the list, in-place</strong>, restore all rows with:</p>
+<p><strong>Data</strong> tab &gt; <strong>Sort &amp; Filter</strong> group &gt; <strong>Clear</strong>.</p>
+<p>If you used <strong>Copy to another location</strong>, the source list was never modified — simply delete the copied range when no longer needed.</p>
+<hr>
+<h2>Part 8: Database Functions (D-Functions)</h2>
+<p>The <strong>D-functions</strong> apply the same criteria-range pattern as Advanced Filter but return a <strong>single aggregate value</strong> instead of a filtered list. They are the closest thing Excel has to <code>SELECT SUM(...) FROM ... WHERE ...</code>.</p>
+<h3>Common D-Functions</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Function</th>
+<th style="text-align: left;">Returns</th>
+<th style="text-align: left;">SQL equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>DSUM(database, field, criteria)</code></td>
+<td style="text-align: left;">Sum of a field for rows matching the criteria</td>
+<td style="text-align: left;"><code>SELECT SUM(field) WHERE …</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DCOUNT(database, field, criteria)</code></td>
+<td style="text-align: left;">Count of numeric values in the field</td>
+<td style="text-align: left;"><code>SELECT COUNT(field) WHERE … AND field IS NUMERIC</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DCOUNTA(database, field, criteria)</code></td>
+<td style="text-align: left;">Count of non-blank values in the field</td>
+<td style="text-align: left;"><code>SELECT COUNT(*) WHERE …</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DAVERAGE(database, field, criteria)</code></td>
+<td style="text-align: left;">Average of a field</td>
+<td style="text-align: left;"><code>SELECT AVG(field) WHERE …</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DMAX(database, field, criteria)</code></td>
+<td style="text-align: left;">Max of a field</td>
+<td style="text-align: left;"><code>SELECT MAX(field) WHERE …</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DMIN(database, field, criteria)</code></td>
+<td style="text-align: left;">Min of a field</td>
+<td style="text-align: left;"><code>SELECT MIN(field) WHERE …</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>DGET(database, field, criteria)</code></td>
+<td style="text-align: left;">The single value that matches (errors on 0 or 2+ matches)</td>
+<td style="text-align: left;"><code>SELECT field WHERE …</code> (one row)</td>
+</tr>
+</tbody>
+</table>
+<h3>Arguments</h3>
+<ul>
+<li><strong>database</strong> — the source list including headers (e.g., <code>A1:F500</code>).</li>
+<li><strong>field</strong> — either the column header in quotes (<code>"Amount"</code>) or the numeric column index (<code>5</code>).</li>
+<li><strong>criteria</strong> — the criteria range, identical in structure to the Advanced Filter criteria range.</li>
+</ul>
+<h3>Example</h3>
+<p>Source list <code>A1:E500</code> has headers <code>Region</code>, <code>Department</code>, <code>Customer</code>, <code>Amount</code>, <code>Date</code>. Criteria range built in <code>H1:I2</code>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Region</th>
+<th style="text-align: left;">Amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">North</td>
+<td style="text-align: left;">&gt;5000</td>
+</tr>
+</tbody>
+</table>
+<pre><code>=DSUM(A1:E500,&quot;Amount&quot;,H1:I2)
+</code></pre>
+<p>Returns the sum of <code>Amount</code> for every row where Region = North AND Amount &gt; 5000.</p>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
+
+D-functions and Advanced Filter share the same criteria-range syntax — wildcards, comparison operators, computed criteria, and AND/OR rules all behave identically. Build the criteria range once and reuse it for both.
+
+</div>
+
+<hr>
+<h2>Links:</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/filter-by-using-advanced-criteria-4c9222fe-8529-4cd7-a898-3f16abdff32b" target="_blank" rel="noopener">Microsoft Support — Filter by using advanced criteria</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/dsum-function-53181285-0c4b-4f5a-aaa3-529a322be41b" target="_blank" rel="noopener">Microsoft Support — DSUM function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/dcount-function-c1fc7b93-fb0d-4d8d-97db-8d5f076eaeb1" target="_blank" rel="noopener">Microsoft Support — DCOUNT function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/daverage-function-a6a2d5ac-4b4b-48cd-a1d8-7b37834e5aee" target="_blank" rel="noopener">Microsoft Support — DAVERAGE function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/dget-function-9a0a05c2-674f-44b9-be40-b0b7ae46f4d8" target="_blank" rel="noopener">Microsoft Support — DGET function</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.5-data-validation.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.5 Data Validation</span></a><a class="pager-link pager-next" href="./2.7-subtotals-and-totals.html"><span class="pager-direction">Next →</span><span class="pager-title">2.7 Calculate Data by Inserting Subtotals and Totals</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.12-excel-tables-and-structured-references.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.12 Excel Tables and Structured References</span></a><a class="pager-link pager-next" href="./2.test-yourself.html"><span class="pager-direction">Next →</span><span class="pager-title">Quiz Module 2 Test: Manage and Format Data</span></a></nav>
       </div>
     </main>
   </div>

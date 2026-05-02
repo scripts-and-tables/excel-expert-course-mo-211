@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Group and Ungroup Data" />
+  <meta name="description" content="MO-211 Excel Expert prep — Forecast Sheet and Forecast Functions" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.6 Group and Ungroup Data · MO-211 Excel Expert</title>
+  <title>3.10 Forecast Sheet and Forecast Functions · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -54,7 +54,7 @@
 <li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 1.1 Test: Managing Workbooks &amp; Macros</span></a></li>
 </ul></details>
-<details class="nav-module is-current" open>
+<details class="nav-module">
 <summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -63,7 +63,7 @@
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
@@ -73,7 +73,7 @@
 <li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
 </ul></details>
-<details class="nav-module">
+<details class="nav-module is-current" open>
 <summary><span class="nav-mod-num">M3</span><span class="nav-mod-title">Advanced Formulas &amp; Macros</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-3/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -86,7 +86,7 @@
 <li><a class="nav-lesson" href="../module-3/3.7-troubleshoot-formulas.html"><span class="nav-lesson-num">3.7</span><span class="nav-lesson-title">Troubleshoot Formulas and Audit Logic</span></a></li>
 <li><a class="nav-lesson" href="../module-3/3.8-macro.html"><span class="nav-lesson-num">3.8</span><span class="nav-lesson-title">Introduction to Macros (Automation)</span></a></li>
 <li><a class="nav-lesson" href="../module-3/3.9-consolidate.html"><span class="nav-lesson-num">3.9</span><span class="nav-lesson-title">Summarize Data Using the Consolidate Feature</span></a></li>
-<li><a class="nav-lesson" href="../module-3/3.10-forecast-sheet.html"><span class="nav-lesson-num">3.10</span><span class="nav-lesson-title">Forecast Sheet and Forecast Functions</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-3/3.10-forecast-sheet.html"><span class="nav-lesson-num">3.10</span><span class="nav-lesson-title">Forecast Sheet and Forecast Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-3/3.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 3 Test: Advanced Formulas, Analysis &amp; Macros</span></a></li>
 </ul></details>
 <details class="nav-module">
@@ -121,141 +121,213 @@
           <span aria-hidden="true">/</span>
           <a href="../">Course</a>
           <span aria-hidden="true">/</span>
-          <a href="./">Module 2</a>
+          <a href="./">Module 3</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">2.6</span>
+          <span aria-current="page">3.10</span>
         </nav>
         <header class="lesson-head">
-          <span class="lesson-eyebrow">Module 2 · Lesson 2.6</span>
-          <h1 class="lesson-title">Group and Ungroup Data</h1>
-          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.6-group-and-ungroup-data.md" target="_blank" rel="noopener">
+          <span class="lesson-eyebrow">Module 3 · Lesson 3.10</span>
+          <h1 class="lesson-title">Forecast Sheet and Forecast Functions</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/03-advanced-formulas-and-macro/3.10-forecast-sheet.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Financial models, quarterly reports, and large project plans all share one problem: they are too long to navigate comfortably. Excel's <strong>Grouping</strong> feature solves this by creating collapsible outline levels — similar to the expand/collapse sections in a modern code editor or project management tool. Users can hide detail rows with one click and expose them again instantly, without deleting or hiding data permanently.</p>
+<p>Predicting next quarter's sales used to require manual exponential-smoothing models, custom seasonal indices, and a lot of trust in your spreadsheet math. <strong>Forecast Sheet</strong> is Excel's built-in time-series forecasting tool: you point it at a date column and a value column, and it produces a confidence-bounded forecast chart in two clicks—seasonality detection included. Behind the scenes it calls the same <code>FORECAST.ETS</code> family of functions you can use directly for more control.</p>
 <hr>
-<h2>Part 1: Grouping Rows and Columns</h2>
-<p><strong>To group rows:</strong>
-1. Select the <strong>rows</strong> you want to collapse (click the row numbers on the left).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> &gt; <strong>Group...</strong> (or just click <strong>Group</strong> — Excel auto-detects rows vs. columns based on your selection).
-3. A bracket and +/- button appear on the left margin.</p>
-<p><strong>To group columns:</strong>
-1. Select the <strong>columns</strong> you want to collapse (click the column letters at the top).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong>.
-3. A bracket and +/- button appear above the column headers.</p>
-<p>You can nest multiple group levels (up to 8 levels deep) to create a hierarchical outline.</p>
-<hr>
-<h2>Part 2: Expand and Collapse Controls</h2>
-<p>Once groups are applied, outline controls appear on the left (for row groups) or top (for column groups):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>–</code> button</strong></td>
-<td style="text-align: left;">Collapses that group (hides the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>+</code> button</strong></td>
-<td style="text-align: left;">Expands that group (shows the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>1</code></strong></td>
-<td style="text-align: left;">Collapse all groups to the outermost level</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>2</code></strong></td>
-<td style="text-align: left;">Expand to the second level of nesting</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>3</code></strong></td>
-<td style="text-align: left;">Show all detail (innermost level)</td>
-</tr>
-</tbody>
-</table>
-<p>Click the level buttons in the top-left corner of the row/column header area to control all groups simultaneously.</p>
-<hr>
-<h2>Part 3: Auto Outline</h2>
-<p>If your worksheet contains <strong>summary formulas</strong> (like SUM rows below detail rows), Excel can detect the outline structure automatically:</p>
-<p><strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> dropdown &gt; <strong>Auto Outline</strong></p>
-<p>Excel places the +/- buttons above or below (and left or right of) detail rows based on where it finds the summary formulas. The result is a complete, multi-level outline without manually selecting each group.</p>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Auto Outline works best when summary rows are **consistently positioned** (e.g., always below the detail rows they summarize). Inconsistent layouts produce incorrect or missing groups.
-
-</div>
-
-<hr>
-<h2>Part 4: Ungroup and Clear Outline</h2>
-<p><strong>To ungroup a specific group:</strong>
-1. Select the same rows or columns that form the group.
-2. <strong>Data</strong> tab &gt; <strong>Outline</strong> &gt; <strong>Ungroup</strong>.</p>
-<p><strong>To remove ALL grouping from the sheet:</strong>
-<strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Ungroup</strong> dropdown &gt; <strong>Clear Outline</strong></p>
-<p>This removes all outline levels and +/- buttons without deleting any data.</p>
-<hr>
-<h2>Part 5: Grouping vs. Hiding — Key Difference</h2>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Grouping and hiding rows/columns are **not the same thing**. This distinction appears on the exam.
-
-</div>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: left;">Grouping</th>
-<th style="text-align: left;">Hiding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Toggle method</strong></td>
-<td style="text-align: left;">+/– buttons or level numbers</td>
-<td style="text-align: left;">Right-click &gt; Hide / Unhide</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Visual indicator</strong></td>
-<td style="text-align: left;">Outline bracket + level buttons</td>
-<td style="text-align: left;">Skipped row/column numbers</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>User can find hidden rows?</strong></td>
-<td style="text-align: left;">Yes — easily, via + button</td>
-<td style="text-align: left;">Only if they know to look</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>SUBTOTAL behavior</strong></td>
-<td style="text-align: left;">Collapsed rows are excluded from <code>SUBTOTAL(101–111)</code></td>
-<td style="text-align: left;">Hidden rows excluded from <code>SUBTOTAL(101–111)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Printing</strong></td>
-<td style="text-align: left;">Collapsed groups are not printed</td>
-<td style="text-align: left;">Hidden rows not printed</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Best for</strong></td>
-<td style="text-align: left;">Structured reports with drill-down</td>
-<td style="text-align: left;">One-time hiding of sensitive data</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2>Official Resources</h2>
+<h2>Part 1: Why Forecast Sheet Exists</h2>
+<p>Manually forecasting a time series correctly involves several steps: detecting the seasonal period, decomposing trend and seasonality, fitting smoothing parameters, and computing prediction intervals. Forecast Sheet automates all of that with the <strong>ETS (Exponential Triple Smoothing / AAA Error-Trend-Seasonal)</strong> algorithm and gives you:</p>
 <ul>
-<li><a href="https://support.microsoft.com/en-us/office/group-or-ungroup-data-in-a-pivottable-c9d1ddd0-6580-47d1-82bc-c84a5a340725" target="_blank" rel="noopener">Microsoft Support — Group or ungroup data in a PivotTable</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/outline-group-data-in-a-worksheet-08ce98c4-0063-4d42-8ac7-8278c49e9aff" target="_blank" rel="noopener">Microsoft Support — Outline (group) data in a worksheet</a></li>
+<li>A pre-built chart (line or column) with historical values, forecast values, and upper/lower confidence bounds.</li>
+<li>A linked data table that you can edit, restyle, or feed into a PivotTable.</li>
+<li>Automatic seasonality detection (e.g., it will recognize a 12-month cycle in monthly sales without being told).</li>
+</ul>
+<p>The result lands on a <strong>brand new worksheet</strong>, so your source data is untouched.</p>
+<hr>
+<h2>Part 2: Workflow — Creating a Forecast Sheet</h2>
+<h3>🛠 Steps</h3>
+<ol>
+<li>Arrange your data in <strong>two adjacent columns</strong>: a column of dates (or numeric time periods) and a column of historical values. Dates should be evenly spaced (daily, weekly, monthly, quarterly, yearly).</li>
+<li>Select <strong>both</strong> columns, including headers.</li>
+<li>On the <strong>Data</strong> tab, in the <strong>Forecast</strong> group, click <strong>Forecast Sheet</strong>.</li>
+<li>The <strong>Create Forecast Worksheet</strong> dialog opens.</li>
+<li>Choose the <strong>chart type</strong>:
+   * <strong>Line chart</strong> (default) — best for continuous trends.
+   * <strong>Column chart</strong> — best for discrete period-over-period comparisons.</li>
+<li>Set the <strong>Forecast End</strong> date (the last period you want predicted).</li>
+<li>(Optional) Expand <strong>Options</strong> to fine-tune (see Part 3).</li>
+<li>Click <strong>Create</strong>. Excel inserts a new sheet with the historical data, forecast values, confidence bounds, and the chart.</li>
+</ol>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+Excel needs at least a handful of historical points to fit the model. As a rule of thumb, supply **at least two full seasonal cycles** of data—24 months for a yearly seasonality, 14 days for a weekly cycle—or the seasonality detection will silently fall back to a non-seasonal model.
+
+</div>
+
+<hr>
+<h2>Part 3: The Options Panel — What Each Setting Does</h2>
+<p>Click <strong>Options</strong> at the bottom of the Create Forecast Worksheet dialog to expose:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Forecast Start</strong></td>
+<td style="text-align: left;">The first date the model begins predicting. Set this <em>earlier than the last historical point</em> to "back-test" the model against known values.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Confidence Interval</strong></td>
+<td style="text-align: left;">The shaded band around the forecast. Default <code>95%</code>. Lower it for a tighter (less conservative) band; uncheck to hide bounds entirely.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Seasonality</strong></td>
+<td style="text-align: left;"><code>Detect Automatically</code> (default) or <code>Set Manually</code>. Manual values: <code>12</code> for monthly data with yearly seasonality, <code>7</code> for daily data with a weekly pattern, <code>4</code> for quarterly data, <code>1</code> (or unchecked) to force no seasonality.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Include forecast statistics</strong></td>
+<td style="text-align: left;">Adds a small table of accuracy metrics (smoothing coefficients α/β/γ, MASE, SMAPE, MAE, RMSE) to the new sheet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Timeline Range</strong></td>
+<td style="text-align: left;">The cell range holding the dates. Pre-filled from your selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Values Range</strong></td>
+<td style="text-align: left;">The cell range holding the historical values. Pre-filled from your selection.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fill Missing Points Using</strong></td>
+<td style="text-align: left;"><code>Interpolation</code> (linear estimate from neighbours, recommended) or <code>Zeros</code> (treat gaps as <code>0</code>, which usually distorts the model).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Aggregate Duplicates Using</strong></td>
+<td style="text-align: left;">If your timeline contains duplicate dates, pick the rollup: <code>Average</code> (default), <code>Sum</code>, <code>Count</code>, <code>Min</code>, <code>Max</code>, <code>Median</code>.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+The **Confidence Interval** is *not* the same as a 95% guarantee that future values will land in the band. It is a statistical prediction interval based on the residuals of the fitted model—if the underlying process changes (a price hike, a pandemic), the band can be badly wrong.
+
+</div>
+
+<hr>
+<h2>Part 4: The Underlying Functions</h2>
+<p>Forecast Sheet is a UI wrapper. If you need more control, embed the same functions directly in your worksheet.</p>
+<h3><code>FORECAST.ETS</code></h3>
+<p>Predicts a future value using the ETS algorithm.</p>
+<pre><code class="language-excel">=FORECAST.ETS(target_date, values, timeline, [seasonality], [data_completion], [aggregation])
+</code></pre>
+<ul>
+<li><code>target_date</code> — the date you want to predict.</li>
+<li><code>values</code> — the historical values range.</li>
+<li><code>timeline</code> — the historical date range (must be evenly spaced once gaps are handled).</li>
+<li><code>seasonality</code> <em>(optional)</em> — <code>1</code> (auto-detect, default), <code>0</code> (no seasonality), or a positive integer to force a period.</li>
+<li><code>data_completion</code> <em>(optional)</em> — <code>1</code> for interpolation (default), <code>0</code> to treat gaps as zero.</li>
+<li>
+<p><code>aggregation</code> <em>(optional)</em> — <code>1</code>–<code>7</code> mapping to <code>AVERAGE</code>, <code>COUNT</code>, <code>COUNTA</code>, <code>MAX</code>, <code>MEDIAN</code>, <code>MIN</code>, <code>SUM</code> for duplicate-date rollup.</p>
+</li>
+<li>
+<p><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/forecast-ets-function-15389b8b-677e-4fbd-bd95-21d464333f41" target="_blank" rel="noopener">FORECAST.ETS function</a></p>
+</li>
+</ul>
+<h3><code>FORECAST.ETS.CONFINT</code></h3>
+<p>Returns the <strong>width</strong> of the confidence interval for a given target date. Add and subtract it from <code>FORECAST.ETS</code> to get the upper and lower bounds.</p>
+<pre><code class="language-excel">=FORECAST.ETS.CONFINT(target_date, values, timeline, [confidence_level], [seasonality], [data_completion], [aggregation])
+</code></pre>
+<ul>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/forecast-ets-confint-function-5cba6b04-74fb-4036-8083-d19df1860b7a" target="_blank" rel="noopener">FORECAST.ETS.CONFINT function</a></li>
+</ul>
+<h3><code>FORECAST.ETS.SEASONALITY</code></h3>
+<p>Returns the seasonal period (in number of timeline steps) that Excel detected. Useful for sanity-checking that auto-detection picked up the cycle you expected.</p>
+<pre><code class="language-excel">=FORECAST.ETS.SEASONALITY(values, timeline, [data_completion], [aggregation])
+</code></pre>
+<ul>
+<li><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/forecast-ets-seasonality-function-44fcdb53-a80b-4a94-812f-dbfd5f5413f2" target="_blank" rel="noopener">FORECAST.ETS.SEASONALITY function</a></li>
+</ul>
+<h3><code>FORECAST.LINEAR</code></h3>
+<p>Simple linear regression. Replaces the legacy <code>FORECAST</code> function (which still works for backward compatibility but is no longer recommended). Use this when your data has a clear linear trend and <strong>no seasonality</strong>.</p>
+<pre><code class="language-excel">=FORECAST.LINEAR(x, known_y, known_x)
+</code></pre>
+<ul>
+<li><code>x</code> — the x-value (e.g., future date) at which to predict.</li>
+<li><code>known_y</code> — historical dependent values.</li>
+<li>
+<p><code>known_x</code> — historical independent values (typically dates).</p>
+</li>
+<li>
+<p><strong>Official Docs:</strong> <a href="https://support.microsoft.com/en-us/office/forecast-and-forecast-linear-functions-50ca49c9-7b40-4892-94e4-7ad38bbeda99" target="_blank" rel="noopener">FORECAST.LINEAR function</a></p>
+</li>
+</ul>
+<hr>
+<h2>Part 5: When NOT to Use Forecast Sheet</h2>
+<p>Forecast Sheet is excellent for clean, periodic, sufficiently long time series. It is the wrong tool when:</p>
+<ul>
+<li><strong>No clear seasonality and no trend</strong> — you are essentially forecasting noise; use a moving average or just the historical mean.</li>
+<li><strong>Less than 2 full cycles of history</strong> — the ETS algorithm cannot estimate seasonal indices reliably. For yearly seasonality, that means <strong>at least 24 months</strong> of data.</li>
+<li><strong>More than ~30% of points are missing</strong> — interpolation distorts the seasonal pattern beyond recognition.</li>
+<li><strong>Irregular timestamps</strong> that cannot be cleanly aggregated to a fixed cadence (e.g., transaction-level event data).</li>
+<li><strong>Step changes / structural breaks</strong> — a permanent shift mid-series (a launch, a regulation change) violates the model's assumption of stable trend and seasonality. Forecast the post-break segment only.</li>
+<li><strong>External drivers dominate</strong> — if your sales depend mostly on marketing spend or pricing, you need a regression model with predictors, not univariate ETS.</li>
+</ul>
+<div class="callout callout-warning"><div class="callout-title">WARNING</div>
+
+Forecast Sheet will happily produce a confident-looking forecast on a tiny dataset. Always inspect the **forecast statistics** table (SMAPE, MASE) and back-test by setting **Forecast Start** earlier than the last historical date before trusting the numbers in a presentation.
+
+</div>
+
+<hr>
+<h2>💡 Cheat Sheet</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Need</th>
+<th style="text-align: left;">Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">One-click forecast with chart</td>
+<td style="text-align: left;"><strong>Data &gt; Forecast Sheet</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">Custom forecast in-cell, with seasonality</td>
+<td style="text-align: left;"><code>FORECAST.ETS</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Upper/lower bound around a forecast</td>
+<td style="text-align: left;"><code>FORECAST.ETS.CONFINT</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Verify detected seasonal period</td>
+<td style="text-align: left;"><code>FORECAST.ETS.SEASONALITY</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Simple linear extrapolation, no seasonality</td>
+<td style="text-align: left;"><code>FORECAST.LINEAR</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Optimization with constraints (not forecasting)</td>
+<td style="text-align: left;"><strong>Solver</strong> (see 3.4)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Links</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/create-a-forecast-in-excel-for-windows-22c500da-6da7-45e5-bfdc-60a7062329fd" target="_blank" rel="noopener">Create a forecast in Excel for Windows</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/forecast-ets-function-15389b8b-677e-4fbd-bd95-21d464333f41" target="_blank" rel="noopener">FORECAST.ETS function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/forecast-ets-confint-function-5cba6b04-74fb-4036-8083-d19df1860b7a" target="_blank" rel="noopener">FORECAST.ETS.CONFINT function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/forecast-ets-seasonality-function-44fcdb53-a80b-4a94-812f-dbfd5f5413f2" target="_blank" rel="noopener">FORECAST.ETS.SEASONALITY function</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/forecast-and-forecast-linear-functions-50ca49c9-7b40-4892-94e4-7ad38bbeda99" target="_blank" rel="noopener">FORECAST.LINEAR function</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.5-data-validation.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.5 Data Validation</span></a><a class="pager-link pager-next" href="./2.7-subtotals-and-totals.html"><span class="pager-direction">Next →</span><span class="pager-title">2.7 Calculate Data by Inserting Subtotals and Totals</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./3.9-consolidate.html"><span class="pager-direction">← Previous</span><span class="pager-title">3.9 Summarize Data Using the Consolidate Feature</span></a><a class="pager-link pager-next" href="./3.test-yourself.html"><span class="pager-direction">Next →</span><span class="pager-title">Quiz Module 3 Test: Advanced Formulas, Analysis &amp; Macros</span></a></nav>
       </div>
     </main>
   </div>

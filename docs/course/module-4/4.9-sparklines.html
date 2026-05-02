@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Group and Ungroup Data" />
+  <meta name="description" content="MO-211 Excel Expert prep — Sparklines: Inline Data Visualizations" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.6 Group and Ungroup Data · MO-211 Excel Expert</title>
+  <title>4.9 Sparklines: Inline Data Visualizations · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -54,7 +54,7 @@
 <li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 1.1 Test: Managing Workbooks &amp; Macros</span></a></li>
 </ul></details>
-<details class="nav-module is-current" open>
+<details class="nav-module">
 <summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -63,7 +63,7 @@
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
@@ -89,7 +89,7 @@
 <li><a class="nav-lesson" href="../module-3/3.10-forecast-sheet.html"><span class="nav-lesson-num">3.10</span><span class="nav-lesson-title">Forecast Sheet and Forecast Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-3/3.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 3 Test: Advanced Formulas, Analysis &amp; Macros</span></a></li>
 </ul></details>
-<details class="nav-module">
+<details class="nav-module is-current" open>
 <summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -101,7 +101,7 @@
 <li><a class="nav-lesson" href="../module-4/4.6-grouping-in-pivot-tables.html"><span class="nav-lesson-num">4.6</span><span class="nav-lesson-title">Group PivotTable Data</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.8-pivotcharts.html"><span class="nav-lesson-num">4.8</span><span class="nav-lesson-title">Create and Modify PivotCharts</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.9-sparklines.html"><span class="nav-lesson-num">4.9</span><span class="nav-lesson-title">Sparklines: Inline Data Visualizations</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-4/4.9-sparklines.html"><span class="nav-lesson-num">4.9</span><span class="nav-lesson-title">Sparklines: Inline Data Visualizations</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.10-trendlines.html"><span class="nav-lesson-num">4.10</span><span class="nav-lesson-title">Trendlines and Forecasting on Charts</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 4 Test: Manage Advanced Charts and Tables</span></a></li>
 </ul></details>
@@ -121,141 +121,189 @@
           <span aria-hidden="true">/</span>
           <a href="../">Course</a>
           <span aria-hidden="true">/</span>
-          <a href="./">Module 2</a>
+          <a href="./">Module 4</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">2.6</span>
+          <span aria-current="page">4.9</span>
         </nav>
         <header class="lesson-head">
-          <span class="lesson-eyebrow">Module 2 · Lesson 2.6</span>
-          <h1 class="lesson-title">Group and Ungroup Data</h1>
-          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.6-group-and-ungroup-data.md" target="_blank" rel="noopener">
+          <span class="lesson-eyebrow">Module 4 · Lesson 4.9</span>
+          <h1 class="lesson-title">Sparklines: Inline Data Visualizations</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/04-manage-advanced-charts-and-tables/4.9-sparklines.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Financial models, quarterly reports, and large project plans all share one problem: they are too long to navigate comfortably. Excel's <strong>Grouping</strong> feature solves this by creating collapsible outline levels — similar to the expand/collapse sections in a modern code editor or project management tool. Users can hide detail rows with one click and expose them again instantly, without deleting or hiding data permanently.</p>
+<p>A <strong>sparkline</strong> is a tiny chart that lives inside a single cell. Sparklines are designed to sit next to the numbers they describe — perfect for dashboards, KPI tables, and one-row-per-product summaries where a full chart would be overkill. The MO-211 exam expects you to insert all three types, change what is highlighted, control the axis, and group/ungroup them correctly.</p>
 <hr>
-<h2>Part 1: Grouping Rows and Columns</h2>
-<p><strong>To group rows:</strong>
-1. Select the <strong>rows</strong> you want to collapse (click the row numbers on the left).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> &gt; <strong>Group...</strong> (or just click <strong>Group</strong> — Excel auto-detects rows vs. columns based on your selection).
-3. A bracket and +/- button appear on the left margin.</p>
-<p><strong>To group columns:</strong>
-1. Select the <strong>columns</strong> you want to collapse (click the column letters at the top).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong>.
-3. A bracket and +/- button appear above the column headers.</p>
-<p>You can nest multiple group levels (up to 8 levels deep) to create a hierarchical outline.</p>
-<hr>
-<h2>Part 2: Expand and Collapse Controls</h2>
-<p>Once groups are applied, outline controls appear on the left (for row groups) or top (for column groups):</p>
+<h2>Part 1: The Three Sparkline Types</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">Action</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Looks Like</th>
+<th style="text-align: left;">Best For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong><code>–</code> button</strong></td>
-<td style="text-align: left;">Collapses that group (hides the rows/columns)</td>
+<td style="text-align: left;"><strong>Line</strong></td>
+<td style="text-align: left;">A miniature line chart.</td>
+<td style="text-align: left;">Continuous trends over time (monthly revenue, daily active users).</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong><code>+</code> button</strong></td>
-<td style="text-align: left;">Expands that group (shows the rows/columns)</td>
+<td style="text-align: left;"><strong>Column</strong></td>
+<td style="text-align: left;">A miniature column chart.</td>
+<td style="text-align: left;">Discrete period-over-period comparisons.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Level number <code>1</code></strong></td>
-<td style="text-align: left;">Collapse all groups to the outermost level</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>2</code></strong></td>
-<td style="text-align: left;">Expand to the second level of nesting</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>3</code></strong></td>
-<td style="text-align: left;">Show all detail (innermost level)</td>
+<td style="text-align: left;"><strong>Win/Loss</strong></td>
+<td style="text-align: left;">A two-state bar (up = positive, down = negative, no bar = zero).</td>
+<td style="text-align: left;">Tracking whether each period was a "win" or a "loss" — magnitude is ignored.</td>
 </tr>
 </tbody>
 </table>
-<p>Click the level buttons in the top-left corner of the row/column header area to control all groups simultaneously.</p>
-<hr>
-<h2>Part 3: Auto Outline</h2>
-<p>If your worksheet contains <strong>summary formulas</strong> (like SUM rows below detail rows), Excel can detect the outline structure automatically:</p>
-<p><strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> dropdown &gt; <strong>Auto Outline</strong></p>
-<p>Excel places the +/- buttons above or below (and left or right of) detail rows based on where it finds the summary formulas. The result is a complete, multi-level outline without manually selecting each group.</p>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
 
-Auto Outline works best when summary rows are **consistently positioned** (e.g., always below the detail rows they summarize). Inconsistent layouts produce incorrect or missing groups.
+Win/Loss only encodes the **sign** of each value, not its size. A `+1` bar is the same height as a `+1,000,000` bar.
 
 </div>
 
 <hr>
-<h2>Part 4: Ungroup and Clear Outline</h2>
-<p><strong>To ungroup a specific group:</strong>
-1. Select the same rows or columns that form the group.
-2. <strong>Data</strong> tab &gt; <strong>Outline</strong> &gt; <strong>Ungroup</strong>.</p>
-<p><strong>To remove ALL grouping from the sheet:</strong>
-<strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Ungroup</strong> dropdown &gt; <strong>Clear Outline</strong></p>
-<p>This removes all outline levels and +/- buttons without deleting any data.</p>
-<hr>
-<h2>Part 5: Grouping vs. Hiding — Key Difference</h2>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+<h2>Part 2: Inserting Sparklines</h2>
+<ol>
+<li>Select the <strong>destination cells</strong> (where you want the sparklines to appear — usually a single column next to your data).</li>
+<li>Go to the <strong>Insert</strong> tab &gt; <strong>Sparklines</strong> group &gt; pick <strong>Line</strong>, <strong>Column</strong>, or <strong>Win/Loss</strong>.</li>
+<li>In the <strong>Create Sparklines</strong> dialog:<ul>
+<li><strong>Data Range:</strong> the source rows of numbers (one row per destination cell).</li>
+<li><strong>Location Range:</strong> auto-filled from your selection — the cells that will hold the sparklines.</li>
+</ul>
+</li>
+<li>Click <strong>OK</strong>. Excel inserts one sparkline per destination cell.</li>
+</ol>
+<pre><code>Data Range:     B2:G2, B3:G3, B4:G4   (one row per product)
+Location Range: H2:H4                  (one sparkline per row)
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
 
-Grouping and hiding rows/columns are **not the same thing**. This distinction appears on the exam.
+The number of rows in **Data Range** must match the number of cells in **Location Range**. If they don't match, Excel rejects the dialog.
 
 </div>
 
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: left;">Grouping</th>
-<th style="text-align: left;">Hiding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Toggle method</strong></td>
-<td style="text-align: left;">+/– buttons or level numbers</td>
-<td style="text-align: left;">Right-click &gt; Hide / Unhide</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Visual indicator</strong></td>
-<td style="text-align: left;">Outline bracket + level buttons</td>
-<td style="text-align: left;">Skipped row/column numbers</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>User can find hidden rows?</strong></td>
-<td style="text-align: left;">Yes — easily, via + button</td>
-<td style="text-align: left;">Only if they know to look</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>SUBTOTAL behavior</strong></td>
-<td style="text-align: left;">Collapsed rows are excluded from <code>SUBTOTAL(101–111)</code></td>
-<td style="text-align: left;">Hidden rows excluded from <code>SUBTOTAL(101–111)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Printing</strong></td>
-<td style="text-align: left;">Collapsed groups are not printed</td>
-<td style="text-align: left;">Hidden rows not printed</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Best for</strong></td>
-<td style="text-align: left;">Structured reports with drill-down</td>
-<td style="text-align: left;">One-time hiding of sensitive data</td>
-</tr>
-</tbody>
-</table>
 <hr>
-<h2>Official Resources</h2>
+<h2>Part 3: The Sparkline Tab</h2>
+<p>Selecting any sparkline activates the <strong>Sparkline</strong> tab in the Ribbon.</p>
+<h3>Show Group (Highlight Specific Points)</h3>
+<p>Tick any combination of these checkboxes to mark notable points:</p>
 <ul>
-<li><a href="https://support.microsoft.com/en-us/office/group-or-ungroup-data-in-a-pivottable-c9d1ddd0-6580-47d1-82bc-c84a5a340725" target="_blank" rel="noopener">Microsoft Support — Group or ungroup data in a PivotTable</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/outline-group-data-in-a-worksheet-08ce98c4-0063-4d42-8ac7-8278c49e9aff" target="_blank" rel="noopener">Microsoft Support — Outline (group) data in a worksheet</a></li>
+<li><strong>High Point</strong> — the maximum value in the series.</li>
+<li><strong>Low Point</strong> — the minimum value.</li>
+<li><strong>First Point</strong> — the earliest data point.</li>
+<li><strong>Last Point</strong> — the most recent data point.</li>
+<li><strong>Negative Points</strong> — every value below zero (most useful in Column / Win/Loss).</li>
+<li><strong>Markers</strong> — show a dot at every data point (<strong>Line sparklines only</strong>).</li>
+</ul>
+<h3>Style Group</h3>
+<ul>
+<li><strong>Style gallery</strong> — preset color schemes for the line/columns and the highlighted points.</li>
+<li><strong>Sparkline Color</strong> — recolor the line/columns themselves.</li>
+<li><strong>Marker Color</strong> — fine-grained control over each highlight category (High, Low, First, Last, Negative, Markers).</li>
+</ul>
+<h3>Axis Options</h3>
+<p>Click <strong>Axis</strong> in the Sparkline tab for axis controls:</p>
+<ul>
+<li><strong>Vertical Axis Minimum / Maximum</strong><ul>
+<li><strong>Automatic for Each Sparkline</strong> (default) — every sparkline scales to its own range. Great for comparing shape, terrible for comparing magnitude.</li>
+<li><strong>Same for All Sparklines</strong> — Excel uses one shared min/max across the group, so a flat sparkline next to a tall one tells you "this product is small."</li>
+<li><strong>Custom Value</strong> — type your own min/max (e.g., <code>0</code> baseline).</li>
+</ul>
+</li>
+<li><strong>Horizontal Axis Type</strong><ul>
+<li><strong>General Axis Type</strong> (default) — even spacing.</li>
+<li><strong>Date Axis Type</strong> — point a date column; gaps in time are honored visually.</li>
+</ul>
+</li>
+<li><strong>Show Axis</strong> — draws a horizontal zero line. Essential for Win/Loss and any series that crosses zero.</li>
+<li><strong>Plot Data Right-to-Left</strong> — flip the time direction.</li>
+</ul>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+"Same for All" is the single most common axis fix in exam tasks. Whenever the prompt says "compare across rows," set the vertical axis to **Same for All Sparklines**.
+
+</div>
+
+<hr>
+<h2>Part 4: Group &amp; Ungroup</h2>
+<p>When you insert several sparklines in one operation, they are automatically a <strong>group</strong> — they share styling, axis settings, and Show options. Editing any one of them edits all of them.</p>
+<ul>
+<li><strong>Ungroup:</strong> Select the sparklines &gt; <strong>Sparkline</strong> tab &gt; <strong>Ungroup</strong>. Now each cell can be styled independently.</li>
+<li><strong>Group:</strong> Select multiple sparklines &gt; <strong>Sparkline</strong> tab &gt; <strong>Group</strong>. They re-merge into a single editable unit (the first sparkline's settings win).</li>
+</ul>
+<div class="callout callout-warning"><div class="callout-title">WARNING</div>
+
+If you can't get a single sparkline to take a different color, it is almost certainly part of a group. Ungroup first.
+
+</div>
+
+<hr>
+<h2>Part 5: Clearing Sparklines</h2>
+<p>Pressing <code>Delete</code> on a sparkline cell removes the cell's text but leaves the sparkline behind. To actually remove it:</p>
+<ul>
+<li><strong>Sparkline tab</strong> &gt; <strong>Clear</strong> dropdown &gt; <strong>Clear Selected Sparklines</strong> or <strong>Clear Selected Sparkline Groups</strong>.</li>
+<li>Or right-click the sparkline &gt; <strong>Sparklines</strong> &gt; <strong>Clear Selected Sparklines</strong>.</li>
+</ul>
+<hr>
+<h2>Part 6: Limitations &amp; Gotchas</h2>
+<ul>
+<li><strong>One cell = one sparkline.</strong> You cannot merge cells to make a "bigger" sparkline; resize the row/column instead.</li>
+<li><strong>Cell content is preserved.</strong> A sparkline is a <em>background graphic</em> — the cell can still hold a number, label, or formula behind it. To use the cell as a label, type your text and the sparkline will sit underneath.</li>
+<li><strong>No multi-series.</strong> Each sparkline shows exactly one data series. For overlay comparisons, use a real chart.</li>
+<li><strong>Hidden / empty cells:</strong> Sparkline tab &gt; <strong>Edit Data</strong> &gt; <strong>Hidden &amp; Empty Cells</strong> controls how breaks in the data are rendered (Gaps, Zero, or Connect data points with line).</li>
+</ul>
+<hr>
+<h2>Technical Checklist for the Exam</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Task</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Insert Line/Column/Win-Loss</strong></td>
+<td style="text-align: left;"><strong>Insert</strong> &gt; <strong>Sparklines</strong> group &gt; pick type</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Highlight High &amp; Low</strong></td>
+<td style="text-align: left;"><strong>Sparkline</strong> tab &gt; <strong>Show</strong> group &gt; tick <strong>High Point</strong> + <strong>Low Point</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Same axis across rows</strong></td>
+<td style="text-align: left;"><strong>Sparkline</strong> tab &gt; <strong>Axis</strong> &gt; <strong>Vertical Axis Minimum</strong> &gt; <strong>Same for All Sparklines</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Show zero line</strong></td>
+<td style="text-align: left;"><strong>Sparkline</strong> tab &gt; <strong>Axis</strong> &gt; <strong>Show Axis</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ungroup to recolor one</strong></td>
+<td style="text-align: left;">Select group &gt; <strong>Sparkline</strong> tab &gt; <strong>Ungroup</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Remove sparkline</strong></td>
+<td style="text-align: left;"><strong>Sparkline</strong> tab &gt; <strong>Clear</strong> &gt; <strong>Clear Selected Sparklines</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Official Resources:</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/analyze-trends-in-data-using-sparklines-be6579cf-a8e3-471a-a45c-d8f3b1c1bb12" target="_blank" rel="noopener">Analyze trends in data using sparklines</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/create-sparklines-bf451324-fa09-4a35-87a2-c5f3a6889b56" target="_blank" rel="noopener">Create sparklines</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.5-data-validation.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.5 Data Validation</span></a><a class="pager-link pager-next" href="./2.7-subtotals-and-totals.html"><span class="pager-direction">Next →</span><span class="pager-title">2.7 Calculate Data by Inserting Subtotals and Totals</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./4.8-pivotcharts.html"><span class="pager-direction">← Previous</span><span class="pager-title">4.8 Create and Modify PivotCharts</span></a><a class="pager-link pager-next" href="./4.10-trendlines.html"><span class="pager-direction">Next →</span><span class="pager-title">4.10 Trendlines and Forecasting on Charts</span></a></nav>
       </div>
     </main>
   </div>

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Group and Ungroup Data" />
+  <meta name="description" content="MO-211 Excel Expert prep — Excel Tables and Structured References" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.6 Group and Ungroup Data · MO-211 Excel Expert</title>
+  <title>2.12 Excel Tables and Structured References · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -63,13 +63,13 @@
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.11-manage-conditional-formatting-rules.html"><span class="nav-lesson-num">2.11</span><span class="nav-lesson-title">Manage Conditional Formatting Rules</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
 </ul></details>
@@ -123,139 +123,274 @@
           <span aria-hidden="true">/</span>
           <a href="./">Module 2</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">2.6</span>
+          <span aria-current="page">2.12</span>
         </nav>
         <header class="lesson-head">
-          <span class="lesson-eyebrow">Module 2 · Lesson 2.6</span>
-          <h1 class="lesson-title">Group and Ungroup Data</h1>
-          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.6-group-and-ungroup-data.md" target="_blank" rel="noopener">
+          <span class="lesson-eyebrow">Module 2 · Lesson 2.12</span>
+          <h1 class="lesson-title">Excel Tables and Structured References</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.12-excel-tables-and-structured-references.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Financial models, quarterly reports, and large project plans all share one problem: they are too long to navigate comfortably. Excel's <strong>Grouping</strong> feature solves this by creating collapsible outline levels — similar to the expand/collapse sections in a modern code editor or project management tool. Users can hide detail rows with one click and expose them again instantly, without deleting or hiding data permanently.</p>
+<p>In SQL, every query operates on a named <strong>table</strong> — a self-contained object with named columns, a known row range, and a stable identity. Excel's <strong>Tables</strong> (created with <code>Ctrl+T</code>) bring that same idea to the worksheet grid: a contiguous range becomes a first-class object with a name, headers, and column references. Once a range is converted into a Table, formulas can stop pointing at fragile cell coordinates like <code>B2:B500</code> and start using readable <strong>structured references</strong> like <code>Sales[Amount]</code> — references that automatically grow as new rows are added.</p>
 <hr>
-<h2>Part 1: Grouping Rows and Columns</h2>
-<p><strong>To group rows:</strong>
-1. Select the <strong>rows</strong> you want to collapse (click the row numbers on the left).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> &gt; <strong>Group...</strong> (or just click <strong>Group</strong> — Excel auto-detects rows vs. columns based on your selection).
-3. A bracket and +/- button appear on the left margin.</p>
-<p><strong>To group columns:</strong>
-1. Select the <strong>columns</strong> you want to collapse (click the column letters at the top).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong>.
-3. A bracket and +/- button appear above the column headers.</p>
-<p>You can nest multiple group levels (up to 8 levels deep) to create a hierarchical outline.</p>
-<hr>
-<h2>Part 2: Expand and Collapse Controls</h2>
-<p>Once groups are applied, outline controls appear on the left (for row groups) or top (for column groups):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>–</code> button</strong></td>
-<td style="text-align: left;">Collapses that group (hides the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>+</code> button</strong></td>
-<td style="text-align: left;">Expands that group (shows the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>1</code></strong></td>
-<td style="text-align: left;">Collapse all groups to the outermost level</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>2</code></strong></td>
-<td style="text-align: left;">Expand to the second level of nesting</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>3</code></strong></td>
-<td style="text-align: left;">Show all detail (innermost level)</td>
-</tr>
-</tbody>
-</table>
-<p>Click the level buttons in the top-left corner of the row/column header area to control all groups simultaneously.</p>
-<hr>
-<h2>Part 3: Auto Outline</h2>
-<p>If your worksheet contains <strong>summary formulas</strong> (like SUM rows below detail rows), Excel can detect the outline structure automatically:</p>
-<p><strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> dropdown &gt; <strong>Auto Outline</strong></p>
-<p>Excel places the +/- buttons above or below (and left or right of) detail rows based on where it finds the summary formulas. The result is a complete, multi-level outline without manually selecting each group.</p>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Auto Outline works best when summary rows are **consistently positioned** (e.g., always below the detail rows they summarize). Inconsistent layouts produce incorrect or missing groups.
-
-</div>
-
-<hr>
-<h2>Part 4: Ungroup and Clear Outline</h2>
-<p><strong>To ungroup a specific group:</strong>
-1. Select the same rows or columns that form the group.
-2. <strong>Data</strong> tab &gt; <strong>Outline</strong> &gt; <strong>Ungroup</strong>.</p>
-<p><strong>To remove ALL grouping from the sheet:</strong>
-<strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Ungroup</strong> dropdown &gt; <strong>Clear Outline</strong></p>
-<p>This removes all outline levels and +/- buttons without deleting any data.</p>
-<hr>
-<h2>Part 5: Grouping vs. Hiding — Key Difference</h2>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Grouping and hiding rows/columns are **not the same thing**. This distinction appears on the exam.
-
-</div>
-
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: left;">Grouping</th>
-<th style="text-align: left;">Hiding</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Toggle method</strong></td>
-<td style="text-align: left;">+/– buttons or level numbers</td>
-<td style="text-align: left;">Right-click &gt; Hide / Unhide</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Visual indicator</strong></td>
-<td style="text-align: left;">Outline bracket + level buttons</td>
-<td style="text-align: left;">Skipped row/column numbers</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>User can find hidden rows?</strong></td>
-<td style="text-align: left;">Yes — easily, via + button</td>
-<td style="text-align: left;">Only if they know to look</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>SUBTOTAL behavior</strong></td>
-<td style="text-align: left;">Collapsed rows are excluded from <code>SUBTOTAL(101–111)</code></td>
-<td style="text-align: left;">Hidden rows excluded from <code>SUBTOTAL(101–111)</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Printing</strong></td>
-<td style="text-align: left;">Collapsed groups are not printed</td>
-<td style="text-align: left;">Hidden rows not printed</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Best for</strong></td>
-<td style="text-align: left;">Structured reports with drill-down</td>
-<td style="text-align: left;">One-time hiding of sensitive data</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h2>Official Resources</h2>
+<h2>Part 1: Why Use a Table?</h2>
+<p>A plain range and an Excel Table look similar on screen, but a Table behaves very differently:</p>
 <ul>
-<li><a href="https://support.microsoft.com/en-us/office/group-or-ungroup-data-in-a-pivottable-c9d1ddd0-6580-47d1-82bc-c84a5a340725" target="_blank" rel="noopener">Microsoft Support — Group or ungroup data in a PivotTable</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/outline-group-data-in-a-worksheet-08ce98c4-0063-4d42-8ac7-8278c49e9aff" target="_blank" rel="noopener">Microsoft Support — Outline (group) data in a worksheet</a></li>
+<li><strong>Auto-extending range</strong> — typing in the row directly below the Table extends it. Any formula, chart, PivotTable, or slicer that points at the Table picks up the new row automatically.</li>
+<li><strong>Banded rows and built-in styles</strong> — alternating row colors are applied via the <strong>Table Design</strong> tab, with one click.</li>
+<li><strong>Dedicated Total Row</strong> — a built-in summary row with a per-column dropdown (Sum, Average, Count, Min, Max, StdDev, Var, or a custom formula).</li>
+<li><strong>Structured references</strong> — formulas read like English: <code>=SUM(Sales[Amount])</code> instead of <code>=SUM(B2:B500)</code>.</li>
+<li><strong>First-class source for slicers and PivotTables</strong> — a PivotTable built on a Table refreshes against the new rows automatically; a PivotTable built on a static range does not.</li>
+<li><strong>Header row freezes when scrolling</strong> — when you scroll past the Table, the column letters at the top of the worksheet are temporarily replaced by the Table's column headers.</li>
+</ul>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
+
+The terms **Excel Table** and **List Object** refer to the same thing. The exam and the ribbon use "Table"; the VBA object model uses `ListObject`.
+
+</div>
+
+<hr>
+<h2>Part 2: Creating a Table</h2>
+<h3>Steps</h3>
+<ol>
+<li>Click any cell inside the contiguous data range (or select the range explicitly).</li>
+<li>Press <code>Ctrl + T</code> — or go to <strong>Insert</strong> tab &gt; <strong>Tables</strong> group &gt; <strong>Table</strong>.</li>
+<li>The <strong>Create Table</strong> dialog opens. Confirm the detected range and tick <strong>My table has headers</strong> if the first row contains column names.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>A new contextual ribbon tab — <strong>Table Design</strong> — appears whenever a cell inside the Table is selected.</p>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+If you do **not** check "My table has headers," Excel inserts a generic header row (`Column1`, `Column2`, …) above your data. Always confirm this checkbox matches your data.
+
+</div>
+
+<h3>Naming the Table</h3>
+<p>By default, Excel names new Tables <code>Table1</code>, <code>Table2</code>, etc. Rename them so structured references read clearly.</p>
+<p><strong>Table Design</strong> tab &gt; <strong>Properties</strong> group &gt; <strong>Table Name</strong> field — type a new name (no spaces) and press <code>Enter</code>.</p>
+<pre><code>Table1   →   Sales
+Table2   →   Employees
+</code></pre>
+<p>Table names follow the same rules as named ranges: must start with a letter or underscore, no spaces, must be unique in the workbook.</p>
+<hr>
+<h2>Part 3: The Total Row</h2>
+<p>The Total Row is a single summary row at the bottom of the Table that responds to filters and provides per-column aggregations.</p>
+<h3>Toggle the Total Row</h3>
+<p><strong>Table Design</strong> tab &gt; <strong>Table Style Options</strong> group &gt; tick <strong>Total Row</strong> (or press <code>Ctrl + Shift + T</code>).</p>
+<p>A new row appears below the data with the label "Total" in the first column.</p>
+<h3>Per-Column Aggregations</h3>
+<p>Click any cell in the Total Row — a dropdown arrow appears. The dropdown options are:</p>
+<ul>
+<li><strong>None</strong> (blank cell)</li>
+<li><strong>Average</strong></li>
+<li><strong>Count</strong></li>
+<li><strong>Count Numbers</strong></li>
+<li><strong>Max</strong></li>
+<li><strong>Min</strong></li>
+<li><strong>Sum</strong></li>
+<li><strong>StdDev</strong></li>
+<li><strong>Var</strong></li>
+<li><strong>More Functions...</strong> (opens the Insert Function dialog)</li>
+</ul>
+<p>The aggregation Excel writes uses <code>SUBTOTAL()</code> with function numbers <code>101–111</code>, so the totals <strong>automatically recalculate when filters are applied</strong> — only visible rows are included.</p>
+<pre><code>=SUBTOTAL(109,[Amount])    → Sum of visible Amount values
+=SUBTOTAL(101,[Amount])    → Average of visible Amount values
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+If you need a custom formula in the Total Row (e.g., a weighted average), pick **More Functions...** from the dropdown — Excel will keep the row formatted as a Total Row but let you write any formula.
+
+</div>
+
+<hr>
+<h2>Part 4: Structured References</h2>
+<p>Once a range is a Table, formulas can refer to columns and rows by name. These are called <strong>structured references</strong>.</p>
+<h3>Reference Syntax</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Reference</th>
+<th style="text-align: left;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>Sales[Amount]</code></td>
+<td style="text-align: left;">The entire Amount column (data only, excludes header and total)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[@Amount]</code></td>
+<td style="text-align: left;">The Amount value <strong>on the current row</strong> (used inside the Table)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[#Headers]</code></td>
+<td style="text-align: left;">The header row of the Table</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[#Totals]</code></td>
+<td style="text-align: left;">The total row of the Table</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[#All]</code></td>
+<td style="text-align: left;">Headers + data + totals (the entire Table including chrome)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[#Data]</code></td>
+<td style="text-align: left;">Data rows only (default — same as <code>Sales[Amount]</code> shorthand)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[#This Row]</code></td>
+<td style="text-align: left;">The current row (older syntax; prefer <code>@</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[[#Headers],[Amount]]</code></td>
+<td style="text-align: left;">The header cell of the Amount column</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[[#Headers],[Amount]:[Tax]]</code></td>
+<td style="text-align: left;">The header cells from Amount through Tax (column intersection)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>Sales[[Amount]:[Tax]]</code></td>
+<td style="text-align: left;">All data cells from Amount through Tax</td>
+</tr>
+</tbody>
+</table>
+<h3>Examples</h3>
+<pre><code>=SUM(Sales[Amount])                       Sum the entire Amount column
+=AVERAGE(Sales[Amount])                   Average of the Amount column
+=Sales[@Amount]*Sales[@TaxRate]           Calculated column: row-by-row product
+=COUNTIF(Sales[Region],&quot;North&quot;)           Count of Northern rows
+=SUMIFS(Sales[Amount],Sales[Region],&quot;East&quot;)
+=INDEX(Sales[Amount],MATCH(&quot;Acme&quot;,Sales[Customer],0))
+</code></pre>
+<h3>The <code>@</code> (At) Operator</h3>
+<p><code>@</code> means "this row." It is used inside the Table when you want a single row's value rather than the whole column.</p>
+<pre><code>=[@Quantity]*[@Price]      In a calculated column inside the Sales Table
+=Sales[@Amount]            From outside the Table, but only valid on the same row
+</code></pre>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+When you enter a formula in **any cell of an empty column inside a Table**, Excel automatically copies the formula down for every existing row and every future row added — this is called a **calculated column**. To opt out, use AutoCorrect Options > "Stop automatically creating calculated columns."
+
+</div>
+
+<hr>
+<h2>Part 5: Selecting Parts of a Table</h2>
+<p>Excel provides shortcuts for selecting Table regions cleanly:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Action</th>
+<th style="text-align: left;">How</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Select a column's data</td>
+<td style="text-align: left;">Hover top of header until pointer becomes a down arrow → single click</td>
+</tr>
+<tr>
+<td style="text-align: left;">Select column including header</td>
+<td style="text-align: left;">Same hover position → click twice</td>
+</tr>
+<tr>
+<td style="text-align: left;">Select an entire row</td>
+<td style="text-align: left;">Hover left edge of first cell until pointer becomes a right arrow → click</td>
+</tr>
+<tr>
+<td style="text-align: left;">Select the whole Table</td>
+<td style="text-align: left;"><code>Ctrl + A</code> once (data only); <code>Ctrl + A</code> twice (with headers and totals)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Part 6: Converting a Table Back to a Range</h2>
+<p>If you need to use a feature that does not work on Tables — most commonly <strong>Data &gt; Subtotal</strong>, which is greyed out for Tables — convert the Table back to a normal range.</p>
+<p><strong>Table Design</strong> tab &gt; <strong>Tools</strong> group &gt; <strong>Convert to Range</strong> &gt; confirm the dialog.</p>
+<p>This action:
+- Removes the Table object and its name.
+- <strong>Keeps</strong> the formatting (banded rows stay applied as plain cell shading).
+- <strong>Keeps</strong> any data that was in the Table.
+- <strong>Loses</strong> structured references — formulas are rewritten to use cell references like <code>B2:B500</code>.</p>
+<div class="callout callout-warning"><div class="callout-title">WARNING</div>
+
+Conversion is a one-way operation in the sense that any structured reference formulas elsewhere in the workbook will be rewritten. If you change your mind, undo with `Ctrl+Z` immediately — once the workbook is saved and closed, you must re-create the Table from scratch.
+
+</div>
+
+<hr>
+<h2>Part 7: Why Tables Matter for Slicers and PivotTables</h2>
+<p>Two features formally require an Excel Table (or PivotTable) as their source:</p>
+<ul>
+<li><strong>Slicers</strong> — visual filter buttons. Insert a slicer via <strong>Table Design</strong> &gt; <strong>Tools</strong> &gt; <strong>Insert Slicer</strong>, or <strong>Insert</strong> &gt; <strong>Filters</strong> &gt; <strong>Slicer</strong>.</li>
+<li><strong>PivotTables built on a Table</strong> — when you build a PivotTable from a Table, the PivotTable's source range is the Table name (e.g., <code>Sales</code>), not a fixed <code>A1:F500</code>. Adding new rows to the Table extends the PivotTable's source automatically; pressing <strong>PivotTable Analyze &gt; Refresh</strong> (<code>Alt + F5</code>) is enough — you never have to <strong>Change Data Source</strong>.</li>
+</ul>
+<pre><code>PivotTable source on a range:    Sheet1!$A$1:$F$500   (static — won't grow)
+PivotTable source on a Table:    Sales                 (auto-extends with new rows)
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+The exam frequently tests "make this PivotTable update automatically when new rows are added." The expected answer is: convert the source range to an Excel Table first, then build the PivotTable from the Table.
+
+</div>
+
+<hr>
+<h2>Part 8: Table Style Options</h2>
+<p>The <strong>Table Design</strong> &gt; <strong>Table Style Options</strong> group toggles structural features:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Header Row</strong></td>
+<td style="text-align: left;">Show or hide the header row</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total Row</strong></td>
+<td style="text-align: left;">Show or hide the total row</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Banded Rows</strong></td>
+<td style="text-align: left;">Alternate row shading</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>First Column</strong></td>
+<td style="text-align: left;">Bold the first column</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Last Column</strong></td>
+<td style="text-align: left;">Bold the last column</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Banded Columns</strong></td>
+<td style="text-align: left;">Alternate column shading</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Filter Button</strong></td>
+<td style="text-align: left;">Show or hide the AutoFilter dropdowns in headers</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Table Styles</strong> gallery provides Light, Medium, and Dark presets, plus a <strong>New Table Style...</strong> option for fully custom styling.</p>
+<hr>
+<h2>Links:</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/overview-of-excel-tables-7ab0bb7d-3a9e-4b56-a3c9-6c94334e492c" target="_blank" rel="noopener">Microsoft Support — Overview of Excel tables</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/create-and-format-tables-e07a7e98-6e2a-49d2-9b48-4b8b0ce0d5dd" target="_blank" rel="noopener">Microsoft Support — Create and format tables</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e" target="_blank" rel="noopener">Microsoft Support — Using structured references with Excel tables</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/total-the-data-in-an-excel-table-6944378f-a222-4449-93d8-474386b11f20" target="_blank" rel="noopener">Microsoft Support — Total the data in an Excel table</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/convert-an-excel-table-to-a-range-of-data-0b326ff1-1764-4ebe-84ea-786265d41c77" target="_blank" rel="noopener">Microsoft Support — Convert an Excel table to a range of data</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.5-data-validation.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.5 Data Validation</span></a><a class="pager-link pager-next" href="./2.7-subtotals-and-totals.html"><span class="pager-direction">Next →</span><span class="pager-title">2.7 Calculate Data by Inserting Subtotals and Totals</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.11-manage-conditional-formatting-rules.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.11 Manage Conditional Formatting Rules</span></a><a class="pager-link pager-next" href="./2.13-advanced-filter.html"><span class="pager-direction">Next →</span><span class="pager-title">2.13 Advanced Filter and Database Functions</span></a></nav>
       </div>
     </main>
   </div>

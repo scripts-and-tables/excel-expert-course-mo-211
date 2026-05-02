@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Group and Ungroup Data" />
+  <meta name="description" content="MO-211 Excel Expert prep — Trendlines and Forecasting on Charts" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.6 Group and Ungroup Data · MO-211 Excel Expert</title>
+  <title>4.10 Trendlines and Forecasting on Charts · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -54,7 +54,7 @@
 <li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 1.1 Test: Managing Workbooks &amp; Macros</span></a></li>
 </ul></details>
-<details class="nav-module is-current" open>
+<details class="nav-module">
 <summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -63,7 +63,7 @@
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
@@ -89,7 +89,7 @@
 <li><a class="nav-lesson" href="../module-3/3.10-forecast-sheet.html"><span class="nav-lesson-num">3.10</span><span class="nav-lesson-title">Forecast Sheet and Forecast Functions</span></a></li>
 <li><a class="nav-lesson" href="../module-3/3.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 3 Test: Advanced Formulas, Analysis &amp; Macros</span></a></li>
 </ul></details>
-<details class="nav-module">
+<details class="nav-module is-current" open>
 <summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
@@ -102,7 +102,7 @@
 <li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.8-pivotcharts.html"><span class="nav-lesson-num">4.8</span><span class="nav-lesson-title">Create and Modify PivotCharts</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.9-sparklines.html"><span class="nav-lesson-num">4.9</span><span class="nav-lesson-title">Sparklines: Inline Data Visualizations</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.10-trendlines.html"><span class="nav-lesson-num">4.10</span><span class="nav-lesson-title">Trendlines and Forecasting on Charts</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-4/4.10-trendlines.html"><span class="nav-lesson-num">4.10</span><span class="nav-lesson-title">Trendlines and Forecasting on Charts</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 4 Test: Manage Advanced Charts and Tables</span></a></li>
 </ul></details>
 <details class="nav-module nav-resources">
@@ -121,141 +121,218 @@
           <span aria-hidden="true">/</span>
           <a href="../">Course</a>
           <span aria-hidden="true">/</span>
-          <a href="./">Module 2</a>
+          <a href="./">Module 4</a>
           <span aria-hidden="true">/</span>
-          <span aria-current="page">2.6</span>
+          <span aria-current="page">4.10</span>
         </nav>
         <header class="lesson-head">
-          <span class="lesson-eyebrow">Module 2 · Lesson 2.6</span>
-          <h1 class="lesson-title">Group and Ungroup Data</h1>
-          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.6-group-and-ungroup-data.md" target="_blank" rel="noopener">
+          <span class="lesson-eyebrow">Module 4 · Lesson 4.10</span>
+          <h1 class="lesson-title">Trendlines and Forecasting on Charts</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/04-manage-advanced-charts-and-tables/4.10-trendlines.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Financial models, quarterly reports, and large project plans all share one problem: they are too long to navigate comfortably. Excel's <strong>Grouping</strong> feature solves this by creating collapsible outline levels — similar to the expand/collapse sections in a modern code editor or project management tool. Users can hide detail rows with one click and expose them again instantly, without deleting or hiding data permanently.</p>
+<p>A <strong>trendline</strong> is a regression line overlaid on a chart series — it summarizes the direction of the data and, optionally, projects it forward (or backward) by N periods. On the MO-211 exam you should be able to add a trendline of any type, configure its forecast horizon, and display its equation and R-squared value.</p>
 <hr>
-<h2>Part 1: Grouping Rows and Columns</h2>
-<p><strong>To group rows:</strong>
-1. Select the <strong>rows</strong> you want to collapse (click the row numbers on the left).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> &gt; <strong>Group...</strong> (or just click <strong>Group</strong> — Excel auto-detects rows vs. columns based on your selection).
-3. A bracket and +/- button appear on the left margin.</p>
-<p><strong>To group columns:</strong>
-1. Select the <strong>columns</strong> you want to collapse (click the column letters at the top).
-2. Go to <strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong>.
-3. A bracket and +/- button appear above the column headers.</p>
-<p>You can nest multiple group levels (up to 8 levels deep) to create a hierarchical outline.</p>
-<hr>
-<h2>Part 2: Expand and Collapse Controls</h2>
-<p>Once groups are applied, outline controls appear on the left (for row groups) or top (for column groups):</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Control</th>
-<th style="text-align: left;">Action</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>–</code> button</strong></td>
-<td style="text-align: left;">Collapses that group (hides the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>+</code> button</strong></td>
-<td style="text-align: left;">Expands that group (shows the rows/columns)</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>1</code></strong></td>
-<td style="text-align: left;">Collapse all groups to the outermost level</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>2</code></strong></td>
-<td style="text-align: left;">Expand to the second level of nesting</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Level number <code>3</code></strong></td>
-<td style="text-align: left;">Show all detail (innermost level)</td>
-</tr>
-</tbody>
-</table>
-<p>Click the level buttons in the top-left corner of the row/column header area to control all groups simultaneously.</p>
-<hr>
-<h2>Part 3: Auto Outline</h2>
-<p>If your worksheet contains <strong>summary formulas</strong> (like SUM rows below detail rows), Excel can detect the outline structure automatically:</p>
-<p><strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Group</strong> dropdown &gt; <strong>Auto Outline</strong></p>
-<p>Excel places the +/- buttons above or below (and left or right of) detail rows based on where it finds the summary formulas. The result is a complete, multi-level outline without manually selecting each group.</p>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+<h2>Part 1: Inserting a Trendline</h2>
+<ol>
+<li>Click the chart, then click the <strong>specific series</strong> you want to analyze.</li>
+<li>Click the <strong>Chart Elements (+)</strong> icon to the right of the chart.</li>
+<li>Tick the <strong>Trendline</strong> checkbox.</li>
+<li>Click the arrow next to <strong>Trendline</strong> &gt; <strong>More Options…</strong> to open the <code>Format Trendline</code> pane.</li>
+</ol>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
 
-Auto Outline works best when summary rows are **consistently positioned** (e.g., always below the detail rows they summarize). Inconsistent layouts produce incorrect or missing groups.
+If the chart contains multiple series, Excel may prompt you to pick which series to fit. Trendlines belong to one series at a time — add a second trendline if you need to fit another.
 
 </div>
 
 <hr>
-<h2>Part 4: Ungroup and Clear Outline</h2>
-<p><strong>To ungroup a specific group:</strong>
-1. Select the same rows or columns that form the group.
-2. <strong>Data</strong> tab &gt; <strong>Outline</strong> &gt; <strong>Ungroup</strong>.</p>
-<p><strong>To remove ALL grouping from the sheet:</strong>
-<strong>Data</strong> tab &gt; <strong>Outline</strong> group &gt; <strong>Ungroup</strong> dropdown &gt; <strong>Clear Outline</strong></p>
-<p>This removes all outline levels and +/- buttons without deleting any data.</p>
-<hr>
-<h2>Part 5: Grouping vs. Hiding — Key Difference</h2>
-<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
-
-Grouping and hiding rows/columns are **not the same thing**. This distinction appears on the exam.
-
-</div>
-
+<h2>Part 2: Trendline Types</h2>
+<p>Pick the type that matches the <strong>shape</strong> of your data, not the one that gives the highest R-squared.</p>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Feature</th>
-<th style="text-align: left;">Grouping</th>
-<th style="text-align: left;">Hiding</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: left;">Shape</th>
+<th style="text-align: left;">Use When</th>
+<th style="text-align: left;">Restrictions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>Toggle method</strong></td>
-<td style="text-align: left;">+/– buttons or level numbers</td>
-<td style="text-align: left;">Right-click &gt; Hide / Unhide</td>
+<td style="text-align: left;"><strong>Linear</strong></td>
+<td style="text-align: left;">Straight line.</td>
+<td style="text-align: left;">Constant rate of change (most common default).</td>
+<td style="text-align: left;">None.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Visual indicator</strong></td>
-<td style="text-align: left;">Outline bracket + level buttons</td>
-<td style="text-align: left;">Skipped row/column numbers</td>
+<td style="text-align: left;"><strong>Exponential</strong></td>
+<td style="text-align: left;">Curve that accelerates.</td>
+<td style="text-align: left;">Compound growth/decay (population, viral spread).</td>
+<td style="text-align: left;">Source values must be <strong>strictly positive</strong> — no zeros or negatives.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>User can find hidden rows?</strong></td>
-<td style="text-align: left;">Yes — easily, via + button</td>
-<td style="text-align: left;">Only if they know to look</td>
+<td style="text-align: left;"><strong>Logarithmic</strong></td>
+<td style="text-align: left;">Rapid change that levels off.</td>
+<td style="text-align: left;">Diminishing returns (learning curves, saturation).</td>
+<td style="text-align: left;">None on the Y values; X values must be positive.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>SUBTOTAL behavior</strong></td>
-<td style="text-align: left;">Collapsed rows are excluded from <code>SUBTOTAL(101–111)</code></td>
-<td style="text-align: left;">Hidden rows excluded from <code>SUBTOTAL(101–111)</code></td>
+<td style="text-align: left;"><strong>Polynomial</strong></td>
+<td style="text-align: left;">Curve with peaks/valleys.</td>
+<td style="text-align: left;">Data that rises and falls (seasonal, parabolic).</td>
+<td style="text-align: left;">Pick <strong>Order 2-6</strong>; higher order = more wiggles, more overfit risk.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Printing</strong></td>
-<td style="text-align: left;">Collapsed groups are not printed</td>
-<td style="text-align: left;">Hidden rows not printed</td>
+<td style="text-align: left;"><strong>Power</strong></td>
+<td style="text-align: left;">Curve passing through the origin.</td>
+<td style="text-align: left;">Physics/engineering ratios, area-vs-volume relationships.</td>
+<td style="text-align: left;">All X and Y values must be <strong>positive</strong>.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>Best for</strong></td>
-<td style="text-align: left;">Structured reports with drill-down</td>
-<td style="text-align: left;">One-time hiding of sensitive data</td>
+<td style="text-align: left;"><strong>Moving Average</strong></td>
+<td style="text-align: left;">Smoothed line lagging the data.</td>
+<td style="text-align: left;">Reducing noise to see the underlying trend.</td>
+<td style="text-align: left;">Pick <strong>Period 2-N</strong>; not a regression — no equation/R² available.</td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+Polynomial **Order 2** is a parabola; **Order 3** is an S-curve; orders 4-6 chase noise. If the prompt says "fit a curve to seasonal data," start at Order 2 and only raise it if explicitly asked.
+
+</div>
+
 <hr>
-<h2>Official Resources</h2>
+<h2>Part 3: Format Trendline Pane</h2>
+<p>The <code>Format Trendline</code> pane (right-click the trendline &gt; <strong>Format Trendline</strong>) is where every adjustment happens.</p>
+<h3>Trendline Name</h3>
 <ul>
-<li><a href="https://support.microsoft.com/en-us/office/group-or-ungroup-data-in-a-pivottable-c9d1ddd0-6580-47d1-82bc-c84a5a340725" target="_blank" rel="noopener">Microsoft Support — Group or ungroup data in a PivotTable</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/outline-group-data-in-a-worksheet-08ce98c4-0063-4d42-8ac7-8278c49e9aff" target="_blank" rel="noopener">Microsoft Support — Outline (group) data in a worksheet</a></li>
+<li><strong>Automatic</strong> — Excel labels it "Linear (Series 1)" etc.</li>
+<li><strong>Custom</strong> — type your own legend label (e.g., <code>Q1-Q4 Forecast</code>).</li>
+</ul>
+<h3>Forecast</h3>
+<ul>
+<li><strong>Forward:</strong> project the trendline <strong>N periods</strong> beyond the last data point. Excel extends the line into empty plot area.</li>
+<li><strong>Backward:</strong> project the trendline <strong>N periods</strong> before the first data point.</li>
+</ul>
+<pre><code>Forward: 3   →   trendline extends 3 periods past the last bar/point
+Backward: 1  →   trendline extends 1 period before the first bar/point
+</code></pre>
+<h3>Set Intercept</h3>
+<p>Force the trendline to pass through a specific Y value at X = 0. Common uses:
+  * <code>Set Intercept = 0</code> for a Linear or Polynomial fit through the origin (e.g., regression where you know zero input = zero output).
+  * Disabled for Logarithmic, Power, Exponential, and Moving Average (mathematically inapplicable).</p>
+<h3>Display Equation on Chart</h3>
+<p>Tick to print the regression equation directly on the plot, e.g., <code>y = 0.42x + 18.6</code>. Useful when the prompt asks "show the trendline formula."</p>
+<h3>Display R-Squared Value on Chart</h3>
+<p>Tick to print the <strong>coefficient of determination</strong> (R²), a 0-1 number measuring how well the line fits the data. Closer to <code>1</code> = tighter fit. Not available for Moving Average.</p>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+"Display Equation" and "Display R-squared" are independent checkboxes — tick both for the full statistical readout the exam often asks for.
+
+</div>
+
+<hr>
+<h2>Part 4: When NOT to Use a Trendline</h2>
+<p>Trendlines are powerful, but they are easy to misuse:</p>
+<ul>
+<li><strong>Categorical X-axis</strong> (e.g., Region: North/South/East/West) — there is no meaningful "next" category to project to.</li>
+<li><strong>Very few data points</strong> (3-4) — any line will fit, but the R² is meaningless.</li>
+<li><strong>Irregular time gaps</strong> — trendlines assume even spacing on the X axis. Daily data with random missing days will project incorrectly.</li>
+<li><strong>Mixed regimes</strong> — if the data clearly changed behavior partway through (a price increase, a launch event), one trendline across both regimes hides the real story. Split into two series instead.</li>
+</ul>
+<hr>
+<h2>Part 5: Trendlines vs. Forecast Sheet</h2>
+<p>A chart trendline is a <strong>visual</strong> approximation. For real forecasting on a time-series, pair it with a <strong>Forecast Sheet</strong> (covered in lesson 3.10):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Chart Trendline</th>
+<th style="text-align: left;">Forecast Sheet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Drawn on top of an existing chart.</td>
+<td style="text-align: left;">Generates a new sheet with formulas + chart.</td>
+</tr>
+<tr>
+<td style="text-align: left;">One regression curve, no confidence interval.</td>
+<td style="text-align: left;">Uses <strong>AAA-ETS</strong> algorithm with confidence bounds.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Static — does not update if you change source.</td>
+<td style="text-align: left;">Built on <code>FORECAST.ETS</code> formulas that recalc.</td>
+</tr>
+<tr>
+<td style="text-align: left;">Good for visual narrative.</td>
+<td style="text-align: left;">Good for actual numeric forecasts you'll cite.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
+
+The exam may ask for either. "Add a trendline" = chart workflow above. "Create a forecast" = `Data` tab > **Forecast Sheet**.
+
+</div>
+
+<hr>
+<h2>Technical Checklist for the Exam</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Task</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Add a trendline</strong></td>
+<td style="text-align: left;">Chart &gt; <strong>Chart Elements (+)</strong> &gt; tick <strong>Trendline</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pick type</strong></td>
+<td style="text-align: left;"><strong>Chart Elements (+)</strong> &gt; <strong>Trendline</strong> arrow &gt; <strong>More Options</strong> &gt; pick type</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Forward forecast</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; <strong>Forecast</strong> &gt; <strong>Forward</strong> = N</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Show equation</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; tick <strong>Display Equation on chart</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Show R²</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; tick <strong>Display R-squared value on chart</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polynomial order</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; <strong>Polynomial</strong> &gt; <strong>Order</strong> = 2-6</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Moving Average period</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; <strong>Moving Average</strong> &gt; <strong>Period</strong> = N</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Set intercept</strong></td>
+<td style="text-align: left;"><code>Format Trendline</code> &gt; tick <strong>Set Intercept</strong> &gt; type Y value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Official Resources:</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/add-a-trend-or-moving-average-line-to-a-chart-fa59f86c-5852-4b68-a6d4-901a745842ad" target="_blank" rel="noopener">Add a trend or moving average line to a chart</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/choosing-the-best-trendline-for-your-data-1bb3c9e7-0280-45b5-9ab0-d0c93161daa8" target="_blank" rel="noopener">Choosing the best trendline for your data</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/create-a-forecast-in-excel-for-windows-22c500da-6da7-45e5-bfdc-60a7062329fd" target="_blank" rel="noopener">Create a forecast in Excel for Windows</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.5-data-validation.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.5 Data Validation</span></a><a class="pager-link pager-next" href="./2.7-subtotals-and-totals.html"><span class="pager-direction">Next →</span><span class="pager-title">2.7 Calculate Data by Inserting Subtotals and Totals</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./4.9-sparklines.html"><span class="pager-direction">← Previous</span><span class="pager-title">4.9 Sparklines: Inline Data Visualizations</span></a><a class="pager-link pager-next" href="./4.test-yourself.html"><span class="pager-direction">Next →</span><span class="pager-title">Quiz Module 4 Test: Manage Advanced Charts and Tables</span></a></nav>
       </div>
     </main>
   </div>
