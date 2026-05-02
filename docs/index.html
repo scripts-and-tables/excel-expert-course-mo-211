@@ -11,6 +11,12 @@
   <meta property="og:type" content="website" />
   <title>MO-211 Excel Expert — Free Prep Course</title>
   <link rel="icon" type="image/png" href="hero-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,63 +24,131 @@
   <header class="site-header">
     <div class="container nav">
       <a class="brand" href="#top" aria-label="MO-211 Excel Expert home">
-        <span class="brand-mark" aria-hidden="true">X</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l6 5-6 5"/><path d="M13 7l6 5-6 5"/></svg>
+        </span>
         <span class="brand-text">MO-211 <span class="brand-accent">Expert Prep</span></span>
       </a>
       <nav class="primary-nav" aria-label="Primary">
         <a href="#why">Why</a>
+        <a href="#learn">Curriculum</a>
         <a href="#modules">Modules</a>
-        <a href="#about">About</a>
-        <a class="btn btn-ghost" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">GitHub</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-ghost" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.99 0 1.98.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
       </nav>
     </div>
   </header>
 
   <main id="top">
 
+    <!-- HERO -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="blob blob-a"></div>
+        <div class="blob blob-b"></div>
+        <div class="grid-dots"></div>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Free &middot; Open Source &middot; Self-paced</span>
+          <span class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Free · Open Source · Self-paced
+          </span>
           <h1>Pass the <span class="grad">Microsoft Excel Expert</span> exam — without paying a cent.</h1>
-          <p class="lede">A hands-on, scenario-based bootcamp that walks you through every skill measured on <strong>Exam MO-211</strong> and prepares you for the <strong>Microsoft Office Specialist: Excel Expert</strong> certification.</p>
+          <p class="lede">A hands-on, scenario-based bootcamp that walks you through every skill measured on <strong>Exam MO-211</strong> so you can earn the <strong>Microsoft Office Specialist: Excel Expert</strong> certification with confidence.</p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="#modules">Start learning →</a>
-            <a class="btn btn-secondary" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-primary" href="#modules">Start learning <span aria-hidden="true">→</span></a>
+            <a class="btn btn-secondary" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.99 0 1.98.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+              Star on GitHub
+            </a>
           </div>
           <ul class="hero-stats" aria-label="Course at a glance">
             <li><strong>4</strong><span>Modules</span></li>
             <li><strong>36+</strong><span>Lessons</span></li>
-            <li><strong>$0</strong><span>Cost, forever</span></li>
+            <li><strong>$0</strong><span>Forever</span></li>
+            <li><strong>100%</strong><span>Open source</span></li>
           </ul>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <img src="hero-image.png" alt="" loading="eager" />
+        <div class="hero-art">
+          <div class="hero-photo">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1400&auto=format&fit=crop&q=80"
+              alt="Analytics dashboard with charts on a laptop"
+              loading="eager"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="float-card float-card-a" aria-hidden="true">
+            <div class="fc-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 4 4 5-6"/></svg>
+            </div>
+            <div class="fc-body">
+              <span class="fc-title">PivotTable mastery</span>
+              <span class="fc-meta">Module 4 · Lesson 4.3</span>
+            </div>
+          </div>
+          <div class="float-card float-card-b" aria-hidden="true">
+            <div class="fc-icon fc-icon-amber">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="fc-body">
+              <span class="fc-title">XLOOKUP unlocked</span>
+              <span class="fc-meta">Lesson complete</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- TRUST STRIP -->
+    <section class="trust">
+      <div class="container">
+        <p class="trust-lede">Mapped <strong>1:1</strong> to Microsoft's official Skills Measured outline</p>
+        <ul class="trust-badges">
+          <li><span class="dot dot-green"></span>Excel for Microsoft 365</li>
+          <li><span class="dot dot-blue"></span>MO-211 aligned</li>
+          <li><span class="dot dot-amber"></span>Hands-on workbooks</li>
+          <li><span class="dot dot-purple"></span>MIT licensed</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- WHY -->
     <section id="why" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Why this course exists</h2>
+        <span class="eyebrow eyebrow-center">Why this course</span>
+        <h2 class="section-title section-title-center">Built for people who actually want to learn Excel.</h2>
+        <p class="section-sub section-sub-center">No fluff, no upsells, no email walls — just a complete, practical path from "I know some formulas" to passing the Excel Expert exam.</p>
         <div class="why-grid">
           <article class="why-card">
-            <div class="why-icon" aria-hidden="true">💸</div>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
             <h3>Prep shouldn't be paywalled</h3>
-            <p>Most MO-211 prep is locked behind expensive subscriptions. This one isn't — every lesson, dataset, and exercise is free and open source.</p>
+            <p>Most MO-211 prep is locked behind expensive subscriptions. Every lesson, dataset, and exercise here is free and open source — forever.</p>
           </article>
           <article class="why-card">
-            <div class="why-icon" aria-hidden="true">🛠️</div>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
             <h3>Learn by doing, not watching</h3>
             <p>Forget passive video lectures. You get realistic worksheets, step-by-step instructions, and solution files so the muscle memory actually sticks.</p>
           </article>
           <article class="why-card">
-            <div class="why-icon" aria-hidden="true">🎯</div>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
             <h3>Mapped to the official spec</h3>
-            <p>Every lesson is aligned to Microsoft's <em>Skills Measured</em> document for MO-211 — nothing extra, nothing missing.</p>
+            <p>Every lesson aligns to Microsoft's <em>Skills Measured</em> document for MO-211 — nothing extra, nothing missing, weighted exactly as the exam is.</p>
           </article>
           <article class="why-card">
-            <div class="why-icon" aria-hidden="true">🌱</div>
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9"/><path d="M12 15V9"/></svg>
+            </div>
             <h3>Built in the open</h3>
             <p>Found a typo? Have a better example? Open an issue or a pull request — improvements get folded back in for the next learner.</p>
           </article>
@@ -82,50 +156,77 @@
       </div>
     </section>
 
-    <section id="modules" class="section">
+    <!-- WHAT YOU'LL LEARN -->
+    <section id="learn" class="section">
+      <div class="container learn-wrap">
+        <div class="learn-head">
+          <span class="eyebrow">What you'll learn</span>
+          <h2 class="section-title">Every Excel Expert skill, demystified.</h2>
+          <p class="section-sub">Twelve focus areas pulled directly from the MO-211 Skills Measured outline — practiced on real worksheets, not toy examples.</p>
+        </div>
+        <ul class="learn-grid">
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Nested IF, IFS, SWITCH &amp; LET</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>XLOOKUP, INDEX &amp; MATCH</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Dynamic arrays, FILTER &amp; SORT</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Custom number &amp; date formats</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Advanced data validation</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Formula-based conditional formatting</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>PivotTables &amp; slicers</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Calculated fields &amp; PivotCharts</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Box, Waterfall &amp; Sunburst charts</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Goal Seek &amp; Scenario Manager</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Recording &amp; editing macros</li>
+          <li><span class="check"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Workbook protection &amp; sharing</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- MODULES -->
+    <section id="modules" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Course syllabus</h2>
-        <p class="section-sub">Four modules, sequenced exactly the way the exam weights them.</p>
+        <span class="eyebrow eyebrow-center">Course syllabus</span>
+        <h2 class="section-title section-title-center">Four modules. Sequenced like the exam.</h2>
+        <p class="section-sub section-sub-center">Each module is weighted to match the official exam blueprint, so your time goes where the points are.</p>
 
         <div class="modules-grid">
 
           <a class="module-card" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/01-manage-workbook-options-and-settings" target="_blank" rel="noopener">
             <div class="module-thumb"><img src="hero-c1.png" alt="" loading="lazy" /></div>
             <div class="module-body">
-              <span class="module-tag">Module 1 &middot; 10–15%</span>
+              <span class="module-tag">Module 1 · 10–15%</span>
               <h3>Manage Workbook Options &amp; Settings</h3>
-              <p>Copy macros across workbooks, reference external data, configure version history, lock down editing, and tune calculation options.</p>
-              <span class="module-link">Open module →</span>
+              <p>Copy macros across workbooks, reference external data, version history, restrict editing, and tune calculation options.</p>
+              <span class="module-link">Open module <span aria-hidden="true">→</span></span>
             </div>
           </a>
 
           <a class="module-card" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/02-manage-and-format-data" target="_blank" rel="noopener">
             <div class="module-thumb"><img src="hero-c2.png" alt="" loading="lazy" /></div>
             <div class="module-body">
-              <span class="module-tag">Module 2 &middot; 30–35%</span>
+              <span class="module-tag">Module 2 · 30–35%</span>
               <h3>Manage &amp; Format Data</h3>
               <p>Master Flash Fill, advanced fill series, RANDARRAY, custom number formats, data validation, subtotals, and advanced conditional formatting.</p>
-              <span class="module-link">Open module →</span>
+              <span class="module-link">Open module <span aria-hidden="true">→</span></span>
             </div>
           </a>
 
           <a class="module-card" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/03-advanced-formulas-and-macro" target="_blank" rel="noopener">
             <div class="module-thumb"><img src="hero-c3.png" alt="" loading="lazy" /></div>
             <div class="module-body">
-              <span class="module-tag">Module 3 &middot; 25–30%</span>
+              <span class="module-tag">Module 3 · 25–30%</span>
               <h3>Advanced Formulas &amp; Macros</h3>
               <p>IFS, SWITCH, LET, XLOOKUP, INDEX/MATCH, dynamic arrays, financial functions, troubleshooting tools, and recording your first macros.</p>
-              <span class="module-link">Open module →</span>
+              <span class="module-link">Open module <span aria-hidden="true">→</span></span>
             </div>
           </a>
 
           <a class="module-card" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/04-manage-advanced-charts-and-tables" target="_blank" rel="noopener">
             <div class="module-thumb"><img src="hero-c4.png" alt="" loading="lazy" /></div>
             <div class="module-body">
-              <span class="module-tag">Module 4 &middot; 25–30%</span>
+              <span class="module-tag">Module 4 · 25–30%</span>
               <h3>Advanced Charts &amp; PivotTables</h3>
               <p>Dual-axis, Box &amp; Whisker, Waterfall, Funnel, and Sunburst charts. PivotTables, slicers, calculated fields, and PivotCharts end-to-end.</p>
-              <span class="module-link">Open module →</span>
+              <span class="module-link">Open module <span aria-hidden="true">→</span></span>
             </div>
           </a>
 
@@ -133,10 +234,40 @@
       </div>
     </section>
 
+    <!-- HOW IT WORKS -->
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow eyebrow-center">How it works</span>
+        <h2 class="section-title section-title-center">Three steps, then you're learning.</h2>
+        <ol class="steps-grid">
+          <li class="step-card">
+            <span class="step-num">01</span>
+            <h3>Clone or download</h3>
+            <p>Grab the entire course from GitHub. No accounts, no email walls — the whole thing fits in a single folder on your machine.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">02</span>
+            <h3>Open a lesson</h3>
+            <p>Each lesson includes plain-English instructions, a starter workbook, and the exact concepts the exam tests for that topic.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">03</span>
+            <h3>Practice &amp; verify</h3>
+            <p>Build the solution yourself, then compare against the included answer file. Repeat until the pattern is automatic.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FREE BANNER -->
     <section class="section section-free">
       <div class="container free-banner">
-        <div class="free-mark" aria-hidden="true">100%</div>
-        <div>
+        <div class="free-mark" aria-hidden="true">
+          <span class="free-mark-num">100%</span>
+          <span class="free-mark-label">FREE</span>
+        </div>
+        <div class="free-body">
+          <span class="eyebrow">Yes, really</span>
           <h2>Completely free. Forever.</h2>
           <p>No signup. No email wall. No "premium tier." Clone the repo, start the first lesson, and keep going at your own pace. If it helps you pass, a ⭐ on GitHub is the only thank-you needed.</p>
           <a class="btn btn-primary" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">Star the repo on GitHub</a>
@@ -144,18 +275,28 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="section section-alt">
       <div class="container about-grid">
-        <div>
-          <h2 class="section-title">About the author</h2>
-          <p>I've spent years working with Excel as my daily driver — building financial models, wrangling data, and automating the tedious bits with formulas and macros. While prepping for the MO-211 exam I found that solid, end-to-end material was either scattered across blog posts or locked behind paid courses.</p>
+        <div class="about-copy">
+          <span class="eyebrow">About the author</span>
+          <h2 class="section-title">Built by someone who lives in spreadsheets.</h2>
+          <p>I've spent years working with Excel as my daily driver — building financial models, wrangling messy data, and automating tedious bits with formulas and macros. While prepping for the MO-211 exam I found that solid, end-to-end material was either scattered across blog posts or locked behind paid courses.</p>
           <p>So I wrote the course I wished I'd had: structured around the official Skills Measured outline, full of realistic scenarios, and free for anyone who wants to level up.</p>
           <p>If a single lesson here saves you a few hours of confusion, the project has done its job.</p>
         </div>
         <aside class="about-card">
-          <h3>Prerequisites</h3>
-          <ul>
-            <li>Microsoft Excel — Microsoft 365 version recommended (for <code>XLOOKUP</code>, <code>LET</code>, dynamic arrays).</li>
+          <div class="about-card-head">
+            <div class="about-avatar" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <p class="about-card-title">Prerequisites</p>
+              <p class="about-card-sub">What you should bring</p>
+            </div>
+          </div>
+          <ul class="about-list">
+            <li>Microsoft Excel — Microsoft 365 recommended (for <code>XLOOKUP</code>, <code>LET</code>, dynamic arrays).</li>
             <li>Comfort with basic formulas and the Excel ribbon.</li>
             <li>A willingness to actually open the workbooks and try things — that's the whole point.</li>
           </ul>
@@ -163,11 +304,53 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container faq-wrap">
+        <div class="faq-head">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Frequently asked questions</h2>
+          <p class="section-sub">Still have questions? <a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/issues" target="_blank" rel="noopener">Open an issue on GitHub</a> and I'll get back to you.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary><span>Is this <em>really</em> free? What's the catch?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>There's no catch. The entire course — every lesson, every starter workbook, every solution file — is published openly under the MIT license. No upsells, no email gates, no "premium tier" hidden behind the next click.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Do I need to be an Excel power user already?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>No. You should be comfortable with basic formulas (SUM, AVERAGE, IF) and navigating the ribbon. Everything beyond that — XLOOKUP, dynamic arrays, PivotTables, macros — is taught from the ground up.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>How long does it take to complete?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>Most learners finish in 3–6 weeks at a comfortable pace of one lesson per evening. You can move faster or slower; the course doesn't expire and there's no "cohort" to keep up with.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Will this prepare me to pass the MO-211 exam?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>Yes — that's exactly what it's built for. Every lesson maps to a skill on Microsoft's official MO-211 Skills Measured outline, weighted to match how the exam scores each domain.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Can I contribute or suggest improvements?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>Absolutely. Open an issue for typos, broken links, or fuzzy explanations, or send a pull request with a fix. Contributions are warmly welcomed.</p>
+          </details>
+          <details class="faq-item">
+            <summary><span>Which version of Excel do I need?</span><span class="faq-toggle" aria-hidden="true"></span></summary>
+            <p>Microsoft 365 / Excel 2021 or newer is recommended, since several lessons use modern functions like <code>XLOOKUP</code>, <code>LET</code>, <code>FILTER</code>, and <code>SORTBY</code> that aren't available in older versions.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
     <section class="section section-cta">
       <div class="container cta-inner">
-        <h2>Ready to get certified?</h2>
-        <p>Jump into Module 1 and start building real Excel Expert skills today.</p>
-        <a class="btn btn-primary btn-lg" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/01-manage-workbook-options-and-settings" target="_blank" rel="noopener">Begin Module 1 →</a>
+        <span class="eyebrow eyebrow-center eyebrow-on-dark">Ready when you are</span>
+        <h2>Start your Excel Expert journey today.</h2>
+        <p>Open Module 1 and have your first lesson done before your coffee gets cold.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/tree/main/01-manage-workbook-options-and-settings" target="_blank" rel="noopener">Begin Module 1 <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost btn-ghost-on-dark btn-lg" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">Browse on GitHub</a>
+        </div>
       </div>
     </section>
 
@@ -182,8 +365,8 @@
       <div>
         <p class="footer-heading">Resources</p>
         <ul>
-          <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/" target="_blank" rel="noopener">Official MO-211 exam page</a></li>
-          <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps" target="_blank" rel="noopener">MOS: Excel Expert certification</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/" target="_blank" rel="noopener">Official MO-211 exam</a></li>
+          <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps" target="_blank" rel="noopener">MOS: Excel Expert</a></li>
           <li><a href="https://arch-center.azureedge.net/Learning/Credentials/MO-211_OD_MOS365_ExcelExpert.pdf" target="_blank" rel="noopener">Skills Measured (PDF)</a></li>
         </ul>
       </div>
