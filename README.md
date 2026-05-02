@@ -42,6 +42,15 @@ To get started, simply clone this repository or download the ZIP file, and work 
 
 ---
 
+## 📚 Companion Resources
+
+In addition to the modules, this repo includes two reference docs to help you cram and execute under pressure:
+
+* [**KEYBOARD-SHORTCUTS.md**](./KEYBOARD-SHORTCUTS.md) — Every shortcut that saves seconds on the timed exam.
+* [**EXAM-DAY-TIPS.md**](./EXAM-DAY-TIPS.md) — What the test environment looks like and how to navigate it.
+
+---
+
 ## 🛠 Prerequisites
 * Microsoft Excel (Microsoft 365 Apps version recommended to ensure functions like `XLOOKUP` and `LET` are available).
 * A basic understanding of standard Excel formulas and interface navigation.
@@ -49,7 +58,18 @@ To get started, simply clone this repository or download the ZIP file, and work 
 ## 🤝 Contributing
 Found a typo or have a better way to solve a practice problem? Feel free to open an issue or submit a pull request!
 
-## Useful Links
+## 🔗 Useful Links
+
+**Official Microsoft resources**
 1. [Exam MO-211: Microsoft Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/exams/mo-211/)
-2. [Certification Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)
-3. [YouTube - Mike's Office - Excel Expert Tutorial (MO-201 Practice Exam) - 28 min](https://youtu.be/jOZZOEFllrA)
+2. [Certification: Microsoft Office Specialist: Excel Expert (Microsoft 365 Apps)](https://learn.microsoft.com/en-us/credentials/certifications/mos-excel-expert-m365-apps)
+3. [Skills Measured PDF (official)](https://arch-center.azureedge.net/Learning/Credentials/MO-211_OD_MOS365_ExcelExpert.pdf)
+4. [Microsoft Learn — educator preparation materials](https://learn.microsoft.com/en-us/training/educator-center/instructor-materials/microsoft-365-apps-certification-preparation-materials)
+
+**Video & courses**
+5. [YouTube — Mike's Office — Excel Expert Tutorial (MO-201 Practice Exam) — 28 min](https://youtu.be/jOZZOEFllrA)
+6. [LinkedIn Learning — Prepare for the Excel Expert (MO-211) Path](https://www.linkedin.com/learning/paths/prepare-for-the-excel-expert-microsoft-office-specialist-exam-for-m365-apps-mo-211)
+
+**Practice tests & sample questions**
+7. [EDUSUM — free MO-211 sample questions](https://www.edusum.com/microsoft/microsoft-excel-expert-365-apps-mo-211-certification-sample-questions)
+8. [GMetrix — MOS practice tests (paid; closest match to the live exam UI)](https://www.gmetrix.com/)
