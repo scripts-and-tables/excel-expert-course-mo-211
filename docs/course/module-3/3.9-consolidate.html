@@ -336,7 +336,12 @@ If you enable **Create links to source data**, Excel automatically groups the de
       });
       // Close when a sidebar link is tapped (mobile UX)
       sb.addEventListener('click', function(e) {
-        if (e.target.closest('a')) sb.classList.remove('is-open');
+        // Close when tapping a link OR the backdrop (which is the sidebar's ::before pseudo-element,
+        // so clicks on it bubble up with e.target === sb)
+        if (e.target.closest('a') || e.target === sb) {
+          sb.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
       });
     })();
   </script>

@@ -264,7 +264,12 @@ Use "Clear Rules from Entire Sheet" with caution in shared workbooks — it remo
       });
       // Close when a sidebar link is tapped (mobile UX)
       sb.addEventListener('click', function(e) {
-        if (e.target.closest('a')) sb.classList.remove('is-open');
+        // Close when tapping a link OR the backdrop (which is the sidebar's ::before pseudo-element,
+        // so clicks on it bubble up with e.target === sb)
+        if (e.target.closest('a') || e.target === sb) {
+          sb.classList.remove('is-open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
       });
     })();
   </script>
