@@ -61,7 +61,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; color-scheme: light; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -951,7 +951,9 @@ body.course-outline .course-sidebar { display: none; }
   padding: 4px 8px;
   border-radius: 6px;
 }
-.course-nav-home:hover { color: var(--green-700); background: var(--green-50); text-decoration: none; }
+@media (hover: hover) {
+  .course-nav-home:hover { color: var(--green-700); background: var(--green-50); text-decoration: none; }
+}
 
 .nav-module {
   border-radius: 10px;
@@ -973,7 +975,9 @@ body.course-outline .course-sidebar { display: none; }
   transition: background 160ms ease, color 160ms ease;
 }
 .nav-module > summary::-webkit-details-marker { display: none; }
-.nav-module > summary:hover { background: var(--green-50); color: var(--green-800); }
+@media (hover: hover) {
+  .nav-module > summary:hover { background: var(--green-50); color: var(--green-800); }
+}
 .nav-module.is-current > summary { color: var(--green-800); }
 .nav-mod-num {
   display: inline-grid;
@@ -1025,7 +1029,9 @@ body.course-outline .course-sidebar { display: none; }
   line-height: 1.35;
   transition: background 140ms ease, color 140ms ease;
 }
-.nav-lesson:hover { background: var(--green-50); color: var(--green-800); text-decoration: none; }
+@media (hover: hover) {
+  .nav-lesson:hover { background: var(--green-50); color: var(--green-800); text-decoration: none; }
+}
 .nav-lesson-num {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1036,7 +1042,7 @@ body.course-outline .course-sidebar { display: none; }
 }
 .nav-lesson-title { flex: 1; }
 .nav-lesson.is-current {
-  background: linear-gradient(135deg, rgba(33,165,87,0.10), rgba(76,201,124,0.06));
+  background: var(--green-50);
   color: var(--green-800);
   font-weight: 600;
   position: relative;
@@ -1416,13 +1422,16 @@ body.course-outline .course-sidebar { display: none; }
     height: 100vh;
     height: 100dvh;
     border-right: 1px solid var(--line);
-    background: var(--paper);
-    box-shadow: var(--shadow-lg);
+    background: #ffffff;
+    box-shadow: 0 18px 40px rgba(11, 81, 50, 0.12), 0 4px 12px rgba(11, 81, 50, 0.05);
     transition: left 260ms cubic-bezier(.2,.7,.2,1);
     z-index: 60;
   }
   .course-sidebar.is-open { left: 0; }
-  .course-sidebar .sidebar-inner { padding-top: 18px; }
+  .course-sidebar .sidebar-inner {
+    padding-top: 18px;
+    background: #ffffff;
+  }
 
   /* Backdrop: real element injected by JS, sits behind drawer */
   .sidebar-backdrop {
