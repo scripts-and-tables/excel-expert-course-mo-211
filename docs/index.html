@@ -393,15 +393,22 @@
       var burger = document.querySelector('.header-burger');
       var nav = document.getElementById('primary-nav');
       if (!burger || !nav) return;
-      burger.addEventListener('click', function() {
-        var open = nav.classList.toggle('is-open');
+      function setOpen(open) {
+        nav.classList.toggle('is-open', open);
         burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      burger.addEventListener('click', function(e) {
+        e.preventDefault();
+        setOpen(!nav.classList.contains('is-open'));
       });
       nav.addEventListener('click', function(e) {
-        if (e.target.closest('a')) {
-          nav.classList.remove('is-open');
-          burger.setAttribute('aria-expanded', 'false');
-        }
+        if (e.target.closest('a')) setOpen(false);
+      });
+      // Tap outside the panel to close
+      document.addEventListener('click', function(e) {
+        if (!nav.classList.contains('is-open')) return;
+        if (e.target.closest('.primary-nav') || e.target.closest('.header-burger')) return;
+        setOpen(false);
       });
     })();
   </script>

@@ -1054,18 +1054,23 @@ ul, ol { padding-left: 1.1em; }
   display: none;
   background: transparent;
   border: 0;
-  padding: 8px;
+  padding: 10px;
   margin-right: 6px;
-  margin-left: -4px;
+  margin-left: -6px;
   color: var(--ink-800);
   cursor: pointer;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  transition: background 160ms ease, color 160ms ease;
+  transition: background 160ms ease, color 160ms ease, transform 100ms ease;
+  -webkit-tap-highlight-color: rgba(15, 111, 63, 0.15);
+  touch-action: manipulation;
+  -webkit-appearance: none;
+  appearance: none;
 }
+.header-burger svg { pointer-events: none; display: block; }
 .header-burger:hover { background: var(--green-50); color: var(--green-700); }
-.header-burger:active { background: var(--green-100); }
+.header-burger:active { background: var(--green-100); color: var(--green-700); transform: scale(0.94); }
 .header-burger:focus-visible { outline: 2px solid var(--green-500); outline-offset: 2px; }
 /* Legacy FAB removed — use the burger in the header */
 .sidebar-toggle { display: none !important; }
@@ -1398,33 +1403,32 @@ ul, ol { padding-left: 1.1em; }
   .course-sidebar {
     position: fixed;
     top: 0;
-    left: 0; right: 0;
-    width: 100%;
-    max-width: 360px;
+    left: -400px;
+    right: auto;
+    width: 360px;
+    max-width: 88vw;
     height: 100vh;
     height: 100dvh;
     border-right: 1px solid var(--line);
     background: var(--paper);
     box-shadow: var(--shadow-lg);
-    transform: translateX(-105%);
-    transition: transform 260ms cubic-bezier(.2,.7,.2,1);
+    transition: left 260ms cubic-bezier(.2,.7,.2,1);
     z-index: 60;
   }
-  .course-sidebar.is-open { transform: translateX(0); }
+  .course-sidebar.is-open { left: 0; }
   .course-sidebar .sidebar-inner { padding-top: 18px; }
 
-  /* Backdrop while sidebar is open: a fixed overlay attached to body via the open sidebar */
-  .course-sidebar::before {
-    content: "";
+  /* Backdrop: real element injected by JS, sits behind drawer */
+  .sidebar-backdrop {
     position: fixed;
     inset: 0;
     background: rgba(7, 18, 12, 0.45);
     opacity: 0;
     pointer-events: none;
     transition: opacity 240ms ease;
-    z-index: -1;
+    z-index: 55;
   }
-  .course-sidebar.is-open::before {
+  .sidebar-backdrop.is-visible {
     opacity: 1;
     pointer-events: auto;
   }

@@ -247,22 +247,25 @@
     (function() {
       var sb = document.getElementById('course-sidebar');
       if (!sb) return;
-      var toggles = document.querySelectorAll('.header-burger');
-      function setExpanded(open) {
-        toggles.forEach(function(b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+      var burgers = document.querySelectorAll('.header-burger');
+      var backdrop = document.createElement('div');
+      backdrop.className = 'sidebar-backdrop';
+      document.body.appendChild(backdrop);
+      function setOpen(open) {
+        sb.classList.toggle('is-open', open);
+        backdrop.classList.toggle('is-visible', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        burgers.forEach(function(b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); });
       }
-      toggles.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          var open = sb.classList.toggle('is-open');
-          setExpanded(open);
+      burgers.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          setOpen(!sb.classList.contains('is-open'));
         });
       });
-      // Close on link tap or backdrop click (the backdrop is the sidebar's ::before, so e.target === sb)
+      backdrop.addEventListener('click', function() { setOpen(false); });
       sb.addEventListener('click', function(e) {
-        if (e.target.closest('a') || e.target === sb) {
-          sb.classList.remove('is-open');
-          setExpanded(false);
-        }
+        if (e.target.closest('a')) setOpen(false);
       });
     })();
   </script>
