@@ -909,6 +909,10 @@ ul, ol { padding-left: 1.1em; }
 /* ---------- Course shell (sidebar + main) ---------- */
 .course-page { background: var(--paper); }
 
+/* On the course outline page, the sidebar is hidden on desktop (the
+   page itself shows the curriculum). On mobile it's the drawer. */
+body.course-outline .course-sidebar { display: none; }
+
 .course-shell {
   display: grid;
   grid-template-columns: 296px minmax(0, 1fr);
@@ -1400,7 +1404,9 @@ ul, ol { padding-left: 1.1em; }
 /* ---------- Course responsive ---------- */
 @media (max-width: 980px) {
   .course-shell { grid-template-columns: 1fr; }
-  .course-sidebar {
+  .course-sidebar,
+  body.course-outline .course-sidebar {
+    display: block;
     position: fixed;
     top: 0;
     left: -400px;
