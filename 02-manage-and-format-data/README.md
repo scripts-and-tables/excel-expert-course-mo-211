@@ -9,10 +9,11 @@ We begin with **smart data entry techniques**: using Flash Fill to instantly ref
 
 ## 📂 Module Contents
 
-### [2.1 Flash Fill](./2.1-flash-fill.md)
+### [2.1 Flash Fill and Linked Data Types](./2.1-flash-fill.md)
 
   * Using pattern recognition to split, combine, and reformat text data instantly.
   * Triggering Flash Fill with `Ctrl+E` and guiding it with additional examples.
+  * Converting plain text to **Linked Data Types** (Stocks, Geography, Currencies) and pulling live fields with the insert-data icon and dot-operator formulas.
 
 ### [2.2 Advanced Fill Series](./2.2-advanced-fill-series.md)
 
