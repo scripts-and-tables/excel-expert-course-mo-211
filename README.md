@@ -19,26 +19,32 @@ To get started, simply clone this repository or download the ZIP file, and work 
 ## 📚 Course Syllabus (Skills Measured)
 
 ### [Module 1: Manage Workbook Options and Settings (10–15%)](./01-manage-workbook-options-and-settings)
-* **1.1 Manage workbooks:** Copy macros, reference external data, version history.
-* **1.2 Prepare for collaboration:** Restrict editing, protect structure/ranges, configure calculation options.
+* **Manage workbooks:** Copy macros, reference external data, enable macros (Trust Center), version history.
+* **Prepare for collaboration:** Restrict editing, protect worksheet/cell ranges, protect workbook structure, calculation options.
+* **Inspect & check:** Document Inspector, Accessibility Checker, Compatibility Checker.
 
 ### [Module 2: Manage and Format Data (30–35%)](./02-manage-and-format-data)
-* **2.1 Fill cells:** Flash Fill, advanced Series options, `RANDARRAY()`.
-* **2.2 Format and validate:** Custom number formats, data validation, subtotals, removing duplicates.
-* **2.3 Advanced conditional formatting:** Custom rules, formula-based rules, rule management.
+* **Fill cells:** Flash Fill, advanced Fill Series, `RANDARRAY()`.
+* **Format and validate:** Custom number formats, data validation (incl. cascading dropdowns), group/subtotal, remove duplicates.
+* **Conditional formatting:** Built-in rules, formula-based rules, rule management.
+* **Tables & filtering:** Excel Tables and structured references, Advanced Filter with criteria ranges.
 
 ### [Module 3: Create Advanced Formulas and Macros (25–30%)](./03-advanced-formulas-and-macro)
-* **3.1 Logical operations:** Nested `IF()`, `IFS()`, `SWITCH()`, `LET()`, and `AND/OR`.
-* **3.2 Lookup functions:** `XLOOKUP()`, `VLOOKUP()`, `INDEX()`, `MATCH()`.
-* **3.3 Date/Time functions:** `WEEKDAY()`, `WORKDAY()`, `NOW()`.
-* **3.4 Data analysis:** Consolidate, Goal Seek, Scenario Manager, `PMT()`, `FILTER()`, `SORTBY()`.
-* **3.5 Troubleshoot formulas:** Trace precedents/dependents, Watch Window, Evaluate Formula.
-* **3.6 Macros:** Record, name, and edit simple macros.
+* **Logical operations:** `IF`, `IFS`, `SWITCH`, `LET`, `*IFS` family.
+* **Lookups:** `XLOOKUP` (full args), `VLOOKUP`, `INDEX/MATCH`, `XMATCH`, wildcards.
+* **Date/Time:** `WORKDAY.INTL`, `NETWORKDAYS`, `DATEDIF`, `EDATE`, `EOMONTH`.
+* **What-If Analysis:** Goal Seek, Scenario Manager, Data Tables.
+* **Dynamic arrays:** `FILTER`, `SORT`, `SORTBY`, `UNIQUE`, `SEQUENCE`, `VSTACK`, `HSTACK`, `TEXTSPLIT` family.
+* **Financial:** `PMT`, `NPER`, `RATE`, `IPMT`, `PPMT`, `XNPV`, `XIRR`.
+* **Troubleshoot:** Trace Precedents/Dependents, Watch Window, Evaluate Formula, error reference.
+* **Macros:** Record, edit, Personal Macro Workbook, Form Controls.
+* **Forecast:** Consolidate, Forecast Sheet (`FORECAST.ETS`).
 
 ### [Module 4: Manage Advanced Charts and Tables (25–30%)](./04-manage-advanced-charts-and-tables)
-* **4.1 Advanced charts:** Dual-axis, Box & Whisker, Waterfall, Funnel, Sunburst.
-* **4.2 PivotTables:** Creation, slicers, calculated fields, value field settings.
-* **4.3 PivotCharts:** Creation, styles, drill-down details.
+* **Advanced charts:** Dual-axis, Box & Whisker, Histogram (Pareto), Waterfall, Funnel, Sunburst, Combo.
+* **Sparklines & Trendlines:** Inline cell sparklines (Line / Column / Win-Loss); chart trendlines with R² and forecast.
+* **PivotTables:** Creation, layouts, slicers, **timelines**, grouping, calculated fields, value field settings, `GETPIVOTDATA`, drill-through.
+* **PivotCharts:** Creation, styles, drill-down details.
 
 ---
 

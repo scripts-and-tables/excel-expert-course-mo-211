@@ -64,6 +64,21 @@ We begin with **smart data entry techniques**: using Flash Fill to instantly ref
   * Using the Manage Rules dialog to view, reorder, edit, and delete rules.
   * Controlling rule priority and using **Stop If True** for mutually exclusive formatting conditions.
 
+### [2.12 Excel Tables and Structured References](./2.12-excel-tables-and-structured-references.md)
+
+  * Converting a range to a Table (`Ctrl+T`), naming it, adding Total Rows.
+  * Structured-reference syntax: `Sales[@Amount]`, `Sales[#Totals]`, `Sales[#Headers]`.
+  * Why Tables matter for slicers, PivotTables, and auto-extending formulas.
+
+### [2.13 Advanced Filter](./2.13-advanced-filter.md)
+
+  * Building criteria ranges with AND/OR logic across rows and columns.
+  * In-place filtering vs. copy-to-location, and the unique-records-only flag.
+
+### [Test Yourself](./2.test-yourself.md)
+
+  * Comprehensive practice quiz covering all of Module 2.
+
 -----
 
 ## 🎯 What You Must Be Able To Do

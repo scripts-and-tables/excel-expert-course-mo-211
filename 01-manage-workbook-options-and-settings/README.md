@@ -48,3 +48,13 @@ You will also learn to navigate the high-stakes world of **Workbook Security and
 
   * Toggling between **Manual and Automatic** calculation for performance optimization.
   * Enabling **Iterative Calculations** and setting **Precision as Displayed** for financial accuracy.
+
+### [1.9 Inspect Workbook](./1.9-inspect-and-check.md)
+
+  * **Document Inspector** — find and remove hidden data (comments, hidden sheets, custom XML, embedded files).
+  * **Check Accessibility** — alt text, header rows, contrast, sheet names.
+  * **Check Compatibility** — flag features that won't survive a save to older formats.
+
+### [Test Yourself](./1.test-yourself.md)
+
+  * Comprehensive practice quiz covering all of Module 1.
