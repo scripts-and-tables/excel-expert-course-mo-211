@@ -6,7 +6,8 @@
   <meta name="description" content="MO-211 Excel Expert prep — Module 3 Test: Advanced Formulas, Analysis &amp; Macros" />
   <meta name="theme-color" content="#0f6f3f" />
   <title>Module 3 Test: Advanced Formulas, Analysis &amp; Macros · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -133,114 +134,339 @@
           </a>
         </header>
         <article class="lesson-content">
-<p><strong>Course:</strong> MO-211: Microsoft Excel Expert<br>
+<p><strong>Course:</strong> MO-211: Microsoft Excel Expert
 <strong>Topics covered:</strong> 3.1 Logical Functions · 3.2 Lookup · 3.3 Date &amp; Time · 3.4 What-If Analysis · 3.5 Arrays · 3.6 Financial Functions · 3.7 Troubleshooting · 3.8 Macros · 3.9 Consolidate · 3.10 Forecast Sheet</p>
-<p>This test combines exam-style multiple choice with hands-on micro-tasks. Try every question with your notes closed first; reveal the answer key only after attempting all of them.</p>
+<p>This test combines exam-style multiple choice with hands-on micro-tasks. Try every question with your notes closed first; reveal the answer key only after attempting all of them. Practice file: <a href="../practice/module-3-finance-and-formulas.xlsx"><code>practice/module-3-finance-and-formulas.xlsx</code></a>.</p>
 <hr>
-<h2>Part 1: Multiple Choice</h2>
-<p><em>Choose the best answer for each scenario.</em></p>
-<h3>Q1. Logical Branching (3.1)</h3>
+<h2>Section A: Lesson 3.1 — Logical Functions</h2>
+<h3>Q1. Logical Branching</h3>
 <p>You need to assign a letter grade based on a numeric score: <code>&gt;= 90</code> → "A", <code>&gt;= 80</code> → "B", <code>&gt;= 70</code> → "C", otherwise "F". Which function gives the <strong>cleanest, flattest</strong> formula?
 - A) Nested <code>IF</code> statements four levels deep.
 - B) <code>SWITCH(score, 90, "A", 80, "B", 70, "C", "F")</code>.
 - C) <code>IFS(score&gt;=90,"A", score&gt;=80,"B", score&gt;=70,"C", TRUE,"F")</code>.
 - D) <code>LOOKUP(score, {0;70;80;90}, {"F";"C";"B";"A"})</code> — but <code>IFS</code> is cleaner.</p>
-<h3>Q2. Lookup Mismatch (3.2)</h3>
+<h3>Q2. SWITCH vs IFS</h3>
+<p>A worksheet has shipping codes <code>1</code>, <code>2</code>, <code>3</code> that map to <code>"Standard"</code>, <code>"Express"</code>, <code>"Overnight"</code>. Which function is the most natural fit?
+- A) <code>IFS</code> with three conditions.
+- B) <code>SWITCH(code, 1, "Standard", 2, "Express", 3, "Overnight")</code>.
+- C) <code>IF(code=1, "Standard", IF(code=2, "Express", "Overnight"))</code>.
+- D) <code>CHOOSE(code, "Standard", "Express", "Overnight")</code> — both <code>SWITCH</code> and <code>CHOOSE</code> work, but <code>SWITCH</code> is more readable.</p>
+<h3>Q3. Conditional Sum with Two Criteria</h3>
+<p>You want the total of the <code>Amount</code> column for rows where <code>Region = "East"</code> AND <code>Status = "Paid"</code>. Which formula is correct?
+- A) <code>=SUMIF(Amount, "East", Region) + SUMIF(Amount, "Paid", Status)</code>
+- B) <code>=SUMIFS(Amount, Region, "East", Status, "Paid")</code>
+- C) <code>=SUMIF(Amount, Region="East" AND Status="Paid")</code>
+- D) <code>=SUM(IF(Region="East", IF(Status="Paid", Amount)))</code></p>
+<h3>Q4. LET — Why Use It</h3>
+<p>What is the primary benefit of wrapping a long formula in <code>LET()</code>?
+- A) It enables iterative calculation automatically.
+- B) It computes a sub-expression once, names it, and reuses the named value — improving both speed and readability.
+- C) It is required for any formula with more than five arguments.
+- D) It converts the formula to a dynamic array.</p>
+<hr>
+<h2>Section B: Lesson 3.2 — Lookup Functions</h2>
+<h3>Q5. VLOOKUP Mismatch</h3>
 <p>A <code>VLOOKUP</code> returns <code>#N/A</code> for some rows and correct values for others. The lookup column is sorted, the table_array is correct, and the lookup values <em>appear</em> identical to the values in the table. What is the most likely cause?
 - A) The fourth argument is <code>TRUE</code> instead of <code>FALSE</code>.
 - B) Hidden whitespace or a trailing space in the lookup or table values.
 - C) The table has a header row.
 - D) <code>VLOOKUP</code> only works on numeric data.</p>
-<h3>Q3. Date Math (3.3)</h3>
+<h3>Q6. XLOOKUP — match_mode for Tier Lookup</h3>
+<p>You want <code>XLOOKUP</code> to find the discount tier for an order amount of <code>$4,200</code> from a table sorted ascending by minimum spend. Which <code>match_mode</code> value is correct?
+- A) <code>0</code> (exact match only)
+- B) <code>-1</code> (exact, or <strong>next smaller</strong>)
+- C) <code>1</code> (exact, or <strong>next larger</strong>)
+- D) <code>2</code> (wildcard)</p>
+<h3>Q7. XLOOKUP — search_mode for Most Recent</h3>
+<p>You want <code>XLOOKUP</code> to return the <strong>most recent</strong> transaction amount for <code>CUST-001</code> from a chronologically ordered log. Which <code>search_mode</code> value is correct?
+- A) <code>1</code> (first-to-last, default)
+- B) <code>-1</code> (last-to-first)
+- C) <code>2</code> (binary search ascending)
+- D) <code>-2</code> (binary search descending)</p>
+<h3>Q8. XLOOKUP — Wildcards</h3>
+<p>Your <code>XLOOKUP</code> formula uses <code>"Acme*"</code> as the lookup value, but it returns <code>#N/A</code> even though "Acme Corp" exists in the lookup column. What did you forget?
+- A) The lookup column must be sorted alphabetically.
+- B) The 5th argument (<code>match_mode</code>) must be set to <code>2</code> to enable wildcards.
+- C) <code>XLOOKUP</code> does not support wildcards — use <code>VLOOKUP</code>.
+- D) Wildcards must be wrapped in square brackets: <code>[Acme*]</code>.</p>
+<h3>Q9. INDEX/MATCH — 2-D Lookup</h3>
+<p>You have a matrix with months down column A and product names across row 1, with sales values in the interior. Which formula returns the sales for <code>"Widget"</code> in <code>"April"</code> (<code>H2</code> = "April", <code>H3</code> = "Widget")?
+- A) <code>=VLOOKUP(H2, A1:G13, MATCH(H3, A1:G1, 0), FALSE)</code>
+- B) <code>=INDEX(B2:G13, MATCH(H2, A2:A13, 0), MATCH(H3, B1:G1, 0))</code>
+- C) <code>=HLOOKUP(H3, A1:G13, MATCH(H2, A:A, 0))</code>
+- D) <code>=LOOKUP(H2&amp;H3, A2:G13)</code></p>
+<h3>Q10. XMATCH — Find the Last Match</h3>
+<p>You want the position of the <strong>last</strong> "Pending" status in <code>Orders[Status]</code> (a Microsoft 365 workbook). Which formula does this?
+- A) <code>=MATCH("Pending", Orders[Status], 0)</code>
+- B) <code>=XMATCH("Pending", Orders[Status], 0, -1)</code>
+- C) <code>=XMATCH("Pending", Orders[Status], -1, 1)</code>
+- D) <code>=COUNTIF(Orders[Status], "Pending")</code></p>
+<hr>
+<h2>Section C: Lesson 3.3 — Date &amp; Time Functions</h2>
+<h3>Q11. NETWORKDAYS</h3>
 <p>You need to count the <strong>business days</strong> between a project start (<code>A2</code>) and project end (<code>B2</code>), excluding company holidays listed in <code>Holidays!A:A</code>. Which formula is correct?
 - A) <code>=B2-A2</code>
 - B) <code>=NETWORKDAYS(A2, B2, Holidays!A:A)</code>
 - C) <code>=WORKDAY(A2, B2, Holidays!A:A)</code>
 - D) <code>=DAYS(B2, A2) - 2</code></p>
-<h3>Q4. Goal Seek vs. Solver (3.4)</h3>
+<h3>Q12. NETWORKDAYS.INTL — Custom Weekend</h3>
+<p>A team in Israel works Sun-Thu (weekend = Fri &amp; Sat). Which <code>weekend</code> argument tells <code>NETWORKDAYS.INTL</code> to treat Fri/Sat as the weekend?
+- A) <code>1</code>
+- B) <code>2</code>
+- C) <code>7</code>
+- D) <code>11</code></p>
+<h3>Q13. WORKDAY.INTL Bitmask</h3>
+<p>You need <code>WORKDAY.INTL</code> to use a custom weekend where <strong>only Friday</strong> is a non-working day (no other days off). Which bitmask string is correct (read Mon, Tue, Wed, Thu, Fri, Sat, Sun)?
+- A) <code>"0000011"</code>
+- B) <code>"0000100"</code>
+- C) <code>"1000000"</code>
+- D) <code>"0000001"</code></p>
+<h3>Q14. DATEDIF — Tenure</h3>
+<p>An employee was hired on <code>2018-04-15</code>. Today is <code>2026-05-03</code>. Which formula returns the <strong>complete years</strong> of tenure, ignoring partial-year fractions?
+- A) <code>=YEARFRAC(HireDate, TODAY())</code>
+- B) <code>=DATEDIF(HireDate, TODAY(), "Y")</code>
+- C) <code>=YEAR(TODAY()) - YEAR(HireDate)</code>
+- D) <code>=(TODAY() - HireDate) / 365.25</code></p>
+<h3>Q15. EOMONTH — Start of Next Month</h3>
+<p>Cell <code>A2</code> contains <code>2026-05-15</code>. Which formula returns <code>2026-06-01</code> (the first day of the next month)?
+- A) <code>=EOMONTH(A2, 1)</code>
+- B) <code>=EOMONTH(A2, 0) + 1</code>
+- C) <code>=EOMONTH(A2, -1) + 1</code>
+- D) <code>=DATE(YEAR(A2), MONTH(A2)+1, 31)</code></p>
+<h3>Q16. EDATE — Anniversary</h3>
+<p>A subscription started on <code>2024-01-31</code>. Which formula returns the renewal date one month later?
+- A) <code>=A2 + 30</code>
+- B) <code>=A2 + 31</code>
+- C) <code>=EDATE(A2, 1)</code> — returns <code>2024-02-29</code> (Excel clamps to the last valid day).
+- D) <code>=DATE(YEAR(A2), MONTH(A2)+1, DAY(A2))</code> — returns <code>#NUM!</code> because Feb has no day 31.</p>
+<hr>
+<h2>Section D: Lesson 3.4 — What-If Analysis</h2>
+<h3>Q17. Goal Seek vs Solver</h3>
 <p>You want to maximize total profit by choosing how many units to produce of <strong>three</strong> different products, subject to a labour-hour ceiling and a raw-material ceiling. Which tool fits?
 - A) Goal Seek.
 - B) Scenario Manager.
 - C) A two-variable Data Table.
 - D) Solver.</p>
-<h3>Q5. Two-Variable Data Table (3.4)</h3>
+<h3>Q18. Goal Seek Pre-flight</h3>
+<p>Goal Seek refuses to run when you set the <strong>Set cell</strong> to <code>B5</code>. What is the most likely problem?
+- A) <code>B5</code> is on a hidden sheet.
+- B) <code>B5</code> contains a hard-coded number rather than a formula.
+- C) The workbook is in Manual calculation mode.
+- D) Goal Seek requires the <strong>By changing cell</strong> to be on a different sheet.</p>
+<h3>Q19. Scenario Manager — Max Cells</h3>
+<p>Scenario Manager allows up to how many <strong>changing cells</strong> per scenario?
+- A) 8
+- B) 16
+- C) 32
+- D) 256</p>
+<h3>Q20. Two-Variable Data Table</h3>
 <p>When building a two-variable Data Table, where must the formula be placed?
 - A) In the cell directly above the column of input values.
 - B) In the cell directly to the left of the row of input values.
 - C) In the <strong>corner cell</strong> at the top-left of the grid (intersection of the row and column inputs).
-- D) Anywhere on the worksheet—Excel finds it automatically.</p>
-<h3>Q6. Dynamic Arrays (3.5)</h3>
+- D) Anywhere on the worksheet — Excel finds it automatically.</p>
+<h3>Q21. One-Variable Data Table — Multiple Outputs</h3>
+<p>You build a one-variable Data Table to test interest rates against a <code>PMT</code> formula. You want to also see total interest paid for each rate, side by side. Where does the second formula go?
+- A) The Data Table feature only supports one output per table.
+- B) In the cell <strong>adjacent</strong> to the first formula, in the same row (column-oriented input list).
+- C) In a separate Data Table — they cannot share the input column.
+- D) In the corner cell, joined to the first formula by <code>&amp;</code>.</p>
+<h3>Q22. Recalculation Mode</h3>
+<p>Your model has 200,000 formulas plus a 50×50 Data Table; every cell edit causes a long pause. Which calculation mode helps?
+- A) <strong>Automatic</strong>.
+- B) <strong>Automatic Except for Data Tables</strong>.
+- C) <strong>Manual</strong>.
+- D) <strong>Iterative</strong>.</p>
+<hr>
+<h2>Section E: Lesson 3.5 — Dynamic Arrays</h2>
+<h3>Q23. SPILL Error</h3>
 <p>A formula that used to return a single value now shows <code>#SPILL!</code>. What is happening?
 - A) The formula has a divide-by-zero error.
 - B) The formula returns multiple values, but the spill range contains a non-empty cell or a merged cell.
 - C) The workbook is in manual calculation mode.
 - D) The formula references a deleted cell.</p>
-<h3>Q7. Financial Function Sign Convention (3.6)</h3>
+<h3>Q24. SORT vs SORTBY</h3>
+<p>You want to display a list of names sorted by a separate column of scores (descending), without showing the scores themselves. Which function is correct?
+- A) <code>=SORT(Names, Scores, -1)</code> — <code>SORT</code> accepts a separate sort key.
+- B) <code>=SORTBY(Names, Scores, -1)</code> — <code>SORTBY</code> sorts an array by a different array.
+- C) <code>=SORT(Scores, Names, -1)</code> — pass the names as the sort order.
+- D) <code>=LARGE(Names, Scores)</code>.</p>
+<h3>Q25. Spilled Range Operator</h3>
+<p>A <code>UNIQUE</code> formula in <code>E2</code> spills four values down to <code>E5</code>. You want a <code>COUNTA</code> of the entire spill range that automatically grows when more values appear. Which reference is correct?
+- A) <code>=COUNTA(E2:E5)</code>
+- B) <code>=COUNTA(E:E)</code>
+- C) <code>=COUNTA(E2#)</code>
+- D) <code>=COUNTA(SPILL(E2))</code></p>
+<h3>Q26. TEXTSPLIT</h3>
+<p>Cell <code>A2</code> contains the literal text <code>"Smith, John, Engineer"</code>. Which formula spills the three parts into adjacent cells across a row?
+- A) <code>=TEXTSPLIT(A2, ",")</code>
+- B) <code>=TEXTSPLIT(A2, ", ")</code>
+- C) <code>=SPLIT(A2, ", ")</code>
+- D) <code>=TEXT.SPLIT(A2, ",", " ")</code></p>
+<h3>Q27. TEXTBEFORE — Nth Delimiter</h3>
+<p>Cell <code>A2</code> contains <code>"PROJ-2024-NORTH-001"</code>. Which formula returns <code>"PROJ-2024"</code> (everything before the <strong>second</strong> hyphen)?
+- A) <code>=TEXTBEFORE(A2, "-")</code>
+- B) <code>=TEXTBEFORE(A2, "-", 2)</code>
+- C) <code>=LEFT(A2, FIND("-", A2, 1))</code>
+- D) <code>=TEXTAFTER(A2, "-", -2)</code></p>
+<hr>
+<h2>Section F: Lesson 3.6 — Financial Functions</h2>
+<h3>Q28. PMT Sign</h3>
 <p>You use <code>=PMT(0.06/12, 360, 200000)</code> for a $200,000 mortgage at 6% APR over 30 years and you get a <strong>negative</strong> number. Why?
 - A) The interest rate is too high.
 - B) <code>PMT</code> returns money you pay out as a negative number; pass the present value as <code>-200000</code> (or negate the result) to display a positive payment.
 - C) The function is broken; use <code>IPMT</code> instead.
 - D) The number of periods should be <code>30</code>, not <code>360</code>.</p>
-<h3>Q8. Error Handling (3.7)</h3>
-<p>You wrap a <code>VLOOKUP</code> in <code>IFERROR(..., "Not found")</code>. Months later, someone deletes the lookup column entirely. What does the user now see?
-- A) <code>#REF!</code>
-- B) <code>"Not found"</code> — masking a real bug.
-- C) <code>#N/A</code>
-- D) Excel auto-repairs the formula.</p>
-<h3>Q9. Show Formulas (3.7)</h3>
+<h3>Q29. IPMT vs PPMT</h3>
+<p>On the <strong>first month</strong> of a 60-month $530,000 loan at 6% APR, which statement is true?
+- A) <code>IPMT(6%/12, 1, 60, 530000)</code> returns the <strong>principal</strong> portion of the payment.
+- B) <code>IPMT</code> returns the <strong>interest</strong> portion; <code>PPMT</code> returns the <strong>principal</strong> portion. Together they equal <code>PMT</code>.
+- C) <code>IPMT</code> and <code>PPMT</code> return the same value — you only need one.
+- D) Neither function exists in modern Excel; use <code>PMT</code> divided by 2.</p>
+<h3>Q30. XIRR Inputs</h3>
+<p>Which arguments does <code>XIRR</code> require?
+- A) A single rate and a single number of periods.
+- B) An array of cash-flow values <strong>and</strong> an array of corresponding dates.
+- C) Loan amount, interest rate, and term — the same as <code>PMT</code>.
+- D) A guess and an array of monthly payments.</p>
+<hr>
+<h2>Section G: Lesson 3.7 — Troubleshooting Formulas</h2>
+<h3>Q31. Show Formulas Shortcut</h3>
 <p>Which keyboard shortcut toggles every cell on the active sheet between displaying values and displaying the underlying formula text?
 - A) <code>Ctrl + Shift + F</code>
 - B) <code>F9</code>
 - C) <code>Ctrl + `</code> (grave accent)
 - D) <code>Alt + =</code></p>
-<h3>Q10. Personal Macro Workbook (3.8)</h3>
+<h3>Q32. IFERROR Hides Real Bugs</h3>
+<p>You wrap a <code>VLOOKUP</code> in <code>IFERROR(..., "Not found")</code>. Months later, someone deletes the lookup column entirely. What does the user now see?
+- A) <code>#REF!</code>
+- B) <code>"Not found"</code> — masking a real bug.
+- C) <code>#N/A</code>
+- D) Excel auto-repairs the formula.</p>
+<h3>Q33. IFNA vs IFERROR</h3>
+<p>When wrapping a lookup, why might you prefer <code>IFNA</code> over <code>IFERROR</code>?
+- A) <code>IFNA</code> is faster than <code>IFERROR</code>.
+- B) <code>IFNA</code> only catches <code>#N/A</code>, allowing other errors (<code>#REF!</code>, <code>#VALUE!</code>) to surface so genuine bugs are visible.
+- C) <code>IFNA</code> works on older versions of Excel; <code>IFERROR</code> does not.
+- D) <code>IFNA</code> accepts more arguments than <code>IFERROR</code>.</p>
+<h3>Q34. Error Type — Deleted Column</h3>
+<p>A cell shows <code>#REF!</code>. Which root cause matches?
+- A) A lookup function found no match.
+- B) A column or cell the formula referenced has been deleted.
+- C) A function name was misspelled.
+- D) Two ranges were combined with a space and do not actually intersect.</p>
+<h3>Q35. Trace Precedents</h3>
+<p>Which keyboard shortcut <strong>selects</strong> the precedent cells (jumps to the source cells) of the active formula?
+- A) <code>Ctrl + [</code>
+- B) <code>Ctrl + ]</code>
+- C) <code>Ctrl + Shift + [</code>
+- D) <code>F2</code></p>
+<hr>
+<h2>Section H: Lesson 3.8 — Macros</h2>
+<h3>Q36. Personal Macro Workbook</h3>
 <p>You record a macro and want it to be available in every workbook you open from now on. In the <strong>Record Macro</strong> dialog, which <strong>Store macro in</strong> option must you choose?
 - A) This Workbook.
 - B) New Workbook.
 - C) Personal Macro Workbook.
 - D) Add-in (.xlam).</p>
-<h3>Q11. Form Controls vs. ActiveX (3.8)</h3>
+<h3>Q37. PERSONAL.XLSB Location</h3>
+<p>The Personal Macro Workbook lives at which default path?
+- A) <code>C:\Program Files\Microsoft Office\Excel\PERSONAL.XLSB</code>
+- B) <code>%APPDATA%\Microsoft\Excel\XLSTART\PERSONAL.XLSB</code>
+- C) <code>%TEMP%\Excel\PERSONAL.XLSB</code>
+- D) <code>C:\Users\Public\Documents\PERSONAL.XLSB</code></p>
+<h3>Q38. Editing PERSONAL.XLSB</h3>
+<p>Why must you click <strong>View &gt; Unhide</strong> before editing macros stored in the Personal Macro Workbook?
+- A) Excel encrypts hidden workbooks; unhiding decrypts them.
+- B) <code>PERSONAL.XLSB</code> opens <strong>hidden</strong> by default — you must unhide it before its modules can be edited in the VBE Project Explorer.
+- C) Unhiding is required to comply with macro security policy.
+- D) The VBE refuses to open <code>.xlsb</code> files unless they are visible.</p>
+<h3>Q39. Form Controls vs ActiveX</h3>
 <p>Which statement about <strong>Form Controls</strong> is correct?
 - A) Form Controls have full event handlers like <code>_Click</code> and <code>_Change</code> you can write VBA against.
 - B) Form Controls are simpler than ActiveX, do not expose properties/events, and continue to work in protected workbooks and on Excel for Mac.
 - C) Form Controls are Windows-only; ActiveX works cross-platform.
 - D) Form Controls require an internet connection to render.</p>
-<h3>Q12. Consolidate (3.9)</h3>
+<h3>Q40. Assigning a Macro to a Button</h3>
+<p>You drew a Form Control button on the worksheet but the <strong>Assign Macro</strong> dialog never appeared. What did you do wrong?
+- A) You picked <strong>ActiveX &gt; Command Button</strong> from the second row of the dropdown rather than <strong>Form Controls &gt; Button</strong> from the first row. ActiveX buttons require a separate VBA event handler.
+- B) The workbook is not macro-enabled.
+- C) You drew the button outside the visible window area.
+- D) The Developer tab needs to be re-enabled.</p>
+<h3>Q41. Check Box Cell Link</h3>
+<p>A Form Control <strong>Check Box</strong> is linked to cell <code>D1</code>. What value does <code>D1</code> show when the box is ticked?
+- A) <code>1</code>
+- B) <code>Yes</code>
+- C) <code>TRUE</code>
+- D) The text label of the check box.</p>
+<hr>
+<h2>Section I: Lesson 3.9 — Consolidate</h2>
+<h3>Q42. Live Consolidate</h3>
 <p>You need to combine four regional sales sheets (<code>North</code>, <code>South</code>, <code>East</code>, <code>West</code>) into one summary table that <strong>updates automatically</strong> when the source data changes. In the <strong>Data &gt; Consolidate</strong> dialog, which option enables live updating?
 - A) Use labels in <strong>Top row</strong>.
 - B) Use labels in <strong>Left column</strong>.
 - C) <strong>Create links to source data</strong>.
 - D) <strong>Browse…</strong>.</p>
-<h3>Q13. Forecast Sheet Pre-flight (3.10)</h3>
+<h3>Q43. Consolidate by Position</h3>
+<p>Your four source sheets all have <strong>identical column orders</strong> and identical row labels. Which Consolidate setting is fastest?
+- A) Tick both <strong>Top row</strong> and <strong>Left column</strong>.
+- B) Tick neither — match by <strong>position</strong>.
+- C) Tick <strong>Top row</strong> only.
+- D) Use <strong>Power Query Append</strong> instead.</p>
+<hr>
+<h2>Section J: Lesson 3.10 — Forecast Sheet</h2>
+<h3>Q44. Forecast Sheet Pre-flight</h3>
 <p>You have <strong>14 months</strong> of monthly sales data and you want to forecast the next 6 months using <strong>Data &gt; Forecast Sheet</strong>. What is the most likely problem?
 - A) Excel will refuse to open the dialog.
-- B) Forecast Sheet needs at least two full seasonal cycles—24 months for a yearly cycle—so seasonality detection will likely fall back to a non-seasonal model.
+- B) Forecast Sheet needs at least two full seasonal cycles — 24 months for a yearly cycle — so seasonality detection will likely fall back to a non-seasonal model.
 - C) The chart will only support a Column type.
 - D) The Confidence Interval cannot be set.</p>
-<h3>Q14. FORECAST family (3.10)</h3>
+<h3>Q45. FORECAST family</h3>
 <p>Which function is the <strong>modern replacement</strong> for the legacy <code>FORECAST</code> function and is appropriate when your data has a clear linear trend but <strong>no seasonality</strong>?
 - A) <code>FORECAST.ETS</code>
 - B) <code>FORECAST.ETS.SEASONALITY</code>
 - C) <code>FORECAST.ETS.CONFINT</code>
 - D) <code>FORECAST.LINEAR</code></p>
+<h3>Q46. Confidence Interval</h3>
+<p>You want a tighter, less conservative forecast band. Which Forecast Sheet option do you adjust?
+- A) Set <strong>Seasonality</strong> to <code>1</code>.
+- B) Lower the <strong>Confidence Interval</strong> percentage from 95% to (say) 80%.
+- C) Untick <strong>Fill Missing Points Using Interpolation</strong>.
+- D) Switch the chart type from Line to Column.</p>
+<h3>Q47. Manual Seasonality Override</h3>
+<p>You know your data has a strict <strong>monthly</strong> cycle but Forecast Sheet's auto-detection picked a 7-day pattern. How do you override it?
+- A) Forecast Sheet's seasonality is fixed by the algorithm; there is no override.
+- B) Expand <strong>Options</strong> in the Create Forecast Worksheet dialog and switch <strong>Seasonality</strong> from <strong>Detect Automatically</strong> to <strong>Set Manually = 12</strong>.
+- C) Convert the dates to ISO strings before opening the dialog.
+- D) Replace <code>FORECAST.ETS</code> with <code>FORECAST.LINEAR</code>.</p>
 <hr>
 <h2>Part 2: True or False</h2>
-<p><strong>Q15.</strong> A one-variable Data Table can show multiple formula outputs (e.g., monthly payment <strong>and</strong> total interest) for each input value, but a two-variable Data Table can only show one output.<br>
+<p><strong>Q48.</strong> A one-variable Data Table can show multiple formula outputs (e.g., monthly payment <strong>and</strong> total interest) for each input value, but a two-variable Data Table can only show one output.
 <em>(True / False)</em></p>
-<p><strong>Q16.</strong> <code>IFERROR</code> and <code>IFNA</code> are interchangeable—both catch the same set of errors.<br>
+<p><strong>Q49.</strong> <code>IFERROR</code> and <code>IFNA</code> are interchangeable — both catch the same set of errors.
 <em>(True / False)</em></p>
-<p><strong>Q17.</strong> The calculation mode <strong>Automatic Except for Data Tables</strong> exists because Data Tables can be very expensive to recompute and would otherwise slow down typing in the workbook.<br>
+<p><strong>Q50.</strong> The calculation mode <strong>Automatic Except for Data Tables</strong> exists because Data Tables can be very expensive to recompute and would otherwise slow down typing in the workbook.
 <em>(True / False)</em></p>
-<p><strong>Q18.</strong> To edit macros stored in your Personal Macro Workbook you must first <strong>Unhide</strong> <code>PERSONAL.XLSB</code> from the <strong>View</strong> tab.<br>
+<p><strong>Q51.</strong> To edit macros stored in your Personal Macro Workbook you must first <strong>Unhide</strong> <code>PERSONAL.XLSB</code> from the <strong>View</strong> tab.
 <em>(True / False)</em></p>
-<p><strong>Q19.</strong> Saving a workbook that contains macros as <code>.xlsx</code> will silently strip the VBA code.<br>
+<p><strong>Q52.</strong> Saving a workbook that contains macros as <code>.xlsx</code> will silently strip the VBA code.
+<em>(True / False)</em></p>
+<p><strong>Q53.</strong> <code>XLOOKUP</code>'s default <code>match_mode</code> is <strong>exact match</strong>, unlike <code>VLOOKUP</code>'s default which is approximate match.
+<em>(True / False)</em></p>
+<p><strong>Q54.</strong> <code>DATEDIF</code> appears in IntelliSense and is fully documented inside the Excel app, just like every other date function.
+<em>(True / False)</em></p>
+<p><strong>Q55.</strong> A trendline on a chart and a Forecast Sheet both produce confidence-bounded forecasts using the AAA-ETS algorithm.
+<em>(True / False)</em></p>
+<p><strong>Q56.</strong> Form Controls can be programmed against with <code>_Click</code> event handlers, the same way ActiveX controls are.
+<em>(True / False)</em></p>
+<p><strong>Q57.</strong> Pressing <code>F9</code> while a portion of a formula is highlighted in the formula bar evaluates that portion in place — useful for debugging.
 <em>(True / False)</em></p>
 <hr>
 <h2>Part 3: Hands-On Micro-Tasks</h2>
-<p><em>Open Excel and perform each task. The exam will grade by the resulting workbook state, not by the path you took.</em></p>
-<h3>Task A — Forecast Sheet (3.10)</h3>
+<p><em>Open Excel and perform each task. The exam will grade by the resulting workbook state, not by the path you took. Reference workbook: <code>practice/module-3-finance-and-formulas.xlsx</code>.</em></p>
+<h3>Task A — Forecast Sheet</h3>
 <ol>
-<li>Open <code>MonthlySales.xlsx</code> (or any file with Date | Sales columns spanning at least 24 months).</li>
+<li>Open the <code>MonthlySales</code> sheet (Date | Sales spanning at least 24 months).</li>
 <li>Select both columns including headers.</li>
 <li>On the <strong>Data</strong> tab, click <strong>Forecast Sheet</strong>.</li>
 <li>Set <strong>Forecast End</strong> to 12 months past the last data point.</li>
@@ -248,9 +474,9 @@
 <li>Click <strong>Create</strong>.</li>
 </ol>
 <p><em>Success criteria:</em> a new worksheet appears containing historical and forecast values, an upper/lower bound at 90%, and a line chart.</p>
-<h3>Task B — Two-Variable Data Table (3.4)</h3>
+<h3>Task B — Two-Variable Data Table</h3>
 <ol>
-<li>In a fresh worksheet, place <code>=PMT(C1/12, C2*12, -250000)</code> in <code>B2</code>.</li>
+<li>On the <code>LoanModel</code> sheet, place <code>=PMT(C1/12, C2*12, -250000)</code> in <code>B2</code>.</li>
 <li>Put <code>0.03</code>, <code>0.04</code>, <code>0.05</code>, <code>0.06</code>, <code>0.07</code> in <code>B3:B7</code> (rates).</li>
 <li>Put <code>15</code>, <code>20</code>, <code>25</code>, <code>30</code> in <code>C2:F2</code> (loan terms in years).</li>
 <li>Select <code>B2:F7</code>.</li>
@@ -258,16 +484,22 @@
 <li>Click <strong>OK</strong>.</li>
 </ol>
 <p><em>Success criteria:</em> the interior of the grid (<code>C3:F7</code>) is filled with monthly payment values that vary down (rate) and across (term).</p>
-<h3>Task C — Trace Error (3.7)</h3>
+<h3>Task C — XLOOKUP with match_mode</h3>
+<p>On the <code>Tiers</code> sheet, the <strong>Min_Spend</strong> column lists <code>0, 1000, 5000, 10000</code> ascending; the <strong>Discount_Pct</strong> column lists <code>0%, 5%, 10%, 15%</code>. In cell <code>H2</code> write a formula that returns the discount tier for the order amount in <code>G2</code> (try <code>4200</code>). Use <code>XLOOKUP</code> with the appropriate <code>match_mode</code>.</p>
+<p><em>Success criteria:</em> <code>H2</code> returns <code>5%</code> for an order of <code>4200</code>.</p>
+<h3>Task D — DATEDIF Tenure Breakdown</h3>
+<p>On the <code>Employees</code> sheet, in cell <code>F2</code> write a single formula that produces a string like <code>"7 years, 4 months"</code> showing tenure between <code>HireDate</code> (column D) and <code>TODAY()</code>. Fill the formula down to the rest of the table.</p>
+<p><em>Success criteria:</em> <code>F2</code> reads <code>"7 years, 4 months"</code> (or whatever is correct as of the test date).</p>
+<h3>Task E — Trace Error</h3>
 <ol>
-<li>In <code>A1</code> enter <code>0</code>. In <code>B1</code> enter <code>=10/A1</code>. In <code>C1</code> enter <code>=B1*5</code>. In <code>D1</code> enter <code>=C1+100</code>.</li>
+<li>On the <code>Audit</code> sheet, in <code>A1</code> enter <code>0</code>. In <code>B1</code> enter <code>=10/A1</code>. In <code>C1</code> enter <code>=B1*5</code>. In <code>D1</code> enter <code>=C1+100</code>.</li>
 <li>Select <code>D1</code> (which now shows <code>#DIV/0!</code>).</li>
 <li><strong>Formulas &gt; Error Checking</strong> dropdown &gt; <strong>Trace Error</strong>.</li>
 <li>Observe the red and blue arrows.</li>
 <li>Use <strong>Remove Arrows</strong> to clean up.</li>
 </ol>
 <p><em>Success criteria:</em> arrows correctly identify <code>A1</code> as the source of the divide-by-zero error.</p>
-<h3>Task D — Personal Macro Workbook (3.8)</h3>
+<h3>Task F — Personal Macro Workbook</h3>
 <ol>
 <li><strong>Developer &gt; Record Macro</strong>. Name it <code>BoldHeader</code>. <strong>Store macro in:</strong> <strong>Personal Macro Workbook</strong>.</li>
 <li>Select <code>A1</code>, press <code>Ctrl + B</code>, click <strong>Stop Recording</strong>.</li>
@@ -275,7 +507,15 @@
 <li>Reopen Excel with any new blank workbook and run the macro from <strong>View &gt; Macros</strong>.</li>
 </ol>
 <p><em>Success criteria:</em> <code>BoldHeader</code> appears in the macro list of the brand-new workbook and runs successfully.</p>
-<h3>Task E — Consolidate with Links (3.9)</h3>
+<h3>Task G — Form Control Button</h3>
+<ol>
+<li>On the <code>Dashboard</code> sheet, <strong>Developer &gt; Insert &gt; Button (Form Control)</strong>.</li>
+<li>Draw a button approximately covering <code>H2:I3</code>.</li>
+<li>In the <strong>Assign Macro</strong> dialog, pick the existing <code>RefreshAll</code> macro and click <strong>OK</strong>.</li>
+<li>Right-click the button &gt; <strong>Edit Text</strong> → type <code>Refresh</code>.</li>
+</ol>
+<p><em>Success criteria:</em> clicking the button runs the assigned macro.</p>
+<h3>Task H — Consolidate with Links</h3>
 <ol>
 <li>Build three small regional sheets <code>Q1</code>, <code>Q2</code>, <code>Q3</code>, each with the same row labels in column A and a numeric column B.</li>
 <li>On a new sheet, click the top-left destination cell.</li>
@@ -284,59 +524,212 @@
 <li>Click <strong>OK</strong>.</li>
 </ol>
 <p><em>Success criteria:</em> the consolidated sheet contains an outlined, expandable summary that re-totals when source values change.</p>
-<h3>Task F — Goal Seek (3.4)</h3>
+<h3>Task I — Goal Seek</h3>
 <ol>
-<li>In <code>B1</code> enter <code>200</code> (units sold). In <code>B2</code> enter <code>50</code> (price). In <code>B3</code> enter <code>=B1*B2</code>.</li>
+<li>On the <code>WhatIf</code> sheet, in <code>B1</code> enter <code>200</code> (units sold). In <code>B2</code> enter <code>50</code> (price). In <code>B3</code> enter <code>=B1*B2</code>.</li>
 <li>Use <strong>Data &gt; What-If Analysis &gt; Goal Seek</strong> to find the unit count needed to hit <code>15000</code> revenue, by changing <code>B1</code>.</li>
 </ol>
 <p><em>Success criteria:</em> <code>B1</code> updates to <code>300</code>, and <code>B3</code> reads <code>15000</code>.</p>
+<h3>Task J — TEXTSPLIT and TEXTAFTER</h3>
+<p>On the <code>Contacts</code> sheet, column <code>A</code> contains email addresses such as <code>alice@contoso.com</code>. In column <code>B</code>, write a formula using <code>TEXTAFTER</code> to extract the domain (<code>contoso.com</code>). Then in column <code>C</code> use <code>TEXTSPLIT</code> to split the value in column <code>A</code> by <code>@</code> so that the local part lands in <code>C</code> and the domain lands in <code>D</code>.</p>
+<p><em>Success criteria:</em> <code>B2</code> reads <code>"contoso.com"</code> for <code>alice@contoso.com</code>; <code>C2:D2</code> spill the parts into two cells.</p>
 <hr>
 <details>
 <summary>Show answers</summary>
 
-### Part 1 Answer Key
+### Section A — Lesson 3.1 Answer Key
 
-| Question | Correct Answer | Explanation |
+| # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q1** | **C** | `IFS` evaluates conditions top-to-bottom and returns the first match—much flatter than nested `IF`. `SWITCH` is for exact value matches, not ranges. |
-| **Q2** | **B** | Trailing spaces are the #1 cause of "looks identical but doesn't match." Use `TRIM` or `CLEAN` to normalize, or compare with `EXACT`. |
-| **Q3** | **B** | `NETWORKDAYS(start, end, [holidays])` returns whole working days, automatically excluding Saturdays, Sundays, and any dates in the holidays list. |
-| **Q4** | **D** | Solver handles multiple decision variables with constraints and an optimization objective; Goal Seek is single-variable, no-constraints, exact-target only. |
-| **Q5** | **C** | The corner cell holds the formula; the row of values runs across the top, the column of values runs down the left. |
-| **Q6** | **B** | `#SPILL!` means the dynamic array tried to spill into a range that already had content (or a merged cell, or off the edge of the sheet). |
-| **Q7** | **B** | `PMT` follows the cash-flow sign convention: outflows are negative. Pass `-200000` for the present value or wrap the result in `-PMT(…)` to display a positive payment. |
-| **Q8** | **B** | `IFERROR` masks every error type, including the `#REF!` from a deleted column. Use `IFNA` for lookups so genuine bugs surface. |
-| **Q9** | **C** | `` Ctrl + ` `` (grave accent) toggles **Show Formulas**. |
-| **Q10** | **C** | The Personal Macro Workbook (`PERSONAL.XLSB`) is auto-loaded hidden every Excel session, making its macros available everywhere. |
-| **Q11** | **B** | Form Controls are simpler, cross-platform, and survive workbook protection; ActiveX is more powerful but Windows-only and often blocked by IT policy. |
-| **Q12** | **C** | **Create links to source data** writes formulas (with outlining) so the consolidated sheet re-totals when the sources change. |
-| **Q13** | **B** | Forecast Sheet's seasonality detection needs at least two complete cycles—24 months for a yearly seasonal pattern. With only 14 months it will fall back to a non-seasonal model. |
-| **Q14** | **D** | `FORECAST.LINEAR` is the modern, named replacement for the legacy `FORECAST` function. |
+| **Q1** | **C** | `IFS` evaluates conditions top-to-bottom and returns the first match — much flatter than nested `IF`. `SWITCH` is for exact value matches, not ranges. |
+| **Q2** | **B** | `SWITCH` is purpose-built for one expression matched against an exact value list. `IFS` works but is more verbose. |
+| **Q3** | **B** | `SUMIFS` takes the sum range first, then alternating criteria-range/criteria pairs. Multiple criteria are combined with AND by default. |
+| **Q4** | **B** | `LET` defines names inside the formula, computes the expression once, and reuses the name — improving both performance and readability. |
 
-### Part 2 Answer Key
+### Section B — Lesson 3.2 Answer Key
 
-| Question | Answer | Explanation |
+| # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q15** | **True** | A one-variable Data Table can place multiple formulas in adjacent columns (or rows). A two-variable table is constrained to one corner formula and therefore one output. |
-| **Q16** | **False** | `IFERROR` catches every error type; `IFNA` catches only `#N/A`. Prefer `IFNA` for lookups so other errors remain visible. |
-| **Q17** | **True** | A large grid is a separate calculation per cell; recomputing on every keystroke would be unworkable, hence the dedicated mode. |
-| **Q18** | **True** | `PERSONAL.XLSB` opens hidden by default. Use **View > Unhide** to expose it before editing in the VBE. |
-| **Q19** | **True** | `.xlsx` is the macro-free format. Saving a macro-containing workbook as `.xlsx` strips the VBA project without warning the user a second time. |
+| **Q5** | **B** | Trailing spaces are the #1 cause of "looks identical but doesn't match." Use `TRIM` or `CLEAN` to normalize, or compare with `EXACT`. |
+| **Q6** | **B** | `match_mode = -1` means exact, or **next smaller**. Perfect for tier lookups where the tier table lists each minimum threshold. |
+| **Q7** | **B** | `search_mode = -1` scans the array bottom-to-top, returning the last match. The lookup array does not need to be sorted in reverse. |
+| **Q8** | **B** | Unlike `VLOOKUP`, `XLOOKUP` does not treat `*` and `?` as wildcards by default. You must opt in with `match_mode = 2`. |
+| **Q9** | **B** | The 2-D `INDEX(MATCH, MATCH)` pattern: row position from the first `MATCH`, column position from the second, fed into `INDEX` over the value grid. |
+| **Q10** | **B** | `XMATCH` adds the `search_mode` argument; `-1` scans bottom-to-top, returning the position of the **last** matching value. |
 
-### Part 3 Notes
+### Section C — Lesson 3.3 Answer Key
 
-These hands-on tasks are graded on the resulting workbook state. Common pitfalls:
-* **Task A:** make sure dates are evenly spaced and at least 24 months long, otherwise seasonality `= 12` will produce a poor fit.
-* **Task B:** the formula must live in the **corner** cell (`B2`). Putting it elsewhere is the most common reason a two-variable Data Table fills with zeros.
-* **Task C:** if Trace Error is greyed out, the selected cell does not currently contain an error.
-* **Task D:** if you forget to **Save** `PERSONAL.XLSB` on close, the macro is lost.
-* **Task E:** without **Create links to source data**, the consolidated table is a one-shot snapshot and will not update.
-* **Task F:** Goal Seek requires the **Set cell** to contain a formula (not a hard-coded number) and the **By changing cell** to be a precedent of that formula.
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q11** | **B** | `NETWORKDAYS(start, end, [holidays])` returns whole working days, automatically excluding Saturdays, Sundays, and any dates in the holidays list. |
+| **Q12** | **C** | Code `7` in `NETWORKDAYS.INTL` = Friday & Saturday weekend (the Israeli convention). Code `1` is the default Sat/Sun. |
+| **Q13** | **B** | The bitmask reads Mon-Sun, with `1` = weekend. `"0000100"` makes only Friday a weekend day. |
+| **Q14** | **B** | `DATEDIF(start, end, "Y")` returns the number of complete years between two dates. `YEARFRAC` returns a decimal; `YEAR()-YEAR()` ignores month/day. |
+| **Q15** | **B** | `EOMONTH(A2, 0)` returns the last day of the current month; adding `1` gives the first of next month. `EOMONTH(A2, 1)` returns the last day of next month. |
+| **Q16** | **C** | `EDATE` clamps to the last valid day when the day-of-month doesn't exist in the target month — `EDATE("2024-01-31", 1)` returns `2024-02-29` in a leap year. |
+
+### Section D — Lesson 3.4 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q17** | **D** | Solver handles multiple decision variables with constraints and an optimization objective; Goal Seek is single-variable, no-constraints, exact-target only. (Solver is a beyond-exam reference but the distinction is exam-fair.) |
+| **Q18** | **B** | Goal Seek requires the **Set cell** to contain a formula. A hard-coded number cannot be solved against. |
+| **Q19** | **C** | Up to **32 changing cells** per scenario. |
+| **Q20** | **C** | The corner cell holds the formula; the row of values runs across the top, the column of values runs down the left. |
+| **Q21** | **B** | A one-variable Data Table allows multiple formulas adjacent to the first (one column per output). The two-variable variant only supports one output (the corner formula). |
+| **Q22** | **B** | **Automatic Except for Data Tables** keeps every other formula live but defers Data Table recalc until you press `F9`. |
+
+### Section E — Lesson 3.5 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q23** | **B** | `#SPILL!` means the dynamic array tried to spill into a range that already had content (or a merged cell, or off the edge of the sheet). |
+| **Q24** | **B** | `SORT` sorts an array by **its own** values; `SORTBY` sorts an array by a **separate** key array. |
+| **Q25** | **C** | The `#` operator references the **entire spill range** of a dynamic-array formula by pointing at its top-left cell. |
+| **Q26** | **B** | The delimiter must match the actual literal in the source — `", "` (comma followed by space) cleanly produces `Smith`, `John`, `Engineer`. |
+| **Q27** | **B** | `TEXTBEFORE(text, delim, instance_num)` slices before the *Nth* occurrence of the delimiter. `2` returns everything before the second hyphen. |
+
+### Section F — Lesson 3.6 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q28** | **B** | `PMT` follows the cash-flow sign convention: outflows are negative. Pass `-200000` for the present value or wrap the result in `-PMT(…)` to display a positive payment. |
+| **Q29** | **B** | `IPMT` returns the interest portion of a single payment; `PPMT` returns the principal portion. Their sum equals `PMT`. |
+| **Q30** | **B** | `XIRR(values, dates)` accepts irregular cash flows by pairing each value with its actual date — unlike `IRR`, which assumes evenly spaced periods. |
+
+### Section G — Lesson 3.7 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q31** | **C** | `` Ctrl + ` `` (grave accent) toggles **Show Formulas**. |
+| **Q32** | **B** | `IFERROR` masks every error type, including the `#REF!` from a deleted column. Use `IFNA` for lookups so genuine bugs surface. |
+| **Q33** | **B** | `IFNA` only catches `#N/A`. Other errors like `#REF!` or `#VALUE!` continue to display, exposing real bugs instead of hiding them under "Not found." |
+| **Q34** | **B** | `#REF!` specifically means a reference points "nowhere" because the referent was deleted. |
+| **Q35** | **A** | `Ctrl + [` selects precedents (jumps to the source); `Ctrl + ]` selects dependents (jumps to formulas using this cell). |
+
+### Section H — Lesson 3.8 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q36** | **C** | The Personal Macro Workbook (`PERSONAL.XLSB`) is auto-loaded hidden every Excel session, making its macros available everywhere. |
+| **Q37** | **B** | The default path is `%APPDATA%\Microsoft\Excel\XLSTART\PERSONAL.XLSB`. Files inside `XLSTART` open automatically when Excel launches. |
+| **Q38** | **B** | `PERSONAL.XLSB` opens hidden by default. **View > Unhide > PERSONAL** brings it into view so you can edit its modules in the VBE. |
+| **Q39** | **B** | Form Controls are simpler, cross-platform, and survive workbook protection; ActiveX is more powerful but Windows-only and often blocked by IT policy. |
+| **Q40** | **A** | The Form Controls row (top of the Insert dropdown) opens the Assign Macro dialog automatically. ActiveX buttons require you to write your own `_Click` event in the VBE. |
+| **Q41** | **C** | A Form Control Check Box's **Cell link** receives `TRUE` when ticked, `FALSE` when unticked. Use it inside an `IF` to drive other formulas. |
+
+### Section I — Lesson 3.9 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q42** | **C** | **Create links to source data** writes formulas (with outlining) so the consolidated sheet re-totals when the sources change. |
+| **Q43** | **B** | When all source layouts are identical, **position-based** consolidation (neither **Top row** nor **Left column** ticked) is the fastest and avoids label-matching surprises. |
+
+### Section J — Lesson 3.10 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q44** | **B** | Forecast Sheet's seasonality detection needs at least two complete cycles — 24 months for a yearly seasonal pattern. With only 14 months it will fall back to a non-seasonal model. |
+| **Q45** | **D** | `FORECAST.LINEAR` is the modern, named replacement for the legacy `FORECAST` function. |
+| **Q46** | **B** | The Confidence Interval percentage controls how wide the prediction band is. 80% is tighter than 95%; 99% is wider. |
+| **Q47** | **B** | Expand **Options** in the dialog and switch **Seasonality** to **Set Manually**, entering `12` for monthly data. `1` (or unchecked) forces no seasonality. |
+
+### Part 2 — True/False Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q48** | **True** | A one-variable Data Table can place multiple formulas in adjacent columns (or rows). A two-variable table is constrained to one corner formula and therefore one output. |
+| **Q49** | **False** | `IFERROR` catches every error type; `IFNA` catches only `#N/A`. Prefer `IFNA` for lookups so other errors remain visible. |
+| **Q50** | **True** | A large grid is a separate calculation per cell; recomputing on every keystroke would be unworkable, hence the dedicated mode. |
+| **Q51** | **True** | `PERSONAL.XLSB` opens hidden by default. Use **View > Unhide** to expose it before editing in the VBE. |
+| **Q52** | **True** | `.xlsx` is the macro-free format. Saving a macro-containing workbook as `.xlsx` strips the VBA project without warning the user a second time. |
+| **Q53** | **True** | `XLOOKUP`'s default `match_mode` is `0` (exact match). `VLOOKUP` defaults to approximate match (TRUE) — a frequent source of silent errors. |
+| **Q54** | **False** | `DATEDIF` is the famous "hidden" function — it works but does **not** appear in IntelliSense and is not documented inside the Excel app. |
+| **Q55** | **False** | A chart trendline is a single visual regression line with no confidence band. Forecast Sheet uses ETS with confidence bounds. |
+| **Q56** | **False** | Form Controls expose only **Format Control** properties and a single **Assign Macro** hook — no `_Click` events. ActiveX has full event support. |
+| **Q57** | **True** | Highlighting part of a formula in the formula bar and pressing `F9` evaluates that fragment in place. Press `Esc` to abandon the change without committing. |
+
+### Part 3 — Hands-On Solutions
+
+**Task A.** Make sure dates are evenly spaced and at least 24 months long, otherwise seasonality `= 12` will produce a poor fit. The new sheet must contain historical, forecast, lower-bound, upper-bound columns plus a chart.
+
+**Task B.** The formula must live in the **corner** cell (`B2`). Putting it elsewhere is the most common reason a two-variable Data Table fills with zeros. **Row input** = the cell that the *row* of values substitutes into; **Column input** = the cell that the *column* of values substitutes into.
+
+**Task C.** Write `=XLOOKUP(G2, Tiers[Min_Spend], Tiers[Discount_Pct], 0, -1)`. The 5th argument `-1` selects exact-or-next-smaller. For `4200`, the lookup falls to the `1000` tier → `5%`.
+
+**Task D.** Use:
+
+<pre><code>=DATEDIF(D2, TODAY(), &quot;Y&quot;) &amp; &quot; years, &quot; &amp; DATEDIF(D2, TODAY(), &quot;YM&quot;) &amp; &quot; months&quot;
+</code></pre>
+
+`"Y"` returns whole years; `"YM"` returns the residual months after subtracting whole years.
+
+**Task E.** If **Trace Error** is greyed out, the selected cell does not currently contain an error. The arrows show `D1 → C1 → B1 → A1` (red along the broken chain) confirming `A1 = 0` is the divide-by-zero source.
+
+**Task F.** If you forget to **Save** `PERSONAL.XLSB` on close, the macro is lost. Verify by closing Excel completely, reopening with `Ctrl + N`, and confirming `PERSONAL.XLSB!BoldHeader` is in the Macros list.
+
+**Task G.** Make sure you pick **Form Controls > Button** (top row of the Insert dropdown), not **ActiveX > Command Button**. Right-click the button to change the assigned macro afterwards via **Assign Macro**.
+
+**Task H.** Without **Create links to source data**, the consolidated table is a one-shot snapshot and will not update. With links enabled, Excel writes external-reference formulas and groups the detail rows under outline level 2.
+
+**Task I.** Goal Seek requires the **Set cell** to contain a formula (not a hard-coded number) and the **By changing cell** to be a precedent of that formula. After the run, `B1` = `300` and `B3` = `15000`.
+
+**Task J.** `=TEXTAFTER(A2, "@")` returns the domain. `=TEXTSPLIT(A2, "@")` spills `local | domain` across two cells.
 
 </details>
 
 <hr>
-<p><strong>Exam Tip:</strong> On MO-211 you will frequently be asked to <em>navigate</em> to a feature ("On the Data tab, in the Forecast group, click What-If Analysis…"). Practise the ribbon paths until they are automatic—the test is timed and the grading robot watches the cells, not your reasoning.</p>
+<p><strong>Exam Tip — Module 3 Coverage Map:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Lesson</th>
+<th style="text-align: left;">Most-Tested Concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">3.1</td>
+<td style="text-align: left;"><code>IFS</code> / <code>SWITCH</code> flatten nested <code>IF</code>s; <code>SUMIFS</code> puts the sum range first; <code>LET</code> names sub-expressions for reuse.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.2</td>
+<td style="text-align: left;"><code>XLOOKUP</code> defaults to <strong>exact match</strong>; <code>match_mode = -1</code> for tiers, <code>2</code> for wildcards; <code>search_mode = -1</code> for "most recent"; 2-D <code>INDEX(MATCH, MATCH)</code> for grids.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.3</td>
+<td style="text-align: left;"><code>NETWORKDAYS.INTL</code> weekend codes; <code>DATEDIF</code> units <code>"Y"</code>/<code>"M"</code>/<code>"YM"</code>; <code>EOMONTH(A2,-1)+1</code> for start-of-month; <code>EDATE</code> clamps month-end.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.4</td>
+<td style="text-align: left;">Goal Seek = single variable; Solver = constraints; corner-cell formula for 2-variable Data Table; <strong>Automatic Except for Data Tables</strong> mode.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.5</td>
+<td style="text-align: left;"><code>#SPILL!</code> causes; <code>SORT</code> vs <code>SORTBY</code>; <code>E2#</code> spilled-range operator; <code>TEXTSPLIT</code> / <code>TEXTBEFORE</code> / <code>TEXTAFTER</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.6</td>
+<td style="text-align: left;">Sign convention — outflows negative; <code>IPMT</code> + <code>PPMT</code> = <code>PMT</code>; <code>XIRR(values, dates)</code> for irregular cash flows.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.7</td>
+<td style="text-align: left;"><code>Ctrl + `</code> = Show Formulas; <code>IFNA</code> over <code>IFERROR</code> for lookups; <code>Ctrl + [</code> = trace precedents; <code>#REF!</code> = deleted reference.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.8</td>
+<td style="text-align: left;">Personal Macro Workbook in <code>XLSTART</code>; <strong>View &gt; Unhide</strong> to edit; Form Controls vs ActiveX; Form Control Check Box returns <code>TRUE</code>/<code>FALSE</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.9</td>
+<td style="text-align: left;"><strong>Create links to source data</strong> for live consolidation; position-based when layouts match.</td>
+</tr>
+<tr>
+<td style="text-align: left;">3.10</td>
+<td style="text-align: left;">Two full seasonal cycles minimum; <strong>Set Manually = 12</strong> for monthly seasonality; lower Confidence Interval = tighter band; <code>FORECAST.LINEAR</code> for trend without seasonality.</td>
+</tr>
+</tbody>
+</table>
         </article>
         <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./3.10-forecast-sheet.html"><span class="pager-direction">← Previous</span><span class="pager-title">3.10 Forecast Sheet and Forecast Functions</span></a><a class="pager-link pager-next" href="../module-4/4.2-advanced-charts.html"><span class="pager-direction">Next →</span><span class="pager-title">4.2 4.1–4.2 Advanced Charts: Dual-Axis, Combo, Histogram, Box &amp; Whisker, Funnel, Sunburst, Waterfall</span></a></nav>
       </div>
@@ -369,7 +762,7 @@ These hands-on tasks are graded on the resulting workbook state. Common pitfalls
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -412,7 +805,6 @@ These hands-on tasks are graded on the resulting workbook state. Common pitfalls
               if (match) anyVisible = true;
             });
             mod.style.display = anyVisible ? '' : 'none';
-            // Auto-expand modules with matches when filtering
             if (q) mod.setAttribute('open', '');
           });
         });
@@ -420,6 +812,64 @@ These hands-on tasks are graded on the resulting workbook state. Common pitfalls
           if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
         });
       }
+
+      // Progress tracking — mark visited lessons with a checkmark, show percent in sidebar
+      try {
+        var STORAGE_KEY = 'mo211:visited:v1';
+        var visited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        // Mark current page as visited (use pathname so query-strings/hashes don't fragment)
+        var currentPath = location.pathname;
+        if (currentPath.indexOf('/course/') !== -1) {
+          visited[currentPath] = Date.now();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+        }
+        // Render checkmarks against any sidebar link whose pathname is in the visited set
+        var visitedSet = {};
+        Object.keys(visited).forEach(function(p) {
+          // Normalize trailing slash and index.html
+          var norm = p.replace(/index\.html$/, '').replace(/\/$/, '');
+          visitedSet[norm] = true;
+        });
+        var lessonLinks = sb.querySelectorAll('.nav-lesson');
+        var totalLessons = 0, visitedLessons = 0;
+        lessonLinks.forEach(function(a) {
+          var href = a.getAttribute('href') || '';
+          // Resolve relative href against current location
+          var url;
+          try { url = new URL(href, location.href); } catch (e) { return; }
+          var key = url.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+          totalLessons++;
+          if (visitedSet[key]) {
+            a.classList.add('is-visited');
+            visitedLessons++;
+          }
+        });
+        // Progress bar at top of sidebar
+        if (totalLessons > 0) {
+          var pct = Math.round((visitedLessons / totalLessons) * 100);
+          var progressBar = document.createElement('div');
+          progressBar.className = 'course-nav-progress';
+          progressBar.innerHTML =
+            '<div class="course-nav-progress-label">' +
+              '<span>Progress</span>' +
+              '<strong>' + visitedLessons + ' / ' + totalLessons + '</strong>' +
+            '</div>' +
+            '<div class="course-nav-progress-track"><div class="course-nav-progress-fill" style="width:' + pct + '%"></div></div>';
+          var nav = sb.querySelector('.course-nav');
+          var firstChild = nav.firstChild;
+          nav.insertBefore(progressBar, firstChild);
+          // Reset button
+          progressBar.addEventListener('click', function(e) {
+            if (e.detail >= 2) { // double-click resets
+              if (confirm('Reset your progress checkmarks?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+              }
+            }
+          });
+          progressBar.title = 'Double-click to reset progress';
+        }
+      } catch (e) { /* localStorage unavailable */ }
     })();
   </script>
 </body>

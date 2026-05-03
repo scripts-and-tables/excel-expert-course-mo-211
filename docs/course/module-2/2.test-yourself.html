@@ -6,7 +6,8 @@
   <meta name="description" content="MO-211 Excel Expert prep — Module 2 Test: Manage and Format Data" />
   <meta name="theme-color" content="#0f6f3f" />
   <title>Module 2 Test: Manage and Format Data · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -134,95 +135,217 @@
         </header>
         <article class="lesson-content">
 <p><strong>Course:</strong> MO-211: Microsoft Excel Expert
-<strong>Topic:</strong> Comprehensive review of Lessons 2.1 – 2.13</p>
+<strong>Topic:</strong> Comprehensive review of Lessons 2.0 – 2.14</p>
+<p>This test combines exam-style multiple choice with hands-on micro-tasks. Try every question with your notes closed first; reveal the answer key only after attempting all of them. Practice file: <a href="../practice/module-2-sales-data.xlsx"><code>practice/module-2-sales-data.xlsx</code></a>.</p>
 <hr>
-<h2>Part 1: Multiple Choice</h2>
-<p><em>Choose the best answer for each scenario.</em></p>
-<h3>Q1. Flash Fill Triggering</h3>
+<h2>Section A: Lessons 2.0 – 2.3 — Names, Flash Fill, Fill Series, RANDARRAY</h2>
+<h3>Q1. Name Box Scope</h3>
+<p>You select <code>B2:B100</code>, click in the <strong>Name Box</strong> (left of the formula bar), type <code>Sales</code>, and press <code>Enter</code>. What is the scope of the new name?
+- A) Worksheet — only visible from the active sheet.
+- B) Workbook — visible from every sheet in the workbook.
+- C) Application — visible from every open workbook.
+- D) Selection — only valid until you click somewhere else.</p>
+<h3>Q2. Create from Selection</h3>
+<p>You have a 2-column lookup table with <code>Country</code> labels in column A and the corresponding <code>Capital</code> values in column B (rows 2-30). You select <code>A2:B30</code> and pick <strong>Formulas &gt; Create from Selection</strong> with <strong>Left column</strong> ticked. What did you just build?
+- A) A single workbook-scoped name called <code>LookupTable</code> pointing at the whole range.
+- B) One name per row whose name equals the country label and whose value is the capital cell on its right.
+- C) One name per column (one for <code>Country</code>, one for <code>Capital</code>).
+- D) Nothing — Create from Selection requires Top row to be checked as well.</p>
+<h3>Q3. Invalid Name</h3>
+<p>Which of the following is <strong>rejected</strong> by Excel as an invalid defined name?
+- A) <code>_Tax_Rate_2026</code>
+- B) <code>Q.1.Sales</code>
+- C) <code>Q1</code>
+- D) <code>MaxDiscount</code></p>
+<h3>Q4. Name Manager Filter</h3>
+<p>You inherit a workbook with hundreds of named ranges and suspect several point at deleted sheets. Which Name Manager filter exposes them in one click?
+- A) <strong>Names Scoped to Workbook</strong>
+- B) <strong>Table Names</strong>
+- C) <strong>Names with Errors</strong>
+- D) <strong>Defined Names</strong></p>
+<h3>Q5. Paste Name Dialog</h3>
+<p>You are part-way through typing <code>=SUM(</code> and want to insert an existing named range without remembering the exact spelling. Which key opens the <strong>Paste Name</strong> dialog?
+- A) <code>F2</code>
+- B) <code>F3</code>
+- C) <code>F5</code>
+- D) <code>Ctrl + F3</code></p>
+<h3>Q6. Flash Fill Trigger</h3>
 <p>You typed the desired output for the first row of a name-cleanup column. Which keyboard shortcut tells Excel to infer the pattern and fill the rest of the column?
 - A) <code>Ctrl + F</code>
 - B) <code>Ctrl + E</code>
 - C) <code>Ctrl + D</code>
 - D) <code>Ctrl + Enter</code></p>
-<h3>Q2. Fill Series Type</h3>
+<h3>Q7. Flash Fill Limitation</h3>
+<p>After running Flash Fill on column B from source data in column A, you change a value in column A. What happens to column B?
+- A) Column B updates automatically — Flash Fill writes formulas behind the scenes.
+- B) Column B does not update — Flash Fill produces static values, not formulas.
+- C) Excel asks whether to re-run Flash Fill.
+- D) The column B value turns red until you press <code>F9</code>.</p>
+<h3>Q8. Fill Series — Growth</h3>
 <p>You enter <code>100</code> in <code>A1</code> and want column A to show <code>100, 110, 121, 133.1, …</code> — a constant 10% growth per row. Which <strong>Type</strong> in the <strong>Series</strong> dialog do you pick?
 - A) Linear
 - B) Date
 - C) Growth
 - D) AutoFill</p>
-<h3>Q3. RANDARRAY Output</h3>
+<h3>Q9. Linked Data Type — Dot Operator</h3>
+<p>Cell <code>A2</code> has been converted to a <strong>Stocks</strong> linked data type for ticker <code>MSFT</code>. Which formula correctly returns its current price?
+- A) <code>=A2.Price</code>
+- B) <code>=GETSTOCK(A2, "Price")</code>
+- C) <code>=VLOOKUP(A2, Stocks, 2, FALSE)</code>
+- D) <code>=PRICE(A2)</code></p>
+<h3>Q10. RANDARRAY Output</h3>
 <p>You enter <code>=RANDARRAY(4, 2, 1, 100, TRUE)</code>. What is in the spilled output?
-- A) A single random integer between 1 and 100
-- B) A 4-row by 2-column grid of random integers between 1 and 100
-- C) A 2-row by 4-column grid of random decimals between 1 and 100
-- D) A 4-row by 2-column grid of random decimals between 1 and 100</p>
-<h3>Q4. Custom Number Format Sections</h3>
+- A) A single random integer between 1 and 100.
+- B) A 4-row by 2-column grid of random integers between 1 and 100.
+- C) A 2-row by 4-column grid of random decimals between 1 and 100.
+- D) A 4-row by 2-column grid of random decimals between 1 and 100.</p>
+<hr>
+<h2>Section B: Lessons 2.4 – 2.5 — Custom Number Formats and Data Validation</h2>
+<h3>Q11. Section Order</h3>
 <p>A custom format code with <strong>four</strong> sections is interpreted in what order?
 - A) Text ; Zero ; Negative ; Positive
 - B) Negative ; Positive ; Zero ; Text
 - C) Positive ; Negative ; Zero ; Text
 - D) Positive ; Zero ; Negative ; Text</p>
-<h3>Q5. Conditional Format Code</h3>
+<h3>Q12. Conditional Format Code</h3>
 <p>Which custom format code displays values <code>&gt;= 1,000,000</code> as <code>1.5M</code>, values <code>&gt;= 1,000</code> as <code>2.5K</code>, and everything else as a plain integer?
 - A) <code>0.0,,"M";0.0,"K";0</code>
 - B) <code>[&gt;=1000000]0.0,,"M";[&gt;=1000]0.0,"K";0</code>
 - C) <code>[Million]0.0;[Thousand]0.0;0</code>
 - D) <code>0.0M;0.0K;0</code></p>
-<h3>Q6. Data Validation Enforcement</h3>
+<h3>Q13. Hide All Cell Content</h3>
+<p>Which custom format code visually hides every value (positive, negative, zero, and text) while leaving the underlying value intact?
+- A) <code>"";"";"";""</code>
+- B) <code>;;;</code>
+- C) <code>[Hidden]</code>
+- D) <code>*;*;*;*</code></p>
+<h3>Q14. Color Code Position</h3>
+<p>Where in a custom number format code must a colour name like <code>[Red]</code> appear to take effect?
+- A) Anywhere inside the section.
+- B) As the <strong>first</strong> item in a section, in square brackets.
+- C) After the digit code, separated by a space.
+- D) Wrapped in double quotes after the section.</p>
+<h3>Q15. Data Validation Enforcement</h3>
 <p>You configured a <strong>List</strong> validation but users can still type values that are not in the list — and Excel only warns them. Which Error Alert style was used?
 - A) Stop
 - B) Warning
 - C) Information
-- D) None — list validation cannot be bypassed</p>
-<h3>Q7. Cascading Dropdowns</h3>
+- D) None — list validation cannot be bypassed.</p>
+<h3>Q16. Cascading Dropdowns</h3>
 <p>You built a Country dropdown in <code>A2</code> and want <code>B2</code> to show only the cities for that country. Each country's city list is a named range whose name matches the country. What goes in the City cell's Data Validation <strong>Source</strong> field?
 - A) <code>=A2</code>
 - B) <code>=OFFSET(A2,0,1)</code>
 - C) <code>=INDIRECT(A2)</code>
 - D) <code>=VLOOKUP(A2, CityTable, 2, FALSE)</code></p>
-<h3>Q8. Subtotal vs. SUM</h3>
+<h3>Q17. Custom Validation Formula</h3>
+<p>You apply Data Validation to <code>A2:A100</code> with <strong>Allow &gt; Custom</strong> to forbid duplicate IDs. Which formula belongs in the Formula box?
+- A) <code>=A2:A100&lt;&gt;""</code>
+- B) <code>=COUNTIF($A$2:$A$100,A2)=1</code>
+- C) <code>=UNIQUE(A2:A100)</code>
+- D) <code>=ISNUMBER(A2)</code></p>
+<h3>Q18. Find Validated Cells</h3>
+<p>You inherit a sheet and want to highlight every cell that currently has any data-validation rule applied. Which command does this in one click?
+- A) <strong>Home &gt; Find &amp; Select &gt; Constants</strong>
+- B) <strong>Home &gt; Find &amp; Select &gt; Data Validation</strong>
+- C) <strong>Data &gt; Data Validation &gt; Circle Invalid Data</strong>
+- D) <strong>Review &gt; Track Changes</strong></p>
+<hr>
+<h2>Section C: Lessons 2.6 – 2.8 — Group, Subtotals, AGGREGATE, Remove Duplicates</h2>
+<h3>Q19. SUBTOTAL with Filtered Rows</h3>
 <p>A worksheet has an AutoFilter applied. Which formula gives the sum of column <code>D</code> for <strong>only the visible rows</strong>?
 - A) <code>=SUM(D2:D500)</code>
 - B) <code>=SUMIF(D2:D500,"&gt;0")</code>
 - C) <code>=SUBTOTAL(9, D2:D500)</code>
 - D) <code>=SUBTOTAL(109, D2:D500)</code></p>
-<h3>Q9. Inserting Subtotals via the Menu</h3>
+<h3>Q20. Subtotal Menu Pre-flight</h3>
 <p>Before running <strong>Data &gt; Subtotal</strong> to group sales by Department, what must you do first?
-- A) Convert the range to an Excel Table
-- B) Sort the data by the Department column
-- C) Apply a filter to the Department column
-- D) Insert a header row</p>
-<h3>Q10. Remove Duplicates Behavior</h3>
+- A) Convert the range to an Excel Table.
+- B) Sort the data by the Department column.
+- C) Apply a filter to the Department column.
+- D) Insert a header row.</p>
+<h3>Q21. AGGREGATE Options for Errors</h3>
+<p>Your dataset contains some <code>#N/A</code> lookup errors but you still need the running total of column <code>B2:B500</code>, ignoring rows hidden by an AutoFilter AND the error cells. Which formula is correct?
+- A) <code>=SUM(B2:B500)</code>
+- B) <code>=AGGREGATE(9, 5, B2:B500)</code> (option 5 = ignore hidden + nested SUBTOTAL/AGGREGATE)
+- C) <code>=AGGREGATE(9, 7, B2:B500)</code> (option 7 = ignore hidden + errors)
+- D) <code>=SUMIFS(B2:B500, B2:B500, "&gt;0")</code></p>
+<h3>Q22. AGGREGATE Function Number</h3>
+<p>Which <code>function_num</code> in <code>AGGREGATE</code> lets you compute <code>LARGE</code>, that is, "the Nth-largest value in the visible rows"?
+- A) <code>9</code>
+- B) <code>12</code>
+- C) <code>14</code>
+- D) <code>17</code></p>
+<h3>Q23. AGGREGATE vs. SUBTOTAL</h3>
+<p>Which capability does <strong>AGGREGATE</strong> offer that <strong>SUBTOTAL</strong> does not?
+- A) Ignoring rows hidden by an AutoFilter.
+- B) Ignoring nested SUBTOTAL rows.
+- C) Computing <code>LARGE</code>, <code>SMALL</code>, and <code>PERCENTILE</code> while ignoring errors.
+- D) Returning a Total Row at the bottom of an Excel Table.</p>
+<h3>Q24. Remove Duplicates Behaviour</h3>
 <p>In the <strong>Remove Duplicates</strong> dialog, you check <strong>only</strong> the <code>Customer ID</code> column. What does Excel do?
-- A) It deletes any row whose Customer ID matches another row, ignoring all other columns
-- B) It deletes any row where Customer ID matches AND every other column also matches
-- C) It returns a new list of unique Customer IDs in a different range
-- D) Nothing — at least two columns must be checked</p>
-<h3>Q11. Conditional Formatting — Format Entire Row</h3>
+- A) It deletes any row whose Customer ID matches another row, ignoring all other columns.
+- B) It deletes any row where Customer ID matches AND every other column also matches.
+- C) It returns a new list of unique Customer IDs in a different range.
+- D) Nothing — at least two columns must be checked.</p>
+<h3>Q25. Group and Outline</h3>
+<p>You manually group rows 5-15 via <strong>Data &gt; Group</strong>. Which keyboard shortcut collapses every grouped section on the sheet to its top-most outline level?
+- A) <code>Ctrl + 1</code>
+- B) <code>Alt + Shift + Left</code>
+- C) The numbered outline buttons (1, 2, 3) at the top-left corner of the grid.
+- D) <code>Ctrl + 8</code> (toggles the outline symbols on/off, not the level).</p>
+<hr>
+<h2>Section D: Lessons 2.9 – 2.11 — Conditional Formatting</h2>
+<h3>Q26. Format Entire Row</h3>
 <p>You want to highlight the entire row <code>A2:E2</code> red whenever <code>$E2</code> (the status column) equals <code>"Overdue"</code>. The selected range is <code>A2:E100</code>. Which formula belongs in the <strong>Use a formula</strong> rule?
 - A) <code>=E2="Overdue"</code>
 - B) <code>=$E$2="Overdue"</code>
 - C) <code>=$E2="Overdue"</code>
 - D) <code>=E$2="Overdue"</code></p>
-<h3>Q12. Manage Rules — Stop If True</h3>
+<h3>Q27. Stop If True</h3>
 <p>Two conditional formatting rules apply to the same cells. With <strong>Stop If True</strong> enabled on the top rule, what happens when that top rule evaluates to <code>TRUE</code>?
-- A) Both rules' formats are applied and stacked
-- B) Only the top rule's format applies; the lower rule is skipped
-- C) Only the lower rule's format applies
-- D) Excel raises an error</p>
-<h3>Q13. Tables and PivotTables</h3>
+- A) Both rules' formats are applied and stacked.
+- B) Only the top rule's format applies; the lower rule is skipped.
+- C) Only the lower rule's format applies.
+- D) Excel raises an error.</p>
+<h3>Q28. Manage Rules — Scope</h3>
+<p>In <strong>Conditional Formatting &gt; Manage Rules</strong>, the <strong>Show formatting rules for</strong> dropdown defaults to which scope?
+- A) This Worksheet
+- B) This Workbook
+- C) Current Selection
+- D) Selected PivotTable</p>
+<h3>Q29. Icon Set Reverse Order</h3>
+<p>You apply a 3-arrow Icon Set where green/up should mean "good" but your data uses <strong>lower = better</strong> (e.g., expense ratio). What setting fixes the icons without changing the data?
+- A) Right-click an icon and pick <strong>Flip Icons</strong>.
+- B) Open the rule and tick <strong>Reverse Icon Order</strong>.
+- C) Re-apply the rule with the range entered backwards.
+- D) Convert the column to a Data Bar instead.</p>
+<hr>
+<h2>Section E: Lessons 2.12 – 2.14 — Tables, Advanced Filter, Power Query</h2>
+<h3>Q30. Tables Make PivotTables Auto-Grow</h3>
 <p>You build a PivotTable on a static range <code>A1:F500</code>. Two weeks later, ten new rows are added at row 501. How do you make the PivotTable include the new rows automatically going forward?
-- A) Right-click the PivotTable and pick <strong>Refresh</strong>
-- B) Convert the source range to an Excel Table, then rebuild the PivotTable on the Table
-- C) Resize the PivotTable manually each refresh
-- D) Use <strong>Change Data Source</strong> every time data is added</p>
-<h3>Q14. Structured References</h3>
+- A) Right-click the PivotTable and pick <strong>Refresh</strong>.
+- B) Convert the source range to an Excel Table, then rebuild the PivotTable on the Table.
+- C) Resize the PivotTable manually each refresh.
+- D) Use <strong>Change Data Source</strong> every time data is added.</p>
+<h3>Q31. Structured References</h3>
 <p>Inside an Excel Table named <code>Sales</code>, what does <code>Sales[@Amount]</code> refer to?
-- A) The header cell of the Amount column
-- B) The total of the Amount column
-- C) The Amount value on the current row
-- D) The entire Amount column including header</p>
-<h3>Q15. Advanced Filter — Logic</h3>
+- A) The header cell of the Amount column.
+- B) The total of the Amount column.
+- C) The Amount value on the current row.
+- D) The entire Amount column including header.</p>
+<h3>Q32. Total Row Formula</h3>
+<p>You tick <strong>Total Row</strong> on a Table named <code>Orders</code> and pick <strong>Sum</strong> from the Revenue column dropdown. Which formula does Excel actually write into the Total Row cell?
+- A) <code>=SUM(Orders[Revenue])</code>
+- B) <code>=SUBTOTAL(9, Orders[Revenue])</code>
+- C) <code>=SUBTOTAL(109, [Revenue])</code>
+- D) <code>=AGGREGATE(9, 7, Orders[Revenue])</code></p>
+<h3>Q33. Convert to Range</h3>
+<p>You click <strong>Table Design &gt; Convert to Range</strong> on a styled Table. What survives the conversion?
+- A) Only the data — banded-row formatting is removed.
+- B) Data and the Table name; structured references continue to work.
+- C) Data and the banded-row formatting (as plain shading); the Table object and structured references are lost.
+- D) Nothing — Excel deletes the data along with the Table.</p>
+<h3>Q34. Advanced Filter — Logic</h3>
 <p>A criteria range looks like this:</p>
 <table>
 <thead>
@@ -243,115 +366,208 @@
 </tbody>
 </table>
 <p>What does Advanced Filter return?
-- A) Rows where Region = North <strong>AND</strong> Amount &gt; 5000
-- B) Rows where Region = North <strong>OR</strong> Amount &gt; 5000
-- C) Rows where Region &lt;&gt; North AND Amount &gt; 5000
-- D) An error — the criteria range is malformed</p>
-<h3>Q16. D-Function</h3>
-<p>Which formula returns the sum of the <code>Amount</code> column in a list at <code>A1:E500</code>, for rows that match the criteria built in <code>H1:I2</code>?
-- A) <code>=SUMIFS(A1:E500, "Amount", H1:I2)</code>
-- B) <code>=DSUM(A1:E500, "Amount", H1:I2)</code>
-- C) <code>=DSUM(H1:I2, "Amount", A1:E500)</code>
-- D) <code>=SUM.IFS(A1:E500, H1:I2, "Amount")</code></p>
+- A) Rows where Region = North <strong>AND</strong> Amount &gt; 5000.
+- B) Rows where Region = North <strong>OR</strong> Amount &gt; 5000.
+- C) Rows where Region &lt;&gt; North AND Amount &gt; 5000.
+- D) An error — the criteria range is malformed.</p>
+<h3>Q35. Power Query Merge — Anti Join</h3>
+<p>You need to find every customer in the master <code>Customers</code> query who placed <strong>no orders</strong> in the <code>Orders</code> query. Which <strong>Join Kind</strong> in <strong>Merge Queries</strong> is the cleanest choice?
+- A) Left Outer
+- B) Inner
+- C) Left Anti
+- D) Full Outer</p>
+<h3>Q36. Append vs. Merge</h3>
+<p>You have twelve monthly sales tables (<code>Sales_Jan</code> … <code>Sales_Dec</code>), each with the same column layout. Which Power Query command stacks them into a single year-to-date table?
+- A) <strong>Merge Queries</strong> with Inner join.
+- B) <strong>Append Queries</strong>.
+- C) <strong>Group By</strong> with Sum aggregation.
+- D) <strong>Pivot Column</strong> on Month.</p>
+<h3>Q37. Power Query Refresh</h3>
+<p>A query loaded as a Table is showing yesterday's data even though the source CSV was updated this morning. What does the user need to do?
+- A) Convert the Table to a Range, then back to a Table.
+- B) Right-click the Table &gt; <strong>Refresh</strong>, or click <strong>Data &gt; Refresh All</strong> (<code>Ctrl + Alt + F5</code>).
+- C) Re-import the CSV from scratch — queries cannot be re-run.
+- D) Wait — Excel refreshes external queries every 60 seconds automatically.</p>
+<h3>Q38. Only Create Connection</h3>
+<p>You build a staging query that exists only to be merged into another query. Which <strong>Close &amp; Load To...</strong> option is correct?
+- A) Table on a new worksheet.
+- B) PivotTable Report.
+- C) Only Create Connection.
+- D) Add to the Data Model + Table.</p>
 <hr>
 <h2>Part 2: True or False</h2>
-<p><strong>Q17.</strong> <code>RANDARRAY()</code> is a <strong>volatile</strong> function — its values recalculate every time the workbook recalculates.
+<p><strong>Q39.</strong> <code>RANDARRAY()</code> is a <strong>volatile</strong> function — its values recalculate every time the workbook recalculates.
 <em>(True / False)</em></p>
-<p><strong>Q18.</strong> A custom number format can use up to <strong>5</strong> condition-tested sections.
+<p><strong>Q40.</strong> A custom number format can use up to <strong>5</strong> condition-tested sections.
 <em>(True / False)</em></p>
-<p><strong>Q19.</strong> <strong>Home &gt; Find &amp; Select &gt; Data Validation</strong> highlights every cell in the active sheet that has any data validation rule applied.
+<p><strong>Q41.</strong> <strong>Home &gt; Find &amp; Select &gt; Data Validation</strong> highlights every cell in the active sheet that has any data validation rule applied.
 <em>(True / False)</em></p>
-<p><strong>Q20.</strong> The <strong>Data &gt; Subtotal</strong> menu feature works on Excel Tables exactly the same as on plain ranges.
+<p><strong>Q42.</strong> The <strong>Data &gt; Subtotal</strong> menu feature works on Excel Tables exactly the same as on plain ranges.
 <em>(True / False)</em></p>
-<p><strong>Q21.</strong> When you convert an Excel Table back to a range via <strong>Table Design &gt; Convert to Range</strong>, the banded-row formatting is removed automatically.
+<p><strong>Q43.</strong> When you convert an Excel Table back to a range via <strong>Table Design &gt; Convert to Range</strong>, the banded-row formatting is removed automatically.
 <em>(True / False)</em></p>
-<p><strong>Q22.</strong> In an Advanced Filter criteria range, criteria placed on the <strong>same row</strong> are combined with <code>AND</code>, and criteria on <strong>different rows</strong> are combined with <code>OR</code>.
+<p><strong>Q44.</strong> In an Advanced Filter criteria range, criteria placed on the <strong>same row</strong> are combined with <code>AND</code>, and criteria on <strong>different rows</strong> are combined with <code>OR</code>.
+<em>(True / False)</em></p>
+<p><strong>Q45.</strong> Editing a name in the <strong>Name Manager</strong> to change its spelling automatically rewrites every formula in the workbook that referenced the old name.
+<em>(True / False)</em></p>
+<p><strong>Q46.</strong> The headers in a Power Query <strong>Append Queries</strong> operation must be in identical order across the source queries; mismatched column orders cause <code>#REF!</code> errors.
+<em>(True / False)</em></p>
+<p><strong>Q47.</strong> Power Query's <strong>Applied Steps</strong> can be reordered by dragging — the same way you might rearrange commits in a feature branch.
+<em>(True / False)</em></p>
+<p><strong>Q48.</strong> A Linked Data Type cell continues to display its enriched value when opened in Excel 2019 perpetual.
 <em>(True / False)</em></p>
 <hr>
 <h2>Part 3: Hands-On Micro-Tasks</h2>
-<p><em>Treat each task like a real exam project file. Steps are listed in the answer key.</em></p>
-<p><strong>T1. Custom number format with three branches.</strong>
-Open <code>practice.xlsx</code>. On the <code>Sales</code> sheet, in the <code>Amount</code> column, apply a custom number format that:
-- Displays positive values in <strong>green</strong> with <strong>2 decimals</strong> and a thousands separator
-- Displays negative values in <strong>red</strong>, in parentheses, with 2 decimals
-- Displays zero as a single dash (<code>-</code>)</p>
-<p><strong>T2. Cascading dropdowns.</strong>
+<p><em>Treat each task like a real exam project file. Steps are listed in the answer key. The reference workbook is <code>practice/module-2-sales-data.xlsx</code>.</em></p>
+<p><strong>T1. Define a workbook-scoped name.</strong>
+On the <code>Sales</code> sheet, select <code>D2:D500</code> (the Amount column). Define a new workbook-scoped named range called <code>Amounts</code> using <strong>Formulas &gt; Define Name</strong> and add the comment "Sales amount column for module-2 quiz." Verify it appears in the <strong>Name Manager</strong> (<code>Ctrl + F3</code>) under Workbook scope.</p>
+<p><strong>T2. Custom number format with three branches.</strong>
+On the <code>Sales</code> sheet, in the <code>Amount</code> column (<code>D2:D500</code>), apply a custom number format that:
+- Displays positive values in <strong>green</strong> with <strong>2 decimals</strong> and a thousands separator.
+- Displays negative values in <strong>red</strong>, in parentheses, with 2 decimals.
+- Displays zero as a single dash (<code>-</code>).</p>
+<p><strong>T3. Cascading dropdowns.</strong>
 On the <code>Form</code> sheet, build a cascading dropdown:
-- Cell <code>B2</code> is a Country picker (USA, France, Germany)
-- Cell <code>C2</code> lists only the cities of the selected country
-- City lists are on the <code>Lookups</code> sheet, one column per country</p>
-<p><strong>T3. Excel Table + PivotTable that auto-grows.</strong>
-On the <code>Orders</code> sheet, convert <code>A1:F500</code> to an Excel Table named <code>Orders</code>. Add a Total Row that <strong>sums</strong> the <code>Revenue</code> column. Build a PivotTable from the Table on a new sheet showing Revenue by Region.</p>
-<p><strong>T4. Subtotals.</strong>
+- Cell <code>B2</code> is a Country picker (USA, France, Germany).
+- Cell <code>C2</code> lists only the cities of the selected country.
+- City lists are on the <code>Lookups</code> sheet, one column per country, with the column header used as the named range name.</p>
+<p><strong>T4. Excel Table + PivotTable that auto-grows.</strong>
+On the <code>Orders</code> sheet, convert <code>A1:F500</code> to an Excel Table named <code>Orders</code>. Add a <strong>Total Row</strong> that <strong>sums</strong> the <code>Revenue</code> column. Build a PivotTable from the Table on a new sheet showing Revenue by Region.</p>
+<p><strong>T5. Subtotals.</strong>
 On the <code>Expenses</code> sheet, insert automatic subtotals that <strong>sum</strong> the <code>Amount</code> column at every change in <code>Department</code>. Make sure the source data is sorted correctly first.</p>
-<p><strong>T5. Advanced Filter — Copy Unique to Another Location.</strong>
+<p><strong>T6. AGGREGATE with errors.</strong>
+On the <code>Inventory</code> sheet, the <code>Cost</code> column contains scattered <code>#N/A</code> errors. In cell <code>H2</code>, write a formula that returns the <strong>average</strong> of <code>Cost</code> ignoring those errors. The result should match the cleaned mean.</p>
+<p><strong>T7. Advanced Filter — Copy Unique to Another Location.</strong>
 On the <code>Customers</code> sheet, copy every row where <code>Region = "East"</code> <strong>OR</strong> <code>Sales &gt; 10000</code> into a new area starting at <code>H1</code>. Output <strong>unique records only</strong>.</p>
-<p><strong>T6. Formula-based conditional formatting.</strong>
+<p><strong>T8. Formula-based conditional formatting.</strong>
 On the <code>Tasks</code> sheet, format the entire row <code>A2:E2</code> (and down through row 100) with a <strong>light yellow fill</strong> whenever the value in column <code>D</code> (Status) equals <code>"In Progress"</code>.</p>
-<p><strong>T7. Validation audit and clear.</strong>
+<p><strong>T9. Validation audit and clear.</strong>
 On the <code>Inventory</code> sheet, find every cell that currently has a data validation rule, then clear all data validation from the entire sheet without affecting the cell values.</p>
+<p><strong>T10. Power Query — Unpivot months.</strong>
+On the <code>MonthlyMatrix</code> sheet you have one row per region with twelve month columns (<code>Jan</code> … <code>Dec</code>). Use Power Query <strong>From Table/Range</strong> to <strong>Unpivot</strong> the month columns into a long-format table with three columns: <code>Region</code>, <code>Month</code>, <code>Amount</code>. Load the result as a new Table on a sheet named <code>MonthlyLong</code>.</p>
 <hr>
 <details>
 <summary>Show answers</summary>
 
-## Part 1 — Multiple Choice Answer Key
+## Section A — Lessons 2.0–2.3 Answer Key
 
 | # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q1** | **B** | `Ctrl + E` is the dedicated Flash Fill shortcut. |
-| **Q2** | **C** | **Growth** uses multiplication (compound) rather than addition (Linear) — `100 * 1.10 = 110`, `110 * 1.10 = 121`, etc. |
-| **Q3** | **B** | `RANDARRAY(rows, columns, min, max, integer)` — `4, 2, 1, 100, TRUE` produces a 4×2 grid of integers from 1 to 100. |
-| **Q4** | **C** | The format-code section order is **Positive ; Negative ; Zero ; Text**. |
-| **Q5** | **B** | Bracketed conditions `[>=N]` override default sign-based routing. The trailing comma in `0.0,,` scales by millions. |
-| **Q6** | **B** | **Warning** allows users to proceed past the alert. **Stop** is the only style that strictly enforces the rule. |
-| **Q7** | **C** | `=INDIRECT(A2)` returns the named range whose name equals the parent value, producing the dependent list. |
-| **Q8** | **D** | Function numbers `101–111` exclude rows hidden by filter; `109` is SUM excluding hidden rows. |
-| **Q9** | **B** | The Subtotal feature inserts a subtotal each time the grouping column changes, so the data must be sorted first. |
-| **Q10** | **A** | Only checked columns define uniqueness. With only Customer ID checked, any row whose ID matches another is removed. |
-| **Q11** | **C** | The column reference must be locked (`$E`), but the row reference must shift down (`E2`, `E3`, …). `$E2` does both. |
-| **Q12** | **B** | **Stop If True** prevents Excel from evaluating any lower-priority rules when the current rule fires. |
-| **Q13** | **B** | A PivotTable built on a Table tracks the Table's auto-extending range; static ranges do not grow. |
-| **Q14** | **C** | The `@` operator in structured references means "this row." |
-| **Q15** | **B** | Rows in a criteria range are joined by **OR**. Region = North on row 1, Amount > 5000 on row 2 = OR. |
-| **Q16** | **B** | `DSUM(database, field, criteria)` is the database aggregator; arguments are in that order. |
+| **Q1** | **B** | Names created from the Name Box are always **workbook-scoped**. Use **Define Name** if you need a sheet-scoped name. |
+| **Q2** | **B** | With **Left column** ticked, Excel creates one name per row using the left-column label, each pointing at the value cell on its right. |
+| **Q3** | **C** | `Q1` collides with the cell-address rule — `Q1` is a real cell address. Letters `R`, `r`, `C`, `c` alone are also forbidden. |
+| **Q4** | **C** | The **Names with Errors** filter exposes named ranges whose `Refers To` evaluates to an error — perfect for inherited workbook hygiene. |
+| **Q5** | **B** | `F3` opens the **Paste Name** dialog mid-formula. `F2` edits the cell; `Ctrl + F3` opens Name Manager. |
+| **Q6** | **B** | `Ctrl + E` is the dedicated Flash Fill shortcut. |
+| **Q7** | **B** | Flash Fill output is purely static values. Use `LEFT/RIGHT/MID` or `TEXTSPLIT` for live, formula-based transformations. |
+| **Q8** | **C** | **Growth** uses multiplication (compound) rather than addition (Linear) — `100 * 1.10 = 110`, `110 * 1.10 = 121`, etc. |
+| **Q9** | **A** | The dot operator on a linked-data-type cell pulls a specific field. Field names with spaces use `[ ]`: `=A2.[52 week high]`. |
+| **Q10** | **B** | `RANDARRAY(rows, columns, min, max, integer)` — `4, 2, 1, 100, TRUE` produces a 4×2 grid of integers from 1 to 100. |
+
+## Section B — Lessons 2.4–2.5 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q11** | **C** | The format-code section order is **Positive ; Negative ; Zero ; Text**. |
+| **Q12** | **B** | Bracketed conditions `[>=N]` override default sign-based routing. The trailing comma in `0.0,,` scales by millions. |
+| **Q13** | **B** | The format `;;;` defines four empty sections — every value type (positive, negative, zero, text) renders blank, but the underlying value is unchanged. |
+| **Q14** | **B** | Colour codes such as `[Red]` and `[Blue]` must be the **first** bracketed item in their section. |
+| **Q15** | **B** | **Warning** allows users to proceed past the alert. **Stop** is the only style that strictly enforces the rule. |
+| **Q16** | **C** | `=INDIRECT(A2)` returns the named range whose name equals the parent value, producing the dependent list. |
+| **Q17** | **B** | Custom validation formulas evaluate per cell using the top-left reference. `COUNTIF=1` rejects any second occurrence of a value. |
+| **Q18** | **B** | **Find & Select > Data Validation** highlights every validated cell on the active sheet. **Constants** picks up hard-coded values, not validation rules. |
+
+## Section C — Lessons 2.6–2.8 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q19** | **D** | Function numbers `101–111` exclude rows hidden by filter; `109` is SUM excluding hidden rows. `9` includes filtered rows. |
+| **Q20** | **B** | The Subtotal feature inserts a subtotal each time the grouping column changes, so the data must be sorted first. |
+| **Q21** | **C** | Option 7 ignores both hidden rows and error values. Option 5 ignores hidden rows but not errors. AGGREGATE function 9 = SUM. |
+| **Q22** | **C** | `function_num` 14 = `LARGE`, 15 = `SMALL`, 16/18 = `PERCENTILE.INC/EXC`, 17/19 = `QUARTILE.INC/EXC`. These require the optional `k` argument. |
+| **Q23** | **C** | `SUBTOTAL` cannot ignore errors and cannot compute `LARGE`/`SMALL`/`PERCENTILE`/`QUARTILE`. `AGGREGATE` adds both capabilities. |
+| **Q24** | **A** | Only checked columns define uniqueness. With only Customer ID checked, any row whose ID matches another is removed regardless of other column values. |
+| **Q25** | **C** | The numbered outline buttons (1, 2, 3 …) above the row headings collapse to that outline level. `Ctrl + 8` toggles the outline symbols themselves. |
+
+## Section D — Lessons 2.9–2.11 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q26** | **C** | The column reference must be locked (`$E`), but the row reference must shift down (`E2`, `E3`, …). `$E2` does both. |
+| **Q27** | **B** | **Stop If True** prevents Excel from evaluating any lower-priority rules when the current rule fires. |
+| **Q28** | **C** | Manage Rules defaults to **Current Selection**. Switch to **This Worksheet** to see every rule on the active sheet. |
+| **Q29** | **B** | The **Reverse Icon Order** checkbox in the rule's edit dialog flips icon-to-value mapping without touching the data. |
+
+## Section E — Lessons 2.12–2.14 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q30** | **B** | A PivotTable built on a Table tracks the Table's auto-extending range; static ranges do not grow. |
+| **Q31** | **C** | The `@` operator in structured references means "this row." |
+| **Q32** | **C** | The Total Row writes `SUBTOTAL(109, [Column])` so that totals respond to filters automatically. |
+| **Q33** | **C** | Convert to Range strips the Table object and structured references but **keeps** any cell-level shading the style applied. |
+| **Q34** | **B** | Rows in a criteria range are joined by **OR**. Region = North on row 1, Amount > 5000 on row 2 = OR. |
+| **Q35** | **C** | A **Left Anti** join keeps the left rows that have no match on the right — exactly the "customers with no orders" pattern. |
+| **Q36** | **B** | **Append Queries** is Power Query's `UNION ALL`. Merge is for joins (one column matched against another), not for stacking. |
+| **Q37** | **B** | Queries are static until refreshed. Right-click > Refresh, or use `Data > Refresh All` (`Ctrl + Alt + F5`). |
+| **Q38** | **C** | **Only Create Connection** stores the staging query without a Table on the grid — perfect for queries that only feed other queries. |
 
 ## Part 2 — True/False Answer Key
 
 | # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q17** | **True** | Like `RAND()` and `NOW()`, `RANDARRAY()` recalculates on every workbook calc. Use Paste Special > Values to freeze. |
-| **Q18** | **False** | The maximum is **3 condition-tested sections + 1 default = 4 sections total**. Use Conditional Formatting for more branches. |
-| **Q19** | **True** | This is the standard audit shortcut — it highlights every validated cell on the active sheet. |
-| **Q20** | **False** | The **Data > Subtotal** command is **disabled** for Excel Tables. Convert to a range first, or use the Table's own Total Row. |
-| **Q21** | **False** | Convert to Range removes the Table object but **keeps** the formatting as plain cell shading. |
-| **Q22** | **True** | This is the canonical AND-across / OR-down rule for Advanced Filter criteria ranges. |
+| **Q39** | **True** | Like `RAND()` and `NOW()`, `RANDARRAY()` recalculates on every workbook calc. Use Paste Special > Values to freeze. |
+| **Q40** | **False** | The maximum is **3 condition-tested sections + 1 default = 4 sections total**. Use Conditional Formatting for more branches. |
+| **Q41** | **True** | This is the standard audit shortcut — it highlights every validated cell on the active sheet. |
+| **Q42** | **False** | The **Data > Subtotal** command is **disabled** for Excel Tables. Convert to a range first, or use the Table's own Total Row. |
+| **Q43** | **False** | Convert to Range removes the Table object but **keeps** the formatting as plain cell shading. |
+| **Q44** | **True** | This is the canonical AND-across / OR-down rule for Advanced Filter criteria ranges. |
+| **Q45** | **True** | Editing a name's spelling rewrites every formula, conditional-formatting rule, and validation source that referenced the old name. VBA string lookups (`Range("Sales")`) are not rewritten. |
+| **Q46** | **False** | Append matches columns by **name**, not position. Mismatched columns are filled with `null`, not `#REF!`. |
+| **Q47** | **True** | Applied Steps can be reordered by drag-and-drop — useful when a transform was inserted out of order. |
+| **Q48** | **False** | Linked Data Types require Microsoft 365. In Excel 2019 perpetual, the icons render as static text and dot-operator formulas resolve to `#FIELD!`. |
 
 ## Part 3 — Hands-On Solutions
 
-**T1.** Select the Amount column → `Ctrl + 1` → **Number** tab → **Custom** → in the **Type** field enter:
+**T1. Define a workbook-scoped name.**
+1. Select `D2:D500` on the `Sales` sheet.
+2. **Formulas > Define Name**.
+3. **Name:** `Amounts`. **Scope:** `Workbook`. **Comment:** `Sales amount column for module-2 quiz`. **Refers to:** confirm `=Sales!$D$2:$D$500`. **OK**.
+4. `Ctrl + F3` to open Name Manager — verify `Amounts` appears with Scope = `Workbook`.
+
+**T2. Custom number format with three branches.**
+Select the Amount column → `Ctrl + 1` → **Number** tab → **Custom** → in the **Type** field enter:
 
 <pre><code>[Green]#,##0.00;[Red](#,##0.00);&quot;-&quot;
 </code></pre>
 
 
-**T2.**
-1. On `Lookups`, name each city column with the parent country name: select USA cities → **Formulas > Define Name** → name `USA`. Repeat for `France`, `Germany`.
+**T3. Cascading dropdowns.**
+1. On `Lookups`, select the row of country labels and use **Formulas > Create from Selection** with **Top row** ticked. This auto-creates names `USA`, `France`, `Germany`, each pointing at the city column below the label.
 2. Click `B2` on `Form` → **Data > Data Validation** → **Allow: List** → **Source:** select the row of country labels.
-3. Click `C2` → **Data > Data Validation** → **Allow: List** → **Source:** `=INDIRECT(B2)` → **OK**. Excel will warn that the source evaluates to an error if `B2` is currently empty — accept and move on.
+3. Click `C2` → **Data > Data Validation** → **Allow: List** → **Source:** `=INDIRECT(B2)` → **OK**. Excel may warn that the source evaluates to an error if `B2` is currently empty — accept and move on.
 
-**T3.**
+**T4. Excel Table + PivotTable that auto-grows.**
 1. Click any cell in `A1:F500` → `Ctrl + T` → confirm "My table has headers" → **OK**.
 2. **Table Design** > **Table Name** → type `Orders` → `Enter`.
 3. **Table Design** > tick **Total Row** → click the Revenue total cell → pick **Sum** from the dropdown.
 4. With a cell inside `Orders` selected, **Insert > PivotTable** → New Worksheet → **OK**. Drag `Region` to **Rows** and `Revenue` to **Values**. The PivotTable's source is now `Orders` — adding rows to the Table will be picked up on **Refresh** (`Alt + F5`).
 
-**T4.**
+**T5. Subtotals.**
 1. Click anywhere in the data → **Data > Sort** → sort by `Department` ascending.
 2. **Data > Outline > Subtotal**.
-3. **At each change in:** Department. **Use function:** Sum. **Add subtotal to:** tick `Amount`. Click **OK**.
+3. **At each change in:** `Department`. **Use function:** `Sum`. **Add subtotal to:** tick `Amount`. Click **OK**.
 
-**T5.**
-1. Build a criteria range somewhere out of the way, e.g., `K1:L3`:
+**T6. AGGREGATE with errors.**
+In `H2` enter:
+
+<pre><code>=AGGREGATE(1, 6, Cost)
+</code></pre>
+
+where `Cost` is the structured reference (or use `Inventory!$D$2:$D$N`). Function `1` = AVERAGE, option `6` = ignore errors. Result matches the mean computed after deleting `#N/A` rows.
+
+**T7. Advanced Filter — Copy Unique to Another Location.**
+1. Build a criteria range, e.g., `K1:L3`:
 
 | Region | Sales |
 | :--- | :--- |
@@ -363,23 +579,93 @@ On the <code>Inventory</code> sheet, find every cell that currently has a data v
 4. Choose **Copy to another location**.
 5. Confirm **List range** auto-detected. Set **Criteria range** to `K1:L3`. Set **Copy to** to `H1`. Tick **Unique records only**. Click **OK**.
 
-**T6.**
+**T8. Formula-based conditional formatting.**
 1. Select `A2:E100`.
 2. **Home > Conditional Formatting > New Rule...**
 3. Pick **Use a formula to determine which cells to format**.
-4. Formula: `=$D2="In Progress"`
+4. Formula: `=$D2="In Progress"`.
 5. Click **Format...** → **Fill** tab → light yellow → **OK** → **OK**.
 
-**T7.**
-1. **Home > Find & Select > Data Validation** — confirms which cells have rules (audit step).
+**T9. Validation audit and clear.**
+1. **Home > Find & Select > Data Validation** — highlights which cells have rules (audit step).
 2. Click the corner triangle (above row 1, left of column A) to select the entire sheet.
 3. **Data > Data Validation > Data Validation...** — Excel warns that the selection contains different rule types; click **OK**.
 4. In the dialog, click **Clear All** → **OK**. Cell values remain; rules are gone.
 
+**T10. Power Query — Unpivot months.**
+1. Click any cell in the `MonthlyMatrix` data.
+2. **Data > From Table/Range** (convert to Table when prompted).
+3. In the Power Query Editor, select the twelve month columns (click `Jan`, `Shift + click` `Dec`).
+4. **Transform > Unpivot Columns**. The columns become two new columns named `Attribute` and `Value`.
+5. Right-click `Attribute` > **Rename** → `Month`. Right-click `Value` > **Rename** → `Amount`.
+6. **Home > Close & Load To...** → **Table** → **New worksheet** → **OK**. Rename the new sheet `MonthlyLong`.
+
 </details>
 
 <hr>
-<p><strong>Exam Tip:</strong> When the question wording mentions <em>"automatically include new rows,"</em> <em>"summary that responds to filtering,"</em> or <em>"named, named-column data,"</em> the intended tool is almost always an <strong>Excel Table</strong> (<code>Ctrl + T</code>). When the question says <em>"OR criteria,"</em> <em>"copy results elsewhere,"</em> or <em>"unique records only,"</em> the intended tool is <strong>Advanced Filter</strong>.</p>
+<p><strong>Exam Tip — Module 2 Coverage Map:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Lesson</th>
+<th style="text-align: left;">Most-Tested Concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">Name Box = workbook scope only; <strong>Create from Selection</strong> for bulk naming; <code>F3</code> for Paste Name; <code>Ctrl + F3</code> for Name Manager.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.1</td>
+<td style="text-align: left;"><code>Ctrl + E</code> for Flash Fill; output is <strong>static</strong> values; Linked Data Types use the <strong>dot operator</strong> (<code>A2.Price</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.2</td>
+<td style="text-align: left;"><strong>Growth</strong> type uses multiplication; <strong>Linear</strong> uses addition.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.3</td>
+<td style="text-align: left;"><code>RANDARRAY(rows, cols, min, max, integer)</code> is <strong>volatile</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.4</td>
+<td style="text-align: left;">Section order = <code>Positive ; Negative ; Zero ; Text</code>; max 3 conditional sections + default; <code>[Color]</code> must be first; <code>;;;</code> hides everything.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.5</td>
+<td style="text-align: left;"><strong>Stop</strong> is the only enforcing Error Alert; cascading dropdowns use <code>=INDIRECT(parent)</code>; <strong>Find &amp; Select &gt; Data Validation</strong> lists every validated cell.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.6</td>
+<td style="text-align: left;">Numbered outline buttons collapse to a level; <code>Ctrl + 8</code> toggles outline symbols.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.7</td>
+<td style="text-align: left;"><code>SUBTOTAL</code> 1–11 vs 101–111; <strong>Sort first</strong> before Data &gt; Subtotal; <strong>AGGREGATE</strong> option 7 = ignore hidden + errors; functions 14–19 add <code>LARGE</code>/<code>SMALL</code>/<code>PERCENTILE</code>/<code>QUARTILE</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.8</td>
+<td style="text-align: left;"><strong>Remove Duplicates</strong> uniqueness is defined by the checked columns only.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.9–2.11</td>
+<td style="text-align: left;"><code>=$E2="Overdue"</code> for whole-row formatting; <strong>Stop If True</strong>; <strong>Manage Rules</strong> defaults to Current Selection; <strong>Reverse Icon Order</strong> for "lower = better" data.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.12</td>
+<td style="text-align: left;"><code>Ctrl + T</code>; Total Row writes <code>SUBTOTAL(109,…)</code>; PivotTables on a Table auto-grow; Convert to Range keeps formatting but loses the Table.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.13</td>
+<td style="text-align: left;">AND across rows, OR down rows; <strong>Copy to another location</strong> + <strong>Unique records only</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.14</td>
+<td style="text-align: left;"><strong>Append</strong> = stack (UNION ALL); <strong>Merge</strong> = join; <strong>Left Anti</strong> = "no match on the right"; <strong>Only Create Connection</strong> for staging queries; Applied Steps are draggable.</td>
+</tr>
+</tbody>
+</table>
         </article>
         <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.14-power-query-basics.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.14 Power Query Basics: Get &amp; Transform Data</span></a><a class="pager-link pager-next" href="../module-3/3.1-logical-operation.html"><span class="pager-direction">Next →</span><span class="pager-title">3.1 Perform Logical Operations Using Advanced Functions</span></a></nav>
       </div>
@@ -412,7 +698,7 @@ On the <code>Inventory</code> sheet, find every cell that currently has a data v
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -455,7 +741,6 @@ On the <code>Inventory</code> sheet, find every cell that currently has a data v
               if (match) anyVisible = true;
             });
             mod.style.display = anyVisible ? '' : 'none';
-            // Auto-expand modules with matches when filtering
             if (q) mod.setAttribute('open', '');
           });
         });
@@ -463,6 +748,64 @@ On the <code>Inventory</code> sheet, find every cell that currently has a data v
           if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
         });
       }
+
+      // Progress tracking — mark visited lessons with a checkmark, show percent in sidebar
+      try {
+        var STORAGE_KEY = 'mo211:visited:v1';
+        var visited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        // Mark current page as visited (use pathname so query-strings/hashes don't fragment)
+        var currentPath = location.pathname;
+        if (currentPath.indexOf('/course/') !== -1) {
+          visited[currentPath] = Date.now();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+        }
+        // Render checkmarks against any sidebar link whose pathname is in the visited set
+        var visitedSet = {};
+        Object.keys(visited).forEach(function(p) {
+          // Normalize trailing slash and index.html
+          var norm = p.replace(/index\.html$/, '').replace(/\/$/, '');
+          visitedSet[norm] = true;
+        });
+        var lessonLinks = sb.querySelectorAll('.nav-lesson');
+        var totalLessons = 0, visitedLessons = 0;
+        lessonLinks.forEach(function(a) {
+          var href = a.getAttribute('href') || '';
+          // Resolve relative href against current location
+          var url;
+          try { url = new URL(href, location.href); } catch (e) { return; }
+          var key = url.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+          totalLessons++;
+          if (visitedSet[key]) {
+            a.classList.add('is-visited');
+            visitedLessons++;
+          }
+        });
+        // Progress bar at top of sidebar
+        if (totalLessons > 0) {
+          var pct = Math.round((visitedLessons / totalLessons) * 100);
+          var progressBar = document.createElement('div');
+          progressBar.className = 'course-nav-progress';
+          progressBar.innerHTML =
+            '<div class="course-nav-progress-label">' +
+              '<span>Progress</span>' +
+              '<strong>' + visitedLessons + ' / ' + totalLessons + '</strong>' +
+            '</div>' +
+            '<div class="course-nav-progress-track"><div class="course-nav-progress-fill" style="width:' + pct + '%"></div></div>';
+          var nav = sb.querySelector('.course-nav');
+          var firstChild = nav.firstChild;
+          nav.insertBefore(progressBar, firstChild);
+          // Reset button
+          progressBar.addEventListener('click', function(e) {
+            if (e.detail >= 2) { // double-click resets
+              if (confirm('Reset your progress checkmarks?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+              }
+            }
+          });
+          progressBar.title = 'Double-click to reset progress';
+        }
+      } catch (e) { /* localStorage unavailable */ }
     })();
   </script>
 </body>

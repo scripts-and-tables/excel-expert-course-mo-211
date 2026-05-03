@@ -6,7 +6,8 @@
   <meta name="description" content="Module 3: Advanced Formulas &amp; Macros — MO-211 Excel Expert prep" />
   <meta name="theme-color" content="#0f6f3f" />
   <title>Module 3: Advanced Formulas &amp; Macros · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -132,6 +133,20 @@
 <p>Throughout this chapter, you will learn to "reverse-engineer" solutions using <strong>What-If Analysis</strong> (Goal Seek and Scenario Manager) and master the <strong>Financial Suite</strong>—calculating everything from monthly loan payments (<code>PMT</code>) to irregular investment returns (<code>XIRR</code>). Because complex formulas are prone to errors, we also dedicate a section to <strong>Formula Auditing</strong>, teaching you to use Tracer Arrows, the Watch Window, and the Evaluate Formula tool to debug your work like a developer.</p>
 <p>Finally, we introduce <strong>VBA Automation</strong> through simple Macros. You will learn how to record your manual workflows, assign them to buttons, and perform "surgical" edits to the code in the VBA Editor. By the end of this module, you won't just be entering data; you will be building automated analytical systems.</p>
 <hr>
+<h2>✅ What You Must Be Able To Do</h2>
+<p>By the end of this module, you must be able to:</p>
+<ul>
+<li><strong>Build nested logical formulas</strong> using <code>IF</code>, <code>IFS</code>, <code>SWITCH</code>, <code>AND</code>/<code>OR</code>, and the <code>*IFS</code> aggregation family (<code>SUMIFS</code>, <code>COUNTIFS</code>, <code>AVERAGEIFS</code>, <code>MAXIFS</code>, <code>MINIFS</code>).</li>
+<li><strong>Use <code>LET()</code></strong> to assign intermediate names inside a formula for clarity and recalculation efficiency.</li>
+<li><strong>Look up data</strong> with <code>XLOOKUP</code> (full six-argument signature, including <code>match_mode</code> and <code>search_mode</code>), legacy <code>VLOOKUP</code>/<code>HLOOKUP</code> with wildcards, and <code>INDEX</code>/<code>MATCH</code> for 2-D and left-lookup scenarios.</li>
+<li><strong>Calculate dates and business days</strong> with <code>WEEKDAY</code>, <code>WORKDAY</code>, <code>WORKDAY.INTL</code>, <code>NETWORKDAYS</code>, and <code>EOMONTH</code>, and reason about volatile functions (<code>NOW</code>, <code>TODAY</code>).</li>
+<li><strong>Run What-If Analysis</strong>: solve for inputs with <strong>Goal Seek</strong>, compare cases with <strong>Scenario Manager</strong> (including Summary reports), and build <strong>one- and two-variable Data Tables</strong> for sensitivity analysis.</li>
+<li><strong>Author dynamic-array formulas</strong> — <code>FILTER</code>, <code>SORT</code>, <code>SORTBY</code>, <code>UNIQUE</code>, <code>SEQUENCE</code>, <code>VSTACK</code>/<code>HSTACK</code>, <code>TAKE</code>/<code>DROP</code>, <code>CHOOSEROWS</code>/<code>CHOOSECOLS</code>, and the text-split family — and reference results with the spilled-range operator (<code>#</code>).</li>
+<li><strong>Model loans and investments</strong> using <code>PMT</code>, <code>NPER</code>, <code>RATE</code>, <code>IPMT</code>, <code>PPMT</code>, <code>XNPV</code>, and <code>XIRR</code> with correct sign convention and rate-period consistency.</li>
+<li><strong>Audit and troubleshoot formulas</strong> using <strong>Trace Precedents/Dependents</strong>, the <strong>Watch Window</strong>, <strong>Evaluate Formula</strong> (step-through), <strong>Trace Error</strong>, and structured handlers (<code>IFERROR</code>, <code>IFNA</code>).</li>
+<li><strong>Record, edit, and run macros</strong>: name them, save the workbook as <code>.xlsm</code>, edit the recorded VBA in the editor, deploy reusable macros to the <strong>Personal Macro Workbook</strong>, and assign them to <strong>Form Controls</strong> (Button, Check Box, Spin Button).</li>
+<li><strong>Consolidate</strong> data from multiple ranges or workbooks via the Consolidate dialog, and <strong>build a Forecast Sheet</strong> (<code>FORECAST.ETS</code>/<code>FORECAST.LINEAR</code>) with confidence intervals and seasonality.</li>
+</ul>
         </section>
         <section class="module-lessons">
           <h2 class="section-h">Lessons in this module</h2>
@@ -180,7 +195,7 @@
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

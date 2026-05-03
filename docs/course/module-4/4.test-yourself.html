@@ -6,7 +6,8 @@
   <meta name="description" content="MO-211 Excel Expert prep — Module 4 Test: Manage Advanced Charts and Tables" />
   <meta name="theme-color" content="#0f6f3f" />
   <title>Module 4 Test: Manage Advanced Charts and Tables · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -134,111 +135,267 @@
         </header>
         <article class="lesson-content">
 <p><strong>Course:</strong> MO-211: Microsoft Excel Expert
-<strong>Topics covered:</strong> Dual-axis charts, advanced chart types (Histogram, Pareto, Box &amp; Whisker, Waterfall, Funnel, Sunburst, Combo), PivotTables (creation, fields, grouping, calculated fields), Slicers and Timelines, PivotCharts, Sparklines, Trendlines.</p>
+<strong>Topics covered:</strong> 4.2 Advanced charts (Combo, Histogram, Pareto, Box &amp; Whisker, Waterfall, Funnel, Sunburst) · 4.3-4.4 PivotTables · 4.5 Slicers and Timelines · 4.6 PivotTable Grouping · 4.7 Calculated Fields · 4.8 PivotCharts · 4.9 Sparklines · 4.10 Trendlines</p>
+<p>This test combines exam-style multiple choice with hands-on micro-tasks. Try every question with your notes closed first; reveal the answer key only after attempting all of them. Practice file: <a href="../practice/module-4-pivots-and-charts.xlsx"><code>practice/module-4-pivots-and-charts.xlsx</code></a>.</p>
 <hr>
-<h2>Part 1: Multiple Choice</h2>
-<p><em>Choose the best answer for each scenario.</em></p>
-<h3>Q1. Pareto vs. Histogram</h3>
+<h2>Section A: Lesson 4.2 — Advanced Chart Types</h2>
+<h3>Q1. Combo Chart Convention</h3>
+<p>On a Combo chart with <strong>Revenue</strong> in the millions and <strong>Margin %</strong> as a percentage, what is the standard professional layout?
+- A) Both as columns on one axis.
+- B) Revenue as a <strong>Line</strong>, Margin % as a <strong>Column</strong> on the secondary axis.
+- C) Revenue as a <strong>Column</strong> on the primary axis, Margin % as a <strong>Line</strong> on the secondary axis.
+- D) Both as lines, Margin % on a logarithmic axis.</p>
+<h3>Q2. Pareto vs Histogram</h3>
 <p>You are asked to "create a Pareto chart of defect counts by category" from a column of category labels and a column of defect counts. How does the resulting chart differ from a regular Histogram inserted from the same data?
 - A) The Pareto chart uses different colors but the same bar order.
 - B) The Pareto chart sorts bars in <strong>descending</strong> order and overlays a <strong>cumulative percentage line</strong> on a secondary axis.
 - C) The Pareto chart automatically applies a Box &amp; Whisker overlay.
 - D) Pareto charts are only available under <strong>Insert &gt; Recommended Charts</strong>, not under Statistic Charts.</p>
-<h3>Q2. Histogram Bin Modes</h3>
-<p>A task says: "Group every value above 100 into a single right-most bar." Which option in the <code>Format Axis</code> pane do you enable?
+<h3>Q3. Histogram Overflow Bin</h3>
+<p>A task says: "Group every value above 100 into a single right-most bar." Which option in the <strong>Format Axis</strong> pane do you enable?
 - A) Number of bins
 - B) Bin width
 - C) Overflow bin
 - D) Underflow bin</p>
-<h3>Q3. Funnel Chart Source Layout</h3>
-<p>A funnel chart you inserted is showing only one bar instead of a stepped funnel. The most likely cause is:
-- A) You forgot to apply a chart style.
-- B) The source data has multiple value columns instead of a single value column with category labels.
-- C) The data is sorted ascending instead of descending.
-- D) You inserted the chart from the wrong ribbon tab.</p>
-<h3>Q4. Waterfall "Set as Total"</h3>
+<h3>Q4. Histogram — By Category</h3>
+<p>Your source data is a column of department names (<code>Sales</code>, <code>Marketing</code>, <code>Ops</code>, …) with counts. You insert a Histogram and want one bar per department label rather than numeric bins. Which <strong>Bin Mode</strong> in Format Axis do you pick?
+- A) <strong>Automatic</strong>
+- B) <strong>Bin width</strong>
+- C) <strong>Number of bins</strong>
+- D) <strong>By Category</strong></p>
+<h3>Q5. Box and Whisker — Median Mode</h3>
+<p>Right-click a Box and Whisker series and you find <strong>Inclusive Median</strong> and <strong>Exclusive Median</strong> options. What do these control?
+- A) Whether the median line is drawn at all.
+- B) Which quartile-calculation method the box uses (the boundary of Q1/Q3 differs depending on whether the median value itself is included in each half).
+- C) Whether outliers are shown.
+- D) The colour of the whiskers.</p>
+<h3>Q6. Waterfall "Set as Total"</h3>
 <p>The last bar of a Waterfall chart is floating above the axis as an "Increase" instead of resting on the baseline as the final total. What do you do?
 - A) Right-click the chart area &gt; <strong>Change Chart Type</strong>.
 - B) Click the bar twice (until only that single point is selected) &gt; right-click &gt; <strong>Set as Total</strong>.
 - C) Sort the source data in descending order.
 - D) Add a new "Total" row to the source data.</p>
-<h3>Q5. PivotTable Defer Layout Update</h3>
+<h3>Q7. Funnel Chart Source Layout</h3>
+<p>A funnel chart you inserted is showing only one bar instead of a stepped funnel. The most likely cause is:
+- A) You forgot to apply a chart style.
+- B) The source data has multiple value columns instead of a single value column with category labels.
+- C) The data is sorted ascending instead of descending.
+- D) You inserted the chart from the wrong ribbon tab.</p>
+<h3>Q8. Sunburst Hierarchy</h3>
+<p>A Sunburst chart requires what kind of source data?
+- A) A single column of values with a single column of dates.
+- B) <strong>At least two levels</strong> of hierarchical category labels (e.g., Region → Country → City) plus a value column.
+- C) An Excel Table with structured references.
+- D) Exactly three numeric columns.</p>
+<hr>
+<h2>Section B: Lessons 4.3 – 4.4 — PivotTables</h2>
+<h3>Q9. Defer Layout Update</h3>
 <p>You are dragging fields into a PivotTable built on a 2-million-row Power Pivot model and every drag causes a long delay. What is the recommended fix?
 - A) Convert the model to a regular Excel Table.
-- B) Tick <strong>Defer Layout Update</strong> at the bottom of the <code>PivotTable Fields</code> pane, build the layout, then click <strong>Update</strong>.
+- B) Tick <strong>Defer Layout Update</strong> at the bottom of the <strong>PivotTable Fields</strong> pane, build the layout, then click <strong>Update</strong>.
 - C) Disable <strong>Refresh on Open</strong> in PivotTable Options.
 - D) Switch to <strong>Classic PivotTable layout</strong> under Display options.</p>
-<h3>Q6. GETPIVOTDATA Auto-Generation</h3>
+<h3>Q10. GETPIVOTDATA Auto-Generation</h3>
 <p>You type <code>=</code> and click a cell inside a PivotTable on another sheet. Excel writes a verbose <code>GETPIVOTDATA(...)</code> formula instead of <code>=Sheet1!B5</code>. Where do you turn this behavior off?
-- A) <code>File &gt; Options &gt; Advanced &gt; Editing options</code>
+- A) <strong>File &gt; Options &gt; Advanced &gt; Editing options</strong>
 - B) Right-click the cell &gt; <strong>Format Cells</strong>
 - C) <strong>PivotTable Analyze</strong> tab &gt; <strong>Options</strong> dropdown (next to PivotTable Name) &gt; untick <strong>Generate GetPivotData</strong>
 - D) <strong>Design</strong> tab &gt; <strong>Report Layout</strong> &gt; <strong>Show in Tabular Form</strong></p>
-<h3>Q7. Drill-Through</h3>
+<h3>Q11. GETPIVOTDATA Syntax</h3>
+<p>Which <code>GETPIVOTDATA</code> formula correctly returns the West / 2025 cell of a PivotTable rooted at <code>$A$3</code>, with a <code>Sum of Sales</code> value field?
+- A) <code>=GETPIVOTDATA(Sheet1!$A$3, "Sum of Sales", "Region", "West", "Year", 2025)</code>
+- B) <code>=GETPIVOTDATA("Sum of Sales", $A$3, "Region", "West", "Year", 2025)</code>
+- C) <code>=GETPIVOTDATA($A$3, "West", "2025")</code>
+- D) <code>=GETPIVOTDATA("Region=West, Year=2025")</code></p>
+<h3>Q12. Drill-Through (Show Details)</h3>
 <p>A manager asks "where did this $48,200 number come from?" while looking at a PivotTable. What is the fastest way to surface the underlying source rows?
 - A) Refresh the PivotTable.
 - B) Double-click the value cell — Excel inserts a new sheet containing the underlying records.
 - C) Open Power Query and re-run the source query.
 - D) Use the <code>GETPIVOTDATA</code> function to look up the value.</p>
-<h3>Q8. Timeline vs. Date Slicer</h3>
+<h3>Q13. Show Values As — % of Column Total</h3>
+<p>You need each cell in a PivotTable to display its share of the column total (a percent). Which path is correct?
+- A) Right-click value &gt; <strong>Value Field Settings</strong> &gt; <strong>Summarize Values By</strong> tab &gt; Sum.
+- B) Right-click value &gt; <strong>Value Field Settings</strong> &gt; <strong>Show Values As</strong> tab &gt; <strong>% of Column Total</strong>.
+- C) Format the cells as <code>Percent</code> via <code>Ctrl + 1</code>.
+- D) Insert a calculated field <code>=Sum / TotalSum</code>.</p>
+<h3>Q14. Renaming a Value Field</h3>
+<p>You try to rename a value field from <code>Sum of Sales</code> to <code>Sales</code> and Excel rejects the new name. Why?
+- A) Value field names cannot exceed 8 characters.
+- B) <code>Sales</code> already exists as a column header in the source data; the new field name must differ. A common workaround is a trailing space: <code>"Sales "</code>.
+- C) PivotTable field names must contain a function name.
+- D) PivotTable field names must be lower-case.</p>
+<h3>Q15. Change Data Source</h3>
+<p>A PivotTable was built on a static range <code>A1:F500</code>. You added 50 new rows and want the PivotTable to include them. Which action is required (assuming you cannot convert the source to a Table)?
+- A) <strong>PivotTable Analyze &gt; Refresh</strong> — that is sufficient.
+- B) <strong>PivotTable Analyze &gt; Change Data Source</strong> — point to the new wider range.
+- C) Re-create the PivotTable from scratch.
+- D) Use <strong>GETPIVOTDATA</strong> to pull from the new rows.</p>
+<h3>Q16. Disable Drill-Through</h3>
+<p>On a shared dashboard you want to <strong>prevent</strong> users from double-clicking PivotTable values to see source rows. Where do you turn this off?
+- A) <strong>PivotTable Analyze &gt; Options &gt; Data tab</strong> → untick <strong>Enable show details</strong>.
+- B) Hide the source worksheet.
+- C) Convert the PivotTable to a regular range.
+- D) Drill-through cannot be disabled.</p>
+<hr>
+<h2>Section C: Lesson 4.5 — Slicers and Timelines</h2>
+<h3>Q17. Timeline vs Date Slicer</h3>
 <p>Why is a Timeline preferred over a regular Slicer when filtering a PivotTable by a date column?
 - A) Slicers cannot be applied to date fields at all.
 - B) Timelines automatically refresh the source data; slicers do not.
 - C) A Timeline provides a continuous range scrubber with selectable granularity (Years/Quarters/Months/Days), while a date Slicer produces one button per unique date.
 - D) Timelines support Report Connections; Slicers do not.</p>
-<h3>Q9. Sparkline Axis: Same for All</h3>
+<h3>Q18. Timeline Granularity</h3>
+<p>Which dropdown switches a Timeline between <strong>Years / Quarters / Months / Days</strong> views?
+- A) The <strong>Time Level</strong> dropdown in the top-right corner of the Timeline.
+- B) <strong>Slicer Settings</strong> &gt; <strong>Sort items</strong>.
+- C) <strong>PivotTable Analyze &gt; Field Settings</strong>.
+- D) Right-click the Timeline &gt; <strong>Group By</strong>.</p>
+<h3>Q19. Insert Timeline Greyed Out</h3>
+<p>You click <strong>PivotTable Analyze &gt; Insert Timeline</strong> and the date field you expected does not appear in the dialog. What is the most likely cause?
+- A) The PivotTable does not have any Row fields.
+- B) The source date column is being read as <strong>Text</strong>, not as a real date type.
+- C) The Timeline feature is disabled in Trust Center.
+- D) Timelines require Microsoft 365 only.</p>
+<h3>Q20. Report Connections</h3>
+<p>You need one Slicer to filter <strong>two</strong> PivotTables that are both built on the same data source. Where do you wire it up?
+- A) Right-click the Slicer &gt; <strong>Report Connections</strong> &gt; tick the second PivotTable.
+- B) Insert a separate Slicer for each PivotTable.
+- C) <strong>PivotTable Analyze &gt; Insert Slicer</strong> twice with the same field.
+- D) Slicers can only filter one PivotTable; use a Timeline instead.</p>
+<h3>Q21. Slicer Columns Layout</h3>
+<p>You want a Slicer to render as a <strong>horizontal button bar with 4 buttons across</strong> rather than a vertical list. Which control do you change?
+- A) <strong>Slicer</strong> tab &gt; <strong>Buttons</strong> group &gt; <strong>Columns</strong> = <code>4</code>.
+- B) Right-click &gt; <strong>Slicer Settings</strong> &gt; <strong>Multi-Column</strong>.
+- C) Drag the Slicer wider — Excel auto-calculates the column count.
+- D) <strong>Format Slicer &gt; Layout &gt; Direction = Horizontal</strong>.</p>
+<hr>
+<h2>Section D: Lessons 4.6 – 4.7 — Grouping and Calculated Fields</h2>
+<h3>Q22. Group by Quarter</h3>
+<p>Your PivotTable Row field is <code>OrderDate</code> (daily). You want quarterly totals. What is the fastest method?
+- A) Insert a new column in the source and write <code>=ROUNDUP(MONTH(date)/3, 0)</code>.
+- B) Right-click any date cell in the PivotTable &gt; <strong>Group</strong> &gt; pick <strong>Quarters</strong>.
+- C) Use <strong>PivotTable Options &gt; Auto-group</strong>.
+- D) Use a calculated field <code>=QUARTER(OrderDate)</code>.</p>
+<h3>Q23. "Cannot group that selection"</h3>
+<p>When you right-click a Date row and pick <strong>Group</strong>, you get the error "Cannot group that selection." What is the cause?
+- A) The PivotTable has no Values field.
+- B) The source date column contains <strong>blank cells</strong> or <strong>text values</strong> mixed with dates.
+- C) Grouping requires Excel for Mac.
+- D) The PivotTable is built on a Power Pivot model.</p>
+<h3>Q24. Manual Text Grouping</h3>
+<p>You want to group <code>France</code> and <code>Germany</code> into a custom bucket called <code>Europe</code>. How?
+- A) Edit the source data and add a column.
+- B) <code>Ctrl + click</code> to select <code>France</code> and <code>Germany</code> in the Row labels &gt; right-click &gt; <strong>Group</strong>, then rename <code>Group 1</code> to <code>Europe</code>.
+- C) Use a calculated item <code>=France + Germany</code>.
+- D) Insert a Slicer with <strong>Custom List</strong>.</p>
+<h3>Q25. Calculated Field Restriction</h3>
+<p>Which of the following CANNOT be used inside a PivotTable Calculated Field formula?
+- A) <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators.
+- B) The names of existing PivotTable fields.
+- C) Cell references like <code>$A$1</code> or <code>VLOOKUP</code> lookups.
+- D) Constants like <code>0.05</code> or <code>1000</code>.</p>
+<h3>Q26. Calculated Field vs Calculated Item</h3>
+<p>What is the key distinction?
+- A) Calculated Fields and Calculated Items are aliases for the same thing.
+- B) A <strong>Calculated Field</strong> creates a new field-level formula across all rows of the PivotTable; a <strong>Calculated Item</strong> creates a new row/column member computed from existing items in a single field.
+- C) Calculated Fields are SUMmed; Calculated Items are AVERAGED.
+- D) Calculated Items are only available in Power Pivot.</p>
+<h3>Q27. Order of Operations in Calculated Fields</h3>
+<p>A PivotTable has a Calculated Field <code>=Revenue / Quantity</code> (intended as Unit Price). What value does the cell actually compute?
+- A) The average of each row's <code>Revenue/Quantity</code> ratio.
+- B) <code>Sum(Revenue) / Sum(Quantity)</code> — Excel sums each underlying field first, <strong>then</strong> applies the formula.
+- C) The maximum unit price across rows.
+- D) <code>#VALUE!</code> because PivotTables cannot divide.</p>
+<hr>
+<h2>Section E: Lessons 4.8 – 4.9 — PivotCharts and Sparklines</h2>
+<h3>Q28. PivotChart Field Buttons</h3>
+<p>You inserted a PivotChart and want to remove the dropdown arrows from the chart face for a presentation. Where do you toggle them off?
+- A) <strong>Format &gt; Shape Effects &gt; Hide</strong>.
+- B) <strong>PivotChart Analyze &gt; Show/Hide group &gt; Field Buttons</strong> dropdown &gt; <strong>Hide All</strong>.
+- C) Right-click the PivotChart &gt; <strong>Convert to Static Chart</strong>.
+- D) <strong>Design &gt; Add Chart Element &gt; Field Buttons &gt; None</strong>.</p>
+<h3>Q29. Sparkline Axis: Same for All</h3>
 <p>Three sparklines compare monthly sales for three products. All three look like steady upward lines, even though Product A averages $1M and Product C averages $20K. What axis setting fixes the misleading visual?
-- A) Show Axis (zero line)
-- B) Plot Data Right-to-Left
-- C) Vertical Axis Minimum &gt; <strong>Same for All Sparklines</strong>
-- D) Horizontal Axis Type &gt; <strong>Date Axis Type</strong></p>
-<h3>Q10. Sparkline Group Behavior</h3>
+- A) Show Axis (zero line).
+- B) Plot Data Right-to-Left.
+- C) <strong>Vertical Axis Minimum &gt; Same for All Sparklines</strong> (and Maximum &gt; Same for All).
+- D) Horizontal Axis Type &gt; <strong>Date Axis Type</strong>.</p>
+<h3>Q30. Sparkline Group Behaviour</h3>
 <p>You inserted four sparklines as a group. You want only the second one to be red while the others stay blue. What must you do first?
 - A) Delete and re-insert the second sparkline.
 - B) Select the group &gt; <strong>Sparkline</strong> tab &gt; <strong>Ungroup</strong>, then recolor the individual sparkline.
 - C) Right-click &gt; <strong>Format Cells</strong> &gt; change font color.
 - D) Convert the sparkline to a regular chart.</p>
-<h3>Q11. Trendline Type Selection</h3>
-<p>Your data is monthly revenue that grew slowly for a year, then started doubling every quarter. Which trendline type best fits the <strong>whole</strong> series?
+<h3>Q31. Sparkline Type for Sign-Only Tracking</h3>
+<p>You want a tiny chart that shows whether each month was a profit (positive) or loss (negative), ignoring magnitude. Which sparkline type is appropriate?
+- A) <strong>Line</strong> with markers.
+- B) <strong>Column</strong> with red negative bars.
+- C) <strong>Win/Loss</strong> — encodes the <strong>sign</strong> only (no magnitude).
+- D) <strong>Pareto</strong> sparkline.</p>
+<h3>Q32. Clearing a Sparkline</h3>
+<p>You select a sparkline cell and press <code>Delete</code>. The sparkline is still there. How do you actually remove it?
+- A) Delete the entire row.
+- B) <strong>Sparkline tab &gt; Clear</strong> dropdown &gt; <strong>Clear Selected Sparklines</strong>.
+- C) Right-click &gt; <strong>Format Cells</strong> &gt; <strong>Clear All</strong>.
+- D) Sparklines cannot be removed once inserted.</p>
+<hr>
+<h2>Section F: Lesson 4.10 — Trendlines</h2>
+<h3>Q33. Trendline Type Selection</h3>
+<p>Your data is monthly revenue that grew slowly for a year, then started doubling every quarter. Which trendline type best fits the <strong>whole</strong> series (all values are positive)?
 - A) Linear
 - B) Logarithmic
-- C) Exponential (assuming all values are positive)
+- C) Exponential
 - D) Moving Average</p>
-<h3>Q12. Trendline R-squared</h3>
-<p>Where do you turn on the R² (goodness-of-fit) display for an existing trendline?
-- A) Chart Design &gt; Add Chart Element &gt; Data Labels.
-- B) <code>Format Trendline</code> pane &gt; tick <strong>Display R-squared value on chart</strong>.
-- C) Right-click the chart &gt; <strong>Select Data</strong>.
-- D) PivotTable Analyze &gt; <strong>Options</strong> &gt; <strong>Totals &amp; Filters</strong>.</p>
-<h3>Q13. Trendline Forecast</h3>
+<h3>Q34. Trendline Restrictions</h3>
+<p>Which trendline type <strong>cannot</strong> fit data containing zero or negative values?
+- A) Linear
+- B) Polynomial Order 2
+- C) Exponential
+- D) Moving Average</p>
+<h3>Q35. Trendline Forecast Forward</h3>
 <p>You want a Linear trendline that extends 3 periods past the last data point. Which field do you set?
-- A) <code>Format Trendline</code> &gt; Forecast &gt; <strong>Backward</strong> = 3
-- B) <code>Format Trendline</code> &gt; Forecast &gt; <strong>Forward</strong> = 3
-- C) <code>Format Trendline</code> &gt; <strong>Set Intercept</strong> = 3
-- D) <code>Format Trendline</code> &gt; Polynomial &gt; <strong>Order</strong> = 3</p>
-<h3>Q14. Calculated Field Restrictions</h3>
-<p>Which of the following CANNOT be used inside a PivotTable Calculated Field formula?
-- A) <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> operators
-- B) The names of existing PivotTable fields
-- C) Cell references like <code>$A$1</code> or <code>VLOOKUP</code> lookups
-- D) Constants like <code>0.05</code> or <code>1000</code></p>
+- A) <code>Format Trendline</code> &gt; Forecast &gt; <strong>Backward</strong> = 3.
+- B) <code>Format Trendline</code> &gt; Forecast &gt; <strong>Forward</strong> = 3.
+- C) <code>Format Trendline</code> &gt; <strong>Set Intercept</strong> = 3.
+- D) <code>Format Trendline</code> &gt; Polynomial &gt; <strong>Order</strong> = 3.</p>
+<h3>Q36. R-squared Display</h3>
+<p>Where do you turn on the R² (goodness-of-fit) display for an existing trendline?
+- A) <strong>Chart Design &gt; Add Chart Element &gt; Data Labels</strong>.
+- B) <strong>Format Trendline</strong> pane &gt; tick <strong>Display R-squared value on chart</strong>.
+- C) Right-click the chart &gt; <strong>Select Data</strong>.
+- D) <strong>PivotTable Analyze &gt; Options &gt; Totals &amp; Filters</strong>.</p>
+<h3>Q37. Moving Average Limitation</h3>
+<p>Which capability is <strong>not</strong> available for a Moving Average trendline?
+- A) Adjusting the period.
+- B) Customising the line color.
+- C) Displaying the equation and R-squared on the chart.
+- D) Removing the trendline.</p>
 <hr>
 <h2>Part 2: True or False</h2>
-<p><strong>Q15.</strong> A Funnel chart requires the source data to be <strong>sorted from largest to smallest</strong> before insertion to render correctly.
+<p><strong>Q38.</strong> A Funnel chart requires the source data to be <strong>sorted from largest to smallest</strong> before insertion to render correctly.
 <em>(True / False)</em></p>
-<p><strong>Q16.</strong> <strong>Defer Layout Update</strong> in the <code>PivotTable Fields</code> pane will continue to suspend recalculation even after you close and reopen the workbook.
+<p><strong>Q39.</strong> <strong>Defer Layout Update</strong> in the <strong>PivotTable Fields</strong> pane will continue to suspend recalculation even after you close and reopen the workbook.
 <em>(True / False)</em></p>
-<p><strong>Q17.</strong> A single Timeline can be connected to multiple PivotTables via <strong>Report Connections</strong>, provided they share the same data cache.
+<p><strong>Q40.</strong> A single Timeline can be connected to multiple PivotTables via <strong>Report Connections</strong>, provided they share the same data cache.
 <em>(True / False)</em></p>
-<p><strong>Q18.</strong> The <strong>Win/Loss</strong> sparkline encodes both the <strong>direction</strong> and <strong>magnitude</strong> of each value.
+<p><strong>Q41.</strong> The <strong>Win/Loss</strong> sparkline encodes both the <strong>direction</strong> and <strong>magnitude</strong> of each value.
 <em>(True / False)</em></p>
-<p><strong>Q19.</strong> <strong>Polynomial Order 6</strong> trendlines always produce a more accurate forecast than Polynomial Order 2 because they have a higher R-squared value.
+<p><strong>Q42.</strong> <strong>Polynomial Order 6</strong> trendlines always produce a more accurate forecast than Polynomial Order 2 because they have a higher R-squared value.
 <em>(True / False)</em></p>
-<p><strong>Q20.</strong> <strong>Drill-through</strong> (double-click a PivotTable value) respects the currently active slicer and timeline filters.
+<p><strong>Q43.</strong> <strong>Drill-through</strong> (double-click a PivotTable value) respects the currently active slicer and timeline filters.
+<em>(True / False)</em></p>
+<p><strong>Q44.</strong> Hiding the <strong>Field Buttons</strong> on a PivotChart also disables the underlying filtering and drill-down behaviour.
+<em>(True / False)</em></p>
+<p><strong>Q45.</strong> A PivotTable Calculated Field formula can call <code>VLOOKUP</code> to enrich its result.
+<em>(True / False)</em></p>
+<p><strong>Q46.</strong> Pareto and Histogram charts both live under <strong>Insert &gt; Insert Statistic Chart</strong>.
+<em>(True / False)</em></p>
+<p><strong>Q47.</strong> A Sparkline cell can still hold its own text label or formula — the sparkline is drawn as a background graphic.
 <em>(True / False)</em></p>
 <hr>
 <h2>Part 3: Hands-On Micro-Tasks</h2>
-<p>Open the linked practice workbook (or build a quick mock dataset) and complete each task. Time yourself — exam tasks should each take under 90 seconds.</p>
+<p>Open the practice workbook <code>practice/module-4-pivots-and-charts.xlsx</code> (or build a quick mock dataset) and complete each task. Time yourself — exam tasks should each take under 90 seconds.</p>
 <h3>Task A — Pareto Chart</h3>
 <p>On the <strong>Defects</strong> sheet, select the <code>Category</code> and <code>Count</code> columns and create a <strong>Pareto</strong> chart titled <code>Defect Pareto</code>. Verify that the bars are sorted descending and a cumulative line is visible.
 <em>Path: <code>Insert</code> &gt; <code>Insert Statistic Chart</code> &gt; <code>Pareto</code>.</em></p>
@@ -248,61 +405,170 @@
 <h3>Task C — Waterfall Total</h3>
 <p>On the <strong>P&amp;L</strong> sheet, create a Waterfall chart of the bridge from <code>Opening</code> to <code>Closing</code>. Mark the <code>Closing</code> bar as a <strong>Total</strong> so it sits on the baseline.
 <em>Path: Single-click bar twice &gt; right-click &gt; <code>Set as Total</code>.</em></p>
-<h3>Task D — Timeline + Report Connections</h3>
+<h3>Task D — PivotTable + Date Grouping</h3>
+<p>On the <strong>SalesData</strong> sheet, create a PivotTable on a new sheet showing <code>Sum of Revenue</code> by Region (Rows) and <code>Order Date</code> grouped by <strong>Years</strong> and <strong>Quarters</strong> (Columns).</p>
+<p><em>Success criteria:</em> the column area shows nested <code>2024 Q1, 2024 Q2 … 2025 Q4</code> headers; the Region column is in Rows.</p>
+<h3>Task E — Calculated Field</h3>
+<p>On the PivotTable from Task D, add a Calculated Field named <code>Profit</code> defined as <code>= Revenue - Cost</code>. Verify that it appears as a new value column.</p>
+<p><em>Path: <code>PivotTable Analyze &gt; Fields, Items, &amp; Sets &gt; Calculated Field</code>.</em></p>
+<h3>Task F — Timeline + Report Connections</h3>
 <p>On the <strong>Sales Dashboard</strong> sheet, insert a <strong>Timeline</strong> on the <code>Order Date</code> field of the <code>Sales by Region</code> PivotTable. Switch the time level to <strong>Quarters</strong> and connect the Timeline to a second PivotTable named <code>Sales by Product</code> via <strong>Report Connections</strong>.</p>
-<h3>Task E — Sparklines</h3>
+<h3>Task G — Drill-Through</h3>
+<p>On the PivotTable from Task D, double-click any cell in the Revenue column. Verify that Excel inserts a new worksheet containing the underlying source rows that produced that value.</p>
+<p><em>Path: Double-click any value cell.</em></p>
+<h3>Task H — Sparklines</h3>
 <p>In column <code>H</code> of the <strong>Products</strong> sheet, insert <strong>Line</strong> sparklines for each row's January-December values. Highlight the <strong>High Point</strong> and <strong>Low Point</strong>, and set the vertical axis to <strong>Same for All Sparklines</strong>.</p>
-<h3>Task F — Linear Trendline with Forecast and R²</h3>
+<h3>Task I — Linear Trendline with Forecast and R²</h3>
 <p>On the existing <strong>Revenue</strong> chart, add a <strong>Linear</strong> trendline to the <code>Net Revenue</code> series. Set <strong>Forward</strong> forecast to <code>3</code> periods and tick both <strong>Display Equation on chart</strong> and <strong>Display R-squared value on chart</strong>.</p>
+<h3>Task J — Disable GetPivotData</h3>
+<p>Click anywhere in the PivotTable on the <strong>Dashboard</strong> sheet, then go to <strong>PivotTable Analyze &gt; Options</strong> dropdown (left edge of the ribbon, next to the PivotTable Name box) and untick <strong>Generate GetPivotData</strong>. After this, typing <code>=</code> and clicking a PivotTable cell should yield a plain <code>=Sheet1!B5</code> reference rather than a <code>GETPIVOTDATA(...)</code> formula.</p>
 <hr>
 <details>
 <summary>Show answers</summary>
 
-### Multiple Choice
+### Section A — Lesson 4.2 Answer Key
 
-| Question | Correct Answer | Explanation |
+| # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q1** | **B** | Pareto = descending bars + cumulative percentage line on a secondary axis. Both charts live under `Insert > Insert Statistic Chart`. |
-| **Q2** | **C** | **Overflow bin** collapses everything above the threshold into a single right-most bar (`>N`). Underflow does the same on the low side. |
-| **Q3** | **B** | Funnel charts expect a **single value column with category labels**. Multiple value columns confuse the renderer. |
-| **Q4** | **B** | The two-click sequence selects a single data point; **Set as Total** seats it on the baseline. |
-| **Q5** | **B** | **Defer Layout Update** suspends recalculation until you click **Update**, ideal for large models. |
-| **Q6** | **C** | The toggle lives in the **Options** dropdown of the `PivotTable Analyze` tab (or in `File > Options > Formulas`). |
-| **Q7** | **B** | Double-click any value cell to spawn a new sheet containing the underlying source rows (drill-through / Show Details). |
-| **Q8** | **C** | A Timeline gives a continuous scrubber with Years/Quarters/Months/Days; a date Slicer would list every unique date as a button. |
-| **Q9** | **C** | **Same for All Sparklines** forces a shared min/max so magnitude differences become visible. |
-| **Q10** | **B** | Grouped sparklines share styling. **Ungroup** first, then recolor the individual sparkline. |
-| **Q11** | **C** | Accelerating growth = **Exponential** (provided all values are positive). Linear understates the recent doubling. |
-| **Q12** | **B** | Tick **Display R-squared value on chart** in the `Format Trendline` pane. |
-| **Q13** | **B** | **Forward = 3** projects the trendline 3 periods past the last data point. **Backward** projects before the first point. |
-| **Q14** | **C** | Calculated Fields support only basic math on existing PivotTable fields. **No cell references, no VLOOKUP/SUMIF, no defined names.** |
+| **Q1** | **C** | Convention: the volume metric (Revenue) is a **Column** on the primary axis; the rate metric (Margin %) is a **Line** on the secondary axis. |
+| **Q2** | **B** | Pareto = descending bars + cumulative percentage line on a secondary axis. Both charts live under `Insert > Insert Statistic Chart`. |
+| **Q3** | **C** | **Overflow bin** collapses everything above the threshold into a single right-most bar (`>N`). Underflow does the same on the low side. |
+| **Q4** | **D** | **By Category** abandons numeric binning entirely and shows one bar per text category — perfect for `Department`-style data. |
+| **Q5** | **B** | Inclusive vs Exclusive Median changes how Q1 and Q3 are computed when the median value is included or excluded from each half of the data. |
+| **Q6** | **B** | The two-click sequence selects a single data point; **Set as Total** seats it on the baseline. |
+| **Q7** | **B** | Funnel charts expect a **single value column with category labels**. Multiple value columns confuse the renderer. |
+| **Q8** | **B** | Sunburst requires hierarchical category columns (at least two levels) plus a value column to size the rings. |
 
-### True/False
+### Section B — Lessons 4.3-4.4 Answer Key
 
-| Question | Answer | Explanation |
+| # | Answer | Explanation |
 | :--- | :--- | :--- |
-| **Q15** | **True** | A funnel renders top-to-bottom in source order. Largest-first gives the standard tapered shape. |
-| **Q16** | **False** | **Defer Layout Update** is a per-session toggle and is reset when you close the workbook. |
-| **Q17** | **True** | Timelines support **Report Connections** identically to Slicers, provided the PivotTables share the same data cache. |
-| **Q18** | **False** | Win/Loss only encodes the **sign** of each value. A `+1` bar is the same height as a `+1,000,000` bar. |
-| **Q19** | **False** | Higher-order polynomials almost always overfit and project wildly outside the data range. Higher R² on training data is not a forecast guarantee. |
-| **Q20** | **True** | Show Details respects all active filters, slicers, and timelines — the drill-through sheet matches the visible slice. |
+| **Q9** | **B** | **Defer Layout Update** suspends recalculation until you click **Update**, ideal for large models. It is a per-session toggle. |
+| **Q10** | **C** | The toggle lives in the **Options** dropdown of the **PivotTable Analyze** tab (or in `File > Options > Formulas`). |
+| **Q11** | **B** | `GETPIVOTDATA(data_field, pivot_table_anchor, [field, item], …)`. The data field name is in quotes; the anchor is any cell inside the target PivotTable. |
+| **Q12** | **B** | Double-click any value cell to spawn a new sheet containing the underlying source rows (drill-through / Show Details). |
+| **Q13** | **B** | **Show Values As > % of Column Total** displays each cell as its share of the column total. |
+| **Q14** | **B** | A value field name cannot collide with an existing source-column name. Workarounds include adding a trailing space (`"Sales "`) or a different label entirely. |
+| **Q15** | **B** | **Change Data Source** is required when the PivotTable's source range is static and has grown. The better long-term fix is to convert the source to an Excel Table. |
+| **Q16** | **A** | **PivotTable Analyze > Options > Data tab > Enable show details** controls whether double-click drill-through is allowed. |
 
-### Hands-On Tasks
+### Section C — Lesson 4.5 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q17** | **C** | A Timeline gives a continuous scrubber with Years/Quarters/Months/Days; a date Slicer would list every unique date as a button. |
+| **Q18** | **A** | The Time Level dropdown in the top-right corner of the Timeline switches between Years, Quarters, Months, and Days. |
+| **Q19** | **B** | Insert Timeline only lists fields with a true Date data type. If your source date column is text, fix the type first. |
+| **Q20** | **A** | Right-click the Slicer > **Report Connections** > tick every PivotTable that should be filtered. The PivotTables must share the same data cache. |
+| **Q21** | **A** | The **Columns** spinner on the **Slicer** tab > **Buttons** group reflows the buttons into N columns. |
+
+### Section D — Lessons 4.6-4.7 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q22** | **B** | Right-click any date in the Row area > **Group** > pick **Quarters** (and **Years** to nest). No source-data changes are required. |
+| **Q23** | **B** | "Cannot group that selection" almost always means the date column has blanks or text mixed in. Clean the source first. |
+| **Q24** | **B** | `Ctrl + click` to select the items > right-click > **Group** > rename the new `Group 1` label to `Europe`. Excel creates a parallel grouping field. |
+| **Q25** | **C** | Calculated Fields support only basic math on existing PivotTable fields. **No cell references, no VLOOKUP/SUMIF, no defined names.** |
+| **Q26** | **B** | A Calculated Field is a new column-level formula across all rows; a Calculated Item is a new row/column member within an existing field (e.g., `Q1+Q2` as a new "H1" item under a Quarter field). |
+| **Q27** | **B** | The PivotTable engine **sums first, then applies the formula**: `=Revenue/Quantity` becomes `Sum(Revenue) / Sum(Quantity)`. Crucially, this gives a correct weighted unit price even though the formula looks per-row. |
+
+### Section E — Lessons 4.8-4.9 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q28** | **B** | **PivotChart Analyze > Show/Hide group > Field Buttons > Hide All** removes the dropdowns from the chart face. The underlying filter behaviour still works through slicers and the PivotTable. |
+| **Q29** | **C** | **Same for All Sparklines** forces a shared min/max so magnitude differences become visible. |
+| **Q30** | **B** | Grouped sparklines share styling. **Ungroup** first, then recolor the individual sparkline. |
+| **Q31** | **C** | Win/Loss encodes only the sign of each value. A `+1` bar is the same height as a `+1,000,000` bar — perfect for "win or loss?" tracking. |
+| **Q32** | **B** | Pressing `Delete` removes any cell text but the sparkline graphic remains. Use **Sparkline tab > Clear > Clear Selected Sparklines** (or right-click > Sparklines > Clear). |
+
+### Section F — Lesson 4.10 Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q33** | **C** | Accelerating growth = **Exponential** (provided all values are positive). Linear understates the recent doubling. |
+| **Q34** | **C** | **Exponential** and **Power** trendlines require strictly positive values. Linear, Polynomial, and Moving Average have no such restriction. |
+| **Q35** | **B** | **Forward = 3** projects the trendline 3 periods past the last data point. **Backward** projects before the first point. |
+| **Q36** | **B** | Tick **Display R-squared value on chart** in the **Format Trendline** pane. |
+| **Q37** | **C** | Moving Average is a smoothing line, not a regression. Excel does **not** offer Equation or R-squared display for it. |
+
+### Part 2 — True/False Answer Key
+
+| # | Answer | Explanation |
+| :--- | :--- | :--- |
+| **Q38** | **True** | A funnel renders top-to-bottom in source order. Largest-first gives the standard tapered shape. |
+| **Q39** | **False** | **Defer Layout Update** is a per-session toggle and is reset when you close the workbook. |
+| **Q40** | **True** | Timelines support **Report Connections** identically to Slicers, provided the PivotTables share the same data cache. |
+| **Q41** | **False** | Win/Loss only encodes the **sign** of each value. A `+1` bar is the same height as a `+1,000,000` bar. |
+| **Q42** | **False** | Higher-order polynomials almost always overfit and project wildly outside the data range. Higher R² on training data is not a forecast guarantee. |
+| **Q43** | **True** | Show Details respects all active filters, slicers, and timelines — the drill-through sheet matches the visible slice. |
+| **Q44** | **False** | Hiding field buttons is **cosmetic only** — the filters and drill-down behaviour still work through the connected PivotTable and any linked slicers. |
+| **Q45** | **False** | Calculated Fields support only basic operators on existing PivotTable fields. `VLOOKUP`, `SUMIF`, cell references, and named ranges are not allowed. |
+| **Q46** | **True** | Both live under **Insert > Insert Statistic Chart**. Pareto is the right-most icon in the Histogram subgroup. |
+| **Q47** | **True** | A sparkline is drawn as a background graphic — the cell itself can still display a number, label, or formula on top of the sparkline. |
+
+### Part 3 — Hands-On Solutions
 
 | Task | Key Steps / Verification |
 | :--- | :--- |
 | **A** | `Insert > Insert Statistic Chart > Pareto`. Check: bars descend left-to-right, secondary-axis line ends at 100%. |
-| **B** | After insertion, right-click the X-axis > `Format Axis` > under **Axis Options** set **Bin width = 50** and tick **Overflow bin** with value `500`. |
+| **B** | After insertion, right-click the X-axis > **Format Axis** > under **Axis Options** set **Bin width = 50** and tick **Overflow bin** with value `500`. |
 | **C** | Click the closing bar to select the series, click again to select just that point, right-click > **Set as Total**. The bar should drop to the baseline. |
-| **D** | `PivotTable Analyze` > **Insert Timeline** > tick `Order Date` > switch dropdown to **Quarters** > **Report Connections** > tick the second PivotTable. |
-| **E** | Select `H2:Hn` > `Insert > Sparklines > Line` > Data Range = `B2:G n` (one row per destination cell). Sparkline tab > tick **High Point** and **Low Point** > **Axis** > Vertical Axis Minimum > **Same for All Sparklines** (and Maximum > Same for All). |
-| **F** | Click the Net Revenue series > `Chart Elements (+)` > Trendline arrow > **More Options** > pick **Linear** > **Forecast Forward = 3** > tick **Display Equation on chart** + **Display R-squared value on chart**. |
+| **D** | `Insert > PivotTable` on a new sheet. Drag `Region` to **Rows**, `Revenue` to **Values**, `Order Date` to **Columns**. Right-click any date > **Group** > tick **Years** and **Quarters** > **OK**. The column header now shows `2024 > Q1, Q2, Q3, Q4 > 2025 …`. |
+| **E** | **PivotTable Analyze > Fields, Items, & Sets > Calculated Field…** → **Name:** `Profit` → **Formula:** `= Revenue - Cost` (double-click the field names to insert) → **Add** → **OK**. The new `Sum of Profit` column appears alongside `Sum of Revenue`. |
+| **F** | **PivotTable Analyze > Insert Timeline** > tick `Order Date` > switch the Time Level dropdown to **Quarters** > **Report Connections** > tick the second PivotTable. |
+| **G** | Double-click a Revenue cell. Excel creates a new worksheet containing an Excel Table of the source rows that contributed to that value. The new sheet respects any active slicers/timelines. |
+| **H** | Select `H2:Hn` > `Insert > Sparklines > Line` > Data Range = `B2:Gn` (one row per destination cell). **Sparkline** tab > tick **High Point** and **Low Point** > **Axis** > Vertical Axis Minimum > **Same for All Sparklines** (and Maximum > Same for All). |
+| **I** | Click the Net Revenue series > **Chart Elements (+)** > Trendline arrow > **More Options** > pick **Linear** > **Forecast Forward = 3** > tick **Display Equation on chart** + **Display R-squared value on chart**. |
+| **J** | Click any PivotTable cell > **PivotTable Analyze** tab > **Options** dropdown (left edge, beside the PivotTable Name box) > untick **Generate GetPivotData**. After this, typing `=` and clicking a value cell yields `=Sheet1!B5` instead of `GETPIVOTDATA(...)`. |
 
 </details>
 
 <hr>
-<p><strong>Exam Tip:</strong> For chart tasks, always verify the visual result matches the prompt — sorted bars on a Pareto, a baseline-anchored final bar on a Waterfall, equation text visible on a trendline. Examiners grade what they see on the chart, not the menu path you used to get there.</p>
+<p><strong>Exam Tip — Module 4 Coverage Map:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Lesson</th>
+<th style="text-align: left;">Most-Tested Concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">4.2</td>
+<td style="text-align: left;">Combo charts: Volume = Column primary, Rate = Line secondary; Pareto = descending bars + cumulative line; Histogram <strong>Overflow/Underflow/By Category</strong>; Waterfall <strong>Set as Total</strong>; Funnel = single value column with labels; Sunburst needs hierarchical categories.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.3-4.4</td>
+<td style="text-align: left;"><strong>Defer Layout Update</strong> for huge models; <strong>PivotTable Analyze &gt; Options</strong> dropdown for <strong>Generate GetPivotData</strong>; double-click for <strong>Show Details</strong>; <strong>Show Values As &gt; % of Column Total</strong>; <strong>PivotTable Analyze &gt; Options &gt; Data</strong> to disable drill-through.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.5</td>
+<td style="text-align: left;">Timelines for date scrubbing; <strong>Time Level</strong> dropdown for Years/Quarters/Months/Days; <strong>Report Connections</strong> drives multiple PivotTables; greyed-out Insert Timeline = source date is text.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.6</td>
+<td style="text-align: left;">Right-click date &gt; <strong>Group</strong> &gt; tick Years + Quarters; "Cannot group" = blanks/text in date column; manual text grouping with <code>Ctrl + click</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.7</td>
+<td style="text-align: left;">Calculated Fields cannot use cell references, named ranges, or <code>VLOOKUP/SUMIF</code>. PivotTable engine <strong>sums first, then applies the formula</strong>. Calculated Item ≠ Calculated Field.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.8</td>
+<td style="text-align: left;"><strong>PivotChart Analyze &gt; Field Buttons &gt; Hide All</strong> is cosmetic only; PivotCharts auto-update with their PivotTable.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.9</td>
+<td style="text-align: left;"><strong>Same for All Sparklines</strong> for cross-row magnitude comparison; <strong>Ungroup</strong> before per-cell styling; Win/Loss encodes sign only; <strong>Sparkline tab &gt; Clear</strong> to actually remove.</td>
+</tr>
+<tr>
+<td style="text-align: left;">4.10</td>
+<td style="text-align: left;">Trendline types: Exponential/Power need positive values; <strong>Forward = N</strong> for forecast; tick <strong>R²</strong> in Format Trendline; Moving Average has no equation/R².</td>
+</tr>
+</tbody>
+</table>
         </article>
         <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./4.10-trendlines.html"><span class="pager-direction">← Previous</span><span class="pager-title">4.10 Trendlines and Forecasting on Charts</span></a><span></span></nav>
       </div>
@@ -335,7 +601,7 @@
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -378,7 +644,6 @@
               if (match) anyVisible = true;
             });
             mod.style.display = anyVisible ? '' : 'none';
-            // Auto-expand modules with matches when filtering
             if (q) mod.setAttribute('open', '');
           });
         });
@@ -386,6 +651,64 @@
           if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
         });
       }
+
+      // Progress tracking — mark visited lessons with a checkmark, show percent in sidebar
+      try {
+        var STORAGE_KEY = 'mo211:visited:v1';
+        var visited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        // Mark current page as visited (use pathname so query-strings/hashes don't fragment)
+        var currentPath = location.pathname;
+        if (currentPath.indexOf('/course/') !== -1) {
+          visited[currentPath] = Date.now();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+        }
+        // Render checkmarks against any sidebar link whose pathname is in the visited set
+        var visitedSet = {};
+        Object.keys(visited).forEach(function(p) {
+          // Normalize trailing slash and index.html
+          var norm = p.replace(/index\.html$/, '').replace(/\/$/, '');
+          visitedSet[norm] = true;
+        });
+        var lessonLinks = sb.querySelectorAll('.nav-lesson');
+        var totalLessons = 0, visitedLessons = 0;
+        lessonLinks.forEach(function(a) {
+          var href = a.getAttribute('href') || '';
+          // Resolve relative href against current location
+          var url;
+          try { url = new URL(href, location.href); } catch (e) { return; }
+          var key = url.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+          totalLessons++;
+          if (visitedSet[key]) {
+            a.classList.add('is-visited');
+            visitedLessons++;
+          }
+        });
+        // Progress bar at top of sidebar
+        if (totalLessons > 0) {
+          var pct = Math.round((visitedLessons / totalLessons) * 100);
+          var progressBar = document.createElement('div');
+          progressBar.className = 'course-nav-progress';
+          progressBar.innerHTML =
+            '<div class="course-nav-progress-label">' +
+              '<span>Progress</span>' +
+              '<strong>' + visitedLessons + ' / ' + totalLessons + '</strong>' +
+            '</div>' +
+            '<div class="course-nav-progress-track"><div class="course-nav-progress-fill" style="width:' + pct + '%"></div></div>';
+          var nav = sb.querySelector('.course-nav');
+          var firstChild = nav.firstChild;
+          nav.insertBefore(progressBar, firstChild);
+          // Reset button
+          progressBar.addEventListener('click', function(e) {
+            if (e.detail >= 2) { // double-click resets
+              if (confirm('Reset your progress checkmarks?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+              }
+            }
+          });
+          progressBar.title = 'Double-click to reset progress';
+        }
+      } catch (e) { /* localStorage unavailable */ }
     })();
   </script>
 </body>

@@ -6,7 +6,8 @@
   <meta name="description" content="MO-211 Excel Expert prep — Forecast Sheet and Forecast Functions" />
   <meta name="theme-color" content="#0f6f3f" />
   <title>3.10 Forecast Sheet and Forecast Functions · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -357,7 +358,7 @@ Forecast Sheet will happily produce a confident-looking forecast on a tiny datas
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -400,7 +401,6 @@ Forecast Sheet will happily produce a confident-looking forecast on a tiny datas
               if (match) anyVisible = true;
             });
             mod.style.display = anyVisible ? '' : 'none';
-            // Auto-expand modules with matches when filtering
             if (q) mod.setAttribute('open', '');
           });
         });
@@ -408,6 +408,64 @@ Forecast Sheet will happily produce a confident-looking forecast on a tiny datas
           if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
         });
       }
+
+      // Progress tracking — mark visited lessons with a checkmark, show percent in sidebar
+      try {
+        var STORAGE_KEY = 'mo211:visited:v1';
+        var visited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        // Mark current page as visited (use pathname so query-strings/hashes don't fragment)
+        var currentPath = location.pathname;
+        if (currentPath.indexOf('/course/') !== -1) {
+          visited[currentPath] = Date.now();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+        }
+        // Render checkmarks against any sidebar link whose pathname is in the visited set
+        var visitedSet = {};
+        Object.keys(visited).forEach(function(p) {
+          // Normalize trailing slash and index.html
+          var norm = p.replace(/index\.html$/, '').replace(/\/$/, '');
+          visitedSet[norm] = true;
+        });
+        var lessonLinks = sb.querySelectorAll('.nav-lesson');
+        var totalLessons = 0, visitedLessons = 0;
+        lessonLinks.forEach(function(a) {
+          var href = a.getAttribute('href') || '';
+          // Resolve relative href against current location
+          var url;
+          try { url = new URL(href, location.href); } catch (e) { return; }
+          var key = url.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+          totalLessons++;
+          if (visitedSet[key]) {
+            a.classList.add('is-visited');
+            visitedLessons++;
+          }
+        });
+        // Progress bar at top of sidebar
+        if (totalLessons > 0) {
+          var pct = Math.round((visitedLessons / totalLessons) * 100);
+          var progressBar = document.createElement('div');
+          progressBar.className = 'course-nav-progress';
+          progressBar.innerHTML =
+            '<div class="course-nav-progress-label">' +
+              '<span>Progress</span>' +
+              '<strong>' + visitedLessons + ' / ' + totalLessons + '</strong>' +
+            '</div>' +
+            '<div class="course-nav-progress-track"><div class="course-nav-progress-fill" style="width:' + pct + '%"></div></div>';
+          var nav = sb.querySelector('.course-nav');
+          var firstChild = nav.firstChild;
+          nav.insertBefore(progressBar, firstChild);
+          // Reset button
+          progressBar.addEventListener('click', function(e) {
+            if (e.detail >= 2) { // double-click resets
+              if (confirm('Reset your progress checkmarks?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+              }
+            }
+          });
+          progressBar.title = 'Double-click to reset progress';
+        }
+      } catch (e) { /* localStorage unavailable */ }
     })();
   </script>
 </body>

@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Flash Fill" />
+  <meta name="description" content="MO-211 Excel Expert prep — Flash Fill and Linked Data Types" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.1 Flash Fill · MO-211 Excel Expert</title>
-  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <title>2.1 Flash Fill and Linked Data Types · MO-211 Excel Expert</title>
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
 </head>
@@ -59,7 +60,7 @@
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill and Linked Data Types</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
@@ -126,14 +127,16 @@
         </nav>
         <header class="lesson-head">
           <span class="lesson-eyebrow">Module 2 · Lesson 2.1</span>
-          <h1 class="lesson-title">Flash Fill</h1>
+          <h1 class="lesson-title">Flash Fill and Linked Data Types</h1>
           <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.1-flash-fill.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
           </a>
         </header>
         <article class="lesson-content">
-<p>Think of Flash Fill as Excel's built-in <strong>regex-and-replace engine</strong> — without the regex syntax. Instead of writing a complex pattern, you simply type the result you want in one or two cells, and Excel infers the transformation rule and applies it to the rest of the column instantly. It is the fastest tool for one-time text cleanup tasks on real-world, dirty data.</p>
+<p>This lesson covers two <strong>smart data-entry features</strong> that share a family resemblance: instead of writing formulas, you give Excel a hint about the result you want and it produces the rest. <strong>Flash Fill</strong> infers a <em>transformation</em> from one or two example values you type next to a source column, then applies that pattern to every remaining row. <strong>Linked Data Types</strong> enrich a cell by <em>connecting</em> its content to a live online record — typing <code>AAPL</code> and converting to a Stock data type attaches a card with dozens of fields (price, market cap, CEO) that you can then pull into adjacent columns on demand.</p>
+<p>Where formulas describe <em>how</em> to transform data step by step, both of these features let Excel work out the <em>what</em>: pattern recognition for Flash Fill, online enrichment for Linked Data Types.</p>
+<p>Think of Flash Fill itself as Excel's built-in <strong>regex-and-replace engine</strong> — without the regex syntax. Instead of writing a complex pattern, you simply type the result you want in one or two cells, and Excel infers the transformation rule and applies it to the rest of the column instantly. It is the fastest tool for one-time text cleanup tasks on real-world, dirty data.</p>
 <hr>
 <h2>Part 1: What Flash Fill Does</h2>
 <p>Flash Fill recognizes <strong>patterns between adjacent columns</strong> and uses them to extract, combine, or reformat data. It works with:</p>
@@ -250,6 +253,7 @@ Flash Fill only works when the source data and the output are in **adjacent colu
 
 <hr>
 <h2>Part 5: Linked Data Types (Stocks, Geography, Currencies)</h2>
+<p>Flash Fill and Linked Data Types are grouped together in this lesson because they are the two features Microsoft brands as <strong>smart data entry</strong>: both let you produce structured output from minimal user input, with Excel doing the heavy lifting of pattern recognition or record lookup. The difference is the source of the "smarts." Flash Fill works <strong>locally and offline</strong> by detecting patterns between adjacent cells in your workbook. Linked Data Types work <strong>online</strong>, querying Microsoft's data service to pull authoritative facts (stock prices, country populations, exchange rates) into your grid. Knowing both lets you cover the full spectrum from "reformat this messy text" to "fetch fresh figures from the internet" without leaving the cell you're standing in.</p>
 <p>Where Flash Fill <em>infers a transformation</em> from text patterns, <strong>Linked Data Types</strong> <em>enrich the cells themselves</em> by connecting them to live, structured records pulled from an online data service. A cell that started as the string <code>"AAPL"</code> becomes a Stock record with dozens of attached fields — Name, CEO, Headquarters, Market Cap, 52-Week High — that you can pull into adjacent columns on demand.</p>
 <h3>What Linked Data Types Are</h3>
 <p>A linked data type is a special cell value backed by a <strong>record card</strong>. Behind the scenes, Excel stores the underlying data type identifier (e.g., the company's ticker) and queries Microsoft's data service when you expand the card or insert a field. The record card is refreshable: when the underlying data changes (a new closing price, a population update), a refresh pulls the latest values.</p>
@@ -393,7 +397,7 @@ If you send an `.xlsx` file containing linked data types to a colleague on a non
       </div>
     </div>
     <div class="container">
-      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep · Last updated May 03, 2026 · Not affiliated with or endorsed by Microsoft.</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -436,7 +440,6 @@ If you send an `.xlsx` file containing linked data types to a colleague on a non
               if (match) anyVisible = true;
             });
             mod.style.display = anyVisible ? '' : 'none';
-            // Auto-expand modules with matches when filtering
             if (q) mod.setAttribute('open', '');
           });
         });
@@ -444,6 +447,64 @@ If you send an `.xlsx` file containing linked data types to a colleague on a non
           if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
         });
       }
+
+      // Progress tracking — mark visited lessons with a checkmark, show percent in sidebar
+      try {
+        var STORAGE_KEY = 'mo211:visited:v1';
+        var visited = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        // Mark current page as visited (use pathname so query-strings/hashes don't fragment)
+        var currentPath = location.pathname;
+        if (currentPath.indexOf('/course/') !== -1) {
+          visited[currentPath] = Date.now();
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(visited));
+        }
+        // Render checkmarks against any sidebar link whose pathname is in the visited set
+        var visitedSet = {};
+        Object.keys(visited).forEach(function(p) {
+          // Normalize trailing slash and index.html
+          var norm = p.replace(/index\.html$/, '').replace(/\/$/, '');
+          visitedSet[norm] = true;
+        });
+        var lessonLinks = sb.querySelectorAll('.nav-lesson');
+        var totalLessons = 0, visitedLessons = 0;
+        lessonLinks.forEach(function(a) {
+          var href = a.getAttribute('href') || '';
+          // Resolve relative href against current location
+          var url;
+          try { url = new URL(href, location.href); } catch (e) { return; }
+          var key = url.pathname.replace(/index\.html$/, '').replace(/\/$/, '');
+          totalLessons++;
+          if (visitedSet[key]) {
+            a.classList.add('is-visited');
+            visitedLessons++;
+          }
+        });
+        // Progress bar at top of sidebar
+        if (totalLessons > 0) {
+          var pct = Math.round((visitedLessons / totalLessons) * 100);
+          var progressBar = document.createElement('div');
+          progressBar.className = 'course-nav-progress';
+          progressBar.innerHTML =
+            '<div class="course-nav-progress-label">' +
+              '<span>Progress</span>' +
+              '<strong>' + visitedLessons + ' / ' + totalLessons + '</strong>' +
+            '</div>' +
+            '<div class="course-nav-progress-track"><div class="course-nav-progress-fill" style="width:' + pct + '%"></div></div>';
+          var nav = sb.querySelector('.course-nav');
+          var firstChild = nav.firstChild;
+          nav.insertBefore(progressBar, firstChild);
+          // Reset button
+          progressBar.addEventListener('click', function(e) {
+            if (e.detail >= 2) { // double-click resets
+              if (confirm('Reset your progress checkmarks?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+              }
+            }
+          });
+          progressBar.title = 'Double-click to reset progress';
+        }
+      } catch (e) { /* localStorage unavailable */ }
     })();
   </script>
 </body>
