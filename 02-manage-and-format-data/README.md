@@ -9,6 +9,12 @@ We begin with **smart data entry techniques**: using Flash Fill to instantly ref
 
 ## 📂 Module Contents
 
+### [2.0 Named Ranges](./2.0-named-ranges.md)
+
+  * Three creation paths: Name Box, **Define Name** dialog (with workbook vs. worksheet scope), and **Create from Selection**.
+  * **Name Manager** (Ctrl+F3) operations — edit, delete, filter — and the **F3 Paste Name** dialog.
+  * Naming rules and using names in formulas, validation lists, and conditional formatting.
+
 ### [2.1 Flash Fill and Linked Data Types](./2.1-flash-fill.md)
 
   * Using pattern recognition to split, combine, and reformat text data instantly.
@@ -72,23 +78,33 @@ We begin with **smart data entry techniques**: using Flash Fill to instantly ref
   * Building criteria ranges with AND/OR logic across rows and columns.
   * In-place filtering vs. copy-to-location, and the unique-records-only flag.
 
+### [2.14 Power Query Basics](./2.14-power-query-basics.md)
+
+  * Get & Transform entry points: **Data → Get Data**, **From Table/Range**.
+  * Common transforms: Promote Headers, Change Type, Filter, Split Column, Custom Column, Group By, Pivot/Unpivot.
+  * **Merge Queries** (left/right/inner/outer/anti joins) and **Append Queries** workflows.
+  * Close & Load options and refresh behavior.
+
 ### [Test Yourself](./2.test-yourself.md)
 
   * Comprehensive practice quiz covering all of Module 2.
 
 -----
 
-## 🎯 What You Must Be Able To Do
+## ✅ What You Must Be Able To Do
 
 By the end of this module, you must be able to:
 
-- Fill cells using **Flash Fill** and recognize when it is appropriate vs. formula-based solutions.
+- Define, scope, edit, and delete **named ranges** via the Name Manager and use them inside formulas, lists, and conditional formatting.
+- Fill cells using **Flash Fill** and convert text to **Linked Data Types** (Stocks, Geography, Currencies) with the dot-operator formula syntax.
 - Generate sequences and projections using **advanced Fill Series** options (Linear, Growth, Date).
 - Produce arrays of random numeric data using **`RANDARRAY()`** and manage its volatile nature.
-- Create **custom number formats** using format codes to control display without altering underlying values.
-- **Configure data validation** rules with input messages and error alerts to enforce data integrity.
+- Create **custom number formats** with the `Positive;Negative;Zero;Text` structure, conditional brackets, and color codes.
+- **Configure data validation** rules — including dependent dropdowns via `INDIRECT` — with input messages and error alerts.
 - **Group and ungroup** rows and columns to build collapsible worksheet outlines.
-- Use the **`SUBTOTAL()` function** and the Subtotal menu feature to calculate grouped totals that respect filtered and hidden rows.
+- Use the **`SUBTOTAL()`** and **`AGGREGATE()`** functions, and the Subtotal menu feature, to calculate grouped totals that respect filtered/hidden rows.
 - **Remove duplicate records** using both the Remove Duplicates tool and the `UNIQUE()` function.
-- Create **custom and formula-based conditional formatting rules** that respond dynamically to data changes.
-- **Manage rule priority** and Stop If True settings in the Manage Rules dialog.
+- Create and **manage** custom and formula-based **conditional formatting rules**, including rule priority and Stop If True.
+- Convert ranges to **Excel Tables** and use **structured references** (`Sales[@Amount]`, `Sales[#Totals]`, etc.).
+- Build **Advanced Filter** criteria ranges (AND/OR logic) and choose in-place vs. copy-to-location.
+- Pull and shape data with **Power Query**: Promote Headers, Filter, Split Column, Group By, Pivot/Unpivot, Merge, and Append.
