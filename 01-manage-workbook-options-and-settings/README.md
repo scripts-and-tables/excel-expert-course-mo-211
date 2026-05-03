@@ -54,3 +54,20 @@ You will also learn to navigate the high-stakes world of **Workbook Security and
 ### [Test Yourself](./1.test-yourself.md)
 
   * Comprehensive practice quiz covering all of Module 1.
+
+-----
+
+## ✅ What You Must Be Able To Do
+
+By the end of this module, you must be able to:
+
+- **Copy macros and modules between workbooks** using the Visual Basic Editor's Project Explorer (drag-and-drop) or `.bas` export/import.
+- **Build external workbook references** with correct path syntax and **manage links** through the Edit Links dialog (update values, change source, break link).
+- **Configure Trust Center settings** — macro security levels, **Trusted Locations**, and Trusted Publishers — to enable macros without disabling protection workbook-wide.
+- **Recover unsaved work** with AutoRecover and **restore previous file states** through Version History on OneDrive/SharePoint.
+- **Apply layered workbook protection**: Mark as Final, Always Open Read-Only, password encryption, and **Information Rights Management (IRM)**.
+- **Protect worksheets and cell ranges** using the unlock-then-protect workflow, including **Allow Edit Ranges** with per-user permissions and hidden formulas.
+- **Lock workbook structure** to prevent users from inserting, deleting, renaming, moving, or unhiding sheets.
+- **Toggle calculation modes** (Automatic, Automatic Except Tables, Manual) and enable **Iterative Calculation** and **Precision as Displayed** when models require them.
+- Run **Document Inspector** to find and remove hidden data (comments, hidden sheets, custom XML, embedded files) before sharing.
+- Run **Check Accessibility** and **Check Compatibility** to flag alt-text, contrast, and version-incompatible features prior to distribution.

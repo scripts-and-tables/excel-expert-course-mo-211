@@ -57,3 +57,20 @@ Finally, we introduce **VBA Automation** through simple Macros. You will learn h
 
 ### [Test Yourself](./3.test-yourself.md)
 * Comprehensive practice quiz covering Module 3.
+
+---
+
+## ✅ What You Must Be Able To Do
+
+By the end of this module, you must be able to:
+
+- **Build nested logical formulas** using `IF`, `IFS`, `SWITCH`, `AND`/`OR`, and the `*IFS` aggregation family (`SUMIFS`, `COUNTIFS`, `AVERAGEIFS`, `MAXIFS`, `MINIFS`).
+- **Use `LET()`** to assign intermediate names inside a formula for clarity and recalculation efficiency.
+- **Look up data** with `XLOOKUP` (full six-argument signature, including `match_mode` and `search_mode`), legacy `VLOOKUP`/`HLOOKUP` with wildcards, and `INDEX`/`MATCH` for 2-D and left-lookup scenarios.
+- **Calculate dates and business days** with `WEEKDAY`, `WORKDAY`, `WORKDAY.INTL`, `NETWORKDAYS`, and `EOMONTH`, and reason about volatile functions (`NOW`, `TODAY`).
+- **Run What-If Analysis**: solve for inputs with **Goal Seek**, compare cases with **Scenario Manager** (including Summary reports), and build **one- and two-variable Data Tables** for sensitivity analysis.
+- **Author dynamic-array formulas** — `FILTER`, `SORT`, `SORTBY`, `UNIQUE`, `SEQUENCE`, `VSTACK`/`HSTACK`, `TAKE`/`DROP`, `CHOOSEROWS`/`CHOOSECOLS`, and the text-split family — and reference results with the spilled-range operator (`#`).
+- **Model loans and investments** using `PMT`, `NPER`, `RATE`, `IPMT`, `PPMT`, `XNPV`, and `XIRR` with correct sign convention and rate-period consistency.
+- **Audit and troubleshoot formulas** using **Trace Precedents/Dependents**, the **Watch Window**, **Evaluate Formula** (step-through), **Trace Error**, and structured handlers (`IFERROR`, `IFNA`).
+- **Record, edit, and run macros**: name them, save the workbook as `.xlsm`, edit the recorded VBA in the editor, deploy reusable macros to the **Personal Macro Workbook**, and assign them to **Form Controls** (Button, Check Box, Spin Button).
+- **Consolidate** data from multiple ranges or workbooks via the Consolidate dialog, and **build a Forecast Sheet** (`FORECAST.ETS`/`FORECAST.LINEAR`) with confidence intervals and seasonality.
