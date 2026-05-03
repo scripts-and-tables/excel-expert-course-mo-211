@@ -14,26 +14,17 @@ By the end of this module, you won't just "make charts"—you'll build interacti
 
 ## 📂 Module Contents
 
-### [4.1 Dual-Axis Charts](./4.1-dual-axis-charts.md)
+### [4.1–4.2 Advanced Charts: Dual-Axis, Combo, Histogram, Box & Whisker, Funnel, Sunburst, Waterfall](./4.2-advanced-charts.md)
 
-* When (and when **not**) to use a **secondary axis** for mixed scales (e.g., revenue vs. margin %).
-* Converting series types (column → line) and matching axis titles/formatting for clarity.
-
-### [4.2 Advanced Charts](./4.2-advanced-charts.md)
-
-* Creating and modifying **Box & Whisker**, **Histogram** (including **Pareto**), **Waterfall**, **Funnel**, **Combo**, and **Sunburst** charts.
+* When (and when **not**) to use a **secondary axis** for mixed scales (e.g., revenue vs. margin %), and converting an existing series to the secondary axis.
+* Creating and modifying **Combo (Dual-Axis)**, **Box & Whisker**, **Histogram** (including **Pareto**), **Waterfall**, **Funnel**, and **Sunburst** charts.
 * Practical formatting: bins (overflow/underflow, by category), quartiles/outliers, totals/subtotals in waterfalls, hierarchy readability.
 
-### [4.3 Create PivotTables](./4.3-create-pivot-tables.md)
+### [4.3–4.4 Create and Modify PivotTables](./4.3-create-pivot-tables.md)
 
-* Creating PivotTables from ranges and Excel Tables.
-* Layout choices (Compact / Outline / Tabular), Defer Layout Update, and refresh behavior.
+* Creating PivotTables from ranges and Excel Tables; Defer Layout Update and refresh behavior.
 * `GETPIVOTDATA` and Show Details (drill-through to source records).
-
-### [4.4 Modify Field Selection and Options](./4.4-modify-field-selection-and-options.md)
-
-* Field area swaps, Value Field Settings (Sum / Count / Average / `Show Values As`).
-* PivotTable Options dialog: layout, totals, error display, refresh on open.
+* Field area swaps, **Value Field Settings** (Sum / Count / Average / `Show Values As`), and the **PivotTable Options** dialog (layout, totals, error display, refresh on open).
 
 ### [4.5 Slicers & Timelines](./4.5-slicers.md)
 
