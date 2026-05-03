@@ -49,20 +49,16 @@ We begin with **smart data entry techniques**: using Flash Fill to instantly ref
   * Using the Remove Duplicates tool and selecting which columns define uniqueness.
   * Non-destructive deduplication using `UNIQUE()` and pre-removal identification with Conditional Formatting.
 
-### [2.9 Custom Conditional Formatting Rules](./2.9-custom-conditional-formatting-rules.md)
+### [2.9 Custom Conditional Formatting Rules and Rule Management](./2.9-custom-conditional-formatting-rules.md)
 
   * Creating new rules using Highlight Cell Rules, Top/Bottom Rules, Data Bars, Color Scales, and Icon Sets.
   * Setting precise conditions (cell value, specific text, dates, blanks, errors) with custom formats.
+  * Using the **Manage Rules** dialog to view, reorder, edit, and delete rules — including **Stop If True** for mutually exclusive formatting conditions.
 
 ### [2.10 Formula-Based Conditional Formatting](./2.10-formula-based-conditional-formatting.md)
 
   * Writing formula rules that evaluate TRUE/FALSE to apply formatting dynamically.
   * Using absolute and relative references correctly to format entire rows based on a single column value.
-
-### [2.11 Manage Conditional Formatting Rules](./2.11-manage-conditional-formatting-rules.md)
-
-  * Using the Manage Rules dialog to view, reorder, edit, and delete rules.
-  * Controlling rule priority and using **Stop If True** for mutually exclusive formatting conditions.
 
 ### [2.12 Excel Tables and Structured References](./2.12-excel-tables-and-structured-references.md)
 

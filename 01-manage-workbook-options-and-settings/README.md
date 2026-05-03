@@ -29,15 +29,11 @@ You will also learn to navigate the high-stakes world of **Workbook Security and
   * Recovering unsaved work using the AutoRecover engine.
   * Managing, viewing, and restoring previous file states through **Version History**.
 
-### [1.5 Restrict Editing](./1.5-restrict-editing.md)
+### [1.5–1.6 Protect Workbooks: Soft Restrictions, Worksheet Protection, and Cell Ranges](./1.6-protect-worksheet-and-ranges.md)
 
-  * Implementing "soft" restrictions like **Mark as Final** and **Read-Only Recommended**.
-  * Using Encryption and Information Rights Management (IRM) for sensitive data.
-
-### [1.6 Protect Worksheet and Ranges](./1.6-protect-worksheet-and-ranges.md)
-
-  * The "Two-Step" protection workflow: Unlocking input cells and protecting the sheet.
-  * Hiding proprietary formulas and using **Allow Users to Edit Ranges**.
+  * "Soft" restrictions: **Mark as Final**, **Always Open Read-Only**, **Encrypt with Password**, and **Information Rights Management (IRM)**.
+  * The "Two-Step" worksheet protection workflow: unlocking input cells and protecting the sheet.
+  * Hiding proprietary formulas and using **Allow Edit Ranges** for per-user/per-range permissions.
 
 ### [1.7 Protect Workbook Structure](./1.7-protect-workbook-structure.md)
 
