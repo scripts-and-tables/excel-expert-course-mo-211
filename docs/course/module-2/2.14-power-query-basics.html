@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MO-211 Excel Expert prep — Power Query Basics: Get &amp; Transform Data" />
+  <meta name="theme-color" content="#0f6f3f" />
+  <title>2.14 Power Query Basics: Get &amp; Transform Data · MO-211 Excel Expert</title>
+  <link rel="icon" type="image/png" href="../../hero-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body class="course-page">
+
+  <header class="site-header">
+    <div class="container nav">
+      <button class="header-burger" type="button" aria-controls="course-sidebar" aria-expanded="false" aria-label="Open course menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <a class="brand" href="../../" aria-label="MO-211 Excel Expert home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7l6 5-6 5"/><path d="M13 7l6 5-6 5"/></svg>
+        </span>
+        <span class="brand-text">MO-211 <span class="brand-accent">Expert Prep</span></span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="../../#why">Why</a>
+        <a href="../../course/">Course</a>
+        <a href="../../#faq">FAQ</a>
+        <a class="btn btn-ghost" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.96.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39.99 0 1.98.13 2.9.39 2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16v3.2c0 .31.21.66.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div class="course-shell">
+    <aside class="course-sidebar" id="course-sidebar">
+      <div class="sidebar-inner">
+        <nav class="course-nav" aria-label="Course navigation">
+<a class="course-nav-home" href="../"><span aria-hidden="true">←</span> Course outline</a>
+<div class="course-nav-search"><svg class="course-nav-search-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" class="course-nav-filter" placeholder="Filter lessons…" aria-label="Filter lessons" autocomplete="off" /></div>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M1</span><span class="nav-mod-title">Manage Workbook Options &amp; Settings</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-1/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.1-copy-macro.html"><span class="nav-lesson-num">1.1</span><span class="nav-lesson-title">Manage Workbooks: Copying Macros between Workbooks</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.2-reference-data.html"><span class="nav-lesson-num">1.2</span><span class="nav-lesson-title">Manage Workbooks: Reference Data in Other Workbooks</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.3-enable-macro.html"><span class="nav-lesson-num">1.3</span><span class="nav-lesson-title">Manage Workbooks: Enable Macros in a Workbook</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.4-workbook-versions.html"><span class="nav-lesson-num">1.4</span><span class="nav-lesson-title">Manage Workbooks: Manage Workbook Versions</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">1.5–1.6 Protect Workbooks: Soft Restrictions, Worksheet Protection, and Cell Ranges</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.7-protect-workbook-structure.html"><span class="nav-lesson-num">1.7</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Workbook Structure</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.8-formula-calculation-options.html"><span class="nav-lesson-num">1.8</span><span class="nav-lesson-title">Prepare for Collaboration: Configure Formula Calculation Options</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 1.1 Test: Managing Workbooks &amp; Macros</span></a></li>
+</ul></details>
+<details class="nav-module is-current" open>
+<summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.4-custom-number-formats.html"><span class="nav-lesson-num">2.4</span><span class="nav-lesson-title">Custom Number Formats</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.5-data-validation.html"><span class="nav-lesson-num">2.5</span><span class="nav-lesson-title">Data Validation</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Custom Conditional Formatting Rules and Rule Management</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.14-power-query-basics.html"><span class="nav-lesson-num">2.14</span><span class="nav-lesson-title">Power Query Basics: Get &amp; Transform Data</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
+</ul></details>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M3</span><span class="nav-mod-title">Advanced Formulas &amp; Macros</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-3/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.1-logical-operation.html"><span class="nav-lesson-num">3.1</span><span class="nav-lesson-title">Perform Logical Operations Using Advanced Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.2-lookup-data.html"><span class="nav-lesson-num">3.2</span><span class="nav-lesson-title">Look Up Data by Using Advanced Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.3-date-and-time-funcs.html"><span class="nav-lesson-num">3.3</span><span class="nav-lesson-title">Use Advanced Date and Time Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.4-what-if-analysis.html"><span class="nav-lesson-num">3.4</span><span class="nav-lesson-title">What-If Analysis: Goal Seek and Scenario Manager</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.5-arrays.html"><span class="nav-lesson-num">3.5</span><span class="nav-lesson-title">Dynamic Array Functions: The New Era of Excel</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.6-financial-analysis.html"><span class="nav-lesson-num">3.6</span><span class="nav-lesson-title">Financial Analysis &amp; Forecasting</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.7-troubleshoot-formulas.html"><span class="nav-lesson-num">3.7</span><span class="nav-lesson-title">Troubleshoot Formulas and Audit Logic</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.8-macro.html"><span class="nav-lesson-num">3.8</span><span class="nav-lesson-title">Introduction to Macros (Automation)</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.9-consolidate.html"><span class="nav-lesson-num">3.9</span><span class="nav-lesson-title">Summarize Data Using the Consolidate Feature</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.10-forecast-sheet.html"><span class="nav-lesson-num">3.10</span><span class="nav-lesson-title">Forecast Sheet and Forecast Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-3/3.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 3 Test: Advanced Formulas, Analysis &amp; Macros</span></a></li>
+</ul></details>
+<details class="nav-module">
+<summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">4.1–4.2 Advanced Charts: Dual-Axis, Combo, Histogram, Box &amp; Whisker, Funnel, Sunburst, Waterfall</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">4.3–4.4 Create and Modify PivotTables</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.5-slicers.html"><span class="nav-lesson-num">4.5</span><span class="nav-lesson-title">Create Slicers and Timelines</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.6-grouping-in-pivot-tables.html"><span class="nav-lesson-num">4.6</span><span class="nav-lesson-title">Group PivotTable Data</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.8-pivotcharts.html"><span class="nav-lesson-num">4.8</span><span class="nav-lesson-title">Create and Modify PivotCharts</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.9-sparklines.html"><span class="nav-lesson-num">4.9</span><span class="nav-lesson-title">Sparklines: Inline Data Visualizations</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.10-trendlines.html"><span class="nav-lesson-num">4.10</span><span class="nav-lesson-title">Trendlines and Forecasting on Charts</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 4 Test: Manage Advanced Charts and Tables</span></a></li>
+</ul></details>
+<details class="nav-module nav-resources">
+<summary><span class="nav-mod-num nav-mod-num-alt">★</span><span class="nav-mod-title">Resources</span><span class="nav-chevron" aria-hidden="true"></span></summary>
+<ul class="nav-lessons">
+<li><a class="nav-lesson" href="../resources/keyboard-shortcuts.html"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Keyboard Shortcuts</span></a></li>
+<li><a class="nav-lesson" href="../resources/exam-day-tips.html"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Exam Day Tips</span></a></li>
+</ul></details>
+</nav>
+      </div>
+    </aside>
+    <main class="course-main">
+      <div class="lesson-wrap">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../../">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="../">Course</a>
+          <span aria-hidden="true">/</span>
+          <a href="./">Module 2</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">2.14</span>
+        </nav>
+        <header class="lesson-head">
+          <span class="lesson-eyebrow">Module 2 · Lesson 2.14</span>
+          <h1 class="lesson-title">Power Query Basics: Get &amp; Transform Data</h1>
+          <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.14-power-query-basics.md" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Edit on GitHub
+          </a>
+        </header>
+        <article class="lesson-content">
+<p>If you've ever built an ETL pipeline in Python (<code>pandas.read_csv</code> → clean → join → export) or an SQL view that joins three source tables and renames columns, you already know the mental model behind <strong>Power Query</strong>. Power Query is Excel's built-in ETL engine: connect to a source, define a sequence of transformation steps, and reload — and every step is recorded so the next refresh re-runs the same pipeline against fresh data. Where Flash Fill (lesson 2.1) is a one-time text fix and <code>VLOOKUP</code> is a single-formula join, Power Query is the durable, repeatable layer that sits between raw data and your analysis.</p>
+<hr>
+<h2>Part 1: Why Power Query?</h2>
+<p>A Power Query workflow has three distinguishing properties:</p>
+<ul>
+<li><strong>Repeatable</strong> — Each transformation is recorded as a step. When the source data updates, click <strong>Refresh</strong> and every step re-runs in order. No manual re-cleaning.</li>
+<li><strong>Source-agnostic</strong> — The same transformation steps work whether the source is a CSV, a SQL Server table, a SharePoint list, a folder full of Excel files, or a web table. You write the cleanup once and swap the source freely.</li>
+<li><strong>Non-destructive</strong> — The original data file is never modified. Power Query reads it, applies steps in memory, and loads the result into a new Table or PivotTable in your workbook.</li>
+<li><strong>Scales beyond the grid</strong> — Power Query can process millions of rows during transformation, even if the final output you load is filtered down to fit Excel's 1,048,576-row limit.</li>
+</ul>
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
+
+Power Query is the same engine that powers **Power BI's Get Data**. Skills you build in Excel transfer directly to Power BI, and `.pbix` files can import queries from `.xlsx` files without rewriting them.
+
+</div>
+
+<hr>
+<h2>Part 2: Entry Points — Where to Start a Query</h2>
+<p>All Power Query commands live on the <strong>Data</strong> tab, in the <strong>Get &amp; Transform Data</strong> group.</p>
+<h3>Get Data (External Sources)</h3>
+<p><strong>Data &gt; Get Data</strong> opens a categorised dropdown:</p>
+<ul>
+<li><strong>From File</strong> — Excel Workbook, CSV/Text, XML, JSON, PDF, or an entire <strong>Folder</strong> of files combined into one table.</li>
+<li><strong>From Database</strong> — SQL Server, Oracle, MySQL, PostgreSQL, Access, and others.</li>
+<li><strong>From Online Services</strong> — SharePoint, OneDrive, Salesforce, Microsoft Dataverse, etc.</li>
+<li><strong>From Other Sources</strong> — Web (scrape an HTML table), ODBC, OLE DB, blank query, blank table.</li>
+</ul>
+<h3>From Table/Range</h3>
+<p><strong>Data &gt; From Table/Range</strong> loads the current selection into Power Query. If the selection is not yet an Excel Table, Excel prompts you to convert it (<code>Ctrl + T</code>) first.</p>
+<h3>Recent Sources / Existing Connections</h3>
+<p><strong>Data &gt; Recent Sources</strong> and <strong>Data &gt; Existing Connections</strong> reuse previously defined connections without re-entering credentials.</p>
+<pre><code>Data tab
+└── Get &amp; Transform Data group
+    ├── Get Data           (any external source)
+    ├── From Text/CSV
+    ├── From Web
+    ├── From Table/Range   (current data)
+    └── Recent Sources
+</code></pre>
+<hr>
+<h2>Part 3: The Power Query Editor</h2>
+<p>Selecting any source opens the <strong>Power Query Editor</strong> — a separate window with its own ribbon. This is where the actual transformation work happens.</p>
+<h3>Layout</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Pane</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Queries pane (left)</strong></td>
+<td style="text-align: left;">Lists every query in the workbook. Right-click for rename, duplicate, reference, group.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data preview (centre)</strong></td>
+<td style="text-align: left;">A grid showing the first ~1,000 rows after the currently selected step. Updates live as you add steps.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Query Settings (right)</strong></td>
+<td style="text-align: left;">Two sections: <strong>Properties</strong> (query name) and <strong>Applied Steps</strong> — the ordered list of every transform applied.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Formula bar (top)</strong></td>
+<td style="text-align: left;">Shows the M-language code for the currently selected step. Edit it directly to tweak parameters.</td>
+</tr>
+</tbody>
+</table>
+<h3>The Ribbon Tabs</h3>
+<ul>
+<li><strong>Home</strong> — Refresh, Close &amp; Load, Manage Columns, Reduce Rows (Keep/Remove), Sort, Group By, Merge Queries, Append Queries.</li>
+<li><strong>Transform</strong> — Operations that change existing columns: data types, splitting, replacing, formatting, pivot/unpivot, fill, statistics.</li>
+<li><strong>Add Column</strong> — Operations that create new columns: custom column, conditional column, index column, column from examples.</li>
+<li><strong>View</strong> — Toggle Formula Bar, Query Settings pane, and the <strong>Advanced Editor</strong> for raw M code.</li>
+</ul>
+<h3>Applied Steps — The Most Important Idea</h3>
+<p>Every action you take adds an entry to <strong>Applied Steps</strong>. Click any step to rewind the preview to that point. Click the gear icon next to a step to re-open its dialog and tweak parameters. Click the <code>X</code> to delete a step. Drag steps to reorder.</p>
+<pre><code>Applied Steps
+1. Source                 (the original connection)
+2. Promoted Headers
+3. Changed Type
+4. Removed Columns
+5. Filtered Rows
+6. Replaced Value
+7. Added Custom Column
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+The Applied Steps list **is** your transformation pipeline. Treat it like commit history — small, well-named steps are easier to debug than one giant step. Right-click any step > **Rename** to give it a meaningful label like `Removed admin rows`.
+
+</div>
+
+<hr>
+<h2>Part 4: Common Transformations</h2>
+<p>Each transformation below is one click in the editor. Examples assume a small sales dataset.</p>
+<h3>Promote First Row to Headers</h3>
+<p><code>Home &gt; Use First Row as Headers</code> — If the file's first row contains column names that landed as a data row, this promotes them.</p>
+<pre><code>Before:               After:
+Column1  Column2      Region   Amount
+Region   Amount       North    1500
+North    1500         South    2200
+</code></pre>
+<h3>Change Data Type</h3>
+<p>Click the type icon left of the column header (<code>123</code>, <code>ABC</code>, calendar, etc.) and pick the correct type: <strong>Whole Number</strong>, <strong>Decimal Number</strong>, <strong>Currency</strong>, <strong>Date</strong>, <strong>Date/Time</strong>, <strong>Text</strong>, <strong>True/False</strong>.</p>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+Always set types **immediately after** Promoted Headers. Many later transforms (date math, sum aggregations) silently fail or produce wrong results if a numeric column is still typed as `Text`.
+
+</div>
+
+<h3>Remove Columns / Choose Columns</h3>
+<ul>
+<li><strong>Home &gt; Remove Columns</strong> — drop the currently selected column(s).</li>
+<li><strong>Home &gt; Choose Columns</strong> — open a dialog where you tick exactly which columns to keep.</li>
+</ul>
+<p>Prefer <strong>Choose Columns</strong> when the source schema may add columns later — keeping a known whitelist is more stable than blacklisting columns one by one.</p>
+<h3>Filter Rows</h3>
+<p>Click the filter dropdown on any column header (same icon as Excel's AutoFilter). The menu offers value pickers, text filters (<code>Equals</code>, <code>Begins With</code>, <code>Contains</code>), number filters (<code>Greater Than</code>, <code>Between</code>), and date filters (<code>In the Previous</code>, <code>Year &gt; Quarter &gt; Month</code>).</p>
+<pre><code>Filter: Region equals &quot;North&quot; and Amount &gt; 1000
+</code></pre>
+<h3>Replace Values</h3>
+<p><code>Home &gt; Replace Values</code> — Find/replace inside a single column. Supports a "Match entire cell contents" checkbox and (for advanced users) regex via M code.</p>
+<h3>Split Column</h3>
+<p><code>Home &gt; Split Column</code>:</p>
+<ul>
+<li><strong>By Delimiter</strong> — split <code>John, Smith</code> on <code>,</code> into two columns.</li>
+<li><strong>By Number of Characters</strong> — split a fixed-width string at character N.</li>
+<li><strong>By Positions</strong> — split at a list of character positions.</li>
+<li><strong>By Lowercase to Uppercase</strong> / <strong>Digit to Non-Digit</strong> — useful for splitting concatenated identifiers like <code>ORD12345</code>.</li>
+</ul>
+<h3>Trim and Clean Text</h3>
+<p><code>Transform &gt; Format &gt; Trim</code> removes leading/trailing whitespace. <code>Transform &gt; Format &gt; Clean</code> removes non-printable control characters (<code>\t</code>, <code>\r</code>, etc.) — invaluable for data pasted out of PDFs.</p>
+<h3>Add Custom Column</h3>
+<p><code>Add Column &gt; Custom Column</code> — open a dialog and type an M expression that produces a new column.</p>
+<pre><code>New column name:  TotalWithTax
+Formula:          = [Amount] * 1.0825
+</code></pre>
+<h3>Group By</h3>
+<p><code>Home &gt; Group By</code> — equivalent to SQL's <code>GROUP BY</code>. Choose grouping columns and aggregations (Sum, Average, Min, Max, Count, Count Distinct, All Rows).</p>
+<pre><code>Group by: Region
+Aggregations: Sum of Amount, Count of OrderId
+</code></pre>
+<h3>Pivot Column / Unpivot Columns</h3>
+<ul>
+<li><strong>Transform &gt; Pivot Column</strong> — turn distinct values from one column into new column headers (wide format).</li>
+<li><strong>Transform &gt; Unpivot Columns</strong> — turn columns into rows (long/tidy format). The opposite operation, and a daily lifesaver when source data has a column-per-month layout.</li>
+</ul>
+<pre><code>Unpivot:
+Region   Jan   Feb   Mar         Region   Attribute   Value
+North    100   120   140    →    North    Jan         100
+South    200   220   210         North    Feb         120
+                                 North    Mar         140
+                                 South    Jan         200
+                                 ...
+</code></pre>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+Most Excel data lives in wide format ("one column per month"); most analytical tools want long format ("one row per observation"). **Unpivot Columns** is the bridge.
+
+</div>
+
+<hr>
+<h2>Part 5: Merge Queries (Joins)</h2>
+<p><code>Home &gt; Merge Queries</code> is Power Query's <code>JOIN</code>. Pick a left query, pick a right query, click the matching key column(s) on each side, choose a <strong>Join Kind</strong>, and click <strong>OK</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Join Kind</th>
+<th style="text-align: left;">SQL Equivalent</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Left Outer</strong> (default)</td>
+<td style="text-align: left;"><code>LEFT JOIN</code></td>
+<td style="text-align: left;">All left rows + matching right rows; nulls where right has no match</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Right Outer</strong></td>
+<td style="text-align: left;"><code>RIGHT JOIN</code></td>
+<td style="text-align: left;">All right rows + matching left</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Full Outer</strong></td>
+<td style="text-align: left;"><code>FULL OUTER JOIN</code></td>
+<td style="text-align: left;">All rows from both, nulls where no match</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inner</strong></td>
+<td style="text-align: left;"><code>INNER JOIN</code></td>
+<td style="text-align: left;">Only rows with a match on both sides</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Left Anti</strong></td>
+<td style="text-align: left;"><code>LEFT JOIN ... WHERE right IS NULL</code></td>
+<td style="text-align: left;">Left rows that have <strong>no</strong> match on the right</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Right Anti</strong></td>
+<td style="text-align: left;">Inverse of Left Anti</td>
+<td style="text-align: left;">Right rows with no left match</td>
+</tr>
+</tbody>
+</table>
+<p>After the merge, the joined query has a new column whose cells contain a nested table. Click the <strong>expand icon</strong> (double arrow) in the column header to pick which fields to bring through.</p>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+A **Left Anti** join is the cleanest way to find "customers in the master list who placed no orders this month" — no `COUNTIF`, no helper columns, no formulas. Just two queries and a join.
+
+</div>
+
+<div class="callout callout-note"><div class="callout-title">NOTE</div>
+
+**Merge Queries vs. VLOOKUP/XLOOKUP** — Merge is more powerful: multi-column keys, all six join types, and refresh-on-demand. Lookup formulas remain better when you need a single value inside a calculated column on existing Table data.
+
+</div>
+
+<hr>
+<h2>Part 6: Append Queries (Stack/Union)</h2>
+<p><code>Home &gt; Append Queries</code> is Power Query's <code>UNION ALL</code>. It stacks queries vertically.</p>
+<ul>
+<li><strong>Two Tables</strong> — append exactly two queries.</li>
+<li><strong>Three or more tables</strong> — append any number; Power Query matches columns by name, filling unmatched columns with <code>null</code>.</li>
+</ul>
+<p>Use Append to combine monthly files that all share the same column layout (<code>Sales_Jan</code>, <code>Sales_Feb</code>, <code>Sales_Mar</code> → <code>SalesAllYear</code>). Better still, put the source files in a folder and use <strong>Get Data &gt; From File &gt; From Folder</strong> to combine and append in one operation.</p>
+<hr>
+<h2>Part 7: Close &amp; Load Options</h2>
+<p>When the pipeline is ready, you ship the result back to the Excel grid via <strong>Home &gt; Close &amp; Load</strong>.</p>
+<h3>Close &amp; Load (Default)</h3>
+<p>Loads the result as a new Excel <strong>Table</strong> on a new worksheet. The Table is connected to the query — refreshing the query rewrites the Table.</p>
+<h3>Close &amp; Load To... (Custom)</h3>
+<p>Opens a dialog with three choices:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Load Mode</th>
+<th style="text-align: left;">What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Table</strong></td>
+<td style="text-align: left;">New Excel Table on a chosen worksheet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PivotTable Report</strong></td>
+<td style="text-align: left;">New PivotTable with the query as its source</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PivotChart</strong></td>
+<td style="text-align: left;">New PivotChart</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Only Create Connection</strong></td>
+<td style="text-align: left;">No grid output — the query is stored but produces no Table. Use this for staging queries that will be merged into others.</td>
+</tr>
+</tbody>
+</table>
+<p>You can also tick <strong>Add this data to the Data Model</strong> to make the query available to Power Pivot and DAX measures.</p>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+**Only Create Connection** is the right choice for any query that exists purely to be merged or appended into another query. Loading every intermediate query as a Table clutters the workbook and wastes memory.
+
+</div>
+
+<hr>
+<h2>Part 8: Refreshing a Query</h2>
+<p>Once loaded, queries do not automatically rerun — they stay snapshot-static until you refresh.</p>
+<ul>
+<li><strong>Right-click the loaded Table &gt; Refresh</strong> — refresh just this query.</li>
+<li><strong>Right-click the query in Queries &amp; Connections pane &gt; Refresh</strong> — same thing, from the side pane.</li>
+<li><strong>Data tab &gt; Refresh All</strong> (<code>Ctrl + Alt + F5</code>) — refresh every query and every PivotTable in the workbook.</li>
+</ul>
+<p>Open the <strong>Queries &amp; Connections</strong> pane (<code>Data &gt; Queries &amp; Connections</code>) to see all queries with their last-refreshed timestamp and row counts.</p>
+<p>To set a refresh schedule: right-click the query &gt; <strong>Properties</strong> &gt; tick <strong>Refresh every N minutes</strong> or <strong>Refresh data when opening the file</strong>.</p>
+<hr>
+<h2>Part 9: A Word About M (the Power Query Formula Language)</h2>
+<p>Behind every Applied Step is a line of code in Microsoft's <strong>M</strong> language (formal name: <em>Power Query Formula Language</em>). You can see it in the formula bar above the data preview, or open the full script via <strong>View &gt; Advanced Editor</strong>.</p>
+<pre><code class="language-m">let
+    Source = Excel.Workbook(File.Contents(&quot;C:\Sales.xlsx&quot;), null, true),
+    Sheet1 = Source{[Item=&quot;Sheet1&quot;,Kind=&quot;Sheet&quot;]}[Data],
+    PromotedHeaders = Table.PromoteHeaders(Sheet1, [PromoteAllScalars=true]),
+    ChangedType = Table.TransformColumnTypes(PromotedHeaders, {{&quot;Amount&quot;, type number}}),
+    FilteredRows = Table.SelectRows(ChangedType, each [Region] = &quot;North&quot;)
+in
+    FilteredRows
+</code></pre>
+<p>You almost never write M directly — the editor's clicks generate it for you. But knowing M exists is useful for two reasons: parameterising queries (e.g., reading a folder path from a cell), and understanding error messages that quote M function names like <code>Table.SelectRows</code>.</p>
+<hr>
+<h2>Part 10: Cross-References</h2>
+<ul>
+<li>Lesson <strong>2.12 Excel Tables and Structured References</strong> — Power Query loads its results back into Excel Tables; <code>From Table/Range</code> is the entry point that turns existing Table data into a query input.</li>
+<li>Lesson <strong>2.7 Subtotals and Totals</strong> — <code>Group By</code> in Power Query is the structured-data version of the <strong>Data &gt; Subtotal</strong> menu feature.</li>
+<li>Lesson <strong>4.x PivotTables</strong> — A PivotTable built on a Power Query output stays in sync: refresh the query, then refresh the PivotTable, and new data flows through the entire chain.</li>
+</ul>
+<hr>
+<h2>Links</h2>
+<ul>
+<li><a href="https://support.microsoft.com/en-us/office/about-power-query-in-excel-7104fbee-9e62-4cb9-a02e-5bfb1a6c536a" target="_blank" rel="noopener">Microsoft Support — About Power Query in Excel</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/import-data-from-external-data-sources-power-query-be4330b3-5356-486c-a168-b68e9e616f5a" target="_blank" rel="noopener">Microsoft Support — Get &amp; Transform in Excel</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/create-edit-and-load-a-query-in-excel-power-query-ed88-9f9c-4d3e-a8a6-2eef0c7eef76" target="_blank" rel="noopener">Microsoft Support — Create, edit, and load a query in Excel (Power Query)</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/merge-queries-overview-power-query-87b8e89a-f6ae-4f74-89dc-1bf61f30be0c" target="_blank" rel="noopener">Microsoft Support — Merge queries (Power Query)</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/append-queries-power-query-c876111b-c4cb-4ba8-bef7-bce9fc28b50d" target="_blank" rel="noopener">Microsoft Support — Append queries (Power Query)</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/unpivot-columns-power-query-0f7d51e2-7b1a-4f3c-bf52-1ec8aebc8aff" target="_blank" rel="noopener">Microsoft Support — Unpivot columns (Power Query)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/powerquery-m/" target="_blank" rel="noopener">Microsoft Power Query M reference</a></li>
+</ul>
+        </article>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.13-advanced-filter.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.13 Advanced Filter</span></a><a class="pager-link pager-next" href="./2.test-yourself.html"><span class="pager-direction">Next →</span><span class="pager-title">Quiz Module 2 Test: Manage and Format Data</span></a></nav>
+      </div>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">MO-211 Expert Prep</p>
+        <p class="muted">A free, open-source path to Microsoft Excel Expert certification.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Course</p>
+        <ul>
+          <li><a href="../../course/">All modules</a></li>
+          <li><a href="../../course/module-1/">Module 1</a></li>
+          <li><a href="../../course/module-2/">Module 2</a></li>
+          <li><a href="../../course/module-3/">Module 3</a></li>
+          <li><a href="../../course/module-4/">Module 4</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-heading">Project</p>
+        <ul>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211" target="_blank" rel="noopener">Repository</a></li>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/issues" target="_blank" rel="noopener">Report an issue</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <p class="muted small">© <span id="year"></span> MO-211 Expert Prep. Not affiliated with or endorsed by Microsoft.</p>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function() {
+      var sb = document.getElementById('course-sidebar');
+      if (!sb) return;
+      var burgers = document.querySelectorAll('.header-burger');
+      var backdrop = document.createElement('div');
+      backdrop.className = 'sidebar-backdrop';
+      document.body.appendChild(backdrop);
+      function setOpen(open) {
+        sb.classList.toggle('is-open', open);
+        backdrop.classList.toggle('is-visible', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+        burgers.forEach(function(b) { b.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+      }
+      burgers.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          setOpen(!sb.classList.contains('is-open'));
+        });
+      });
+      backdrop.addEventListener('click', function() { setOpen(false); });
+      sb.addEventListener('click', function(e) {
+        if (e.target.closest('a')) setOpen(false);
+      });
+
+      // Sidebar filter — hides lessons that don't match the typed query
+      var filter = sb.querySelector('.course-nav-filter');
+      if (filter) {
+        filter.addEventListener('input', function() {
+          var q = filter.value.trim().toLowerCase();
+          sb.querySelectorAll('.nav-module').forEach(function(mod) {
+            var anyVisible = false;
+            mod.querySelectorAll('.nav-lessons li').forEach(function(li) {
+              var text = li.textContent.toLowerCase();
+              var match = !q || text.indexOf(q) !== -1;
+              li.style.display = match ? '' : 'none';
+              if (match) anyVisible = true;
+            });
+            mod.style.display = anyVisible ? '' : 'none';
+            // Auto-expand modules with matches when filtering
+            if (q) mod.setAttribute('open', '');
+          });
+        });
+        filter.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

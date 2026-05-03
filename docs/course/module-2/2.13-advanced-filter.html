@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Advanced Filter and Database Functions" />
+  <meta name="description" content="MO-211 Excel Expert prep — Advanced Filter" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.13 Advanced Filter and Database Functions · MO-211 Excel Expert</title>
+  <title>2.13 Advanced Filter · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -39,6 +39,7 @@
       <div class="sidebar-inner">
         <nav class="course-nav" aria-label="Course navigation">
 <a class="course-nav-home" href="../"><span aria-hidden="true">←</span> Course outline</a>
+<div class="course-nav-search"><svg class="course-nav-search-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" class="course-nav-filter" placeholder="Filter lessons…" aria-label="Filter lessons" autocomplete="off" /></div>
 <details class="nav-module">
 <summary><span class="nav-mod-num">M1</span><span class="nav-mod-title">Manage Workbook Options &amp; Settings</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
@@ -47,8 +48,7 @@
 <li><a class="nav-lesson" href="../module-1/1.2-reference-data.html"><span class="nav-lesson-num">1.2</span><span class="nav-lesson-title">Manage Workbooks: Reference Data in Other Workbooks</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.3-enable-macro.html"><span class="nav-lesson-num">1.3</span><span class="nav-lesson-title">Manage Workbooks: Enable Macros in a Workbook</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.4-workbook-versions.html"><span class="nav-lesson-num">1.4</span><span class="nav-lesson-title">Manage Workbooks: Manage Workbook Versions</span></a></li>
-<li><a class="nav-lesson" href="../module-1/1.5-restrict-editing.html"><span class="nav-lesson-num">1.5</span><span class="nav-lesson-title">Prepare for Collaboration: Restrict Editing</span></a></li>
-<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Worksheet and Cell Ranges</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">1.5–1.6 Protect Workbooks: Soft Restrictions, Worksheet Protection, and Cell Ranges</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.7-protect-workbook-structure.html"><span class="nav-lesson-num">1.7</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Workbook Structure</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.8-formula-calculation-options.html"><span class="nav-lesson-num">1.8</span><span class="nav-lesson-title">Prepare for Collaboration: Configure Formula Calculation Options</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
@@ -58,6 +58,7 @@
 <summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
@@ -66,11 +67,11 @@
 <li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Custom Conditional Formatting Rules and Rule Management</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.11-manage-conditional-formatting-rules.html"><span class="nav-lesson-num">2.11</span><span class="nav-lesson-title">Manage Conditional Formatting Rules</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.14-power-query-basics.html"><span class="nav-lesson-num">2.14</span><span class="nav-lesson-title">Power Query Basics: Get &amp; Transform Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
 </ul></details>
 <details class="nav-module">
@@ -93,10 +94,8 @@
 <summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.1-dual-axis-charts.html"><span class="nav-lesson-num">4.1</span><span class="nav-lesson-title">Create and Modify Dual-Axis Charts</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">Create and Modify Advanced Charts</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">Create PivotTables</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.4-modify-field-selection-and-options.html"><span class="nav-lesson-num">4.4</span><span class="nav-lesson-title">Modify PivotTable Field Selections and Options</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">4.1–4.2 Advanced Charts: Dual-Axis, Combo, Histogram, Box &amp; Whisker, Funnel, Sunburst, Waterfall</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">4.3–4.4 Create and Modify PivotTables</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.5-slicers.html"><span class="nav-lesson-num">4.5</span><span class="nav-lesson-title">Create Slicers and Timelines</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.6-grouping-in-pivot-tables.html"><span class="nav-lesson-num">4.6</span><span class="nav-lesson-title">Group PivotTable Data</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
@@ -127,7 +126,7 @@
         </nav>
         <header class="lesson-head">
           <span class="lesson-eyebrow">Module 2 · Lesson 2.13</span>
-          <h1 class="lesson-title">Advanced Filter and Database Functions</h1>
+          <h1 class="lesson-title">Advanced Filter</h1>
           <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.13-advanced-filter.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
@@ -387,97 +386,12 @@ When using **Copy to another location**, the destination must be on the **same w
 <p><strong>Data</strong> tab &gt; <strong>Sort &amp; Filter</strong> group &gt; <strong>Clear</strong>.</p>
 <p>If you used <strong>Copy to another location</strong>, the source list was never modified — simply delete the copied range when no longer needed.</p>
 <hr>
-<h2>Part 8: Database Functions (D-Functions)</h2>
-<p>The <strong>D-functions</strong> apply the same criteria-range pattern as Advanced Filter but return a <strong>single aggregate value</strong> instead of a filtered list. They are the closest thing Excel has to <code>SELECT SUM(...) FROM ... WHERE ...</code>.</p>
-<h3>Common D-Functions</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Function</th>
-<th style="text-align: left;">Returns</th>
-<th style="text-align: left;">SQL equivalent</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>DSUM(database, field, criteria)</code></td>
-<td style="text-align: left;">Sum of a field for rows matching the criteria</td>
-<td style="text-align: left;"><code>SELECT SUM(field) WHERE …</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DCOUNT(database, field, criteria)</code></td>
-<td style="text-align: left;">Count of numeric values in the field</td>
-<td style="text-align: left;"><code>SELECT COUNT(field) WHERE … AND field IS NUMERIC</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DCOUNTA(database, field, criteria)</code></td>
-<td style="text-align: left;">Count of non-blank values in the field</td>
-<td style="text-align: left;"><code>SELECT COUNT(*) WHERE …</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DAVERAGE(database, field, criteria)</code></td>
-<td style="text-align: left;">Average of a field</td>
-<td style="text-align: left;"><code>SELECT AVG(field) WHERE …</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DMAX(database, field, criteria)</code></td>
-<td style="text-align: left;">Max of a field</td>
-<td style="text-align: left;"><code>SELECT MAX(field) WHERE …</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DMIN(database, field, criteria)</code></td>
-<td style="text-align: left;">Min of a field</td>
-<td style="text-align: left;"><code>SELECT MIN(field) WHERE …</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DGET(database, field, criteria)</code></td>
-<td style="text-align: left;">The single value that matches (errors on 0 or 2+ matches)</td>
-<td style="text-align: left;"><code>SELECT field WHERE …</code> (one row)</td>
-</tr>
-</tbody>
-</table>
-<h3>Arguments</h3>
-<ul>
-<li><strong>database</strong> — the source list including headers (e.g., <code>A1:F500</code>).</li>
-<li><strong>field</strong> — either the column header in quotes (<code>"Amount"</code>) or the numeric column index (<code>5</code>).</li>
-<li><strong>criteria</strong> — the criteria range, identical in structure to the Advanced Filter criteria range.</li>
-</ul>
-<h3>Example</h3>
-<p>Source list <code>A1:E500</code> has headers <code>Region</code>, <code>Department</code>, <code>Customer</code>, <code>Amount</code>, <code>Date</code>. Criteria range built in <code>H1:I2</code>:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Region</th>
-<th style="text-align: left;">Amount</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">North</td>
-<td style="text-align: left;">&gt;5000</td>
-</tr>
-</tbody>
-</table>
-<pre><code>=DSUM(A1:E500,&quot;Amount&quot;,H1:I2)
-</code></pre>
-<p>Returns the sum of <code>Amount</code> for every row where Region = North AND Amount &gt; 5000.</p>
-<div class="callout callout-note"><div class="callout-title">NOTE</div>
-
-D-functions and Advanced Filter share the same criteria-range syntax — wildcards, comparison operators, computed criteria, and AND/OR rules all behave identically. Build the criteria range once and reuse it for both.
-
-</div>
-
-<hr>
 <h2>Links:</h2>
 <ul>
 <li><a href="https://support.microsoft.com/en-us/office/filter-by-using-advanced-criteria-4c9222fe-8529-4cd7-a898-3f16abdff32b" target="_blank" rel="noopener">Microsoft Support — Filter by using advanced criteria</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/dsum-function-53181285-0c4b-4f5a-aaa3-529a322be41b" target="_blank" rel="noopener">Microsoft Support — DSUM function</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/dcount-function-c1fc7b93-fb0d-4d8d-97db-8d5f076eaeb1" target="_blank" rel="noopener">Microsoft Support — DCOUNT function</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/daverage-function-a6a2d5ac-4b4b-48cd-a1d8-7b37834e5aee" target="_blank" rel="noopener">Microsoft Support — DAVERAGE function</a></li>
-<li><a href="https://support.microsoft.com/en-us/office/dget-function-9a0a05c2-674f-44b9-be40-b0b7ae46f4d8" target="_blank" rel="noopener">Microsoft Support — DGET function</a></li>
 </ul>
         </article>
-        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.12-excel-tables-and-structured-references.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.12 Excel Tables and Structured References</span></a><a class="pager-link pager-next" href="./2.test-yourself.html"><span class="pager-direction">Next →</span><span class="pager-title">Quiz Module 2 Test: Manage and Format Data</span></a></nav>
+        <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.12-excel-tables-and-structured-references.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.12 Excel Tables and Structured References</span></a><a class="pager-link pager-next" href="./2.14-power-query-basics.html"><span class="pager-direction">Next →</span><span class="pager-title">2.14 Power Query Basics: Get &amp; Transform Data</span></a></nav>
       </div>
     </main>
   </div>
@@ -536,6 +450,29 @@ D-functions and Advanced Filter share the same criteria-range syntax — wildcar
       sb.addEventListener('click', function(e) {
         if (e.target.closest('a')) setOpen(false);
       });
+
+      // Sidebar filter — hides lessons that don't match the typed query
+      var filter = sb.querySelector('.course-nav-filter');
+      if (filter) {
+        filter.addEventListener('input', function() {
+          var q = filter.value.trim().toLowerCase();
+          sb.querySelectorAll('.nav-module').forEach(function(mod) {
+            var anyVisible = false;
+            mod.querySelectorAll('.nav-lessons li').forEach(function(li) {
+              var text = li.textContent.toLowerCase();
+              var match = !q || text.indexOf(q) !== -1;
+              li.style.display = match ? '' : 'none';
+              if (match) anyVisible = true;
+            });
+            mod.style.display = anyVisible ? '' : 'none';
+            // Auto-expand modules with matches when filtering
+            if (q) mod.setAttribute('open', '');
+          });
+        });
+        filter.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
+        });
+      }
     })();
   </script>
 </body>

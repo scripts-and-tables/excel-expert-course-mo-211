@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MO-211 Excel Expert prep — Create Custom Conditional Formatting Rules" />
+  <meta name="description" content="MO-211 Excel Expert prep — Custom Conditional Formatting Rules and Rule Management" />
   <meta name="theme-color" content="#0f6f3f" />
-  <title>2.9 Create Custom Conditional Formatting Rules · MO-211 Excel Expert</title>
+  <title>2.9 Custom Conditional Formatting Rules and Rule Management · MO-211 Excel Expert</title>
   <link rel="icon" type="image/png" href="../../hero-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css" />
@@ -39,6 +39,7 @@
       <div class="sidebar-inner">
         <nav class="course-nav" aria-label="Course navigation">
 <a class="course-nav-home" href="../"><span aria-hidden="true">←</span> Course outline</a>
+<div class="course-nav-search"><svg class="course-nav-search-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" class="course-nav-filter" placeholder="Filter lessons…" aria-label="Filter lessons" autocomplete="off" /></div>
 <details class="nav-module">
 <summary><span class="nav-mod-num">M1</span><span class="nav-mod-title">Manage Workbook Options &amp; Settings</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
@@ -47,8 +48,7 @@
 <li><a class="nav-lesson" href="../module-1/1.2-reference-data.html"><span class="nav-lesson-num">1.2</span><span class="nav-lesson-title">Manage Workbooks: Reference Data in Other Workbooks</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.3-enable-macro.html"><span class="nav-lesson-num">1.3</span><span class="nav-lesson-title">Manage Workbooks: Enable Macros in a Workbook</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.4-workbook-versions.html"><span class="nav-lesson-num">1.4</span><span class="nav-lesson-title">Manage Workbooks: Manage Workbook Versions</span></a></li>
-<li><a class="nav-lesson" href="../module-1/1.5-restrict-editing.html"><span class="nav-lesson-num">1.5</span><span class="nav-lesson-title">Prepare for Collaboration: Restrict Editing</span></a></li>
-<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Worksheet and Cell Ranges</span></a></li>
+<li><a class="nav-lesson" href="../module-1/1.6-protect-worksheet-and-ranges.html"><span class="nav-lesson-num">1.6</span><span class="nav-lesson-title">1.5–1.6 Protect Workbooks: Soft Restrictions, Worksheet Protection, and Cell Ranges</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.7-protect-workbook-structure.html"><span class="nav-lesson-num">1.7</span><span class="nav-lesson-title">Prepare for Collaboration: Protect Workbook Structure</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.8-formula-calculation-options.html"><span class="nav-lesson-num">1.8</span><span class="nav-lesson-title">Prepare for Collaboration: Configure Formula Calculation Options</span></a></li>
 <li><a class="nav-lesson" href="../module-1/1.9-inspect-and-check.html"><span class="nav-lesson-num">1.9</span><span class="nav-lesson-title">Inspect Workbook: Document Inspector, Accessibility, and Compatibility</span></a></li>
@@ -58,6 +58,7 @@
 <summary><span class="nav-mod-num">M2</span><span class="nav-mod-title">Manage &amp; Format Data</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-2/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.0-named-ranges.html"><span class="nav-lesson-num">2.0</span><span class="nav-lesson-title">Named Ranges and the Name Manager</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.1-flash-fill.html"><span class="nav-lesson-num">2.1</span><span class="nav-lesson-title">Flash Fill</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.2-advanced-fill-series.html"><span class="nav-lesson-num">2.2</span><span class="nav-lesson-title">Advanced Fill Series Options</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.3-randarray.html"><span class="nav-lesson-num">2.3</span><span class="nav-lesson-title">Generate Numeric Data Using RANDARRAY()</span></a></li>
@@ -66,11 +67,11 @@
 <li><a class="nav-lesson" href="../module-2/2.6-group-and-ungroup-data.html"><span class="nav-lesson-num">2.6</span><span class="nav-lesson-title">Group and Ungroup Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.7-subtotals-and-totals.html"><span class="nav-lesson-num">2.7</span><span class="nav-lesson-title">Calculate Data by Inserting Subtotals and Totals</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.8-remove-duplicate-records.html"><span class="nav-lesson-num">2.8</span><span class="nav-lesson-title">Remove Duplicate Records</span></a></li>
-<li><a class="nav-lesson is-current" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Create Custom Conditional Formatting Rules</span></a></li>
+<li><a class="nav-lesson is-current" href="../module-2/2.9-custom-conditional-formatting-rules.html"><span class="nav-lesson-num">2.9</span><span class="nav-lesson-title">Custom Conditional Formatting Rules and Rule Management</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.10-formula-based-conditional-formatting.html"><span class="nav-lesson-num">2.10</span><span class="nav-lesson-title">Conditional Formatting Rules That Use Formulas</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.11-manage-conditional-formatting-rules.html"><span class="nav-lesson-num">2.11</span><span class="nav-lesson-title">Manage Conditional Formatting Rules</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.12-excel-tables-and-structured-references.html"><span class="nav-lesson-num">2.12</span><span class="nav-lesson-title">Excel Tables and Structured References</span></a></li>
-<li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter and Database Functions</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.13-advanced-filter.html"><span class="nav-lesson-num">2.13</span><span class="nav-lesson-title">Advanced Filter</span></a></li>
+<li><a class="nav-lesson" href="../module-2/2.14-power-query-basics.html"><span class="nav-lesson-num">2.14</span><span class="nav-lesson-title">Power Query Basics: Get &amp; Transform Data</span></a></li>
 <li><a class="nav-lesson" href="../module-2/2.test-yourself.html"><span class="nav-lesson-num">Quiz</span><span class="nav-lesson-title">Module 2 Test: Manage and Format Data</span></a></li>
 </ul></details>
 <details class="nav-module">
@@ -93,10 +94,8 @@
 <summary><span class="nav-mod-num">M4</span><span class="nav-mod-title">Advanced Charts &amp; PivotTables</span><span class="nav-chevron" aria-hidden="true"></span></summary>
 <ul class="nav-lessons">
 <li><a class="nav-lesson" href="../module-4/"><span class="nav-lesson-num">·</span><span class="nav-lesson-title">Overview</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.1-dual-axis-charts.html"><span class="nav-lesson-num">4.1</span><span class="nav-lesson-title">Create and Modify Dual-Axis Charts</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">Create and Modify Advanced Charts</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">Create PivotTables</span></a></li>
-<li><a class="nav-lesson" href="../module-4/4.4-modify-field-selection-and-options.html"><span class="nav-lesson-num">4.4</span><span class="nav-lesson-title">Modify PivotTable Field Selections and Options</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.2-advanced-charts.html"><span class="nav-lesson-num">4.2</span><span class="nav-lesson-title">4.1–4.2 Advanced Charts: Dual-Axis, Combo, Histogram, Box &amp; Whisker, Funnel, Sunburst, Waterfall</span></a></li>
+<li><a class="nav-lesson" href="../module-4/4.3-create-pivot-tables.html"><span class="nav-lesson-num">4.3</span><span class="nav-lesson-title">4.3–4.4 Create and Modify PivotTables</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.5-slicers.html"><span class="nav-lesson-num">4.5</span><span class="nav-lesson-title">Create Slicers and Timelines</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.6-grouping-in-pivot-tables.html"><span class="nav-lesson-num">4.6</span><span class="nav-lesson-title">Group PivotTable Data</span></a></li>
 <li><a class="nav-lesson" href="../module-4/4.7-calculated-field.html"><span class="nav-lesson-num">4.7</span><span class="nav-lesson-title">Add Calculated Fields</span></a></li>
@@ -127,7 +126,7 @@
         </nav>
         <header class="lesson-head">
           <span class="lesson-eyebrow">Module 2 · Lesson 2.9</span>
-          <h1 class="lesson-title">Create Custom Conditional Formatting Rules</h1>
+          <h1 class="lesson-title">Custom Conditional Formatting Rules and Rule Management</h1>
           <a class="edit-link" href="https://github.com/scripts-and-tables/excel-expert-course-mo-211/blob/main/02-manage-and-format-data/2.9-custom-conditional-formatting-rules.md" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
             Edit on GitHub
@@ -300,10 +299,95 @@ To apply conditional formatting to an **entire table column** including future r
 <li>Format: Green fill</li>
 </ul>
 <hr>
+<h2>Part 6: Manage Rules — Reorder, Edit, and Stop If True</h2>
+<p>CSS has a specificity system — when multiple rules target the same element, the one with the highest specificity wins. Excel's conditional formatting has a <strong>priority system</strong> that works similarly. The <strong>Manage Rules</strong> dialog is the control panel for this system: it shows every rule applied to a cell or sheet, lets you reorder them, edit them, and control whether multiple rules can apply simultaneously or whether the first match stops all further evaluation.</p>
+<h3>Opening the Manage Rules Dialog</h3>
+<p><strong>Home</strong> tab &gt; <strong>Conditional Formatting</strong> &gt; <strong>Manage Rules...</strong></p>
+<p>The dialog header contains a dropdown: <strong>"Show formatting rules for:"</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Option</th>
+<th style="text-align: left;">What It Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Current Selection</strong></td>
+<td style="text-align: left;">Rules that apply to the currently selected cells</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>This Worksheet</strong></td>
+<td style="text-align: left;">All conditional formatting rules on the active sheet</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[Sheet name]</strong></td>
+<td style="text-align: left;">Rules on a different sheet (if multiple sheets exist)</td>
+</tr>
+</tbody>
+</table>
+<p>Each rule is listed with its format preview, the formula or condition, and the "Applies to" range.</p>
+<h3>Rule Priority — How Conflicts Are Resolved</h3>
+<p>Rules are evaluated <strong>top-to-bottom</strong> in the Manage Rules list. The <strong>first rule that evaluates to TRUE wins</strong> — unless <strong>Stop If True</strong> is disabled, in which case multiple rules can apply simultaneously (their formats stack or the last applied format is shown).</p>
+<p>Use the <strong>Up</strong> (▲) and <strong>Down</strong> (▼) arrow buttons in the Manage Rules dialog to change priority. The rule at the top has the highest priority.</p>
+<div class="callout callout-important"><div class="callout-title">IMPORTANT</div>
+
+Rule priority matters most when two rules could **conflict** — for example, a "red fill for critical" rule and a "yellow fill for warning" rule applied to the same range. If both conditions are true for a cell, the **higher-priority rule** (closer to the top) wins.
+
+</div>
+
+<h3>Stop If True</h3>
+<p>The <strong>Stop If True</strong> checkbox controls whether Excel stops evaluating remaining rules once a rule fires for a cell.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stop If True</th>
+<th style="text-align: left;">Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Checked</strong></td>
+<td style="text-align: left;">If this rule applies to a cell, skip all lower-priority rules for that cell</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Unchecked</strong> (default)</td>
+<td style="text-align: left;">Continue evaluating lower-priority rules even after this rule fires</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use it for mutually exclusive conditions</strong> — when only one rule should ever apply to a cell at a time:</p>
+<p>Example — a status column with three states (Critical, Warning, OK):
+1. Rule 1: <code>=$D2="Critical"</code> → Red fill — <strong>Stop If True: checked</strong>
+2. Rule 2: <code>=$D2="Warning"</code> → Yellow fill — <strong>Stop If True: checked</strong>
+3. Rule 3: <code>=$D2="OK"</code> → Green fill</p>
+<p>Without Stop If True: if a cell is "Critical", both Rule 1 (red) and all lower rules would evaluate. With Stop If True on Rule 1: once a cell is flagged Critical, Rules 2 and 3 are skipped entirely for that cell.</p>
+<p>Leave Stop If True unchecked when rules are <strong>additive</strong> — for example, one rule bolds the font, another changes the fill color. Both should apply simultaneously.</p>
+<h3>Editing Rules</h3>
+<p>Double-click any rule in the Manage Rules list to open the <strong>Edit Formatting Rule</strong> dialog — the same interface used when creating the rule. You can change the condition, the format, or switch the rule type entirely.</p>
+<h3>Deleting Rules</h3>
+<p><strong>To delete a specific rule:</strong>
+1. Select the rule in the Manage Rules list.
+2. Click the <strong>Delete Rule</strong> button.</p>
+<p><strong>To clear all conditional formatting from selected cells:</strong>
+<strong>Home</strong> &gt; <strong>Conditional Formatting</strong> &gt; <strong>Clear Rules</strong> &gt; <strong>Clear Rules from Selected Cells</strong></p>
+<p><strong>To clear all conditional formatting from the entire sheet:</strong>
+<strong>Home</strong> &gt; <strong>Conditional Formatting</strong> &gt; <strong>Clear Rules</strong> &gt; <strong>Clear Rules from Entire Sheet</strong></p>
+<div class="callout callout-tip"><div class="callout-title">TIP</div>
+
+Use "Clear Rules from Entire Sheet" with caution in shared workbooks — it removes all formatting rules, including those applied by other users or earlier sessions.
+
+</div>
+
+<h3>Editing the "Applies To" Range</h3>
+<p>In the Manage Rules dialog, the <strong>Applies to</strong> column shows the range each rule covers. You can click directly in this field and edit the range reference without reopening the rule editor.</p>
+<p>This is useful when you add new rows to a dataset and need to extend the rule's range downward.</p>
+<hr>
 <h2>Official Resources</h2>
 <ul>
 <li><a href="https://support.microsoft.com/en-us/office/add-change-find-or-clear-conditional-formats-164cf93a-b0de-4e31-9b9e-35cf48439f39" target="_blank" rel="noopener">Microsoft Support — Add, change, find, or clear conditional formats</a></li>
 <li><a href="https://support.microsoft.com/en-us/office/use-conditional-formatting-to-highlight-information-fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f" target="_blank" rel="noopener">Microsoft Support — Use conditional formatting to highlight information</a></li>
+<li><a href="https://support.microsoft.com/en-us/office/manage-conditional-formatting-rule-precedence-5a9a80c1-5427-4b2e-85b6-49e08555d1f4" target="_blank" rel="noopener">Microsoft Support — Manage conditional formatting rule precedence</a></li>
 </ul>
         </article>
         <nav class="lesson-pager" aria-label="Lesson navigation"><a class="pager-link pager-prev" href="./2.8-remove-duplicate-records.html"><span class="pager-direction">← Previous</span><span class="pager-title">2.8 Remove Duplicate Records</span></a><a class="pager-link pager-next" href="./2.10-formula-based-conditional-formatting.html"><span class="pager-direction">Next →</span><span class="pager-title">2.10 Conditional Formatting Rules That Use Formulas</span></a></nav>
@@ -365,6 +449,29 @@ To apply conditional formatting to an **entire table column** including future r
       sb.addEventListener('click', function(e) {
         if (e.target.closest('a')) setOpen(false);
       });
+
+      // Sidebar filter — hides lessons that don't match the typed query
+      var filter = sb.querySelector('.course-nav-filter');
+      if (filter) {
+        filter.addEventListener('input', function() {
+          var q = filter.value.trim().toLowerCase();
+          sb.querySelectorAll('.nav-module').forEach(function(mod) {
+            var anyVisible = false;
+            mod.querySelectorAll('.nav-lessons li').forEach(function(li) {
+              var text = li.textContent.toLowerCase();
+              var match = !q || text.indexOf(q) !== -1;
+              li.style.display = match ? '' : 'none';
+              if (match) anyVisible = true;
+            });
+            mod.style.display = anyVisible ? '' : 'none';
+            // Auto-expand modules with matches when filtering
+            if (q) mod.setAttribute('open', '');
+          });
+        });
+        filter.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') { filter.value = ''; filter.dispatchEvent(new Event('input')); }
+        });
+      }
     })();
   </script>
 </body>
